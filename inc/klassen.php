@@ -198,15 +198,20 @@ class Ag_article_c extends Ag_basis_class{
 			} else {
 
 				$img_f = get_field('ta_afbeelding', 'option');
-				$w = $this->afb_formaat.'-width';
-				$h = $this->afb_formaat.'-height';
-				$img = "
-					<img
-						src='{$img_f['sizes'][$this->afb_formaat]}'
-						alt='{$img_f['alt']}'
-						width='{$img_f['sizes'][$w]}'
-						height='{$img_f['sizes'][$h]}'
-					/>";
+				if ($img_f) {
+					$w = $this->afb_formaat.'-width';
+					$h = $this->afb_formaat.'-height';
+					$img = "
+						<img
+							src='{$img_f['sizes'][$this->afb_formaat]}'
+							alt='{$img_f['alt']}'
+							width='{$img_f['sizes'][$w]}'
+							height='{$img_f['sizes'][$h]}'
+						/>";
+				} else {
+					$img =  '';
+				}
+				
 			}
 
 		}
