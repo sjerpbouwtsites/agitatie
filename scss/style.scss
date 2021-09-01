@@ -1,0 +1,60 @@
+//parent
+/*!
+Theme Name: Agitatie
+Theme URI: https://github.com/sjerpbouwtsites/Agitatie
+Author: Sjerp van Wouden
+Author URI: http://sjerpbouwtsites.nl
+Description: Een thema door Sjerp
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: sjerpbouwtsites
+Version: 1.0
+GitHub Theme URI: sjerpbouwtsites/agitatie
+GitHub Theme URI: https://github.com/sjerpbouwtsites/agitatie
+!*/
+
+@import 'inst/bundel';
+
+@import 'basis/normalise';
+@import 'basis/typografie';
+@import 'basis/els';
+@import 'basis/formulieren';
+@import 'basis/menu';
+@import 'basis/inhoud';
+@import 'basis/mixins';
+
+@import 'generiek';
+@import 'generiek-teksten';
+
+@import 'ext/slick';
+@import 'ext/leaflet';
+@import 'ext/facebook';
+
+@import 'onderdelen/art_class';
+@import 'onderdelen/back-to-top';
+@import 'onderdelen/carousel';
+@import 'onderdelen/foto-video-gallerij';
+@import 'onderdelen/knop';
+@import 'onderdelen/paginering';
+@import 'onderdelen/schakel';
+@import 'onderdelen/tax-blok';
+@import 'onderdelen/uitgelichte-afbeelding';
+@import 'onderdelen/viddoos';
+
+@import 'widgets/sticky-sidebar';
+@import 'widgets/pag-fam';
+
+@import 'agenda';
+@import 'archive';
+@import 'footer';
+@import 'header';
+@import 'nav';
+@import 'single';
+@import 'voorpagina';
+@import 'zoeken';
+@import 'waaier';
+
+
+
+
+

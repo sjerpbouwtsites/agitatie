@@ -1,0 +1,27 @@
+# bouw
+
+als niet in admin, dan niet laden jetpack widget
+
+# VOLGENDE VERSIES
+
+uitgelichte afbeelding via fatsoenlijk mvc laten lopen
+
+sticky widgets => ajax
+
+cp_truthy naar standaard klasse
+
+art-c herbouw stijling
+
+video moet poster hebben
+
+controllers en hooks conditioneel inladen
+
+categorie hierarchie
+
+models opsplitsen
+
+
+
+# vlak voor opleveren
+
+zoeken op @OPLEVERING

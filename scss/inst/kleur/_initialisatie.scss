@@ -1,0 +1,18 @@
+//parent
+$wit:		 		$basis_wit;
+$wittig: 			$basis_wittig;
+$lichtgrijs: 		$basis_lichtgrijs;
+$grijs:				$basis_grijs;
+$donkergrijs: 		$basis_donkergrijs;
+$zwart: 			$basis_zwart;
+
+$hoofdkleur: 		$basis_hoofdkleur;
+$zijkleur: 			$basis_zijkleur;
+$accentkleur: 		$basis_accentkleur;
+
+$hoofdkleur_donker: darken($hoofdkleur, 5%);
+$zijkleur_donker: 	darken($zijkleur, 5%);
+$accentkleur_donker:darken($accentkleur, 5%);
+
+
+

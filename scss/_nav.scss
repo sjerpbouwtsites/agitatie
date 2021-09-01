@@ -1,0 +1,180 @@
+//parent
+.menu {
+	@include ul-li-reset();
+	ul {
+		@include ul-li-reset();
+	}
+}
+
+@mixin kopmenu_letter(){
+	line-height: $header-height;
+	padding: 0 .6em;
+	display: block;
+	&:hover {
+		background-color: $hoofdkleur;
+		color: white;
+		text-decoration: none;
+	}
+}
+
+.stek-kop-rechts .menu {
+	overflow: visible;
+
+	li {
+		position: relative;
+	} ul {
+		display: none;
+	}
+	& > li > ul {
+		@media (min-width: 900px) {
+			position: absolute;
+			top: 100%;
+			left: 0;
+		}
+
+		li, a {
+			line-height: 1;
+			//padding: 0.4em 0.7em;
+			//font-size: 0.8em;
+		}
+		@media (min-width: 900px) {
+			li:hover {
+				ul {
+					display: block;
+					right: 100%;
+					top: 0;
+					position: absolute;
+				}
+			}
+		}
+
+	}
+	@media (min-width: 900px) {
+		& > li:hover > ul{
+			display: block;
+			& > li:hover > ul {
+				display: block;
+			}
+		}
+	}
+
+
+	a {
+		@include kopmenu_letter();
+	}
+	.sub-menu {
+		a {
+			padding: 0.6em .7em;
+		}
+		li {
+			box-sizing: border-box;
+		}
+	}
+
+	&.horizontaal {
+		li {
+			display: inline-block;
+		}
+		& > li {
+			& > ul {
+				@media (min-width: 900px) {
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					z-index: 3;
+					min-width: 100%;
+				}
+				li {
+					display: block;
+					min-width: 100%;
+					background-color: white;
+					@media (max-width: 900px) {
+						margin-left: 30px;
+					}
+					li {
+						@media (min-width: 900px) {
+							box-shadow: 2px 2px 2px #929292;
+						}
+					}
+				}
+			}
+			&:last-child > ul {
+				left: auto;
+				right: 0;
+			}
+		}
+
+	}
+}
+
+	@media (max-width: 900px) {
+		.stek-kop-rechts div[class*='menu'] {
+			display: none;
+			position: absolute;
+			width: 100%;
+			left: 0;
+			z-index: 2;
+			top: $header-height;
+			overflow: hidden;
+			background-color: white;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			.menu {
+				&.horizontaal {
+					& > li {
+						display: block;
+						& > a {
+							padding: 0 .8em;
+						}
+						a {
+							line-height: 40px;
+							padding-top: 0;
+							padding-bottom: 0;
+						}
+					}
+				}
+				.menu-item-has-children {
+					& > a i {
+						padding: 0 20px 0 10px;
+						//margin-left: 10px;
+					}
+				}
+			}
+			li {
+				li {
+					text-indent: 20px;
+					i {
+						text-indent: 0;
+					}
+					li {
+						text-indent: 40px;
+						i {
+							text-indent: 0;
+						}
+					}
+				}
+			}
+		}
+
+	}
+
+.kopmenu-mobiel {
+
+	@include kopmenu_letter();
+	margin-right: -20px;
+	display: none;
+	@media (max-width: 900px) {
+		display: block;
+	}
+	i {
+		position: relative;
+		top: 2px;
+		margin-left: 10px;
+	}
+}
+
+footer .menu {
+	a:hover {
+		color: $hoofdkleur;
+	}
+}

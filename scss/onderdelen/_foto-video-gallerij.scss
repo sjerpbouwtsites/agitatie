@@ -1,0 +1,15 @@
+.foto-video-gallerij {
+	img, .vid-doos {
+		margin-bottom: 2em;
+	}
+	.vid-doos {
+		height: auto;
+	}
+	video {
+		max-width: 100%;
+		height: auto;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}

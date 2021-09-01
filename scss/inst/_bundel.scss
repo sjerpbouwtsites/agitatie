@@ -1,0 +1,17 @@
+//parent
+
+@import 'kleur/basiswaarden';
+@import 'kleur/initialisatie';
+@import 'kleur/overschrijven';
+@import 'kleur/zet-klassen';
+
+
+@import 'tekst/basiswaarden';
+@import 'tekst/initialisatie';
+@import 'tekst/overschrijven';
+
+$header-height: 70px;
+
+$ease-out-snel: cubic-bezier(0,0,0,1.28);
+$dunlijntje: 1px solid rgba(33, 33, 33, 0.1);
+

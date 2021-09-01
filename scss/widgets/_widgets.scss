@@ -1,0 +1,10 @@
+//parent
+.widget {
+	&.met-ruimte .blok{
+		padding: 10px;
+	}
+	.textwidget {
+		padding: 10px;
+		@extend .blok;
+	}
+}

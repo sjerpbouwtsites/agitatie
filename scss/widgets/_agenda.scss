@@ -1,0 +1,48 @@
+//parent
+aside .agenda {
+	background-color: $hoofdkleur;
+	padding: 10px;
+	span, h2, a span {
+		color: $wit;
+	}
+	li {
+		border-bottom: 1px solid white;
+		font-family: $kleine_letter;
+		& > a.flex {
+			justify-content: flex-start;
+			&:hover {
+				background-color: rgba(255, 255, 255, 0.1);
+				&::after {
+					display: none;
+				}
+			}
+			&:hover .agenda-links span,
+			.agenda-links span,
+			span,
+			&:hover span {
+				color: $wit;
+			}
+			.agenda-links {
+				flex-basis: 50px
+			}
+		 }
+	}
+	li > a.flex {
+		padding: 10px;
+		width: calc(100% + 20px);
+		margin-left: -10px;
+	}
+	.flex {
+		.titel {
+			color: $wit;
+			font-size: 1em;
+			font-weight: 600;
+		}
+		.locatie {
+			font-size: .75em;
+		}
+		.agenda-midden.flex {
+			min-width: auto;
+		}
+	}
+}

@@ -1,0 +1,29 @@
+//parent
+.carousel {
+	article {
+		margin-top: 0 !important;
+	}
+	.mdi {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translate(-50%, -50%);
+		background-color: $wittig;
+		z-index: 5;
+		font-size: 1.5em;
+		display: inline-block;
+		width: 1.5em;
+		text-align: center;
+		&.mdi-chevron-right {
+			transform: translate(50%, -50%);
+			left: auto;
+			right: 0;
+		}
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	& ~ footer {
+		padding-top: 20px;
+	}
+}

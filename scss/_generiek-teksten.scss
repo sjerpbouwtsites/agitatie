@@ -1,0 +1,115 @@
+//parent
+
+body {
+	color: $zwart;
+	-webkit-text-size-adjust: 100%;
+    font-kerning: auto;
+    font-variant-ligatures: historical-ligatures;
+    font-variant-numeric: oldstyle-nums;
+    text-rendering: optimizeLegibility;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: $hoofdkleur;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a, a:visited {
+	color: $hoofdkleur;
+	text-decoration: none;
+}
+
+body {
+	font-family: $broodletter;
+}
+
+
+h1 {
+	font-size: 3.6em;
+	@media (max-width: 900px) {
+		font-size: 2.7em;
+	}
+	@media (max-width: 600px) {
+		font-size: 2.05em;
+	}
+}
+
+h2 {
+	font-size: 2.22em;
+	@media (max-width: 900px) {
+		font-size: 1.8em;
+	}
+	@media (max-width: 600px) {
+		font-size: 1.35em;
+	}
+}
+
+h3 {
+	font-size: 1.26em;
+	@media (max-width: 600px) {
+		font-size: 1em;
+
+	}
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $kopletter;
+	font-weight: 900;
+	line-height: 1;
+	margin: 1.33em 0 0.5em;
+	@media (max-width: 600px) {
+		word-break: normal;
+		hyphens: auto;
+	}
+}
+
+	h4, h5, h6 {
+		font-weight: 700;
+	}
+
+h1, h2 {
+	letter-spacing: .02em;
+}
+
+
+p, span {
+	line-height: 1.45;
+}
+
+.bericht-tekst {
+	font-size: 1.5em;
+	p:first-child::first-letter {
+		initial-letter: 2;
+		-webkit-initial-letter:2;
+	}
+}
+
+main blockquote {
+	line-height: 1.5625em;
+	text-transform: none;
+	font-size: 31px;
+	letter-spacing: normal;
+	font-weight: 400;
+	padding: 0;
+	margin: 0;
+	p {
+		display: inline-block;
+		vertical-align: top;
+		max-width: calc(100% - 40px);
+		margin-left: 10px;
+		font-size: inherit;
+	}
+	&::before {
+		content: "\F756";
+		display: inline-block;
+		font: normal normal normal 24px/1 "Material Design Icons";
+		text-rendering: auto;
+		line-height: inherit;
+	}
+}

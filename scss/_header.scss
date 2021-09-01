@@ -1,0 +1,60 @@
+
+//parent
+#stek-kop {
+	background-color: $wittig;
+ 	width: 100%;
+	//height: $header-height;
+	z-index: 2;
+	font-size: 1.2rem;
+	.rel > .verpakking {
+		display: flex;
+		justify-content: space-between;
+	}
+	.rel, .verpakking, [class|='stek-kop'], .horizontaal {
+		//height: 100%;
+	}
+	.stek-kop-links {
+		flex-basis: 210px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		h1 {
+			margin: 0;
+		}
+		@media (max-width: 460px) {
+			flex-basis: 120px;
+		}
+	}
+
+
+	.stek-kop-rechts {
+		padding-left: 50px;
+		@media (max-width: 600px) {
+			padding-left: 20px;
+		}
+		div, ul {
+			//height: 100%;
+		}
+		li ul li {
+			margin-left: 0;
+		}
+	}
+
+	.custom-logo-link {
+		display: block;
+		img {
+			display: block;
+		}
+	}
+
+	.geen-logo {
+		//font-family: $broodletter;
+	}
+
+}
+
+
+
+
+
+

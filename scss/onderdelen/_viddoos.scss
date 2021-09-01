@@ -1,0 +1,57 @@
+//parent
+
+.vid-doos {
+	height: 50vh;
+	width: 100%;
+	position: relative;
+	&:hover {
+		cursor: pointer;
+	}
+	video {
+		object-fit:cover;
+		width: 100%;
+		height: 100%;
+		display: block;
+	}
+	.vid-onder-buiten {
+		position: absolute;
+		bottom: 50%;
+		left: 50%;
+		transform: translate(-50%, 50%);
+	}
+		.vid-onder-binnen {
+			position: relative;
+		}
+/* 			.Ag_knop {
+				height: 34px;
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				top: auto !important;
+				box-shadow: none !important;
+				&:hover {
+					bottom: 0;
+				}
+				&.speel-video {
+					left: 0;
+					right: auto;
+				}
+			} */
+/* 			.vid-onder-binnen > * {
+				padding: 20px;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			} */
+}
+	video[autoplay] {
+		& ~ .vid-onder-buiten .speel-video {
+			display: none;
+		}
+		&.pause ~ .vid-onder-buiten .speel-video {
+			display: inline-block;
+		}
+	}
+	video.speelt ~ .vid-onder-buiten .speel-video{
+		display: none;
+	}

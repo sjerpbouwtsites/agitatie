@@ -1,0 +1,17 @@
+
+.schakel {
+	i + i {
+		display: none;
+	}
+	&.open {
+		i {
+			display: none;
+			& + i {
+				display: inline;
+			}
+		}
+		&.scroll i {
+			display: inline;
+		}
+	}
+}

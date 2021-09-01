@@ -1,0 +1,124 @@
+//parent
+html {
+	font-size: 16px;
+	@media (max-width: 900px) {
+		font-size: 14px;
+	}
+
+}
+
+body {
+	background-color: #f7fcf7;
+}
+
+#primary {
+	min-height: 60vh;
+}
+
+.klaar, .float, section, article {
+	&::after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
+
+.verpakking {
+	margin: 0 auto;
+	padding: 0 20px;
+	box-sizing: border-box;
+	width: 1200px;
+	max-width: 100%;
+}
+	.verpakking-klein {
+		width: 760px;
+	}
+	.verpakking-groot .tekst {
+		@media (min-width: 900px) {
+			columns: 2;
+			 p:first-child {
+			 	margin-top: 0;
+			 }
+			 p:last-child {
+			 	margin-bottom: 0;
+			 }
+		}
+	}
+	.verpakking .verpakking {
+		padding: 0;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+.heeft-padding {
+	& > *:first-child {
+		margin-top: 0;
+	}
+	& > *:last-child {
+		margin-bottom: 0;
+	}
+}
+
+
+.paddingveld {
+	padding-top: 25px;
+	padding-bottom: 25px;
+	@media (min-width: 900px) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	&.veel {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		@media (min-width: 900px) {
+			padding-top: 100px;
+			padding-bottom: 100px;
+		}
+	}
+}
+
+.marginveld {
+	margin-top: 25px;
+	margin-bottom: 25px;
+	@media (min-width: 900px) {
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+	&.veel {
+		margin-top: 50px;
+		margin-bottom: 50px;
+		@media (min-width: 900px) {
+			margin-top: 100px;
+			margin-bottom: 100px;
+		}
+	}
+}
+
+.blok {
+	background-color: $wit;
+	box-shadow: 0 1px 2px $grijs;
+	color: $donkergrijs;
+}
+
+
+ul.reset, ul.reset li {
+	@include ul-li-reset();
+}
+
+.post-edit-link {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	padding: .3em .6em;
+	font-weight: bold;
+	background-color: $zwart;
+	color: white;
+	font-size: 20px;
+	text-transform: uppercase;
+	z-index: 20;
+}
+
+.screen-reader-text {
+	display: none;
+}

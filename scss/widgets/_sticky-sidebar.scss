@@ -1,0 +1,38 @@
+//css krijgt pas effect in main
+
+main.heeft-sticky {
+	position: relative;
+	#sticky-sidebar {
+		position: absolute;
+		//top: 0;
+		right: 0;
+		width: 200px;
+		transition: 0.4s opacity ease-in-out;
+		//overflow-y: hidden;
+		.widget:first-child {
+			h2, h3 {
+				margin-top: 0;
+			}
+		}
+		.related-posts {
+			display: block;
+		}
+			.related-post {
+				margin-bottom: 20px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+				.related-post-info {
+					margin-top: 0;
+				}
+
+				.related-post-info, .related-post-date {
+					font-size: 12px;
+				}
+	}
+	.sticky-binnen {
+		position: sticky;
+		top: 40px;
+	}
+}
