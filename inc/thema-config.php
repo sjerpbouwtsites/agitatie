@@ -6,8 +6,8 @@ $thema_ondersteuning = array(
 'title-tag',
 'html5' => array('search-form', 'comment-form', 'comment-list', 'gallery', 'caption', ),
 'custom-logo' => array(
-	   'height'      => 101,
-	   'width'       => 387,
+	   'height'      => 70,
+	   'width'       => 210,
 	   'flex-width' => true,
 	),
 	'thumbnail_formaten' => array(), //in thumbnails
