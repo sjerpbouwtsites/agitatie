@@ -2,6 +2,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<?php get_template_part('sja/header/google-analytics'); ?>
+
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
@@ -10,4 +11,9 @@
 <?php wp_head(); ?>
 <?php get_template_part('sja/header/google-fonts'); ?>
 <meta name="format-detection" content="telephone=no"/>
+<script>
+		window.addEventListener('load', function(){
+		document.body.classList.add('pagina-geladen');
+	})
+</script>
 </head>

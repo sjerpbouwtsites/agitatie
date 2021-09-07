@@ -4642,11 +4642,13 @@ footer .search-form .search-submit {
 #stek-kop {
   background-color: #f5f5f5;
   width: 100%;
-  z-index: 2;
+  z-index: 4;
   font-size: 1.2rem;
+  -webkit-box-shadow: 0.5px 0.5px 1px rgba(33, 33, 33, 0.1);
+          box-shadow: 0.5px 0.5px 1px rgba(33, 33, 33, 0.1);
 }
 
-/* line 9, scss/_header.scss */
+/* line 10, scss/_header.scss */
 #stek-kop .rel > .verpakking {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4656,7 +4658,7 @@ footer .search-form .search-submit {
           justify-content: space-between;
 }
 
-/* line 17, scss/_header.scss */
+/* line 18, scss/_header.scss */
 #stek-kop .stek-kop-links {
   -ms-flex-preferred-size: 210px;
       flex-basis: 210px;
@@ -4672,20 +4674,20 @@ footer .search-form .search-submit {
           justify-content: center;
 }
 
-/* line 22, scss/_header.scss */
+/* line 23, scss/_header.scss */
 #stek-kop .stek-kop-links h1 {
   margin: 0;
 }
 
 @media (max-width: 460px) {
-  /* line 17, scss/_header.scss */
+  /* line 18, scss/_header.scss */
   #stek-kop .stek-kop-links {
     -ms-flex-preferred-size: 120px;
         flex-basis: 120px;
   }
 }
 
-/* line 29, scss/_header.scss */
+/* line 30, scss/_header.scss */
 #stek-kop .stek-kop-links .custom-logo-link {
   max-height: 70px;
   -o-object-fit: cover;
@@ -4695,168 +4697,138 @@ footer .search-form .search-submit {
   overflow: hidden;
 }
 
-/* line 39, scss/_header.scss */
+/* line 40, scss/_header.scss */
 #stek-kop .stek-kop-rechts {
   padding-left: 50px;
 }
 
 @media (max-width: 600px) {
-  /* line 39, scss/_header.scss */
+  /* line 40, scss/_header.scss */
   #stek-kop .stek-kop-rechts {
     padding-left: 20px;
   }
 }
 
-/* line 47, scss/_header.scss */
+/* line 48, scss/_header.scss */
 #stek-kop .stek-kop-rechts li ul li {
   margin-left: 0;
 }
 
-/* line 52, scss/_header.scss */
+/* line 53, scss/_header.scss */
 #stek-kop .custom-logo-link {
   display: block;
 }
 
-/* line 54, scss/_header.scss */
+/* line 55, scss/_header.scss */
 #stek-kop .custom-logo-link img {
   display: block;
 }
 
 /* line 2, scss/_nav.scss */
-.menu {
+.menu, .sub-menu, .menu-item {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
 
-/* line 4, scss/_nav.scss */
-.menu ul {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-/* line 20, scss/_nav.scss */
+/* line 30, scss/_nav.scss */
 .stek-kop-rechts .menu {
   overflow: visible;
 }
 
-/* line 23, scss/_nav.scss */
-.stek-kop-rechts .menu li {
+/* line 33, scss/_nav.scss */
+.stek-kop-rechts .menu.horizontaal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+/* line 38, scss/_nav.scss */
+.stek-kop-rechts .menu-item {
   position: relative;
-}
-
-/* line 25, scss/_nav.scss */
-.stek-kop-rechts .menu ul {
-  display: none;
-}
-
-@media (min-width: 900px) {
-  /* line 28, scss/_nav.scss */
-  .stek-kop-rechts .menu > li > ul {
-    position: absolute;
-    top: 100%;
-    left: 0;
-  }
-}
-
-/* line 35, scss/_nav.scss */
-.stek-kop-rechts .menu > li > ul li, .stek-kop-rechts .menu > li > ul a {
-  line-height: 1;
-}
-
-@media (min-width: 900px) {
-  /* line 42, scss/_nav.scss */
-  .stek-kop-rechts .menu > li > ul li:hover ul {
-    display: block;
-    right: 100%;
-    top: 0;
-    position: absolute;
-  }
-}
-
-@media (min-width: 900px) {
-  /* line 53, scss/_nav.scss */
-  .stek-kop-rechts .menu > li:hover > ul {
-    display: block;
-  }
-  /* line 55, scss/_nav.scss */
-  .stek-kop-rechts .menu > li:hover > ul > li:hover > ul {
-    display: block;
-  }
-}
-
-/* line 62, scss/_nav.scss */
-.stek-kop-rechts .menu a {
-  line-height: 70px;
-  padding: 0 .6em;
-  display: block;
-}
-
-/* line 13, scss/_nav.scss */
-.stek-kop-rechts .menu a:hover {
-  background-color: #C82424;
-  color: white;
-  text-decoration: none;
-}
-
-/* line 66, scss/_nav.scss */
-.stek-kop-rechts .menu .sub-menu a {
-  padding: 0.6em .7em;
-}
-
-/* line 69, scss/_nav.scss */
-.stek-kop-rechts .menu .sub-menu li {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-/* line 75, scss/_nav.scss */
-.stek-kop-rechts .menu.horizontaal li {
-  display: inline-block;
-}
-
-@media (min-width: 900px) {
-  /* line 79, scss/_nav.scss */
-  .stek-kop-rechts .menu.horizontaal > li > ul {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 3;
-    min-width: 100%;
-  }
-}
-
-/* line 87, scss/_nav.scss */
-.stek-kop-rechts .menu.horizontaal > li > ul li {
+/* line 42, scss/_nav.scss */
+.stek-kop-rechts .menu-item > a {
+  padding: 0 .6em;
   display: block;
-  min-width: 100%;
-  background-color: white;
+  line-height: 70px;
 }
 
-@media (max-width: 900px) {
-  /* line 87, scss/_nav.scss */
-  .stek-kop-rechts .menu.horizontaal > li > ul li {
-    margin-left: 30px;
-  }
+/* line 10, scss/_nav.scss */
+.stek-kop-rechts .menu-item > a:hover {
+  text-decoration: none;
+}
+
+/* line 45, scss/_nav.scss */
+.stek-kop-rechts .sub-menu {
+  z-index: 3;
+  right: 0;
+  position: absolute;
+  -webkit-box-shadow: 0.5px 0.5px 1px rgba(33, 33, 33, 0.1);
+          box-shadow: 0.5px 0.5px 1px rgba(33, 33, 33, 0.1);
+  -webkit-transform: translateY(-200%);
+          transform: translateY(-200%);
+}
+
+/* line 53, scss/_nav.scss */
+.stek-kop-rechts .sub-menu .menu-item a {
+  line-height: 1;
+  padding: .5em .7em;
+  background-color: #f5f5f5;
+}
+
+/* line 59, scss/_nav.scss */
+.pagina-geladen .stek-kop-rechts .sub-menu {
+  -webkit-transition: -webkit-transform 0.2s ease-in-out 0.4s;
+  transition: -webkit-transform 0.2s ease-in-out 0.4s;
+  transition: transform 0.2s ease-in-out 0.4s;
+  transition: transform 0.2s ease-in-out 0.4s, -webkit-transform 0.2s ease-in-out 0.4s;
 }
 
 @media (min-width: 900px) {
-  /* line 94, scss/_nav.scss */
-  .stek-kop-rechts .menu.horizontaal > li > ul li li {
-    -webkit-box-shadow: 2px 2px 2px #929292;
-            box-shadow: 2px 2px 2px #929292;
+  /* line 67, scss/_nav.scss */
+  .stek-kop-rechts .menu-item:hover > a {
+    background-color: #C82424;
+    color: white;
+  }
+  /* line 73, scss/_nav.scss */
+  .stek-kop-rechts .menu-item-has-children:hover > a, .stek-kop-rechts .menu-item-has-children:hover .sub-menu a {
+    position: relative;
+  }
+  /* line 17, scss/_nav.scss */
+  .stek-kop-rechts .menu-item-has-children:hover > a::before, .stek-kop-rechts .menu-item-has-children:hover .sub-menu a::before {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #404040;
+  }
+  /* line 76, scss/_nav.scss */
+  .stek-kop-rechts .menu-item-has-children:hover .sub-menu {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  /* line 80, scss/_nav.scss */
+  .stek-kop-rechts .menu-item-has-children:hover .sub-menu .menu-item > a:hover {
+    background-color: #C82424;
+    color: white;
   }
 }
 
-/* line 101, scss/_nav.scss */
-.stek-kop-rechts .menu.horizontaal > li:last-child > ul {
-  left: auto;
-  right: 0;
-}
-
 @media (max-width: 900px) {
-  /* line 111, scss/_nav.scss */
+  /* line 89, scss/_nav.scss */
   .stek-kop-rechts div[class*='menu'] {
     display: none;
     position: absolute;
@@ -4869,73 +4841,72 @@ footer .search-form .search-submit {
     padding-top: 20px;
     padding-bottom: 20px;
   }
-  /* line 124, scss/_nav.scss */
+  /* line 102, scss/_nav.scss */
   .stek-kop-rechts div[class*='menu'] .menu.horizontaal > li {
     display: block;
   }
-  /* line 126, scss/_nav.scss */
+  /* line 104, scss/_nav.scss */
   .stek-kop-rechts div[class*='menu'] .menu.horizontaal > li > a {
     padding: 0 .8em;
   }
-  /* line 129, scss/_nav.scss */
+  /* line 107, scss/_nav.scss */
   .stek-kop-rechts div[class*='menu'] .menu.horizontaal > li a {
     line-height: 40px;
     padding-top: 0;
     padding-bottom: 0;
   }
-  /* line 137, scss/_nav.scss */
+  /* line 115, scss/_nav.scss */
   .stek-kop-rechts div[class*='menu'] .menu .menu-item-has-children > a i {
     padding: 0 20px 0 10px;
   }
-  /* line 144, scss/_nav.scss */
+  /* line 122, scss/_nav.scss */
   .stek-kop-rechts div[class*='menu'] li li {
     text-indent: 20px;
   }
-  /* line 146, scss/_nav.scss */
+  /* line 124, scss/_nav.scss */
   .stek-kop-rechts div[class*='menu'] li li i {
     text-indent: 0;
   }
-  /* line 149, scss/_nav.scss */
+  /* line 127, scss/_nav.scss */
   .stek-kop-rechts div[class*='menu'] li li li {
     text-indent: 40px;
   }
-  /* line 151, scss/_nav.scss */
+  /* line 129, scss/_nav.scss */
   .stek-kop-rechts div[class*='menu'] li li li i {
     text-indent: 0;
   }
 }
 
-/* line 161, scss/_nav.scss */
+/* line 139, scss/_nav.scss */
 .kopmenu-mobiel {
-  line-height: 70px;
   padding: 0 .6em;
   display: block;
+  line-height: 70px;
+  display: none;
   margin-right: -20px;
   display: none;
 }
 
-/* line 13, scss/_nav.scss */
+/* line 10, scss/_nav.scss */
 .kopmenu-mobiel:hover {
-  background-color: #C82424;
-  color: white;
   text-decoration: none;
 }
 
 @media (max-width: 900px) {
-  /* line 161, scss/_nav.scss */
+  /* line 139, scss/_nav.scss */
   .kopmenu-mobiel {
     display: block;
   }
 }
 
-/* line 169, scss/_nav.scss */
+/* line 148, scss/_nav.scss */
 .kopmenu-mobiel i {
   position: relative;
   top: 2px;
   margin-left: 10px;
 }
 
-/* line 177, scss/_nav.scss */
+/* line 156, scss/_nav.scss */
 footer .menu a:hover {
   color: #C82424;
 }

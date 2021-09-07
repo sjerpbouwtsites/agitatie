@@ -4,8 +4,9 @@
 	background-color: $wittig;
  	width: 100%;
 	//height: $header-height;
-	z-index: 2;
+	z-index: 4;
 	font-size: 1.2rem;
+	box-shadow: 0.5px 0.5px 1px rgba(33, 33, 33, .1);
 	.rel > .verpakking {
 		display: flex;
 		justify-content: space-between;

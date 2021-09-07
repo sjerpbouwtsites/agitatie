@@ -26,6 +26,12 @@ function init() {
 	aside = doc.getElementById('zijbalk') || null;
 }
 
+function naAllesGeladenZetCSS(){
+	window.addEventListener('load', function(){
+		document.body.classList.add('pagina-geladen');
+	})
+}
+
 function verschrikkelijkeHacks(){
 
 	if (aside) {
