@@ -80,10 +80,49 @@ class Ag_pag_familie_w extends WP_Widget {
 	}
 }
 
+/**
+ * wordt bij desktop gebruikt om de sharedaddy heen te verplaatsen.
+ */
+class Ag_social_widget_container extends WP_Widget {
+
+    function __construct() {
+
+    parent::__construct(
+        	// Base ID of your widget
+	        'Ag_social_widget_container',
+
+	        // Widget name will appear in UI
+	        __('sharedaddy container', 'sharedaddy_container_domain'),
+
+	        // Widget description
+	        array( 'description' => __( 'Op desktop wordt naar deze container de share knoppen heen verplaatst.', 'sharedaddy_container_domain' ), )
+        );
+
+    }
+
+    // Frontend
+    public function widget($args, $instance) {
+
+    	echo "<div id='sharedaddy-in-sidebar' class='sharedaddy-in-sidebar'></div>";
+
+    }
+
+    // Backend
+    public function form($instance) {
+
+	}
+
+	public function update( $new_instance, $old_instance ) {
+		$instance = array();
+		return $instance;
+	}
+}
+
 
 // Register and load the widget
 function widget_wrap() {
     register_widget( 'ag_pag_familie_w' );
+	register_widget( 'ag_social_widget_container' );
 }
 
 add_action( 'widgets_init', 'widget_wrap' );
