@@ -1,38 +1,22 @@
 {
-  "name": "agitatie",
+  "name": "agitatie-kind",
   "version": "1.0.0",
-  "description": "Sjerps framework/thema",
+  "description": "",
   "main": "gulpfile.js",
-  "dependencies": {
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^3.1.1",
-    "gulp-plumber": "^1.1.0",
-    "gulp-jshint": "^2.0.4",
-    "gulp-sourcemaps": "^2.4.1",
-    "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^2.0.0",
-    "jshint": "^2.9.4",
-    "mdi": "^2.0.46"
-  },
-  "devDependencies": {},
   "scripts": {
-    "test": "gulp init"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sjerpbouwtsites/Agitatie.git"
-  },
-  "keywords": [
-    "beste",
-    "shit",
-    "ooit"
-  ],
-  "author": "Sjerp bouwt sites",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sjerpbouwtsites/Agitatie/issues"
-  },
-  "homepage": "https://github.com/sjerpbouwtsites/Agitatie#readme"
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.1.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-sass": "^4.0.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-uglify": "^3.0.0",
+    "jshint": "^2.9.5"
+  }
 }
