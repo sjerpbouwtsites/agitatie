@@ -40,19 +40,19 @@ if(!function_exists('ag_art_meta_ctrl')) : function ag_art_meta_ctrl() {
 		return;
 	}
 
-    remove_filter( 'the_content', 'sharing_display', 19 );
-    remove_filter( 'the_excerpt', 'sharing_display', 19 );
+    // remove_filter( 'the_content', 'sharing_display', 19 );
+    // remove_filter( 'the_excerpt', 'sharing_display', 19 );
 
-    if ( function_exists( 'sharing_display' ) ) {
+    // if ( function_exists( 'sharing_display' ) ) {
 
-    	add_action('ag_pagina_voor_tekst', 'ag_art_meta_print_share', 20);
+    // 	add_action('ag_pagina_voor_tekst', 'ag_art_meta_print_share', 20);
 
-	}
+	// }
 
 	//art-meta gestart aan begin van action,
 	//gesloten op 99.
-	add_action('ag_pagina_voor_tekst', 'ag_art_meta_wrap_datum_en_share_start', 5);
-	add_action('ag_pagina_voor_tekst', 'ag_art_meta_wrap_datum_en_share_eind', 99);
+	//add_action('ag_pagina_voor_tekst', 'ag_art_meta_wrap_datum_en_share_start', 5);
+	//add_action('ag_pagina_voor_tekst', 'ag_art_meta_wrap_datum_en_share_eind', 99);
 
 }
 
