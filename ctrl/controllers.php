@@ -51,6 +51,13 @@ if(!function_exists('ag_agenda_filter_ctrl')) : function ag_agenda_filter_ctrl()
 
 if(!function_exists('ag_kop_menu_ctrl')) :  function ag_kop_menu_ctrl($menu_klasse = ''){
 
+	$menu_locations = get_nav_menu_locations();
+	if (!array_key_exists('kop', $menu_locations)) {
+		$adm_url = get_admin_url('nav-menus.php');
+		echo "<p class='foutmelding'><a href='$adm_url'>👉 Todo: menu maken & aan kop toekennen.</a></p>";
+		return;
+	}
+
 	$a = array(
 		'menu' 			=> 'kop',
 	);
