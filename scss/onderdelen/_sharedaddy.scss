@@ -1,40 +1,32 @@
 // sharydaddy naar boven
-.bericht-tekst {
-	display: flex;
-	flex-direction: column;
-    & > * {
-        order: 2;
-    }
-    & .sharedaddy {
-        border-top: 2px solid #4881b2;
-        order: 1;
-        padding: .5em 0.25em;
-        color: #4881b2;
-        margin-top: 1em;
-        margin-bottom: 1em;
-        position: relative;
+
+     .sharedaddy {
+        background-color: #DCDCDC;
         width: 260px;
-        max-width: 50%;
-        border-bottom: 2px solid #4881b2;
-        background-color: #4881b212;
+        max-width: 100%;
+        padding: 15px;
+        position: relative;
+        margin: 3em 0 0 !important;
     }
     .sd-sharing {
         margin: 0;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-between;  
     }
-
+ 
     // specificity gevecht
-    div.sharedaddy .sd-title {
-        margin: 0;
-        margin-left: 1em;
-        font-size: 1em;
-        order: 2;
+    div.sharedaddy .sd-title { 
         font-family: $kopletter;
-        font-style: italic;
+        font-size: 2em !important;
+        line-height: 1 !important;
+        margin: 0 !important;   
+        position: absolute;
+        top: -27px;
+        right: 0;
+        
         &::before {
-            display: none;
+            display: none !important;
         }
     }
     .share-customize-link {
@@ -47,7 +39,7 @@
             content: 'admin: ';
         }
     }    
-    &:hover .share-customize-link{
+    .sharedaddy:hover .share-customize-link{
         display: block;
     }
-}
+

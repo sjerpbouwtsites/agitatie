@@ -3834,43 +3834,18 @@ video.speelt ~ .vid-onder-buiten .speel-video {
   display: none;
 }
 
-/* line 2, scss/onderdelen/_sharedaddy.scss */
-.bericht-tekst {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-/* line 5, scss/onderdelen/_sharedaddy.scss */
-.bericht-tekst > * {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-}
-
-/* line 8, scss/onderdelen/_sharedaddy.scss */
-.bericht-tekst .sharedaddy {
-  border-top: 2px solid #4881b2;
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-  padding: .5em 0.25em;
-  color: #4881b2;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  position: relative;
+/* line 3, scss/onderdelen/_sharedaddy.scss */
+.sharedaddy {
+  background-color: #DCDCDC;
   width: 260px;
-  max-width: 50%;
-  border-bottom: 2px solid #4881b2;
-  background-color: #4881b212;
+  max-width: 100%;
+  padding: 15px;
+  position: relative;
+  margin: 3em 0 0 !important;
 }
 
-/* line 21, scss/onderdelen/_sharedaddy.scss */
-.bericht-tekst .sd-sharing {
+/* line 11, scss/onderdelen/_sharedaddy.scss */
+.sd-sharing {
   margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3883,25 +3858,24 @@ video.speelt ~ .vid-onder-buiten .speel-video {
           justify-content: space-between;
 }
 
-/* line 29, scss/onderdelen/_sharedaddy.scss */
-.bericht-tekst div.sharedaddy .sd-title {
-  margin: 0;
-  margin-left: 1em;
-  font-size: 1em;
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
+/* line 19, scss/onderdelen/_sharedaddy.scss */
+div.sharedaddy .sd-title {
   font-family: "Eczar", sans-serif;
-  font-style: italic;
+  font-size: 2em !important;
+  line-height: 1 !important;
+  margin: 0 !important;
+  position: absolute;
+  top: -27px;
+  right: 0;
 }
 
-/* line 36, scss/onderdelen/_sharedaddy.scss */
-.bericht-tekst div.sharedaddy .sd-title::before {
-  display: none;
+/* line 28, scss/onderdelen/_sharedaddy.scss */
+div.sharedaddy .sd-title::before {
+  display: none !important;
 }
 
-/* line 40, scss/onderdelen/_sharedaddy.scss */
-.bericht-tekst .share-customize-link {
+/* line 32, scss/onderdelen/_sharedaddy.scss */
+.share-customize-link {
   display: none;
   position: absolute;
   right: 8px;
@@ -3909,13 +3883,13 @@ video.speelt ~ .vid-onder-buiten .speel-video {
   font-weight: bold;
 }
 
-/* line 46, scss/onderdelen/_sharedaddy.scss */
-.bericht-tekst .share-customize-link a::before {
+/* line 38, scss/onderdelen/_sharedaddy.scss */
+.share-customize-link a::before {
   content: 'admin: ';
 }
 
-/* line 50, scss/onderdelen/_sharedaddy.scss */
-.bericht-tekst:hover .share-customize-link {
+/* line 42, scss/onderdelen/_sharedaddy.scss */
+.sharedaddy:hover .share-customize-link {
   display: block;
 }
 

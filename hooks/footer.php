@@ -22,3 +22,4 @@ if(!function_exists('ag_print_footer_widgets')) : function ag_print_footer_widge
 } endif;
 
 add_action('ag_footer_widget_action', 'ag_print_footer_widgets', 10);
+
