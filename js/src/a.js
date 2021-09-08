@@ -155,9 +155,20 @@ function stickySidebar() {
 
 		$('.related.verpakking').addClass('widget').appendTo(".sticky-binnen");
 		$sticky.css({'opacity': 1});
+
+		verplaatsShareDaddy()
+
 	}, 500);
 
 
+}
+
+function verplaatsShareDaddy(){
+	var shareDaddyOrigineel = document.querySelector('.sharedaddy');
+	shareDaddyOrigineel.parentNode.removeChild(shareDaddyOrigineel);
+	var shareDaddyWrapperSidebar = document.getElementById('sharedaddy-in-sidebar');
+	shareDaddyWrapperSidebar.appendChild(shareDaddyOrigineel);
+	shareDaddyOrigineel.classList.add('actief');
 }
 
 

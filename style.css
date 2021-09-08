@@ -1091,7 +1091,7 @@ html {
 
 /* line 10, scss/_generiek.scss */
 body {
-  background-color: #f7fcf7;
+  background-color: #f7f7f7;
 }
 
 /* line 14, scss/_generiek.scss */
@@ -3834,17 +3834,24 @@ video.speelt ~ .vid-onder-buiten .speel-video {
   display: none;
 }
 
-/* line 3, scss/onderdelen/_sharedaddy.scss */
+/* line 1, scss/onderdelen/_sharedaddy.scss */
 .sharedaddy {
-  background-color: #DCDCDC;
+  display: none !important;
+  background-color: #EAF4F1;
   width: 260px;
   max-width: 100%;
   padding: 15px;
   position: relative;
-  margin: 3em 0 0 !important;
+  border-top: 3em solid #f7f7f7;
+  margin: 0 !important;
 }
 
-/* line 11, scss/onderdelen/_sharedaddy.scss */
+/* line 10, scss/onderdelen/_sharedaddy.scss */
+.sharedaddy.actief {
+  display: block !important;
+}
+
+/* line 14, scss/onderdelen/_sharedaddy.scss */
 .sd-sharing {
   margin: 0;
   display: -webkit-box;
@@ -3858,23 +3865,23 @@ video.speelt ~ .vid-onder-buiten .speel-video {
           justify-content: space-between;
 }
 
-/* line 19, scss/onderdelen/_sharedaddy.scss */
+/* line 22, scss/onderdelen/_sharedaddy.scss */
 div.sharedaddy .sd-title {
   font-family: "Eczar", sans-serif;
   font-size: 2em !important;
   line-height: 1 !important;
   margin: 0 !important;
   position: absolute;
-  top: -27px;
+  top: -25px;
   right: 0;
 }
 
-/* line 28, scss/onderdelen/_sharedaddy.scss */
+/* line 31, scss/onderdelen/_sharedaddy.scss */
 div.sharedaddy .sd-title::before {
   display: none !important;
 }
 
-/* line 32, scss/onderdelen/_sharedaddy.scss */
+/* line 35, scss/onderdelen/_sharedaddy.scss */
 .share-customize-link {
   display: none;
   position: absolute;
@@ -3883,12 +3890,12 @@ div.sharedaddy .sd-title::before {
   font-weight: bold;
 }
 
-/* line 38, scss/onderdelen/_sharedaddy.scss */
+/* line 41, scss/onderdelen/_sharedaddy.scss */
 .share-customize-link a::before {
   content: 'admin: ';
 }
 
-/* line 42, scss/onderdelen/_sharedaddy.scss */
+/* line 45, scss/onderdelen/_sharedaddy.scss */
 .sharedaddy:hover .share-customize-link {
   display: block;
 }

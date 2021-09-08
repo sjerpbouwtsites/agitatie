@@ -103,7 +103,8 @@ class Ag_social_widget_container extends WP_Widget {
     // Frontend
     public function widget($args, $instance) {
 
-    	echo "<div id='sharedaddy-in-sidebar' class='sharedaddy-in-sidebar'></div>";
+		echo "<section id='sharedaddy-in-sidebar' class='widget sticky-widget widget_block sharedaddy-in-sidebar'></section>";
+    	
 
     }
 

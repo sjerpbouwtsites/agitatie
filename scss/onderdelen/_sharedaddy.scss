@@ -1,45 +1,48 @@
-// sharydaddy naar boven
+    .sharedaddy {
+    display: none !important;
+    background-color: #EAF4F1;
+    width: 260px;
+    max-width: 100%;
+    padding: 15px;
+    position: relative;
+    border-top: 3em solid $achtergrondkleur;
+    margin: 0 !important;
+    &.actief {
+        display: block !important;
+    }
+}
+.sd-sharing {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+}
 
-     .sharedaddy {
-        background-color: #DCDCDC;
-        width: 260px;
-        max-width: 100%;
-        padding: 15px;
-        position: relative;
-        margin: 3em 0 0 !important;
+// specificity gevecht
+div.sharedaddy .sd-title { 
+    font-family: $kopletter;
+    font-size: 2em !important;
+    line-height: 1 !important;
+    margin: 0 !important;   
+    position: absolute;
+    top: -25px;
+    right: 0;
+    
+    &::before {
+        display: none !important;
     }
-    .sd-sharing {
-        margin: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;  
+}
+.share-customize-link {
+    display: none;
+    position: absolute;
+    right: 8px;
+    top: 1px;
+    font-weight: bold;
+    & a::before {
+        content: 'admin: ';
     }
- 
-    // specificity gevecht
-    div.sharedaddy .sd-title { 
-        font-family: $kopletter;
-        font-size: 2em !important;
-        line-height: 1 !important;
-        margin: 0 !important;   
-        position: absolute;
-        top: -27px;
-        right: 0;
-        
-        &::before {
-            display: none !important;
-        }
-    }
-    .share-customize-link {
-        display: none;
-        position: absolute;
-        right: 8px;
-        top: 1px;
-        font-weight: bold;
-        & a::before {
-            content: 'admin: ';
-        }
-    }    
-    .sharedaddy:hover .share-customize-link{
-        display: block;
-    }
+}    
+.sharedaddy:hover .share-customize-link{
+    display: block;
+}
 

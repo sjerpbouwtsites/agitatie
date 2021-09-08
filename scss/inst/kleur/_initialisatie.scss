@@ -10,6 +10,8 @@ $hoofdkleur: 		$basis_hoofdkleur;
 $zijkleur: 			$basis_zijkleur;
 $accentkleur: 		$basis_accentkleur;
 
+$achtergrondkleur:  #f7f7f7;
+
 $hoofdkleur_donker: darken($hoofdkleur, 5%);
 $zijkleur_donker: 	darken($zijkleur, 5%);
 $accentkleur_donker:darken($accentkleur, 5%);
