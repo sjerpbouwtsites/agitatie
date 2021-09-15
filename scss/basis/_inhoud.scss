@@ -175,38 +175,44 @@ object {
 ## Galleries
 --------------------------------------------------------------*/
 .gallery {
-	margin-bottom: 1.5em;
+	//margin-bottom: 1.5em;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .gallery-item {
-	display: inline-block;
-	text-align: center;
-	vertical-align: top;
-	width: 100%;
+	// display: inline-block;
+	// text-align: center;
+	// vertical-align: top;
+	// width: 100%;
+	flex-basis: 100%;
+	margin: 0;
+	flex-grow:1;
+	position: relative;
 }
 
 .gallery-columns-2 .gallery-item {
-	max-width: 50%;
+	flex-basis: 50%;
 }
 
 .gallery-columns-3 .gallery-item {
-	max-width: 33.33%;
+	flex-basis: 33.33%;
 }
 
 .gallery-columns-4 .gallery-item {
-	max-width: 25%;
+	flex-basis: 25%;
 }
 
 .gallery-columns-5 .gallery-item {
-	max-width: 20%;
+	flex-basis: 20%;
 }
 
 .gallery-columns-6 .gallery-item {
-	max-width: 16.66%;
+	flex-basis: 16.66%;
 }
 
 .gallery-columns-7 .gallery-item {
-	max-width: 14.28%;
+	flex-basis: 14.28%;
 }
 
 .gallery-columns-8 .gallery-item {
@@ -217,6 +223,31 @@ object {
 	max-width: 11.11%;
 }
 
+.gallery-icon {
+	height: 100%;
+}
+.gallery-icon > a {
+	display: block;
+	height: 100%;
+}
+.gallery-icon img {
+	object-fit: cover;
+	object-position: center;
+	height: 100%;
+	width: 100%;
+}
+
 .gallery-caption {
+	// display: block;
+	 display: none;
+	 position: absolute;
+	 left: 50%;
+	 top: 50%;
+	 transform: translate(-50%, -50%);
+	 color: white;
+	 padding: 10px;
+	 background-color: $zwart;
+}
+.gallery-item:hover .gallery-caption {
 	display: block;
 }

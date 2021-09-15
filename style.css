@@ -970,59 +970,106 @@ object {
 --------------------------------------------------------------*/
 /* line 177, scss/basis/_inhoud.scss */
 .gallery {
-  margin-bottom: 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-/* line 181, scss/basis/_inhoud.scss */
+/* line 183, scss/basis/_inhoud.scss */
 .gallery-item {
-  display: inline-block;
-  text-align: center;
-  vertical-align: top;
-  width: 100%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  margin: 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  position: relative;
 }
 
-/* line 188, scss/basis/_inhoud.scss */
+/* line 194, scss/basis/_inhoud.scss */
 .gallery-columns-2 .gallery-item {
-  max-width: 50%;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
 }
 
-/* line 192, scss/basis/_inhoud.scss */
+/* line 198, scss/basis/_inhoud.scss */
 .gallery-columns-3 .gallery-item {
-  max-width: 33.33%;
+  -ms-flex-preferred-size: 33.33%;
+      flex-basis: 33.33%;
 }
 
-/* line 196, scss/basis/_inhoud.scss */
+/* line 202, scss/basis/_inhoud.scss */
 .gallery-columns-4 .gallery-item {
-  max-width: 25%;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
 }
 
-/* line 200, scss/basis/_inhoud.scss */
+/* line 206, scss/basis/_inhoud.scss */
 .gallery-columns-5 .gallery-item {
-  max-width: 20%;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
 }
 
-/* line 204, scss/basis/_inhoud.scss */
+/* line 210, scss/basis/_inhoud.scss */
 .gallery-columns-6 .gallery-item {
-  max-width: 16.66%;
+  -ms-flex-preferred-size: 16.66%;
+      flex-basis: 16.66%;
 }
 
-/* line 208, scss/basis/_inhoud.scss */
+/* line 214, scss/basis/_inhoud.scss */
 .gallery-columns-7 .gallery-item {
-  max-width: 14.28%;
+  -ms-flex-preferred-size: 14.28%;
+      flex-basis: 14.28%;
 }
 
-/* line 212, scss/basis/_inhoud.scss */
+/* line 218, scss/basis/_inhoud.scss */
 .gallery-columns-8 .gallery-item {
   max-width: 12.5%;
 }
 
-/* line 216, scss/basis/_inhoud.scss */
+/* line 222, scss/basis/_inhoud.scss */
 .gallery-columns-9 .gallery-item {
   max-width: 11.11%;
 }
 
-/* line 220, scss/basis/_inhoud.scss */
+/* line 226, scss/basis/_inhoud.scss */
+.gallery-icon {
+  height: 100%;
+}
+
+/* line 229, scss/basis/_inhoud.scss */
+.gallery-icon > a {
+  display: block;
+  height: 100%;
+}
+
+/* line 233, scss/basis/_inhoud.scss */
+.gallery-icon img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 240, scss/basis/_inhoud.scss */
 .gallery-caption {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  padding: 10px;
+  background-color: #252525;
+}
+
+/* line 251, scss/basis/_inhoud.scss */
+.gallery-item:hover .gallery-caption {
   display: block;
 }
 

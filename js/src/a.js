@@ -148,7 +148,7 @@ function stickySidebar() {
 		$sticky.css({'top': offset + 'px'});
 		$sticky.css({'right': right + 'px'});
 
-		//$sticky.height($('div.bericht-tekst').height());
+		$sticky.height($('div.bericht-tekst').height());
 
 		$('#main').addClass('heeft-sticky').append($sticky);
 
