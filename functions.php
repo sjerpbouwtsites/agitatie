@@ -106,3 +106,7 @@ function change_content_width() {
     $GLOBALS['content_width'] = 760;
 }
 add_action( 'template_redirect', 'change_content_width' );
+
+function body_data(){
+	echo " data-content-width='".$GLOBALS['content_width']."' ";
+}
