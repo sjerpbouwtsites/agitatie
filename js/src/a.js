@@ -104,22 +104,19 @@ function kopmenuSubMobiel() {
 		//niet mobiel
 	}
 
+	// $("#stek-kop .menu").on('click', 'i', function(e){
+	// 	e.preventDefault();
+		
+	// 	document.querySelector('.menu-kop-container').classList.toggle('tonen');
 
-	$("#stek-kop .menu-item-has-children > a").each(function(){
-		$(this).append($("<i class='mdi mdi-plus-circle-outline'></i>"));
-	});
+	// 	// const menuKop = document.getElementById('menu-kop');
+	// 	// menuKop.classList.add('klaar-voor-schuiven');
+	// 	// setTimeout(()=>{
+	// 	// 	menuKop.classList.toggle('omhoog-geschoven');
+	// 	// }, 5); 
 
-	$("#stek-kop .menu").on('click', 'i', function(e){
-		e.preventDefault();
-		if ($(this).hasClass('mdi-plus-circle-outline')) {
-			$(this).removeClass('mdi-plus-circle-outline');
-			$(this).addClass('mdi-minus-circle-outline');
-		} else {
-			$(this).removeClass('mdi-minus-circle-outline');
-			$(this).addClass('mdi-plus-circle-outline');
-		}
-		$(this).closest('.menu-item-has-children').find('ul').first().toggle();
-	});
+		
+	// });
 
 }
 
