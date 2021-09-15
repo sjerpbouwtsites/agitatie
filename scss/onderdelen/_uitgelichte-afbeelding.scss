@@ -1,6 +1,6 @@
 .uitgelichte-afbeelding-buiten {
 	position: relative;
-	height: 50vh;
+	height: calc(50vh + 5em);
 	img {
 		display: block;
 		width: 100%;
@@ -46,4 +46,29 @@
 		}
 	}
 
+}
+
+.uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig {
+	margin-top: 0;
+	h1:first-child {
+		margin-top: -2em;
+		padding-top: .66em;
+		background-color: $achtergrondkleur;
+		position: relative;
+		&::before, &::after {
+			display: block;
+			content: '';
+			background-color: $achtergrondkleur;
+			width:.66em;
+			height: 100%;
+			position: absolute;
+			top: 0;
+		}
+		&::before {
+			right: 100%;
+		}
+		&::after {
+			left: 100%;
+		}
+	}
 }

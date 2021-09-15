@@ -69,6 +69,10 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+h1 {
+	line-height: .8;
+}
+
 	h4, h5, h6 {
 		font-weight: 700;
 	}
@@ -83,10 +87,9 @@ p, span {
 }
 
 .bericht-tekst { 
-	font-size: 1.5em;
-	p:first-child::first-letter {
-		initial-letter: 2;
-		-webkit-initial-letter:2;
+	font-size: 1.33em;
+	& > * {
+		line-height: 1.35;
 	}
 }
 

@@ -1109,7 +1109,7 @@ body {
 /* line 27, scss/_generiek.scss */
 .verpakking {
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 1.25em;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 1200px;
@@ -1157,61 +1157,61 @@ body {
 
 /* line 64, scss/_generiek.scss */
 .paddingveld {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
 }
 
 @media (min-width: 900px) {
   /* line 64, scss/_generiek.scss */
   .paddingveld {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 3em;
+    padding-bottom: 3em;
   }
 }
 
 /* line 71, scss/_generiek.scss */
 .paddingveld.veel {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 3em;
+  padding-bottom: 3em;
 }
 
 @media (min-width: 900px) {
   /* line 71, scss/_generiek.scss */
   .paddingveld.veel {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 6em;
+    padding-bottom: 6em;
   }
 }
 
 /* line 81, scss/_generiek.scss */
 .marginveld {
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 @media (min-width: 900px) {
   /* line 81, scss/_generiek.scss */
   .marginveld {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 3em;
+    margin-bottom: 3em;
   }
 }
 
 /* line 88, scss/_generiek.scss */
 .marginveld.veel {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 3em;
+  margin-bottom: 3em;
 }
 
 @media (min-width: 900px) {
   /* line 88, scss/_generiek.scss */
   .marginveld.veel {
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 6em;
+    margin-bottom: 6em;
   }
 }
 
-/* line 98, scss/_generiek.scss */
+/* line 101, scss/_generiek.scss */
 .blok {
   background-color: #fff;
   -webkit-box-shadow: 0 1px 2px #666;
@@ -1219,14 +1219,14 @@ body {
   color: #211f1f;
 }
 
-/* line 105, scss/_generiek.scss */
+/* line 108, scss/_generiek.scss */
 ul.reset, ul.reset li {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
 
-/* line 109, scss/_generiek.scss */
+/* line 112, scss/_generiek.scss */
 .post-edit-link {
   position: fixed;
   bottom: 0;
@@ -1240,7 +1240,7 @@ ul.reset, ul.reset li {
   z-index: 20;
 }
 
-/* line 122, scss/_generiek.scss */
+/* line 125, scss/_generiek.scss */
 .screen-reader-text {
   display: none;
 }
@@ -1359,32 +1359,36 @@ h6 {
 }
 
 /* line 72, scss/_generiek-teksten.scss */
+h1 {
+  line-height: .8;
+}
+
+/* line 76, scss/_generiek-teksten.scss */
 h4, h5, h6 {
   font-weight: 700;
 }
 
-/* line 76, scss/_generiek-teksten.scss */
+/* line 80, scss/_generiek-teksten.scss */
 h1, h2 {
   letter-spacing: .02em;
 }
 
-/* line 81, scss/_generiek-teksten.scss */
+/* line 85, scss/_generiek-teksten.scss */
 p, span {
   line-height: 1.45;
 }
 
-/* line 85, scss/_generiek-teksten.scss */
+/* line 89, scss/_generiek-teksten.scss */
 .bericht-tekst {
-  font-size: 1.5em;
+  font-size: 1.33em;
 }
 
-/* line 87, scss/_generiek-teksten.scss */
-.bericht-tekst p:first-child::first-letter {
-  initial-letter: 2;
-  -webkit-initial-letter: 2;
+/* line 91, scss/_generiek-teksten.scss */
+.bericht-tekst > * {
+  line-height: 1.35;
 }
 
-/* line 95, scss/_generiek-teksten.scss */
+/* line 98, scss/_generiek-teksten.scss */
 main blockquote {
   line-height: 1.5625em;
   text-transform: none;
@@ -1395,7 +1399,7 @@ main blockquote {
   margin: 0;
 }
 
-/* line 103, scss/_generiek-teksten.scss */
+/* line 106, scss/_generiek-teksten.scss */
 main blockquote p {
   display: inline-block;
   vertical-align: top;
@@ -1404,7 +1408,7 @@ main blockquote p {
   font-size: inherit;
 }
 
-/* line 110, scss/_generiek-teksten.scss */
+/* line 113, scss/_generiek-teksten.scss */
 main blockquote::before {
   content: "\F756";
   display: inline-block;
@@ -3694,7 +3698,7 @@ input.wpcf7-submit {
 /* line 1, scss/onderdelen/_uitgelichte-afbeelding.scss */
 .uitgelichte-afbeelding-buiten {
   position: relative;
-  height: 50vh;
+  height: calc(50vh + 5em);
 }
 
 /* line 4, scss/onderdelen/_uitgelichte-afbeelding.scss */
@@ -3761,6 +3765,40 @@ input.wpcf7-submit {
 /* line 44, scss/onderdelen/_uitgelichte-afbeelding.scss */
 .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop .knop, .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop .navigation a, .navigation .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop a, .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop #agenda-filter [type='submit'], #agenda-filter .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop [type='submit'], .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop .search-form .search-submit, .search-form .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop .search-submit {
   font-size: 1.6em;
+}
+
+/* line 51, scss/onderdelen/_uitgelichte-afbeelding.scss */
+.uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig {
+  margin-top: 0;
+}
+
+/* line 53, scss/onderdelen/_uitgelichte-afbeelding.scss */
+.uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child {
+  margin-top: -2em;
+  padding-top: .66em;
+  background-color: #f7f7f7;
+  position: relative;
+}
+
+/* line 58, scss/onderdelen/_uitgelichte-afbeelding.scss */
+.uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child::before, .uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child::after {
+  display: block;
+  content: '';
+  background-color: #f7f7f7;
+  width: .66em;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+/* line 67, scss/onderdelen/_uitgelichte-afbeelding.scss */
+.uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child::before {
+  right: 100%;
+}
+
+/* line 70, scss/onderdelen/_uitgelichte-afbeelding.scss */
+.uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child::after {
+  left: 100%;
 }
 
 /* line 3, scss/onderdelen/_viddoos.scss */

@@ -9,7 +9,7 @@ echo "<article class='bericht'>";
 ag_uitgelichte_afbeelding_ctrl();
 
 while ( have_posts() ) : the_post();
-	echo "<div class='verpakking verpakking-klein marginveld'>";
+	echo "<div class='verpakking verpakking-klein marginveld titel-over-afbeelding-indien-aanwezig'>";
 
 		do_action('ag_pagina_titel');
 
