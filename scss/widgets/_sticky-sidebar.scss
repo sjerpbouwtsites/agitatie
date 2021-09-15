@@ -12,7 +12,6 @@ main.heeft-sticky {
 		right: 0;
 		transition: 0.4s opacity ease-in-out;
 		padding: 20px; 
-		border-left: 5px solid $hoofdkleur;
 		&::before {
 			content: '';
 			display: block;
@@ -50,5 +49,9 @@ main.heeft-sticky {
 	.sticky-binnen {
 		position: sticky;
 		top: 40px;
+		padding: 20px 20px 40px 20px;
+		margin-left: -20px;
+		margin-top: -20px;
+		border-left: 5px solid $hoofdkleur;
 	}
-}
+} 

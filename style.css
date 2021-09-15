@@ -4061,10 +4061,9 @@ main.heeft-sticky #sticky-sidebar {
   -webkit-transition: 0.4s opacity ease-in-out;
   transition: 0.4s opacity ease-in-out;
   padding: 20px;
-  border-left: 5px solid #0099dc;
 }
 
-/* line 16, scss/widgets/_sticky-sidebar.scss */
+/* line 15, scss/widgets/_sticky-sidebar.scss */
 main.heeft-sticky #sticky-sidebar::before {
   content: '';
   display: block;
@@ -4077,40 +4076,44 @@ main.heeft-sticky #sticky-sidebar::before {
   background-color: #0099dc;
 }
 
-/* line 29, scss/widgets/_sticky-sidebar.scss */
+/* line 28, scss/widgets/_sticky-sidebar.scss */
 main.heeft-sticky #sticky-sidebar .widget:first-child h2, main.heeft-sticky #sticky-sidebar .widget:first-child h3 {
   margin-top: 0;
 }
 
-/* line 33, scss/widgets/_sticky-sidebar.scss */
+/* line 32, scss/widgets/_sticky-sidebar.scss */
 main.heeft-sticky #sticky-sidebar .related-posts {
   display: block;
 }
 
-/* line 36, scss/widgets/_sticky-sidebar.scss */
+/* line 35, scss/widgets/_sticky-sidebar.scss */
 main.heeft-sticky #sticky-sidebar .related-post {
   margin-bottom: 20px;
 }
 
-/* line 38, scss/widgets/_sticky-sidebar.scss */
+/* line 37, scss/widgets/_sticky-sidebar.scss */
 main.heeft-sticky #sticky-sidebar .related-post:last-child {
   margin-bottom: 0;
 }
 
-/* line 42, scss/widgets/_sticky-sidebar.scss */
+/* line 41, scss/widgets/_sticky-sidebar.scss */
 main.heeft-sticky #sticky-sidebar .related-post-info {
   margin-top: 0;
 }
 
-/* line 46, scss/widgets/_sticky-sidebar.scss */
+/* line 45, scss/widgets/_sticky-sidebar.scss */
 main.heeft-sticky #sticky-sidebar .related-post-info, main.heeft-sticky #sticky-sidebar .related-post-date {
   font-size: 12px;
 }
 
-/* line 50, scss/widgets/_sticky-sidebar.scss */
+/* line 49, scss/widgets/_sticky-sidebar.scss */
 main.heeft-sticky .sticky-binnen {
   position: sticky;
   top: 40px;
+  padding: 20px 20px 40px 20px;
+  margin-left: -20px;
+  margin-top: -20px;
+  border-left: 5px solid #0099dc;
 }
 
 /* line 2, scss/widgets/_pag-fam.scss */
