@@ -145,10 +145,10 @@ function stickySidebar() {
 
 		var right = ((body.scrollWidth - berichtWidth) / 2) - 320; //sticky width plus margin
 
-		$sticky.css({'top': offset + 'px'});
+		$sticky.css({'top': offset + 'px'});  
 		$sticky.css({'right': right + 'px'});
 
-		$sticky.height($('div.bericht-tekst').height());
+		//$sticky.height($('div.bericht-tekst').height());
 
 		$('#main').addClass('heeft-sticky').append($sticky);
 
