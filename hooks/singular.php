@@ -47,19 +47,19 @@ if (!function_exists('ag_singular_taxonomieen')) : function ag_singular_taxonomi
 
 	if (count($terms)) :
 
-		echo "<div class='marginveld verpakking bericht-tekst verpakking-klein onder-artikel-taxonomieen'>";
+		echo "<div class='marginveld verpakking verpakking-klein onder-artikel-taxonomieen'>";
 
 		$pt_n = (array_key_exists($post->post_type, $vervang) ? $vervang[$post->post_type] : $post->post_type);
 
 		//als deze/dit  expliciet is ingesteld in de post type, zit het in labels->edit_item;
 		//kijk of deze er in zit, anders altijd dit.
-		if (strpos($post_type_obj->labels->edit_item, 'deze')) {
-			$aanwijswoord = 'Deze';
-		} else {
-			$aanwijswoord = 'Dit';
-		}
+		// if (strpos($post_type_obj->labels->edit_item, 'deze')) {
+		// 	$aanwijswoord = 'Deze';
+		// } else {
+		// 	$aanwijswoord = 'Dit';
+		// }
 
-		echo "<h2>$aanwijswoord $pt_n zit in:</h2>";
+		// echo "<h2>$aanwijswoord $pt_n zit in:</h2>";
 
 		foreach ( $terms as $term ) :
 
