@@ -184,12 +184,17 @@ class Ag_article_c extends Ag_basis_class{
 
 			$afb_verz = get_field('cat_afb', 'category_'.$this->art->term_id);
 
-			$img = "<img
-				src='{$afb_verz['sizes']['lijst']}'
-				alt='{$afb_verz['alt']}'
-				height='{$afb_verz['sizes']['lijst-width']}'
-				width='{$afb_verz['sizes']['lijst-height']}'
-			/>";
+			if ($afb_verz) {
+				$img = "<img
+					src='{$afb_verz['sizes']['lijst']}'
+					alt='{$afb_verz['alt']}'
+					height='{$afb_verz['sizes']['lijst-width']}'
+					width='{$afb_verz['sizes']['lijst-height']}'
+				/>";
+			} else {
+				$img = '';
+			}
+
 
 		} else {
 

@@ -75,7 +75,14 @@
 			left: 100%;
 		}
 	}
-}}
+}
+.archief .uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child {
+	padding-bottom: .66em;
+	margin-bottom: 0;
+	max-width: 380px;
+	margin-top: -2.1em;
+}
+}
 
 @media screen and (max-width: 768px) {
 	.uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1 {

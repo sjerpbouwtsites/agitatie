@@ -60,13 +60,13 @@ if(!function_exists('ag_archief_sub_tax_ctrl')) : function ag_archief_sub_tax_ct
 
 			$vertaal = array(
 				'post_tag' => 'Subtags',
-				'category' => 'Subcategorie&euml;n'
+				'category' => 'Onder deze categorie:'
 			);
 
 			$naam = array_key_exists($kinderen[0]->taxonomy, $vertaal) ? $vertaal[($kinderen[0]->taxonomy)] : $kinderen[0]->taxonomy;
 
 
-			echo "<p><strong>$naam:</strong></p>";
+			echo "<p class='geen-margin-top'><strong>$naam:</strong></p>";
 
 			echo "<div class='art-lijst'>";
 

@@ -9,7 +9,7 @@ get_template_part('/sja/open-main');
 
 ag_uitgelichte_afbeelding_ctrl();
 
-echo "<div class='marginveld veel verpakking'>";
+echo "<div class='marginveld titel-over-afbeelding-indien-aanwezig  veel verpakking'>";
 
     do_action('ag_archief_titel_action');
 

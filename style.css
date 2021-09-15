@@ -1106,7 +1106,12 @@ body {
   clear: both;
 }
 
-/* line 27, scss/_generiek.scss */
+/* line 26, scss/_generiek.scss */
+.geen-margin-top {
+  margin-top: 0;
+}
+
+/* line 31, scss/_generiek.scss */
 .verpakking {
   margin: 0 auto;
   padding: 0 2.33em;
@@ -1117,108 +1122,108 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  /* line 27, scss/_generiek.scss */
+  /* line 31, scss/_generiek.scss */
   .verpakking {
     padding: 0 1.25em;
   }
 }
 
-/* line 37, scss/_generiek.scss */
+/* line 41, scss/_generiek.scss */
 .verpakking-klein {
   width: 760px;
 }
 
 @media (min-width: 900px) {
-  /* line 40, scss/_generiek.scss */
+  /* line 44, scss/_generiek.scss */
   .verpakking-groot .tekst {
     -webkit-columns: 2;
        -moz-columns: 2;
             columns: 2;
   }
-  /* line 43, scss/_generiek.scss */
+  /* line 47, scss/_generiek.scss */
   .verpakking-groot .tekst p:first-child {
     margin-top: 0;
   }
-  /* line 46, scss/_generiek.scss */
+  /* line 50, scss/_generiek.scss */
   .verpakking-groot .tekst p:last-child {
     margin-bottom: 0;
   }
 }
 
-/* line 51, scss/_generiek.scss */
+/* line 55, scss/_generiek.scss */
 .verpakking .verpakking {
   padding: 0;
   margin-left: 0;
   margin-right: 0;
 }
 
-/* line 58, scss/_generiek.scss */
+/* line 62, scss/_generiek.scss */
 .heeft-padding > *:first-child {
   margin-top: 0;
 }
 
-/* line 61, scss/_generiek.scss */
+/* line 65, scss/_generiek.scss */
 .heeft-padding > *:last-child {
   margin-bottom: 0;
 }
 
-/* line 67, scss/_generiek.scss */
+/* line 71, scss/_generiek.scss */
 .paddingveld {
   padding-top: 1.5em;
   padding-bottom: 1.5em;
 }
 
 @media (min-width: 900px) {
-  /* line 67, scss/_generiek.scss */
+  /* line 71, scss/_generiek.scss */
   .paddingveld {
     padding-top: 3em;
     padding-bottom: 3em;
   }
 }
 
-/* line 74, scss/_generiek.scss */
+/* line 78, scss/_generiek.scss */
 .paddingveld.veel {
   padding-top: 3em;
   padding-bottom: 3em;
 }
 
 @media (min-width: 900px) {
-  /* line 74, scss/_generiek.scss */
+  /* line 78, scss/_generiek.scss */
   .paddingveld.veel {
     padding-top: 6em;
     padding-bottom: 6em;
   }
 }
 
-/* line 84, scss/_generiek.scss */
+/* line 88, scss/_generiek.scss */
 .marginveld {
   margin-top: 1.5em;
   margin-bottom: 1.5em;
 }
 
 @media (min-width: 900px) {
-  /* line 84, scss/_generiek.scss */
+  /* line 88, scss/_generiek.scss */
   .marginveld {
     margin-top: 3em;
     margin-bottom: 3em;
   }
 }
 
-/* line 91, scss/_generiek.scss */
+/* line 95, scss/_generiek.scss */
 .marginveld.veel {
   margin-top: 3em;
   margin-bottom: 3em;
 }
 
 @media (min-width: 900px) {
-  /* line 91, scss/_generiek.scss */
+  /* line 95, scss/_generiek.scss */
   .marginveld.veel {
     margin-top: 6em;
     margin-bottom: 6em;
   }
 }
 
-/* line 104, scss/_generiek.scss */
+/* line 108, scss/_generiek.scss */
 .blok {
   background-color: #fff;
   -webkit-box-shadow: 0 1px 2px #666;
@@ -1226,14 +1231,14 @@ body {
   color: #211f1f;
 }
 
-/* line 111, scss/_generiek.scss */
+/* line 115, scss/_generiek.scss */
 ul.reset, ul.reset li {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
 
-/* line 115, scss/_generiek.scss */
+/* line 119, scss/_generiek.scss */
 .post-edit-link {
   position: fixed;
   bottom: 0;
@@ -1247,7 +1252,7 @@ ul.reset, ul.reset li {
   z-index: 20;
 }
 
-/* line 128, scss/_generiek.scss */
+/* line 132, scss/_generiek.scss */
 .screen-reader-text {
   display: none;
 }
@@ -3812,10 +3817,17 @@ input.wpcf7-submit {
   .uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child::after {
     left: 100%;
   }
+  /* line 79, scss/onderdelen/_uitgelichte-afbeelding.scss */
+  .archief .uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child {
+    padding-bottom: .66em;
+    margin-bottom: 0;
+    max-width: 380px;
+    margin-top: -2.1em;
+  }
 }
 
 @media screen and (max-width: 768px) {
-  /* line 81, scss/onderdelen/_uitgelichte-afbeelding.scss */
+  /* line 88, scss/onderdelen/_uitgelichte-afbeelding.scss */
   .uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1 {
     margin-top: .66em;
   }

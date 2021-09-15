@@ -24,9 +24,9 @@ add_action('ag_archief_intro_action', 'ag_archief_intro_hook', 10);
 
 if(!function_exists('ag_archief_content_hook')) : function ag_archief_content_hook() {
 
-	ag_archief_sub_tax_ctrl();
-
+	
 	ag_archief_content_ctrl();
+	ag_archief_sub_tax_ctrl();
 
 } endif;
 
@@ -38,14 +38,14 @@ if(!function_exists('ag_archief_na_content_hook')) : function ag_archief_na_cont
 
 	ag_paginering_ctrl();
 
-	global $post;
+	// global $post;
 
-	$tax_blok = new Ag_tax_blok(array(
-		'post'		=> $post,
-		'titel'		=> 'Zoek sneller',
-		'reset'		=> false
-	));
-	$tax_blok->print();
+	// $tax_blok = new Ag_tax_blok(array(
+	// 	'post'		=> $post,
+	// 	'titel'		=> 'Zoek sneller',
+	// 	'reset'		=> false
+	// ));
+	// $tax_blok->print();
 
 } endif;
 
