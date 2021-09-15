@@ -3735,7 +3735,15 @@ input.wpcf7-submit {
   height: calc(75vh - 70px);
 }
 
-/* line 17, scss/onderdelen/_uitgelichte-afbeelding.scss */
+@media screen and (max-width: 600px) {
+  /* line 15, scss/onderdelen/_uitgelichte-afbeelding.scss */
+  .uitgelichte-afbeelding-buiten.hero {
+    height: calc(100vh - 70px);
+    padding-top: 60px;
+  }
+}
+
+/* line 21, scss/onderdelen/_uitgelichte-afbeelding.scss */
 .uitgelichte-afbeelding-buiten.hero .uitgelichte-afbeelding-binnen {
   position: absolute;
   top: 50%;
@@ -3751,7 +3759,18 @@ input.wpcf7-submit {
           flex-direction: column;
 }
 
-/* line 26, scss/onderdelen/_uitgelichte-afbeelding.scss */
+@media screen and (max-width: 600px) {
+  /* line 21, scss/onderdelen/_uitgelichte-afbeelding.scss */
+  .uitgelichte-afbeelding-buiten.hero .uitgelichte-afbeelding-binnen {
+    top: 0;
+    left: 0;
+    -webkit-transform: unset;
+            transform: unset;
+    width: 100%;
+  }
+}
+
+/* line 36, scss/onderdelen/_uitgelichte-afbeelding.scss */
 .uitgelichte-afbeelding-buiten.hero h1 {
   margin: 0;
   color: #f5f5f5;
@@ -3761,7 +3780,14 @@ input.wpcf7-submit {
   text-align: center;
 }
 
-/* line 33, scss/onderdelen/_uitgelichte-afbeelding.scss */
+@media screen and (max-width: 600px) {
+  /* line 36, scss/onderdelen/_uitgelichte-afbeelding.scss */
+  .uitgelichte-afbeelding-buiten.hero h1 {
+    min-height: 60px;
+  }
+}
+
+/* line 46, scss/onderdelen/_uitgelichte-afbeelding.scss */
 .uitgelichte-afbeelding-buiten.hero h1 span {
   font-size: .5em;
   font-weight: 400;
@@ -3770,36 +3796,50 @@ input.wpcf7-submit {
 }
 
 @media (max-width: 600px) {
-  /* line 26, scss/onderdelen/_uitgelichte-afbeelding.scss */
+  /* line 36, scss/onderdelen/_uitgelichte-afbeelding.scss */
   .uitgelichte-afbeelding-buiten.hero h1 {
     font-size: 1.5rem;
   }
 }
 
-/* line 44, scss/onderdelen/_uitgelichte-afbeelding.scss */
+/* line 57, scss/onderdelen/_uitgelichte-afbeelding.scss */
 .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop {
   margin-top: 40px;
   text-align: center;
 }
 
-/* line 47, scss/onderdelen/_uitgelichte-afbeelding.scss */
+/* line 60, scss/onderdelen/_uitgelichte-afbeelding.scss */
 .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop .knop, .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop .navigation a, .navigation .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop a, .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop #agenda-filter [type='submit'], #agenda-filter .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop [type='submit'], .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop .search-form .search-submit, .search-form .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop .search-submit {
   font-size: 1.6em;
 }
 
+@media screen and (max-width: 600px) {
+  /* line 57, scss/onderdelen/_uitgelichte-afbeelding.scss */
+  .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop {
+    position: absolute;
+    bottom: auto;
+    top: calc(100vh - 170px);
+    margin-top: 0;
+    left: 50%;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(-50%, 0%);
+    width: 80%;
+  }
+}
+
 @media screen and (min-width: 1025px) {
-  /* line 55, scss/onderdelen/_uitgelichte-afbeelding.scss */
+  /* line 78, scss/onderdelen/_uitgelichte-afbeelding.scss */
   .uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig {
     margin-top: 0;
   }
-  /* line 57, scss/onderdelen/_uitgelichte-afbeelding.scss */
+  /* line 80, scss/onderdelen/_uitgelichte-afbeelding.scss */
   .uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child {
     margin-top: -2em;
     padding-top: .66em;
     background-color: #f7f7f7;
     position: relative;
   }
-  /* line 62, scss/onderdelen/_uitgelichte-afbeelding.scss */
+  /* line 85, scss/onderdelen/_uitgelichte-afbeelding.scss */
   .uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child::before, .uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child::after {
     display: block;
     content: '';
@@ -3809,15 +3849,15 @@ input.wpcf7-submit {
     position: absolute;
     top: 0;
   }
-  /* line 71, scss/onderdelen/_uitgelichte-afbeelding.scss */
+  /* line 94, scss/onderdelen/_uitgelichte-afbeelding.scss */
   .uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child::before {
     right: 100%;
   }
-  /* line 74, scss/onderdelen/_uitgelichte-afbeelding.scss */
+  /* line 97, scss/onderdelen/_uitgelichte-afbeelding.scss */
   .uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child::after {
     left: 100%;
   }
-  /* line 79, scss/onderdelen/_uitgelichte-afbeelding.scss */
+  /* line 102, scss/onderdelen/_uitgelichte-afbeelding.scss */
   .archief .uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child {
     padding-bottom: .66em;
     margin-bottom: 0;
@@ -3827,7 +3867,7 @@ input.wpcf7-submit {
 }
 
 @media screen and (max-width: 768px) {
-  /* line 88, scss/onderdelen/_uitgelichte-afbeelding.scss */
+  /* line 111, scss/onderdelen/_uitgelichte-afbeelding.scss */
   .uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1 {
     margin-top: .66em;
   }
