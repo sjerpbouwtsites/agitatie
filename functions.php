@@ -102,6 +102,7 @@ add_action('admin_init', 'css_admin_aanpassing' );
 ///////////////////////////////////////////////////////////
 
 // content width
-if ( ! isset( $content_width ) ) {
-$content_width = 760;
+function change_content_width() {
+    $GLOBALS['content_width'] = 760;
 }
+add_action( 'template_redirect', 'change_content_width' );

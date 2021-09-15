@@ -122,19 +122,23 @@ function kopmenuSubMobiel() {
 
 function stickySidebar() {
 
-	var berichtWidth = $('div.bericht-tekst').width();
+	const stickyBar = document.getElementById('sticky-sidebar');
+	const contentWidth = document.body.dataset.contentWidth;
+	const spaceToTheRight = (window.innerWidth - contentWidth) / 2;
+	const spaceNeeded = stickyBar.offsetWidth + 60;
 
-	var kanStickyDoen = body.scrollWidth - 440 > berichtWidth;
+	var kanStickyDoen = spaceToTheRight > spaceNeeded;
 
 	if (!kanStickyDoen) {
+		stickyBar.parentNode.removeChild(stickyBar);
 		return;
 	}
 
+	stickyBar.style.opacity = 0;
+
 	setTimeout(function(){
 
-		$sticky = $("#sticky-sidebar");
-		$sticky.css({'opacity':0});
-		$sticky.removeClass('verpakking').removeClass('verpakking-klein');
+		const berichtTekst = document.querySelector('berichtTekst');
 
 		var offset = $('div.bericht-tekst').offset().top - $("#stek-kop").height();
 
@@ -143,17 +147,14 @@ function stickySidebar() {
 			offset -= Number($('h1').css('margin-top').replace('px', ''));
 		}
 
-		var right = ((body.scrollWidth - berichtWidth) / 2) - 320; //sticky width plus margin
+		stickyBar.style.top = offset + "px";
+		stickyBar.style.right = right + "px";
+		stickyBar.style.height = berichtTekst.offsetHeight + "px";
+		
+		$('#main').addClass('heeft-sticky').append($(stickyBar));
+		document.getElementsByTagName('main')[0].classList.add('heeft-sticky');
 
-		$sticky.css({'top': offset + 'px'});  
-		$sticky.css({'right': right + 'px'});
-
-		$sticky.height($('div.bericht-tekst').height());
-
-		$('#main').addClass('heeft-sticky').append($sticky);
-
-		$('.related.verpakking').addClass('widget').appendTo(".sticky-binnen");
-		$sticky.css({'opacity': 1});
+		stickyBar.style.opacity = 1;
 
 		verplaatsShareDaddy()
 

@@ -1,6 +1,6 @@
 <?php get_template_part('head');?>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); body_data(); ?>>
 <header id='stek-kop'>
 	<div class='rel'>
 		<div class='verpakking'>
