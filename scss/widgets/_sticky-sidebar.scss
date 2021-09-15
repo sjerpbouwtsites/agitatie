@@ -1,12 +1,15 @@
 //css krijgt pas effect in main
 
+#sticky-sidebar {
+	width: 200px;
+}
+
 main.heeft-sticky {
 	position: relative;
 	#sticky-sidebar {
 		position: absolute;
 		//top: 0;
 		right: 0;
-		width: 200px;
 		transition: 0.4s opacity ease-in-out;
 		padding: 20px; 
 		border-left: 5px solid $hoofdkleur;

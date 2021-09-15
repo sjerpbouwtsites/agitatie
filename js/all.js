@@ -123,11 +123,12 @@ function kopmenuSubMobiel() {
 function stickySidebar() {
 
 	const stickyBar = document.getElementById('sticky-sidebar');
+	
 	const contentWidth = document.body.dataset.contentWidth;
 	const spaceToTheRight = (window.innerWidth - contentWidth) / 2;
 	const spaceNeeded = stickyBar.offsetWidth + 60;
-
 	var kanStickyDoen = spaceToTheRight > spaceNeeded;
+	console.log(contentWidth, spaceToTheRight, spaceNeeded, kanStickyDoen)
 
 	if (!kanStickyDoen) {
 		stickyBar.parentNode.removeChild(stickyBar);
@@ -138,9 +139,10 @@ function stickySidebar() {
 
 	setTimeout(function(){
 
-		const berichtTekst = document.querySelector('berichtTekst');
+		const berichtTekst = document.querySelector('.bericht-tekst');
 
 		var offset = $('div.bericht-tekst').offset().top - $("#stek-kop").height();
+		const right = (spaceToTheRight - stickyBar.offsetWidth) / 2;
 
 		//als er geen uitgelichte afbeelding is telt de margin van h1 mee.
 		if (!$(".uitgelichte-afbeelding-buiten").length) {
