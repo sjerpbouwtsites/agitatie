@@ -3838,20 +3838,19 @@ video.speelt ~ .vid-onder-buiten .speel-video {
 .sharedaddy {
   display: none !important;
   background-color: #EAF4F1;
-  width: 260px;
-  max-width: 100%;
+  width: 100%;
   padding: 15px;
   position: relative;
   border-top: 3em solid #f7f7f7;
   margin: 0 !important;
 }
 
-/* line 10, scss/onderdelen/_sharedaddy.scss */
+/* line 9, scss/onderdelen/_sharedaddy.scss */
 .sharedaddy.actief {
   display: block !important;
 }
 
-/* line 14, scss/onderdelen/_sharedaddy.scss */
+/* line 13, scss/onderdelen/_sharedaddy.scss */
 .sd-sharing {
   margin: 0;
   display: -webkit-box;
@@ -3865,7 +3864,7 @@ video.speelt ~ .vid-onder-buiten .speel-video {
           justify-content: space-between;
 }
 
-/* line 22, scss/onderdelen/_sharedaddy.scss */
+/* line 21, scss/onderdelen/_sharedaddy.scss */
 div.sharedaddy .sd-title {
   font-family: "Eczar", sans-serif;
   font-size: 2em !important;
@@ -3876,12 +3875,12 @@ div.sharedaddy .sd-title {
   right: 0;
 }
 
-/* line 31, scss/onderdelen/_sharedaddy.scss */
+/* line 30, scss/onderdelen/_sharedaddy.scss */
 div.sharedaddy .sd-title::before {
   display: none !important;
 }
 
-/* line 35, scss/onderdelen/_sharedaddy.scss */
+/* line 34, scss/onderdelen/_sharedaddy.scss */
 .share-customize-link {
   display: none;
   position: absolute;
@@ -3890,12 +3889,12 @@ div.sharedaddy .sd-title::before {
   font-weight: bold;
 }
 
-/* line 41, scss/onderdelen/_sharedaddy.scss */
+/* line 40, scss/onderdelen/_sharedaddy.scss */
 .share-customize-link a::before {
   content: 'admin: ';
 }
 
-/* line 45, scss/onderdelen/_sharedaddy.scss */
+/* line 44, scss/onderdelen/_sharedaddy.scss */
 .sharedaddy:hover .share-customize-link {
   display: block;
 }
@@ -4586,32 +4585,73 @@ main.heeft-sticky .sticky-binnen {
 }
 
 /* line 112, scss/_footer.scss */
-.footer-section h3 {
+.footer-section > h3:first-child,
+.footer-section > h2:first-child,
+.footer-section h2.widgettitle,
+.footer-section .wp-block-search__label {
   margin-top: 0;
+  font-size: 1.33rem;
+  margin-bottom: .5em;
+  font-weight: bold;
+  display: block;
+  line-height: 1;
+  font-family: "Eczar", sans-serif;
+  letter-spacing: 0.02em;
 }
 
-/* line 115, scss/_footer.scss */
+/* line 125, scss/_footer.scss */
 .footer-section a, .footer-section a:active, .footer-section a:visited {
   color: inherit;
   text-decoration: none;
 }
 
-/* line 118, scss/_footer.scss */
+/* line 128, scss/_footer.scss */
 .footer-section a:hover, .footer-section a:active:hover, .footer-section a:visited:hover {
   color: #C82424;
 }
 
-/* line 122, scss/_footer.scss */
+/* line 132, scss/_footer.scss */
 .footer-section *:last-child {
   margin-bottom: 0;
 }
 
-/* line 127, scss/_footer.scss */
+/* line 135, scss/_footer.scss */
+.footer-section .wp-block-search__input {
+  background-color: transparent;
+  border: 0;
+  -webkit-box-shadow: inset 0px -2px 0px white;
+          box-shadow: inset 0px -2px 0px white;
+  padding-left: 0;
+  text-indent: 0;
+}
+
+/* line 141, scss/_footer.scss */
+.footer-section .wp-block-search__input:focus {
+  -webkit-box-shadow: inset 0px -4px 0px white;
+          box-shadow: inset 0px -4px 0px white;
+}
+
+/* line 145, scss/_footer.scss */
+.footer-section .wp-block-search__button {
+  background: transparent;
+  border: 0;
+  color: white;
+  font-size: 1.5em;
+  margin-left: 0;
+}
+
+/* line 151, scss/_footer.scss */
+.footer-section .wp-block-search__button:hover {
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+}
+
+/* line 159, scss/_footer.scss */
 footer .search-form .search-submit {
   color: #211f1f;
 }
 
-/* line 132, scss/_footer.scss */
+/* line 164, scss/_footer.scss */
 .colofon p {
   margin: 0;
   padding: 15px;

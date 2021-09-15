@@ -106,11 +106,21 @@ $footerkleur: $donkergrijs;
 		select {
 			height: 27.2px;
 		}
-	}
+	} 
 
 		.footer-section {
-			h3 {
+			& > h3:first-child, 
+			& > h2:first-child,
+			h2.widgettitle, 
+			.wp-block-search__label {
 				margin-top: 0;
+				font-size: 1.33rem;
+				margin-bottom: .5em;
+				font-weight: bold;
+				display: block;
+				line-height: 1;
+				font-family: "Eczar", sans-serif;
+				letter-spacing: 0.02em;
 			}
 			a, a:active, a:visited {
 				color: inherit;
@@ -122,6 +132,28 @@ $footerkleur: $donkergrijs;
 			*:last-child {
 				margin-bottom: 0;
 			}
+			.wp-block-search__input {
+				background-color: transparent;
+				border: 0;
+				box-shadow: inset 0px -2px 0px white;
+				padding-left: 0;
+				text-indent: 0;
+				&:focus {
+					box-shadow: inset 0px -4px 0px white;
+				}
+			}
+			.wp-block-search__button {
+				background: transparent;
+				border: 0;
+				color: white;
+				font-size: 1.5em;
+				margin-left: 0;
+				&:hover {
+					filter: brightness(120%)
+				}
+			 }
+
+
 		}
 
 		footer .search-form .search-submit {
