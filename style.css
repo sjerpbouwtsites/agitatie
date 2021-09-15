@@ -5003,14 +5003,18 @@ footer .menu a:hover {
 /* line 12, scss/_single.scss */
 .bericht-tekst.datum {
   text-transform: lowercase;
+  opacity: .8;
+  margin-bottom: -1em;
+  display: block;
 }
 
 @media screen and (min-width: 600px) {
-  /* line 16, scss/_single.scss */
-  .bericht-tekst.datum {
+  /* line 19, scss/_single.scss */
+  .uitgelichte-afbeelding-buiten + .titel-over-afbeelding-indien-aanwezig .bericht-tekst.datum {
     z-index: 5;
     color: white;
     font-weight: bold;
+    margin: 0;
     opacity: 1;
     position: absolute;
     display: block;
@@ -5022,8 +5026,8 @@ footer .menu a:hover {
 }
 
 @media screen and (min-width: 1250px) {
-  /* line 30, scss/_single.scss */
-  .bericht-tekst.datum {
+  /* line 34, scss/_single.scss */
+  .uitgelichte-afbeelding-buiten + .titel-over-afbeelding-indien-aanwezig .bericht-tekst.datum {
     top: calc(50vh - .25em);
     right: calc(50% - (390px + 1em));
     -webkit-transform: translate(100%, 0);
@@ -5033,8 +5037,8 @@ footer .menu a:hover {
 }
 
 @media screen and (max-width: 1249px) and (min-width: 600px) {
-  /* line 38, scss/_single.scss */
-  .bericht-tekst.datum {
+  /* line 42, scss/_single.scss */
+  .uitgelichte-afbeelding-buiten + .titel-over-afbeelding-indien-aanwezig .bericht-tekst.datum {
     font-size: 1.5em;
     top: .66em;
     right: .66em;
@@ -5043,21 +5047,21 @@ footer .menu a:hover {
 }
 
 @media screen and (max-width: 599px) {
-  /* line 46, scss/_single.scss */
-  .bericht-tekst.datum {
+  /* line 50, scss/_single.scss */
+  .uitgelichte-afbeelding-buiten + .titel-over-afbeelding-indien-aanwezig .bericht-tekst.datum {
     opacity: .8;
     margin-bottom: -1em;
     display: block;
   }
 }
 
-/* line 54, scss/_single.scss */
+/* line 58, scss/_single.scss */
 .onder-artikel-taxonomieen h2 {
   padding-top: .5em;
   border-top: 5px solid #211f1f;
 }
 
-/* line 58, scss/_single.scss */
+/* line 62, scss/_single.scss */
 .onder-artikel-taxonomieen footer {
   margin-top: 30px;
   text-align: right;

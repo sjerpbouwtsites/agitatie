@@ -143,7 +143,6 @@ function stickySidebar() {
 
 		//als er geen uitgelichte afbeelding is telt de margin van h1 mee.
 		if (!$(".uitgelichte-afbeelding-buiten").length) {
-			alert('je moeder');
 			offset -= Number($('h1').css('margin-top').replace('px', ''));
 		}
 
