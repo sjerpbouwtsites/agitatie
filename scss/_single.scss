@@ -1,12 +1,53 @@
 //parent
+
+.bericht {
+	position: relative;
+}
+
 .onder-artikel-taxonomieen {
 	p {
 		margin: 0;
 	}
 }
-
 .bericht-tekst.datum {
-	opacity: 0.7;
+	text-transform: lowercase;
+}
+@media screen and (min-width: 600px) {
+	.bericht-tekst.datum {
+		z-index: 5;
+		color: white;
+		font-weight: bold;
+		opacity: 1;
+		position: absolute;
+		display: block;
+		max-width: 210px;
+		line-height: 1;
+		padding: 0;
+		text-shadow: 0.125em 0.125em 0.125em rgba(0, 0, 0, 0.5);	
+	}	
+}
+ @media screen and (min-width: 1250px){
+.bericht-tekst.datum {
+	top: calc(50vh - .25em);
+	right: calc(50% - (390px + 1em));
+	transform: translate(100%, 0);
+	font-size: 2em;
+}
+}
+@media screen and (max-width: 1249px) and (min-width: 600px){
+	.bericht-tekst.datum {
+		font-size: 1.5em;
+		top: .66em;
+		right: .66em;
+		text-align: right;
+	}
+}
+@media screen and (max-width: 599px){
+	.bericht-tekst.datum {
+		opacity: .8;
+		margin-bottom: -1em;
+		display: block;
+	}
 }
 
 .onder-artikel-taxonomieen {
