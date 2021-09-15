@@ -1,4 +1,8 @@
 .pag-fam article{
+	&.art-c.in-lijst {
+		margin-bottom: .5em;
+
+	}
 	&.huidige a, a:hover {
 		h3 {
 			color: $hoofdkleur;
@@ -10,7 +14,12 @@
 	}
 	&:first-of-type {
 		& ~ article h3 {
-			text-indent: 20px;
+			font-size: .75em;
+			padding-left: 1.5em;
 		}
 	}
+}
+
+.pag-fam h2 {
+	@include sticky_widgettitle();
 }

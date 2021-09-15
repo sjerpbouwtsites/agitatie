@@ -13,7 +13,7 @@ function verwijder_ctf7_stijl() {
 
 function sjerpbouwtsites_scripts() {
 
-	wp_deregister_script('jquery');
+	// wp_deregister_script('jquery');
 	wp_deregister_script('wp-embed');
   wp_dequeue_script( 'devicepx' );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

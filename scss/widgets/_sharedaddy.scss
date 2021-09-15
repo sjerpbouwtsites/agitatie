@@ -1,10 +1,10 @@
     .sharedaddy {
     display: none !important;
-    background-color: #EAF4F1;
+    // background-color: #EAF4F1;
     width:100%;
-    padding: 15px;
+    // padding: 15px;
     position: relative;
-    border-top: 3em solid $achtergrondkleur;
+    // border-top: 3em solid $achtergrondkleur;
     margin: 0 !important;
     &.actief {
         display: block !important;
@@ -12,20 +12,12 @@
 }
 .sd-sharing {
     margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;  
+    display: block;
 }
 
 // specificity gevecht
 div.sharedaddy .sd-title { 
-    font-family: $kopletter;
-    font-size: 2em !important;
-    line-height: 1 !important;
-    margin: 0 !important;   
-    position: absolute;
-    top: -25px;
-    right: 0;
+    @include sticky_widgettitle();
     
     &::before {
         display: none !important;

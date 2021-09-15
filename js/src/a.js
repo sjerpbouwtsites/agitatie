@@ -146,12 +146,12 @@ function stickySidebar() {
 			offset -= Number($('h1').css('margin-top').replace('px', ''));
 		}
 
-		var right = ((body.scrollWidth - berichtWidth) / 2) - 200 - 60; //sticky width plus margin
+		var right = ((body.scrollWidth - berichtWidth) / 2) - 320; //sticky width plus margin
 
 		$sticky.css({'top': offset + 'px'});
 		$sticky.css({'right': right + 'px'});
 
-		$sticky.height($('div.bericht-tekst').height());
+		//$sticky.height($('div.bericht-tekst').height());
 
 		$('#main').addClass('heeft-sticky').append($sticky);
 

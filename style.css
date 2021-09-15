@@ -3904,53 +3904,41 @@ video.speelt ~ .vid-onder-buiten .speel-video {
   display: none;
 }
 
-/* line 1, scss/onderdelen/_sharedaddy.scss */
+/* line 1, scss/widgets/_sharedaddy.scss */
 .sharedaddy {
   display: none !important;
-  background-color: #EAF4F1;
   width: 100%;
-  padding: 15px;
   position: relative;
-  border-top: 3em solid #f7f7f7;
   margin: 0 !important;
 }
 
-/* line 9, scss/onderdelen/_sharedaddy.scss */
+/* line 9, scss/widgets/_sharedaddy.scss */
 .sharedaddy.actief {
   display: block !important;
 }
 
-/* line 13, scss/onderdelen/_sharedaddy.scss */
+/* line 13, scss/widgets/_sharedaddy.scss */
 .sd-sharing {
   margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: block;
 }
 
-/* line 21, scss/onderdelen/_sharedaddy.scss */
+/* line 19, scss/widgets/_sharedaddy.scss */
 div.sharedaddy .sd-title {
-  font-family: "Eczar", sans-serif;
-  font-size: 2em !important;
   line-height: 1 !important;
   margin: 0 !important;
-  position: absolute;
-  top: -25px;
   right: 0;
+  display: block !important;
+  font-size: 1.5rem  !important;
+  margin-bottom: .5em !important;
 }
 
-/* line 30, scss/onderdelen/_sharedaddy.scss */
+/* line 22, scss/widgets/_sharedaddy.scss */
 div.sharedaddy .sd-title::before {
   display: none !important;
 }
 
-/* line 34, scss/onderdelen/_sharedaddy.scss */
+/* line 26, scss/widgets/_sharedaddy.scss */
 .share-customize-link {
   display: none;
   position: absolute;
@@ -3959,12 +3947,12 @@ div.sharedaddy .sd-title::before {
   font-weight: bold;
 }
 
-/* line 40, scss/onderdelen/_sharedaddy.scss */
+/* line 32, scss/widgets/_sharedaddy.scss */
 .share-customize-link a::before {
   content: 'admin: ';
 }
 
-/* line 44, scss/onderdelen/_sharedaddy.scss */
+/* line 36, scss/widgets/_sharedaddy.scss */
 .sharedaddy:hover .share-customize-link {
   display: block;
 }
@@ -3981,58 +3969,89 @@ main.heeft-sticky #sticky-sidebar {
   width: 200px;
   -webkit-transition: 0.4s opacity ease-in-out;
   transition: 0.4s opacity ease-in-out;
+  padding: 20px;
+  border-left: 5px solid #C82424;
 }
 
 /* line 13, scss/widgets/_sticky-sidebar.scss */
+main.heeft-sticky #sticky-sidebar::before {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity: .05;
+  left: 0;
+  top: 0;
+  background-color: #C82424;
+}
+
+/* line 26, scss/widgets/_sticky-sidebar.scss */
 main.heeft-sticky #sticky-sidebar .widget:first-child h2, main.heeft-sticky #sticky-sidebar .widget:first-child h3 {
   margin-top: 0;
 }
 
-/* line 17, scss/widgets/_sticky-sidebar.scss */
+/* line 30, scss/widgets/_sticky-sidebar.scss */
 main.heeft-sticky #sticky-sidebar .related-posts {
   display: block;
 }
 
-/* line 20, scss/widgets/_sticky-sidebar.scss */
+/* line 33, scss/widgets/_sticky-sidebar.scss */
 main.heeft-sticky #sticky-sidebar .related-post {
   margin-bottom: 20px;
 }
 
-/* line 22, scss/widgets/_sticky-sidebar.scss */
+/* line 35, scss/widgets/_sticky-sidebar.scss */
 main.heeft-sticky #sticky-sidebar .related-post:last-child {
   margin-bottom: 0;
 }
 
-/* line 26, scss/widgets/_sticky-sidebar.scss */
+/* line 39, scss/widgets/_sticky-sidebar.scss */
 main.heeft-sticky #sticky-sidebar .related-post-info {
   margin-top: 0;
 }
 
-/* line 30, scss/widgets/_sticky-sidebar.scss */
+/* line 43, scss/widgets/_sticky-sidebar.scss */
 main.heeft-sticky #sticky-sidebar .related-post-info, main.heeft-sticky #sticky-sidebar .related-post-date {
   font-size: 12px;
 }
 
-/* line 34, scss/widgets/_sticky-sidebar.scss */
+/* line 47, scss/widgets/_sticky-sidebar.scss */
 main.heeft-sticky .sticky-binnen {
   position: sticky;
   top: 40px;
 }
 
-/* line 3, scss/widgets/_pag-fam.scss */
+/* line 2, scss/widgets/_pag-fam.scss */
+.pag-fam article.art-c.in-lijst {
+  margin-bottom: .5em;
+}
+
+/* line 7, scss/widgets/_pag-fam.scss */
 .pag-fam article.huidige a h3, .pag-fam article a:hover h3 {
   color: #C82424;
   font-weight: bold;
 }
 
-/* line 8, scss/widgets/_pag-fam.scss */
+/* line 12, scss/widgets/_pag-fam.scss */
 .pag-fam article h3 {
   font-weight: normal;
 }
 
-/* line 12, scss/widgets/_pag-fam.scss */
+/* line 16, scss/widgets/_pag-fam.scss */
 .pag-fam article:first-of-type ~ article h3 {
-  text-indent: 20px;
+  font-size: .75em;
+  padding-left: 1.5em;
+}
+
+/* line 23, scss/widgets/_pag-fam.scss */
+.pag-fam h2 {
+  line-height: 1 !important;
+  margin: 0 !important;
+  right: 0;
+  display: block !important;
+  font-size: 1.5rem  !important;
+  margin-bottom: .5em !important;
 }
 
 /* line 2, scss/_agenda.scss */
