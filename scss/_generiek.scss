@@ -26,10 +26,13 @@ body {
 
 .verpakking {
 	margin: 0 auto;
-	padding: 0 1.25em;
+	padding: 0 2.33em;
 	box-sizing: border-box;
 	width: 1200px;
 	max-width: 100%;
+	@media screen and (max-width: 768px) {
+		padding: 0 1.25em;
+	}
 }
 	.verpakking-klein {
 		width: 760px;
