@@ -98,3 +98,10 @@ function css_admin_aanpassing() {
 	wp_enqueue_style( 'admin-css-aanpassing');
 }
 add_action('admin_init', 'css_admin_aanpassing' );
+
+///////////////////////////////////////////////////////////
+
+// content width
+if ( ! isset( $content_width ) ) {
+$content_width = 760;
+}
