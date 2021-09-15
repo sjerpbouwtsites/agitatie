@@ -5364,4 +5364,27 @@ footer .menu a:hover {
   text-transform: uppercase;
 }
 
+@media screen and (min-width: 1200px) {
+  /* line 61, scss/style.scss */
+  #primary.singular,
+  #primary.voorpagina {
+    position: relative;
+  }
+  /* line 64, scss/style.scss */
+  #primary.singular::before,
+  #primary.voorpagina::before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: -100px;
+    left: 0;
+    width: calc(50vw - 390px);
+    background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 36, 0)), color-stop(99%, #f3fbff), to(#f2f2f2));
+    background: linear-gradient(90deg, rgba(0, 0, 36, 0) 0%, #f3fbff 99%, #f2f2f2 100%);
+    z-index: -1;
+    display: block;
+    height: calc(100% + 200px);
+  }
+}
+
 /*# sourceMappingURL=maps/style.css.map */

@@ -139,7 +139,7 @@ function stickySidebar() {
 
 	setTimeout(function(){
 
-		const berichtTekst = document.querySelector('.bericht-tekst');
+		const berichtTekst = document.querySelector('div.bericht-tekst');
 
 		var offset = $('div.bericht-tekst').offset().top - $("#stek-kop").height();
 		const right = (spaceToTheRight - stickyBar.offsetWidth) / 2;
