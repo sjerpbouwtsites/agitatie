@@ -160,6 +160,11 @@ function stickySidebar() {
 
 		verplaatsShareDaddy()
 
+		// als geen widgets in sidebar dan weer weg.
+		if (stickyBar.querySelectorAll('.widget').length === 0) {
+			stickyBar.parentNode.removeChild(stickyBar);
+		}
+
 	}, 500);
 
 
@@ -167,8 +172,13 @@ function stickySidebar() {
 
 function verplaatsShareDaddy(){
 	var shareDaddyOrigineel = document.querySelector('.sharedaddy');
+	if (!shareDaddyOrigineel) return;
 	shareDaddyOrigineel.parentNode.removeChild(shareDaddyOrigineel);
 	var shareDaddyWrapperSidebar = document.getElementById('sharedaddy-in-sidebar');
+	if (!shareDaddyWrapperSidebar) {
+		console.warn('geen share daddy wrapper!?');
+		return ;
+	}
 	shareDaddyWrapperSidebar.appendChild(shareDaddyOrigineel);
 	shareDaddyOrigineel.classList.add('actief');
 }
