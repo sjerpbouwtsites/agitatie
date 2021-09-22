@@ -12,6 +12,7 @@ main.heeft-sticky {
 		right: 0;
 		transition: 0.4s opacity ease-in-out;
 		padding: 20px; 
+		min-height: 100%;
 		&::before {
 			content: '';
 			display: block;
