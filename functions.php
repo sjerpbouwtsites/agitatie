@@ -110,3 +110,15 @@ add_action( 'template_redirect', 'change_content_width' );
 function body_data(){
 	echo " data-content-width='".$GLOBALS['content_width']."' ";
 }
+
+////////////////////////////////////////////////////////////
+
+// SAFE THE WIDGETS!!!
+/**
+ * Riff on wp_setup_widgets_block_editor
+ */
+function stop_wp_setup_widgets_block_editor() {
+	remove_theme_support( 'widgets-block-editor' );
+}
+
+add_action('after_setup_theme', 'stop_wp_setup_widgets_block_editor', 99);
