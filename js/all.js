@@ -1,3 +1,5 @@
+import stickySidebar from "./modules/sidebar.js";
+
 var doc, body, html, aside, i, l;
 
 function klikBaas(){
@@ -120,68 +122,6 @@ function kopmenuSubMobiel() {
 
 }
 
-function stickySidebar() {
-
-	const stickyBar = document.getElementById('sticky-sidebar');
-	
-	const contentWidth = document.body.dataset.contentWidth;
-	const spaceToTheRight = (window.innerWidth - contentWidth) / 2;
-	const spaceNeeded = stickyBar.offsetWidth + 60;
-	var kanStickyDoen = spaceToTheRight > spaceNeeded;
-	console.log(contentWidth, spaceToTheRight, spaceNeeded, kanStickyDoen)
-
-	if (!kanStickyDoen) {
-		stickyBar.parentNode.removeChild(stickyBar);
-		return;
-	}
-
-	stickyBar.style.opacity = 0;
-
-	setTimeout(function(){
-
-		const berichtTekst = document.querySelector('div.bericht-tekst');
-
-		var offset = $('div.bericht-tekst').offset().top - $("#stek-kop").height();
-		const right = (spaceToTheRight - stickyBar.offsetWidth) / 2;
-
-		//als er geen uitgelichte afbeelding is telt de margin van h1 mee.
-		if (!$(".uitgelichte-afbeelding-buiten").length) {
-			offset -= Number($('h1').css('margin-top').replace('px', ''));
-		}
-
-		stickyBar.style.top = offset + "px";
-		stickyBar.style.right = right + "px";
-		stickyBar.style.height = berichtTekst.offsetHeight + "px";
-		
-		$('#main').addClass('heeft-sticky').append($(stickyBar));
-		document.getElementsByTagName('main')[0].classList.add('heeft-sticky');
-
-		stickyBar.style.opacity = 1;
-
-		verplaatsShareDaddy()
-
-		// als geen widgets in sidebar dan weer weg.
-		if (stickyBar.querySelectorAll('.widget').length === 0) {
-			stickyBar.parentNode.removeChild(stickyBar);
-		}
-
-	}, 500);
-
-
-}
-
-function verplaatsShareDaddy(){
-	var shareDaddyOrigineel = document.querySelector('.sharedaddy');
-	if (!shareDaddyOrigineel) return;
-	shareDaddyOrigineel.parentNode.removeChild(shareDaddyOrigineel);
-	var shareDaddyWrapperSidebar = document.getElementById('sharedaddy-in-sidebar');
-	if (!shareDaddyWrapperSidebar) {
-		console.warn('geen share daddy wrapper!?');
-		return ;
-	}
-	shareDaddyWrapperSidebar.appendChild(shareDaddyOrigineel);
-	shareDaddyOrigineel.classList.add('actief');
-}
 
 
 window.onload = function(){

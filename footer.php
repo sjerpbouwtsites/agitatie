@@ -46,6 +46,7 @@ var BASE_URL = "<?=SITE_URI?>",
 </script>
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type='module' src="<?=THEME_URI?>/js/all.js"></script>
 
 <?php wp_footer(); ?>
 

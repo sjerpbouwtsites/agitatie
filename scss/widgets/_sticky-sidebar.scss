@@ -2,6 +2,7 @@
 
 #sticky-sidebar {
 	width: 200px;
+	opacity: 0;
 }
 
 main.heeft-sticky {
@@ -10,9 +11,9 @@ main.heeft-sticky {
 		position: absolute;
 		//top: 0;
 		right: 0;
-		transition: 0.4s opacity ease-in-out;
+		transition: 0.2s opacity ease-in-out 0.4s;
 		padding: 20px; 
-		min-height: 100%;
+		height: calc(100% - 60px);
 		&::before {
 			content: '';
 			display: block;
@@ -49,11 +50,13 @@ main.heeft-sticky {
 	}
 	.sticky-binnen {
 		position: sticky;
-		top: 40px;
+		top: 20px;
+		bottom: 20px;
 		padding: 20px 20px 40px 20px;
 		margin-left: -20px;
 		margin-top: -20px;
 		border-left: 5px solid $hoofdkleur;
+		max-height: calc(100% - 40px);
 	}
 } 
 

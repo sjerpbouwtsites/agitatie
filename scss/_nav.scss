@@ -50,7 +50,7 @@
 		right: 0;
 		position: absolute;
 		box-shadow: 0.5px 0.5px 1px rgba(33, 33, 33, .1);
-		transform: translateY(-200%);
+		transform: translateY(calc(-200% - 100px));
 	}
 	.sub-menu .menu-item a {
 		line-height: 1;
