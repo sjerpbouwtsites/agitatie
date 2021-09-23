@@ -37,7 +37,7 @@ GitHub Theme URI: https://github.com/sjerpbouwtsites/agitatie
 }
 
 /* line 16, scss/inst/kleur/_zet-klassen.scss */
-.tekst-zwart {
+.tekst-zwart, .sticky-widget.widget_nav_menu .menu-item a {
   color: #252525;
 }
 
@@ -4117,6 +4117,16 @@ main.heeft-sticky .sticky-binnen {
   border-left: 5px solid #0099dc;
 }
 
+/* line 60, scss/widgets/_sticky-sidebar.scss */
+.sticky-widget .widget-title {
+  line-height: 1 !important;
+  margin: 0 !important;
+  right: 0;
+  display: block !important;
+  font-size: 1.5rem  !important;
+  margin-bottom: .5em !important;
+}
+
 /* line 2, scss/widgets/_pag-fam.scss */
 .pag-fam article.art-c.in-lijst {
   margin-bottom: .5em;
@@ -4147,6 +4157,19 @@ main.heeft-sticky .sticky-binnen {
   display: block !important;
   font-size: 1.5rem  !important;
   margin-bottom: .5em !important;
+}
+
+/* line 2, scss/widgets/_nav-menu.scss */
+.sticky-widget.widget_nav_menu .menu-item a {
+  font-size: 1em;
+  font-weight: normal;
+  font-family: "Eczar", sans-serif;
+}
+
+/* line 8, scss/widgets/_nav-menu.scss */
+.sticky-widget.widget_nav_menu .current-menu-item a {
+  color: #0099dc;
+  font-weight: bold;
 }
 
 /* line 2, scss/_agenda.scss */
@@ -5396,12 +5419,12 @@ footer .menu a:hover {
 }
 
 @media screen and (min-width: 1200px) {
-  /* line 61, scss/style.scss */
+  /* line 62, scss/style.scss */
   #primary.singular,
   #primary.voorpagina {
     position: relative;
   }
-  /* line 64, scss/style.scss */
+  /* line 65, scss/style.scss */
   #primary.singular::before,
   #primary.voorpagina::before {
     position: absolute;

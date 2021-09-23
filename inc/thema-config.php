@@ -1,5 +1,6 @@
 <?php
 
+
 $thema_ondersteuning = array(
 'post-thumbnails',
 'automatic-feed-links',
@@ -21,6 +22,10 @@ if ( ! function_exists( 'agitatie_setup' ) ) :
 		global $thema_ondersteuning;
 		global $kind_menus;
 		global $kind_config;
+
+		if (!is_array($thema_ondersteuning)) {
+			$thema_ondersteuning = [];
+		}
 
 		register_nav_menus( array(
 			'kop' => esc_html__( 'kop', 'agitatie' ),
@@ -69,6 +74,15 @@ add_action( 'after_setup_theme', 'agitatie_setup' );
 
 
 function ag_registreer_sidebars() {
+	register_sidebar(array(
+		'name'          => __( 'sticky' ),
+		'id'            => 'sticky-sidebar',
+		'description'   => __( 'Voeg hier widgets toe om ze te laten verschijnen in de sticky sidebar. Als je niet resultaten ziet van opslaan: herladen'),
+		'before_widget' => '<section class="widget sticky-widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	));
     register_sidebar( array(
         'name' 			=> __( 'footer', 'agitatie' ),
         'id' 			=> 'footer-sidebar',
@@ -79,16 +93,7 @@ function ag_registreer_sidebars() {
 		'after_title'   => '</h3>',
     ) );
 
-	register_sidebar(array(
-	    'name'          => __( 'sticky' ),
-	    'id'            => 'sticky-sidebar',
-	    'description'   => __( 'Voeg hier widgets toe om ze te laten verschijnen in de sticky sidebar. Als je niet resultaten ziet van opslaan: herladen'),
-	    'before_widget' => '<section class="widget sticky-widget %2$s">',
-	    'after_widget'  => '</section>',
-	    'before_title'  => '<h3 class="widget-title">',
-	    'after_title'   => '</h3>',
-	));
 
 }
 
-add_action( 'widgets_init', 'ag_registreer_sidebars' );
+add_action( 'init', 'ag_registreer_sidebars', 50 );
