@@ -122,3 +122,7 @@ function stop_wp_setup_widgets_block_editor() {
 }
 
 add_action('after_setup_theme', 'stop_wp_setup_widgets_block_editor', 99);
+
+function has_sticky_sidebar(){
+	return is_singular() && !is_front_page() && !is_search();
+}

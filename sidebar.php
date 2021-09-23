@@ -1,12 +1,12 @@
 <?php
 
-	if (!is_front_page() && !is_search()) {
-	echo "<div id='sticky-sidebar'>";
+	if (has_sticky_sidebar()) {
+	echo "<aside id='sticky-sidebar' class='sticky-sidebar'>";
 	echo "<div class='sticky-binnen'>";
 	if (is_active_sidebar('sticky-sidebar')) {
 		dynamic_sidebar('sticky-sidebar');
 	}
 	echo "</div>";
-	echo "</div>";
+	echo "</aside>";
 	}
 
