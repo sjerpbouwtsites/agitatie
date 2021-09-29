@@ -67,7 +67,6 @@ if (!class_exists('Posttype_voorb')) : class Posttype_voorb {
 
 		$this->args = array(
 			'labels' 			=> $this->termen,
-			'description'		=> 'De ' . $this->meervoud . '.',
 			//'public' 			=> true, dit overschrijft dus vele andere waarden.
 			'exclude_from_search'=> false,
 			'publicly_queryable' => true,
