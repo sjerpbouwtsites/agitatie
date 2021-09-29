@@ -39,12 +39,10 @@ $include_boom = array(
 		"acf", //
 	),
 	'ctrl' => array(
-		'controllers',
-		'archief',
-		'categorie',
-		'singular'
+		'controllers-bundel'
 	),
 	'hooks' => array(
+		'agenda',
 		'header',
 		'singular',
 		'voorpagina',
@@ -108,3 +106,22 @@ add_action('after_setup_theme', 'stop_wp_setup_widgets_block_editor', 99);
 function has_sticky_sidebar(){
 	return is_singular() && !is_front_page() && !is_search();
 }
+
+/////////////////////////////////////////////////////////////////
+
+if (!function_exists('ag_config_agenda')) : function ag_config_agenda(){
+
+	$agenda = new Posttype_voorb('agenda', 'agenda');
+	$agenda->pas_args_aan(array(
+			'has_archive' => true,
+			'public' => true,
+			'show_in_nav_menus' => true,
+			'menu_icon' => 'dashicons-calendar-alt',
+	));
+	$agenda->registreer();
+	
+	$agenda->maak_taxonomie('plek', 'plekken');
+
+} endif;
+
+add_action('after_setup_theme', 'ag_config_agenda');

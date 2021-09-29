@@ -12,7 +12,6 @@ do_action('ag_pagina_titel');
 echo "<div class='art-lijst'>";
 
 if (have_posts()) : while (have_posts()) : the_post();
-
 	ag_print_lijst_ctrl($post, '3', 140);
 
 endwhile; endif;

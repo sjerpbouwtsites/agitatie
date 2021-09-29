@@ -2,10 +2,10 @@ import stickySidebar from "./modules/sidebar.js";
 
 var doc, body, html, aside, i, l;
 
-function klikBaas(){
-
+function klikBaas(){   
+ 
 	body.addEventListener('click', function(e){
-
+ 
 		var
 		funcNamen = ['schakel', 'scroll'],
 		f;
@@ -31,7 +31,7 @@ function init() {
 function naAllesGeladenZetCSS(){
 	window.addEventListener('load', function(){
 		document.body.classList.add('pagina-geladen');
-	})
+	});
 }
 
 function verschrikkelijkeHacks(){
@@ -138,15 +138,14 @@ window.onload = function(){
 		stickySidebar();
 	}
 
-	if (doc.querySelector('.carousel')) carouselInit();
 
 /*	var shareDaddy = $('.sharedaddy');
 	if (shareDaddy.length) kopieerShare(shareDaddy);
 */
-	videoPlayer();
+	videoPlayer(); 
 
 	if (doc.getElementById('agenda-filter')) agendaFilter();
-
+ 
 	kopmenuSubMobiel();
 
 
