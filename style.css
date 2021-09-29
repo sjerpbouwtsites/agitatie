@@ -5316,91 +5316,13 @@ footer .menu a:hover {
   padding-bottom: calc(.3em - 1px);
 }
 
-/* line 1, scss/_waaier.scss */
-.weetje {
-  -webkit-columns: 5;
-     -moz-columns: 5;
-          columns: 5;
-}
-
-@media (max-width: 1200px) {
-  /* line 1, scss/_waaier.scss */
-  .weetje {
-    -webkit-columns: 4;
-       -moz-columns: 4;
-            columns: 4;
-  }
-}
-
-@media (max-width: 900px) {
-  /* line 1, scss/_waaier.scss */
-  .weetje {
-    -webkit-columns: 3;
-       -moz-columns: 3;
-            columns: 3;
-  }
-}
-
-@media (max-width: 600px) {
-  /* line 1, scss/_waaier.scss */
-  .weetje {
-    -webkit-columns: 2;
-       -moz-columns: 2;
-            columns: 2;
-  }
-}
-
-@media (max-width: 400px) {
-  /* line 1, scss/_waaier.scss */
-  .weetje {
-    -webkit-columns: 1;
-       -moz-columns: 1;
-            columns: 1;
-  }
-}
-
-/* line 15, scss/_waaier.scss */
-.weetje .weetje-letter {
-  display: block;
-}
-
-/* line 18, scss/_waaier.scss */
-.weetje .index:first-child h3 {
-  margin-top: 0;
-}
-
-/* line 21, scss/_waaier.scss */
-.weetje.gefilterd h3 {
-  margin-top: 0;
-}
-
-/* line 29, scss/_waaier.scss */
-.waaier .index-nav {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-  max-width: 750px;
-  margin-bottom: 40px;
-}
-
-/* line 33, scss/_waaier.scss */
-.waaier .index-nav a {
-  margin-right: 10px;
-  margin-bottom: 10px;
-}
-
-/* line 36, scss/_waaier.scss */
-.waaier .index-nav a span {
-  text-transform: uppercase;
-}
-
 @media screen and (min-width: 1200px) {
-  /* line 62, scss/style.scss */
+  /* line 61, scss/style.scss */
   #primary.singular,
   #primary.voorpagina {
     position: relative;
   }
-  /* line 65, scss/style.scss */
+  /* line 64, scss/style.scss */
   #primary.singular::before,
   #primary.voorpagina::before {
     position: absolute;
