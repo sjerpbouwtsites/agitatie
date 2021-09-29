@@ -81,24 +81,6 @@ function remove_menu_pages() {
 
 }
 
-//////////////////////////////////////////////////////////
-
-//js toevoegingen aan dashboard
-function js_admin_aanpassing() {
-	wp_register_script( 'admin-aanpassing', get_template_directory_uri() . '/admin/admin-aanpassing.js' );
-	wp_enqueue_script( 'admin-aanpassing' );
-}
-add_action( 'admin_enqueue_scripts', 'js_admin_aanpassing' );
-
-///////////////////////////////////////////////////////////
-
-//css toevoegingen aan dashboard
-function css_admin_aanpassing() {
-	wp_register_style( 'admin-css-aanpassing', THEME_URI . '/admin/admin-aanpassing.css');
-	wp_enqueue_style( 'admin-css-aanpassing');
-}
-add_action('admin_init', 'css_admin_aanpassing' );
-
 ///////////////////////////////////////////////////////////
 
 // content width
