@@ -24,7 +24,6 @@ if( function_exists('acf_add_local_field_group') ):
 	ag_acf_footervelden();
 	ag_acf_terugval_afb_optie();
 	ag_acf_cat_afb();
-	ag_acf_waaier();
 	ag_acf_colofon();
 	ag_acf_hero();
 
@@ -224,56 +223,6 @@ function ag_acf_cat_afb(){
 	));
 }
 
-function ag_acf_waaier(){
-
-
-
-	acf_add_local_field_group(array(
-		'key' => 'group_5aa3f750af1d3',
-		'title' => 'waaier',
-		'fields' => array(
-			array(
-				'key' => 'field_5aa3f7728529b',
-				'label' => 'post type',
-				'name' => 'post_type',
-				'type' => 'text',
-				'instructions' => 'bericht is post, pagina is page. Vul anderen met hand in.',
-				'required' => 0,
-				'conditional_logic' => 0,
-				'wrapper' => array(
-					'width' => '',
-					'class' => '',
-					'id' => '',
-				),
-				'default_value' => array(
-				),
-				'allow_null' => 0,
-				'multiple' => 0,
-				'ui' => 0,
-				'ajax' => 0,
-				'return_format' => 'value',
-				'placeholder' => '',
-			),
-		),
-		'location' => array(
-			array(
-				array(
-					'param' => 'page_template',
-					'operator' => '==',
-					'value' => 'waaier.php',
-				),
-			),
-		),
-		'menu_order' => 0,
-		'position' => 'normal',
-		'style' => 'default',
-		'label_placement' => 'top',
-		'instruction_placement' => 'label',
-		'hide_on_screen' => '',
-		'active' => 1,
-		'description' => '',
-	));
-}
 
 function ag_acf_colofon(){
 
