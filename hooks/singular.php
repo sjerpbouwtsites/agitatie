@@ -113,4 +113,4 @@ if (!function_exists('ag_singular_taxonomieen')) : function ag_singular_taxonomi
 
 endif;
 
-add_action('ag_singular_na_artikel', 'ag_singular_taxonomieen', 10);
+add_action('ag_singular_na_artikel', 'ag_singular_taxonomieen', 20);

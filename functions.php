@@ -39,10 +39,7 @@ $include_boom = array(
 		"acf", //
 	),
 	'ctrl' => array(
-		'controllers',
-		'archief',
-		'categorie',
-		'singular'
+		'controllers-bundel'
 	),
 	'hooks' => array(
 		'header',
