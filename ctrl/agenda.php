@@ -163,22 +163,36 @@ class Ag_agenda extends Ag_basis_class
                         $post_taxonomieen = wp_get_post_terms( $a->ID, $tax_strings);
                         if (!$this->is_widget) {
                             $content = ag_maak_excerpt($a, 320);
-                            $rechts = "<div class='agenda-lijst__cel agenda-lijst__cel--$omgeving agenda-lijst__rechts agenda-lijst__rechts--".$omgeving."'><span>".$content."</span></div>";
-                            $midden = "<div class='agenda-lijst__midden agenda-lijst__cel agenda-lijst__cel--$omgeving agenda-lijst__midden--".$omgeving."'>";
-                            foreach($post_taxonomieen as $pt) {
 
-                                $prefix = count($post_taxonomieen) > 1
-                                ? "<span class='agenda-lijst__taxonomie-prefix agenda-lijst__taxonomie-prefix--$omgeving agenda-lijst__taxonomie-prefix--$pt->taxonomy'>$pt->taxonomy:</span>"
-                                : '';
+                            $rechts = "<div 
+                                class='agenda-lijst__cel 
+                                    agenda-lijst__cel--$omgeving 
+                                    agenda-lijst__rechts 
+                                    agenda-lijst__rechts--".$omgeving."'>
+                                    <span>".$content."</span>
+                                </div>";
 
-                                echo "<span
-                                    class='agenda-lijst__taxonomie agenda-lijst__taxonomie--$omgeving agenda-lijst__taxonomie--$pt->taxonomy'>
-                                    $prefix $pt->name
-                                </span>";
-                            }
+                            $midden = "<div 
+                                class='agenda-lijst__midden agenda-lijst__cel 
+                                    agenda-lijst__cel--$omgeving 
+                                    agenda-lijst__midden--".$omgeving."'>";
+                                foreach($post_taxonomieen as $pt) :
 
-                            echo "
-                            </div>";
+                                    $prefix = count($post_taxonomieen) > 1
+                                    ? "<span 
+                                        class='agenda-lijst__taxonomie-prefix 
+                                        agenda-lijst__taxonomie-prefix--$omgeving 
+                                        agenda-lijst__taxonomie-prefix--$pt->taxonomy
+                                        '>$pt->taxonomy:</span>"
+                                    : '';
+
+                                    $midden .= "<span
+                                        class='agenda-lijst__taxonomie agenda-lijst__taxonomie--$omgeving agenda-lijst__taxonomie--$pt->taxonomy'>
+                                        $prefix $pt->name
+                                    </span>";
+                                endforeach;
+
+                                $midden .= "</div>";
                         } else {
                             $rechts = '';
                             $midden = '';
@@ -195,14 +209,21 @@ class Ag_agenda extends Ag_basis_class
                         echo
                         "<li class='agenda-lijst__stuk agenda-lijst__stuk--".$omgeving."'>
                             <a class='agenda-lijst__link agenda-lijst__link--".$omgeving."' href='".get_the_permalink($a->ID)."'>
-                                <div class='agenda-lijst__links agenda-lijst__cel agenda-lijst__cel--$omgeving agenda-lijst__datum agenda-lijst__links--".$omgeving." agenda-lijst__datum--".$omgeving."'>
-                                <span class='agenda-lijst__titel agenda-lijst__titel--".$omgeving."' >".$a->post_title."</span>
-                                <time class='agenda-lijst__tijd agenda-lijst__tijd--$omgeving'>$datum</time>
+                                <div 
+                                    class='agenda-lijst__links 
+                                        agenda-lijst__cel 
+                                        agenda-lijst__cel--$omgeving 
+                                        agenda-lijst__datum 
+                                        agenda-lijst__links--".$omgeving." 
+                                        agenda-lijst__datum--".$omgeving."'>
+
+                                    <span class='agenda-lijst__titel agenda-lijst__titel--".$omgeving."' >".$a->post_title."</span>
+                                    <time class='agenda-lijst__tijd agenda-lijst__tijd--$omgeving'>$datum</time>
                                 </div>
                                 $midden
                                 {$rechts}
                             </a>
-							</li>";
+						</li>";
                     endforeach; //agendastukken
 
                     ?>
