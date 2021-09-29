@@ -2512,9 +2512,10 @@ main.heeft-uitgelicht.heeft-hero .sticky-sidebar {
   color: #252525;
   margin-bottom: .5em;
   display: inline-block;
+  word-break: break-all;
 }
 
-/* line 130, scss/_agenda.scss */
+/* line 131, scss/_agenda.scss */
 .agenda-lijst__rechts > span {
   font-weight: 500;
   font-size: .75em;
@@ -2522,32 +2523,32 @@ main.heeft-uitgelicht.heeft-hero .sticky-sidebar {
   margin-top: -.15em;
 }
 
-/* line 136, scss/_agenda.scss */
+/* line 137, scss/_agenda.scss */
 .agenda-lijst__stuk {
   border-bottom: 1px solid rgba(33, 33, 33, 0.1);
 }
 
-/* line 138, scss/_agenda.scss */
+/* line 139, scss/_agenda.scss */
 .agenda-lijst__stuk:last-child {
   border-bottom: 0;
 }
 
-/* line 143, scss/_agenda.scss */
+/* line 144, scss/_agenda.scss */
 .agenda-lijst__link {
   position: relative;
 }
 
-/* line 145, scss/_agenda.scss */
+/* line 146, scss/_agenda.scss */
 .agenda-lijst__link:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-/* line 149, scss/_agenda.scss */
+/* line 150, scss/_agenda.scss */
 .agenda-lijst__link:hover {
   text-decoration: none;
 }
 
-/* line 152, scss/_agenda.scss */
+/* line 153, scss/_agenda.scss */
 .agenda-lijst__link--pagina {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2559,7 +2560,7 @@ main.heeft-uitgelicht.heeft-hero .sticky-sidebar {
 }
 
 @media screen and (max-width: 500px) {
-  /* line 152, scss/_agenda.scss */
+  /* line 153, scss/_agenda.scss */
   .agenda-lijst__link--pagina {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2568,7 +2569,7 @@ main.heeft-uitgelicht.heeft-hero .sticky-sidebar {
   }
 }
 
-/* line 160, scss/_agenda.scss */
+/* line 161, scss/_agenda.scss */
 .agenda-lijst__cel--pagina {
   padding: 10px;
   -webkit-box-flex: 0;
@@ -2576,23 +2577,23 @@ main.heeft-uitgelicht.heeft-hero .sticky-sidebar {
           flex-grow: 0;
 }
 
-/* line 164, scss/_agenda.scss */
+/* line 165, scss/_agenda.scss */
 .agenda-lijst__links {
-  width: 128px;
+  width: 180px;
 }
 
-/* line 168, scss/_agenda.scss */
+/* line 169, scss/_agenda.scss */
 .agenda-lijst__midden {
   width: 240px;
 }
 
-/* line 172, scss/_agenda.scss */
+/* line 173, scss/_agenda.scss */
 .agenda-lijst__rechts {
   width: calc(100% - 360px);
 }
 
 @media screen and (max-width: 800px) {
-  /* line 177, scss/_agenda.scss */
+  /* line 178, scss/_agenda.scss */
   .agenda-lijst__rechts {
     display: none;
   }

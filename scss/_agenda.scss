@@ -126,6 +126,7 @@
 	color: $zwart;
 	margin-bottom: .5em;
 	display: inline-block;
+	word-break: break-all;
 }
 .agenda-lijst__rechts > span {
 	font-weight: 500;
@@ -162,7 +163,7 @@
 	flex-grow: 0;
 }
 .agenda-lijst__links {
-	width: 128px;
+	width: 180px;
 }
 
 .agenda-lijst__midden {
