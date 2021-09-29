@@ -29,7 +29,6 @@ if ( ! function_exists( 'agitatie_setup' ) ) :
 
 		register_nav_menus( array(
 			'kop' => esc_html__( 'kop', 'agitatie' ),
-			'voorpagina' => esc_html__( 'voorpagina', 'agitatie' ),
 		) );
 
 
@@ -64,8 +63,6 @@ if ( ! function_exists( 'agitatie_setup' ) ) :
 			}
 		}
 
-
-
 	}
 
 endif;
@@ -92,7 +89,6 @@ function ag_registreer_sidebars() {
 		'before_title'  => '<h3 class="widgettitle">',
 		'after_title'   => '</h3>',
     ) );
-
 
 }
 
