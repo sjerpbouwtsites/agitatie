@@ -19,15 +19,11 @@ GitHub Theme URI: https://github.com/sjerpbouwtsites/agitatie
 @import 'basis/typografie';
 @import 'basis/els'; 
 @import 'basis/formulieren';
-@import 'basis/menu';
 @import 'basis/inhoud';
 @import 'basis/mixins';
 
 @import 'generiek';
 @import 'generiek-teksten';
-
-@import 'ext/leaflet';
-@import 'ext/facebook';
 
 @import 'onderdelen/art_class';
 @import 'onderdelen/back-to-top';
@@ -36,7 +32,6 @@ GitHub Theme URI: https://github.com/sjerpbouwtsites/agitatie
 @import 'onderdelen/schakel';
 @import 'onderdelen/tax-blok';
 @import 'onderdelen/uitgelichte-afbeelding';
-@import 'onderdelen/viddoos';
  
 @import 'widgets/sharedaddy';
 @import 'widgets/sticky-sidebar';
