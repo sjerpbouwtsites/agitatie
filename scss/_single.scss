@@ -32,10 +32,11 @@
 }
  @media screen and (min-width: 1250px){
 	.uitgelichte-afbeelding-buiten + .titel-over-afbeelding-indien-aanwezig .bericht-tekst.datum {
-	top: calc(50vh - .25em);
-	right: calc(50% - (390px + 1em));
-	transform: translate(100%, 0);
-	font-size: 2em;
+    top: calc(50vh + .25em);
+    right: calc(50% - (390px + 1em));
+    -webkit-transform: translate(100%, 0);
+    transform: translate(100%, 0);
+    font-size: 1.75em;
 }
 }
 @media screen and (max-width: 1249px) and (min-width: 600px){

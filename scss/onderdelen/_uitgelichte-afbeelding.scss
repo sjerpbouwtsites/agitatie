@@ -82,6 +82,7 @@
 		padding-top: .66em;
 		background-color: $achtergrondkleur;
 		position: relative;
+		min-height: 130px;
 		&::before, &::after {
 			display: block;
 			content: '';

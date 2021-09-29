@@ -80,6 +80,56 @@ class Ag_pag_familie_w extends WP_Widget {
 	}
 }
 
+class Ag_agenda_widget extends WP_Widget {
+
+	function __construct() {
+
+	parent::__construct(
+				// Base ID of your widget
+				'Ag_agenda_widget',
+
+				// Widget name will appear in UI
+				__('Agenda widget', 'Ag_agenda_widget_domain'),
+
+				// Widget description
+				array( 'description' => __( 'Indien er actieve agendaitems zijn wordt deze widget getoond.', 'Ag_agenda_widget_domain' ), )
+			);
+
+	}
+
+	// Frontend
+	public function widget($args, $instance) {
+
+		echo "<section id='agenda-widget' class='widget widget_block sticky-widget agenda-widget-buiten'>";
+		$agenda = new Ag_agenda(array(
+			'aantal' => 5,
+			'omgeving' => 'widget'
+		));
+
+		$agenda->print();
+
+    // $naar_agenda = new Ag_knop(array(
+    //   'class' 	=> 'in-wit ikoon-rechts',
+    //   'link' 		=> get_post_type_archive_link('agenda'),
+    //   'tekst'		=> 'Agenda',
+    //   'ikoon'		=> 'arrow-right-thick'
+    // ));		
+		// $naar_agenda->print();
+		echo "</section>";
+
+	}
+
+	// Backend
+	public function form($instance) {
+
+}
+
+public function update( $new_instance, $old_instance ) {
+	$instance = array();
+	return $instance;
+}
+}
+
 /**
  * wordt bij desktop gebruikt om de sharedaddy heen te verplaatsen.
  */
@@ -124,6 +174,7 @@ class Ag_social_widget_container extends WP_Widget {
 function widget_wrap() {
     register_widget( 'ag_pag_familie_w' );
 	register_widget( 'ag_social_widget_container' );
+	register_widget('ag_agenda_widget');
 }
 
 add_action( 'widgets_init', 'widget_wrap' );
