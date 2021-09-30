@@ -1,0 +1,105 @@
+//parent
+.knop, input.wpcf7-submit {
+	display: inline-block;
+	padding: 0.3em 1em;
+	font-weight: bold;
+	background-color: $wittig;
+	box-shadow: 2px 4px 0 rgba(0,0,0,0.4);
+	transition: all 0.2s ease-out 0.2s;
+	position: relative;
+	color: $hoofdkleur;
+	top: 0;
+	font-size: 1em;
+	text-transform: lowercase;
+	border-radius: 0;
+	font-family: inherit;
+	border: 0;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+	&:hover, &:visited, &:active {
+		color: $hoofdkleur;
+		text-decoration: none;
+	}
+	&:hover {
+		transition: all 0.15s ease-out;
+		box-shadow: 0.5px 1px 0 rgba(0,0,0,0.4);
+		top: 3px;
+	}
+	span {
+		margin-right: 8px;
+		color: inherit !important;
+		line-height: inherit  !important;
+		position: relative;
+		top: -1px;
+		font-weight: inherit;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+	}
+	&.geen-ikoon {
+		span {
+			margin-right: 0 !important;
+		}
+	}
+	i {
+		color: inherit !important;
+	}
+	&.in-wit {
+		background-color: $hoofdkleur;
+		box-shadow: 2px 4px 0 rgba(0,0,0,0.4);
+		color: white !important;
+			&:hover {
+			box-shadow: 0.5px 1px 0 rgba(0,0,0,0.4);
+			top: 3px;
+		}
+		span, i {
+			color: inherit !important;
+		}
+	}
+	&.ikoon-links {
+		display: inline-flex;
+		flex-direction: row;
+		margin-right: 10px;
+		span {
+			order: 2;
+			margin-right: 0;
+			margin-left: 10px;
+		}
+		i {
+			margin-left: -2px;
+		}
+	}
+}
+	input.wpcf7-submit {
+		height: 34px;
+	}
+
+.knoppendoos {
+	margin-bottom: -10px;
+	.knop {
+		margin-bottom: 10px;
+		margin-right: 10px;
+	}
+	hr {
+		background-color: transparent;
+		position: relative;
+		&::after {
+			position: absolute;
+			left: 0;
+			top: 4px;
+			display: block;
+			content: '';
+			border-bottom: 1px solid $lichtgrijs;
+			width: 290px;
+			max-width: 80%;
+		}
+	}
+}
