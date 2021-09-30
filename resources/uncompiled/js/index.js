@@ -1,5 +1,7 @@
 import '../stijl/style.scss'
 import stickySidebar from "./modules/sidebar.js";
+import gereedschap from "./modules/gereedschap.js";
+import schakelScroll from "./modules/schakel-scroll.js";
 
 var doc, body, html, aside, i, l;
 function klikBaas(){   
@@ -12,8 +14,9 @@ function klikBaas(){
 
 		for (var i = funcNamen.length - 1; i >= 0; i--) {
 			f = funcNamen[i];
+
 			if (e.target.classList.contains(f) || e.target.parentNode.classList.contains(f)) {
-				window[f](e);
+				schakelScroll[f](e);
 			}  
 		}
 

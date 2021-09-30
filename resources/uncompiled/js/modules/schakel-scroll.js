@@ -1,4 +1,9 @@
-function schakel(e) {
+import {actieInit, zetStijl} from "./gereedschap.js";
+
+const doc = document;
+const body = doc.body;
+
+export function schakel(e) {
 
 	var
 	doel = actieInit(e, 'schakel'),
@@ -56,7 +61,7 @@ var schakelExtra = {
 	},
 };
 
-function scroll(e) {
+export function scroll(e) {
 
 	var scrollNaar;
 
@@ -83,3 +88,9 @@ function scroll(e) {
         scrollTop: $(scrollNaar).offset().top - headerH - marginTop
     }, 600);
 }
+
+const schakelScroll = {
+	schakel,
+	scroll
+}
+export default schakelScroll
