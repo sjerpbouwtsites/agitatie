@@ -1,4 +1,4 @@
-function schakel(e) {
+export default function schakel(e) {
 
 	var
 	doel = actieInit(e, 'schakel'),
@@ -56,7 +56,7 @@ var schakelExtra = {
 	},
 };
 
-function scroll(e) {
+export function scroll(e) {
 
 	var scrollNaar;
 
