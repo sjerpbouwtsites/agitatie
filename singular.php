@@ -8,18 +8,18 @@ echo "<article class='bericht'>";
 
 ag_uitgelichte_afbeelding_ctrl();
 
-while ( have_posts() ) : the_post();
-	echo "<div class='verpakking verpakking-klein marginveld titel-over-afbeelding-indien-aanwezig'>";
+while (have_posts()) : the_post();
+    echo "<div class='verpakking verpakking-klein marginveld titel-over-afbeelding-indien-aanwezig'>";
 
-		do_action('ag_pagina_titel');
+        do_action('ag_pagina_titel');
 
-		do_action('ag_pagina_voor_tekst');
+        do_action('ag_pagina_voor_tekst');
 
-		echo "<div class='bericht-tekst'>";
-			the_content();
-		echo "</div>";
+        echo "<div class='bericht-tekst'>";
+            the_content();
+        echo "</div>";
 
-	echo "</div>";
+    echo "</div>";
 endwhile; // End of the loop.
 
 echo "</article>";
