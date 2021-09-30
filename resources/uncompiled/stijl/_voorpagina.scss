@@ -1,0 +1,20 @@
+//parent
+/* .voorpagina main {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	& > * {
+		margin-left: 0;
+		margin-right: 0;
+		@extend .heeft-padding;
+	}
+} */
+
+.voorpagina .art-lijst .art-c {
+	min-width: 200px;
+	img {
+		height: 110px;
+	}
+}
+

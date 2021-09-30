@@ -24,11 +24,157 @@ if( function_exists('acf_add_local_field_group') ):
 	ag_acf_footervelden();
 	ag_acf_terugval_afb_optie();
 	ag_acf_cat_afb();
-	ag_acf_waaier();
 	ag_acf_colofon();
 	ag_acf_hero();
-
+	ag_acf_agenda_en_tax_velden();
 endif;
+
+function ag_acf_agenda_en_tax_velden(){
+	if( function_exists('acf_add_local_field_group') ):
+
+		acf_add_local_field_group(array(
+			'key' => 'group_61542c406f52b',
+			'title' => 'Agenda',
+			'fields' => array(
+				array(
+					'key' => 'field_61542c48ad4da',
+					'label' => 'datum',
+					'name' => 'datum',
+					'type' => 'date_time_picker',
+					'instructions' => '',
+					'required' => 1,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'display_format' => 'd/m/Y H:i',
+					'return_format' => 'd/m/Y H:i',
+					'first_day' => 1,
+				),
+			),
+			'location' => array(
+				array(
+					array(
+						'param' => 'post_type',
+						'operator' => '==',
+						'value' => 'agenda',
+					),
+				),
+			),
+			'menu_order' => 0,
+			'position' => 'normal',
+			'style' => 'default',
+			'label_placement' => 'top',
+			'instruction_placement' => 'label',
+			'hide_on_screen' => '',
+			'active' => true,
+			'description' => '',
+		));
+		
+		acf_add_local_field_group(array(
+			'key' => 'group_615447a43da86',
+			'title' => 'agendaplek-adres',
+			'fields' => array(
+				array(
+					'key' => 'field_615447af346b5',
+					'label' => 'straat',
+					'name' => 'straat',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_615447c1346b6',
+					'label' => 'huisnummer',
+					'name' => 'huisnummer',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_615447c6346b7',
+					'label' => 'postcode',
+					'name' => 'postcode',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_615447cb346b8',
+					'label' => 'stad',
+					'name' => 'stad',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+			),
+			'location' => array(
+				array(
+					array(
+						'param' => 'taxonomy',
+						'operator' => '==',
+						'value' => 'plek',
+					),
+				),
+			),
+			'menu_order' => 0,
+			'position' => 'normal',
+			'style' => 'default',
+			'label_placement' => 'top',
+			'instruction_placement' => 'label',
+			'hide_on_screen' => '',
+			'active' => true,
+			'description' => '',
+		));
+		
+		endif;			
+}
 
 function ag_acf_footervelden() {
 	acf_add_local_field_group(array(
@@ -224,56 +370,6 @@ function ag_acf_cat_afb(){
 	));
 }
 
-function ag_acf_waaier(){
-
-
-
-	acf_add_local_field_group(array(
-		'key' => 'group_5aa3f750af1d3',
-		'title' => 'waaier',
-		'fields' => array(
-			array(
-				'key' => 'field_5aa3f7728529b',
-				'label' => 'post type',
-				'name' => 'post_type',
-				'type' => 'text',
-				'instructions' => 'bericht is post, pagina is page. Vul anderen met hand in.',
-				'required' => 0,
-				'conditional_logic' => 0,
-				'wrapper' => array(
-					'width' => '',
-					'class' => '',
-					'id' => '',
-				),
-				'default_value' => array(
-				),
-				'allow_null' => 0,
-				'multiple' => 0,
-				'ui' => 0,
-				'ajax' => 0,
-				'return_format' => 'value',
-				'placeholder' => '',
-			),
-		),
-		'location' => array(
-			array(
-				array(
-					'param' => 'page_template',
-					'operator' => '==',
-					'value' => 'waaier.php',
-				),
-			),
-		),
-		'menu_order' => 0,
-		'position' => 'normal',
-		'style' => 'default',
-		'label_placement' => 'top',
-		'instruction_placement' => 'label',
-		'hide_on_screen' => '',
-		'active' => 1,
-		'description' => '',
-	));
-}
 
 function ag_acf_colofon(){
 

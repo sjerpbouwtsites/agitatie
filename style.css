@@ -670,109 +670,6 @@ textarea {
   width: 100%;
 }
 
-/* line 2, scss/basis/_menu.scss */
-.main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%;
-}
-
-/* line 9, scss/basis/_menu.scss */
-.main-navigation ul {
-  display: none;
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-}
-
-/* line 16, scss/basis/_menu.scss */
-.main-navigation li {
-  float: left;
-  position: relative;
-}
-
-/* line 21, scss/basis/_menu.scss */
-.main-navigation a {
-  /*	display: block;*/
-  text-decoration: none;
-}
-
-/* line 26, scss/basis/_menu.scss */
-.main-navigation ul ul {
-  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  float: left;
-  position: absolute;
-  top: 1.5em;
-  left: -999em;
-  z-index: 99999;
-}
-
-/* line 35, scss/basis/_menu.scss */
-.main-navigation ul ul ul {
-  left: -999em;
-  top: 0;
-}
-
-/* line 40, scss/basis/_menu.scss */
-.main-navigation ul ul a {
-  width: 200px;
-}
-
-/* line 60, scss/basis/_menu.scss */
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-  left: auto;
-}
-
-/* line 65, scss/basis/_menu.scss */
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-  left: 100%;
-}
-
-/* Small menu. */
-/* line 77, scss/basis/_menu.scss */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block;
-}
-
-/*
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: block;
-	}
-}*/
-/* line 91, scss/basis/_menu.scss */
-.site-main .comment-navigation,
-.site-main .posts-navigation,
-.site-main .post-navigation {
-  margin: 0 0 1.5em;
-  overflow: hidden;
-}
-
-/* line 98, scss/basis/_menu.scss */
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-  float: left;
-  width: 50%;
-}
-
-/* line 105, scss/basis/_menu.scss */
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%;
-}
-
 /*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
@@ -1319,6 +1216,7 @@ body {
           font-variant-ligatures: historical-ligatures;
   font-variant-numeric: oldstyle-nums;
   text-rendering: optimizeLegibility;
+<<<<<<< HEAD
 }
 
 /* line 12, scss/_generiek-teksten.scss */
@@ -2954,200 +2852,169 @@ img.efbl-loader {
 .efbl_read_full_story {
   float: left;
   margin-right: 10px;
+=======
+>>>>>>> e5a60c59521e0ea08c6d505e610345f26c520375
 }
 
-/* line 429, scss/ext/_facebook.scss */
-.efbl_links_container.efbl_slideIn {
-  display: block;
-  float: left;
+/* line 12, scss/_generiek-teksten.scss */
+a:hover,
+a:focus,
+a:active {
+  color: #0099dc;
 }
 
-/* line 434, scss/ext/_facebook.scss */
-#efblcf .efbl_comments_wraper {
-  float: left;
-  width: 100%;
-  margin-top: 5px;
-  padding: 10px;
-  background: #eee;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  display: none;
+/* line 18, scss/_generiek-teksten.scss */
+a:hover {
+  text-decoration: underline;
 }
 
-/* line 445, scss/ext/_facebook.scss */
-#efblcf .efbl_comments_wraper.efbl_cwraper_slide {
-  display: block;
+/* line 22, scss/_generiek-teksten.scss */
+a, a:visited {
+  color: #0099dc;
+  text-decoration: none;
 }
 
-/* line 448, scss/ext/_facebook.scss */
-#efblcf .efbl_comments_wraper .efbl_comments {
-  margin-bottom: 10px;
-  float: left;
-  width: 100%;
+/* line 27, scss/_generiek-teksten.scss */
+body {
+  font-family: "Merriweather", sans-serif;
 }
 
-/* line 453, scss/ext/_facebook.scss */
-#efblcf .efbl_comments_footer {
-  float: left;
-  margin-top: 5px;
-  border-top: 1px solid #fff;
-  width: 100%;
-  padding-top: 5px;
+/* line 32, scss/_generiek-teksten.scss */
+h1 {
+  font-size: 3.6em;
 }
 
-/* line 460, scss/ext/_facebook.scss */
-.efbl_comments_header {
-  float: left;
-  margin-bottom: 5px;
-  border-bottom: 1px solid #fff;
-  width: 100%;
-  padding-bottom: 5px;
-}
-
-/* line 468, scss/ext/_facebook.scss */
-#efblcf .efbl_comments_wraper .efbl_commenter_image {
-  float: left;
-  width: 32px;
-  margin-right: 10px;
-  margin-top: 7px;
-}
-
-/* line 474, scss/ext/_facebook.scss */
-#efblcf .efbl_comments_wraper .efbl_commenter_image a img {
-  border: 0px;
-}
-
-/* line 477, scss/ext/_facebook.scss */
-#efblcf .efbl_comments_wraper .efbl_comment_text {
-  width: 88%;
-  float: left;
-}
-
-/* line 481, scss/ext/_facebook.scss */
-#efblcf .efbl_comments_wraper p {
-  margin: 0px;
-  padding: 0px;
-}
-
-/**
-   * Fade-zoom animation for first dialog
-   */
-/* start state */
-/* line 492, scss/ext/_facebook.scss */
-.my-mfp-zoom-in .zoom-anim-dialog {
-  opacity: 0;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  -webkit-transform: scale(0.8);
-  transform: scale(0.8);
-}
-
-/* animate in */
-/* line 510, scss/ext/_facebook.scss */
-.my-mfp-zoom-in.mfp-ready .zoom-anim-dialog {
-  opacity: 1;
-  -webkit-transform: scale(1);
-  transform: scale(1);
-}
-
-/* animate out */
-/* line 521, scss/ext/_facebook.scss */
-.my-mfp-zoom-in.mfp-removing .zoom-anim-dialog {
-  -webkit-transform: scale(0.8);
-  transform: scale(0.8);
-  opacity: 0;
-}
-
-/* Dark overlay, start state */
-/* line 532, scss/ext/_facebook.scss */
-.my-mfp-zoom-in.mfp-bg {
-  opacity: 0;
-  -webkit-transition: opacity 0.3s ease-out;
-  transition: opacity 0.3s ease-out;
-}
-
-/* animate in */
-/* line 540, scss/ext/_facebook.scss */
-.my-mfp-zoom-in.mfp-ready.mfp-bg {
-  opacity: 0.8;
-}
-
-/* animate out */
-/* line 544, scss/ext/_facebook.scss */
-.my-mfp-zoom-in.mfp-removing.mfp-bg {
-  opacity: 0;
-}
-
-/**
-   * Fade animation for first dialog
-   */
-/* line 552, scss/ext/_facebook.scss */
-.mfp-fade.mfp-bg {
-  opacity: 0;
-  -webkit-transition: all 0.15s ease-out;
-  transition: all 0.15s ease-out;
-}
-
-/* overlay animate in */
-/* line 560, scss/ext/_facebook.scss */
-.mfp-fade.mfp-bg.mfp-ready {
-  opacity: 0.8;
-}
-
-/* overlay animate out */
-/* line 564, scss/ext/_facebook.scss */
-.mfp-fade.mfp-bg.mfp-removing {
-  opacity: 0;
-}
-
-/* content at start */
-/* line 569, scss/ext/_facebook.scss */
-.mfp-fade.mfp-wrap .mfp-content {
-  opacity: 0;
-  -webkit-transition: all 0.15s ease-out;
-  transition: all 0.15s ease-out;
-}
-
-/* content animate it */
-/* line 577, scss/ext/_facebook.scss */
-.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
-  opacity: 1;
-}
-
-/* content animate out */
-/* line 581, scss/ext/_facebook.scss */
-.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
-  opacity: 0;
-}
-
-@media only screen and (max-width: 768px) {
-  /* line 586, scss/ext/_facebook.scss */
-  #efblcf.thumbnail .efbl_story_photo, #efblcf.thumbnail .efbl_post_content, #efblcf.halfwidth .efbl_story_photo, #efblcf.halfwidth .efbl_post_content {
-    width: 100%;
-    margin-bottom: 10px;
+@media (max-width: 900px) {
+  /* line 32, scss/_generiek-teksten.scss */
+  h1 {
+    font-size: 2.7em;
   }
-  /* line 591, scss/ext/_facebook.scss */
-  #efbl_popup {
-    width: auto !important;
-    height: auto !important;
-    display: table;
+}
+
+@media (max-width: 600px) {
+  /* line 32, scss/_generiek-teksten.scss */
+  h1 {
+    font-size: 2.05em;
   }
-  /* line 596, scss/ext/_facebook.scss */
-  #efblcf .efbl_shared_story.efbl_has_link_image .efbl_link_text {
-    width: 100%;
+}
+
+/* line 42, scss/_generiek-teksten.scss */
+h2 {
+  font-size: 2.22em;
+}
+
+@media (max-width: 900px) {
+  /* line 42, scss/_generiek-teksten.scss */
+  h2 {
+    font-size: 1.8em;
   }
-  /* line 600, scss/ext/_facebook.scss */
-  #efblcf .efbl_shared_story {
-    text-align: center;
+}
+
+@media (max-width: 600px) {
+  /* line 42, scss/_generiek-teksten.scss */
+  h2 {
+    font-size: 1.35em;
   }
-  /* line 604, scss/ext/_facebook.scss */
-  #efblcf .efbl_shared_story.efbl_has_link_image .efbl_link_image {
-    float: none;
+}
+
+/* line 52, scss/_generiek-teksten.scss */
+h3 {
+  font-size: 1.26em;
+}
+
+@media (max-width: 600px) {
+  /* line 52, scss/_generiek-teksten.scss */
+  h3 {
+    font-size: 1em;
   }
-  /* line 609, scss/ext/_facebook.scss */
-  .efbl_links_container {
-    bottom: -30px;
+}
+
+/* line 61, scss/_generiek-teksten.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Eczar", sans-serif;
+  font-weight: 900;
+  line-height: 1;
+  margin: 1.33em 0 0.5em;
+}
+
+@media (max-width: 600px) {
+  /* line 61, scss/_generiek-teksten.scss */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    word-break: normal;
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
   }
+}
+
+/* line 72, scss/_generiek-teksten.scss */
+h1 {
+  line-height: .8;
+  word-break: keep-all;
+}
+
+/* line 77, scss/_generiek-teksten.scss */
+h4, h5, h6 {
+  font-weight: 700;
+}
+
+/* line 81, scss/_generiek-teksten.scss */
+h1, h2 {
+  letter-spacing: .02em;
+}
+
+/* line 86, scss/_generiek-teksten.scss */
+p, span {
+  line-height: 1.45;
+}
+
+/* line 90, scss/_generiek-teksten.scss */
+.bericht-tekst {
+  font-size: 1.33em;
+}
+
+/* line 92, scss/_generiek-teksten.scss */
+.bericht-tekst > * {
+  line-height: 1.35;
+}
+
+/* line 99, scss/_generiek-teksten.scss */
+main blockquote {
+  line-height: 1.5625em;
+  text-transform: none;
+  font-size: 31px;
+  letter-spacing: normal;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 107, scss/_generiek-teksten.scss */
+main blockquote p {
+  display: inline-block;
+  vertical-align: top;
+  max-width: calc(100% - 40px);
+  margin-left: 10px;
+  font-size: inherit;
+}
+
+/* line 114, scss/_generiek-teksten.scss */
+main blockquote::before {
+  content: "\F756";
+  display: inline-block;
+  font: normal normal normal 24px/1 "Material Design Icons";
+  text-rendering: auto;
+  line-height: inherit;
 }
 
 /* line 2, scss/onderdelen/_art_class.scss */
@@ -3417,65 +3284,6 @@ img.efbl-loader {
 /* line 13, scss/onderdelen/_back-to-top.scss */
 .scroll.schakel.back-to-top.open i {
   display: inline;
-}
-
-/* line 3, scss/onderdelen/_carousel.scss */
-.carousel article {
-  margin-top: 0 !important;
-}
-
-/* line 6, scss/onderdelen/_carousel.scss */
-.carousel .mdi {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  background-color: #f5f5f5;
-  z-index: 5;
-  font-size: 1.5em;
-  display: inline-block;
-  width: 1.5em;
-  text-align: center;
-}
-
-/* line 17, scss/onderdelen/_carousel.scss */
-.carousel .mdi.mdi-chevron-right {
-  -webkit-transform: translate(50%, -50%);
-          transform: translate(50%, -50%);
-  left: auto;
-  right: 0;
-}
-
-/* line 22, scss/onderdelen/_carousel.scss */
-.carousel .mdi:hover {
-  cursor: pointer;
-}
-
-/* line 26, scss/onderdelen/_carousel.scss */
-.carousel ~ footer {
-  padding-top: 20px;
-}
-
-/* line 2, scss/onderdelen/_foto-video-gallerij.scss */
-.foto-video-gallerij img, .foto-video-gallerij .vid-doos {
-  margin-bottom: 2em;
-}
-
-/* line 5, scss/onderdelen/_foto-video-gallerij.scss */
-.foto-video-gallerij .vid-doos {
-  height: auto;
-}
-
-/* line 8, scss/onderdelen/_foto-video-gallerij.scss */
-.foto-video-gallerij video {
-  max-width: 100%;
-  height: auto;
-}
-
-/* line 11, scss/onderdelen/_foto-video-gallerij.scss */
-.foto-video-gallerij video:hover {
-  cursor: pointer;
 }
 
 /* line 2, scss/onderdelen/_knop.scss */
@@ -3890,8 +3698,9 @@ input.wpcf7-submit {
     padding-top: .66em;
     background-color: #f7f7f7;
     position: relative;
+    min-height: 130px;
   }
-  /* line 85, scss/onderdelen/_uitgelichte-afbeelding.scss */
+  /* line 86, scss/onderdelen/_uitgelichte-afbeelding.scss */
   .uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child::before, .uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child::after {
     display: block;
     content: '';
@@ -3901,15 +3710,15 @@ input.wpcf7-submit {
     position: absolute;
     top: 0;
   }
-  /* line 94, scss/onderdelen/_uitgelichte-afbeelding.scss */
+  /* line 95, scss/onderdelen/_uitgelichte-afbeelding.scss */
   .uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child::before {
     right: 100%;
   }
-  /* line 97, scss/onderdelen/_uitgelichte-afbeelding.scss */
+  /* line 98, scss/onderdelen/_uitgelichte-afbeelding.scss */
   .uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child::after {
     left: 100%;
   }
-  /* line 102, scss/onderdelen/_uitgelichte-afbeelding.scss */
+  /* line 103, scss/onderdelen/_uitgelichte-afbeelding.scss */
   .archief .uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child {
     padding-bottom: .66em;
     margin-bottom: 0;
@@ -3919,81 +3728,10 @@ input.wpcf7-submit {
 }
 
 @media screen and (max-width: 768px) {
-  /* line 111, scss/onderdelen/_uitgelichte-afbeelding.scss */
+  /* line 112, scss/onderdelen/_uitgelichte-afbeelding.scss */
   .uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1 {
     margin-top: .66em;
   }
-}
-
-/* line 3, scss/onderdelen/_viddoos.scss */
-.vid-doos {
-  height: 50vh;
-  width: 100%;
-  position: relative;
-  /* 			.Ag_knop {
-				height: 34px;
-				position: absolute;
-				right: 0;
-				bottom: 0;
-				top: auto !important;
-				box-shadow: none !important;
-				&:hover {
-					bottom: 0;
-				}
-				&.speel-video {
-					left: 0;
-					right: auto;
-				}
-			} */
-  /* 			.vid-onder-binnen > * {
-				padding: 20px;
-				position: absolute;
-				bottom: 0;
-				left: 0;
-			} */
-}
-
-/* line 7, scss/onderdelen/_viddoos.scss */
-.vid-doos:hover {
-  cursor: pointer;
-}
-
-/* line 10, scss/onderdelen/_viddoos.scss */
-.vid-doos video {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-/* line 16, scss/onderdelen/_viddoos.scss */
-.vid-doos .vid-onder-buiten {
-  position: absolute;
-  bottom: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, 50%);
-          transform: translate(-50%, 50%);
-}
-
-/* line 22, scss/onderdelen/_viddoos.scss */
-.vid-doos .vid-onder-binnen {
-  position: relative;
-}
-
-/* line 48, scss/onderdelen/_viddoos.scss */
-video[autoplay] ~ .vid-onder-buiten .speel-video {
-  display: none;
-}
-
-/* line 51, scss/onderdelen/_viddoos.scss */
-video[autoplay].pause ~ .vid-onder-buiten .speel-video {
-  display: inline-block;
-}
-
-/* line 55, scss/onderdelen/_viddoos.scss */
-video.speelt ~ .vid-onder-buiten .speel-video {
-  display: none;
 }
 
 /* line 1, scss/widgets/_sharedaddy.scss */
@@ -4049,6 +3787,87 @@ div.sharedaddy .sd-title::before {
   display: block;
 }
 
+/* line 2, scss/widgets/_agenda.scss */
+.agenda-widget-buiten {
+  margin-left: -20px;
+  width: calc(100% + 40px);
+}
+
+/* line 6, scss/widgets/_agenda.scss */
+.agenda-lijst__wrapper--widget {
+  display: block;
+  padding: 20px 10px;
+}
+
+/* line 10, scss/widgets/_agenda.scss */
+.agenda-lijst--widget {
+  font-size: 1em;
+  margin: 1.5em 0;
+}
+
+/* line 14, scss/widgets/_agenda.scss */
+.agenda-lijst__stuk.agenda-lijst__stuk--widget {
+  margin-bottom: .5em;
+  padding-bottom: .5em;
+}
+
+/* line 17, scss/widgets/_agenda.scss */
+.agenda-lijst__stuk.agenda-lijst__stuk--widget:first-child {
+  margin-top: .5em;
+  padding-top: .5em;
+  border-top: 1px solid rgba(33, 33, 33, 0.1);
+}
+
+/* line 23, scss/widgets/_agenda.scss */
+.agenda-lijst__link.agenda-lijst__link--widget {
+  position: relative;
+  display: block;
+}
+
+/* line 26, scss/widgets/_agenda.scss */
+.agenda-lijst__link.agenda-lijst__link--widget::before {
+  display: none;
+  height: calc(100% + 1em);
+  width: 10px;
+  background-color: #f5f5f5;
+  position: absolute;
+  content: '';
+  top: -.5em;
+  left: -25px;
+}
+
+/* line 36, scss/widgets/_agenda.scss */
+.agenda-lijst__link.agenda-lijst__link--widget:hover {
+  background-color: initial;
+}
+
+/* line 39, scss/widgets/_agenda.scss */
+.agenda-lijst__link.agenda-lijst__link--widget:hover::before {
+  display: block;
+}
+
+/* line 43, scss/widgets/_agenda.scss */
+.agenda-lijst__titel--widget {
+  font-size: 1em;
+}
+
+/* line 46, scss/widgets/_agenda.scss */
+.agenda-lijst__datum--widget,
+.agenda-lijst__tijd--widget {
+  font-size: .75em;
+}
+
+/* line 50, scss/widgets/_agenda.scss */
+.agenda-lijst__tijd--widget {
+  max-width: 90px;
+}
+
+/* line 53, scss/widgets/_agenda.scss */
+.agenda-lijst__tijd-spacer--widget {
+  padding-left: .16em;
+  padding-right: .16em;
+}
+
 /* line 2, scss/widgets/_sticky-sidebar.scss */
 .main.heeft-sticky {
   position: relative;
@@ -4061,7 +3880,6 @@ div.sharedaddy .sd-title::before {
   right: 20px;
   width: 200px;
   height: 100%;
-  overflow: hidden;
 }
 
 @media screen and (max-width: 1200px) {
@@ -4071,19 +3889,19 @@ div.sharedaddy .sd-title::before {
   }
 }
 
-/* line 16, scss/widgets/_sticky-sidebar.scss */
+/* line 15, scss/widgets/_sticky-sidebar.scss */
 main.heeft-uitgelicht .sticky-sidebar {
   top: calc(50vh + 5em);
   height: calc(100% - (50vh + 5em));
 }
 
-/* line 20, scss/widgets/_sticky-sidebar.scss */
+/* line 19, scss/widgets/_sticky-sidebar.scss */
 main.heeft-uitgelicht.heeft-hero .sticky-sidebar {
   top: calc(75vh - 70px);
   height: calc(100% - (75vh - 70px));
 }
 
-/* line 27, scss/widgets/_sticky-sidebar.scss */
+/* line 26, scss/widgets/_sticky-sidebar.scss */
 .sticky-binnen {
   position: sticky;
   top: 40px;
@@ -4091,6 +3909,7 @@ main.heeft-uitgelicht.heeft-hero .sticky-sidebar {
   padding: 0 20px 0 20px;
   border-left: 5px solid #af1616;
   max-height: calc(100% - 40px);
+  overflow-y: hidden;
 }
 
 /* line 36, scss/widgets/_sticky-sidebar.scss */
@@ -4106,6 +3925,11 @@ main.heeft-uitgelicht.heeft-hero .sticky-sidebar {
 /* line 40, scss/widgets/_sticky-sidebar.scss */
 .sticky-widget:first-child h2, .sticky-widget:first-child h3, .sticky-widget:first-child .widget-title {
   margin-top: 0;
+}
+
+/* line 44, scss/widgets/_sticky-sidebar.scss */
+.sticky-widget:last-child {
+  margin-bottom: 0;
 }
 
 /* line 2, scss/widgets/_pag-fam.scss */
@@ -4153,34 +3977,20 @@ main.heeft-uitgelicht.heeft-hero .sticky-sidebar {
   font-weight: bold;
 }
 
-/* line 2, scss/_agenda.scss */
-.agenda .flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-/* line 7, scss/_agenda.scss */
+/* line 3, scss/_agenda.scss */
 #agenda-filter {
   padding: 20px;
   background-color: #af1616;
   color: white;
 }
 
-/* line 11, scss/_agenda.scss */
+/* line 7, scss/_agenda.scss */
 #agenda-filter h3 {
   color: white;
   text-transform: capitalize;
 }
 
-/* line 15, scss/_agenda.scss */
+/* line 11, scss/_agenda.scss */
 #agenda-filter > .flex {
   -webkit-box-align: end;
       -ms-flex-align: end;
@@ -4188,7 +3998,7 @@ main.heeft-uitgelicht.heeft-hero .sticky-sidebar {
 }
 
 @media (max-width: 700px) {
-  /* line 15, scss/_agenda.scss */
+  /* line 11, scss/_agenda.scss */
   #agenda-filter > .flex {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -4200,34 +4010,34 @@ main.heeft-uitgelicht.heeft-hero .sticky-sidebar {
         -ms-flex-pack: start;
             justify-content: start;
   }
-  /* line 23, scss/_agenda.scss */
+  /* line 19, scss/_agenda.scss */
   #agenda-filter > .flex > * {
     margin-bottom: 20px;
   }
 }
 
 @media (max-width: 560px) {
-  /* line 28, scss/_agenda.scss */
+  /* line 24, scss/_agenda.scss */
   #agenda-filter > .flex > *:last-child {
     margin-top: 32px;
   }
 }
 
 @media (max-width: 440px) {
-  /* line 33, scss/_agenda.scss */
+  /* line 29, scss/_agenda.scss */
   #agenda-filter > .flex > * {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     margin-right: 0;
     margin-bottom: 30px;
   }
-  /* line 37, scss/_agenda.scss */
+  /* line 33, scss/_agenda.scss */
   #agenda-filter > .flex > *:last-child {
     margin-top: 0;
   }
 }
 
-/* line 44, scss/_agenda.scss */
+/* line 40, scss/_agenda.scss */
 #agenda-filter section {
   margin-right: 40px;
   -webkit-box-orient: vertical;
@@ -4236,12 +4046,12 @@ main.heeft-uitgelicht.heeft-hero .sticky-sidebar {
           flex-direction: column;
 }
 
-/* line 46, scss/_agenda.scss */
+/* line 42, scss/_agenda.scss */
 #agenda-filter section h3 {
   margin-bottom: 10px;
 }
 
-/* line 53, scss/_agenda.scss */
+/* line 49, scss/_agenda.scss */
 #agenda-filter select {
   -webkit-appearance: none;
   appearance: none;
@@ -4265,17 +4075,17 @@ main.heeft-uitgelicht.heeft-hero .sticky-sidebar {
   color: #666;
 }
 
-/* line 73, scss/_agenda.scss */
+/* line 69, scss/_agenda.scss */
 #agenda-filter select.geklikt, #agenda-filter select:hover {
   color: #211f1f;
 }
 
-/* line 76, scss/_agenda.scss */
+/* line 72, scss/_agenda.scss */
 #agenda-filter select:hover {
   cursor: pointer;
 }
 
-/* line 81, scss/_agenda.scss */
+/* line 77, scss/_agenda.scss */
 #agenda-filter [type='submit'] {
   font-size: 1em;
   border: 0;
@@ -4283,8 +4093,26 @@ main.heeft-uitgelicht.heeft-hero .sticky-sidebar {
   height: calc(2em + 2px);
 }
 
-/* line 90, scss/_agenda.scss */
-.agenda {
+/* line 86, scss/_agenda.scss */
+.agenda-address {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0;
+}
+
+/* line 92, scss/_agenda.scss */
+.agenda-address__regel {
+  color: #211f1f;
+  font-weight: bold;
+}
+
+/* line 97, scss/_agenda.scss */
+.agenda-lijst__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4292,100 +4120,74 @@ main.heeft-uitgelicht.heeft-hero .sticky-sidebar {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: #00abf6;
+  padding: 20px;
 }
 
-/* line 93, scss/_agenda.scss */
-.agenda ul, .agenda li {
+/* line 104, scss/_agenda.scss */
+.agenda-lijst,
+.agenda-lijst__stuk {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-/* line 98, scss/_agenda.scss */
-.agenda span, .agenda h2, .agenda a span {
+/* line 110, scss/_agenda.scss */
+.agenda-lijst {
+  font-size: 1.25rem;
+}
+
+/* line 114, scss/_agenda.scss */
+.agenda-lijst__titel,
+.agenda-lijst__datum,
+.agenda-lijst__taxonomie,
+.agenda-lijst__tijd,
+.agenda-lijst__rechts > span {
   color: #666;
+  line-height: 1;
+  display: block;
+  font-weight: bold;
+  color: white;
 }
 
-/* line 101, scss/_agenda.scss */
-.agenda ul {
-  font-size: .8em;
+/* line 125, scss/_agenda.scss */
+.agenda-lijst__titel {
+  color: #252525;
+  margin-bottom: .5em;
+  display: inline-block;
+  word-break: break-all;
 }
 
-/* line 104, scss/_agenda.scss */
-.agenda li {
+/* line 131, scss/_agenda.scss */
+.agenda-lijst__rechts > span {
+  font-weight: 500;
+  font-size: .75em;
+  line-height: 1.33;
+  margin-top: -.15em;
+}
+
+/* line 137, scss/_agenda.scss */
+.agenda-lijst__stuk {
   border-bottom: 1px solid rgba(33, 33, 33, 0.1);
 }
 
-/* line 106, scss/_agenda.scss */
-.agenda li:last-child {
+/* line 139, scss/_agenda.scss */
+.agenda-lijst__stuk:last-child {
   border-bottom: 0;
 }
 
-/* line 110, scss/_agenda.scss */
-.agenda span {
-  line-height: 1em;
-}
-
-/* line 113, scss/_agenda.scss */
-.agenda li > a.flex {
-  padding: 15px 10px;
-  position: relative;
-}
-
-@media (max-width: 600px) {
-  /* line 113, scss/_agenda.scss */
-  .agenda li > a.flex {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-/* line 120, scss/_agenda.scss */
-.agenda li > a.flex span {
-  -webkit-transition: 0.4s color ease;
-  transition: 0.4s color ease;
-}
-
-/* line 123, scss/_agenda.scss */
-.agenda li > a.flex .agenda-links span {
-  -webkit-transition: 0.5s color ease-in-out 0.5s;
-  transition: 0.5s color ease-in-out 0.5s;
-  color: #252525;
-  font-weight: bold;
-}
-
-/* line 128, scss/_agenda.scss */
-.agenda li > a.flex .agenda-links span.met-streepje {
-  display: block;
-  padding-top: 5px;
-  margin-top: 5px;
-  position: relative;
-}
-
-/* line 133, scss/_agenda.scss */
-.agenda li > a.flex .agenda-links span.met-streepje::after {
-  position: absolute;
-  left: 0;
-  top: -0.5px;
-  content: '';
-  display: block;
-  width: 30px;
-  border-top: 1px solid rgba(33, 33, 33, 0.1);
-}
-
 /* line 144, scss/_agenda.scss */
-.agenda li > a.flex .agenda-rechts {
-  padding-left: 10px;
+.agenda-lijst__link {
+  position: relative;
 }
 
-@media (max-width: 600px) {
-  /* line 144, scss/_agenda.scss */
-  .agenda li > a.flex .agenda-rechts {
-    padding-left: 0;
-  }
+/* line 146, scss/_agenda.scss */
+.agenda-lijst__link:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 /* line 150, scss/_agenda.scss */
+<<<<<<< HEAD
 .agenda li > a.flex:after {
   display: block;
   content: '';
@@ -4433,93 +4235,64 @@ main.heeft-uitgelicht.heeft-hero .sticky-sidebar {
         flex-basis: 100%;
     margin-top: 10px;
   }
+=======
+.agenda-lijst__link:hover {
+  text-decoration: none;
+>>>>>>> e5a60c59521e0ea08c6d505e610345f26c520375
 }
 
-/* line 187, scss/_agenda.scss */
-.agenda .flex {
+/* line 153, scss/_agenda.scss */
+.agenda-lijst__link--pagina {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
 }
 
-/* line 189, scss/_agenda.scss */
-.agenda .flex span {
-  display: block;
-}
-
-/* line 192, scss/_agenda.scss */
-.agenda .flex .agenda-links {
-  -ms-flex-preferred-size: 90px;
-      flex-basis: 90px;
-}
-
-/* line 195, scss/_agenda.scss */
-.agenda .flex .agenda-midden.flex {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-preferred-size: 240px;
-      flex-basis: 240px;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-@media (max-width: 400px) {
-  /* line 195, scss/_agenda.scss */
-  .agenda .flex .agenda-midden.flex {
-    -ms-flex-preferred-size: 170px;
-        flex-basis: 170px;
+@media screen and (max-width: 500px) {
+  /* line 153, scss/_agenda.scss */
+  .agenda-lijst__link--pagina {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
-/* line 203, scss/_agenda.scss */
-.agenda .flex .locatie {
-  font-size: .6em;
-  line-height: .8rem;
+/* line 161, scss/_agenda.scss */
+.agenda-lijst__cel--pagina {
+  padding: 10px;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
 }
 
-@media (max-width: 440px) {
-  /* line 203, scss/_agenda.scss */
-  .agenda .flex .locatie {
-    margin-top: 5px;
-    margin-bottom: 5px;
+/* line 165, scss/_agenda.scss */
+.agenda-lijst__links {
+  width: 180px;
+}
+
+/* line 169, scss/_agenda.scss */
+.agenda-lijst__midden {
+  width: 240px;
+}
+
+/* line 173, scss/_agenda.scss */
+.agenda-lijst__rechts {
+  width: calc(100% - 360px);
+}
+
+@media screen and (max-width: 800px) {
+  /* line 178, scss/_agenda.scss */
+  .agenda-lijst__rechts {
+    display: none;
   }
 }
 
-/* line 211, scss/_agenda.scss */
-.agenda .flex .titel {
-  color: #252525;
-  font-size: 1em;
-}
-
-/* line 216, scss/_agenda.scss */
-.agenda time {
-  display: none;
-}
-
-/* line 219, scss/_agenda.scss */
-.agenda .Ag_knoppen-doos {
-  margin-top: 20px;
-}
-
-@media (max-width: 600px) {
-  /* line 224, scss/_agenda.scss */
-  #agenda-filter {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
-  }
-  /* line 227, scss/_agenda.scss */
-  .agenda.pagina {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-  }
-}
-
+<<<<<<< HEAD
 /* line 232, scss/_agenda.scss */
 .agenda-los .agenda-data {
   padding: 20px;
@@ -4585,6 +4358,8 @@ main.heeft-uitgelicht.heeft-hero .sticky-sidebar {
   margin-top: 20px;
 }
 
+=======
+>>>>>>> e5a60c59521e0ea08c6d505e610345f26c520375
 /* .archive h1 span {
 	font-size: .6em;
 	display: block;
@@ -5218,16 +4993,16 @@ footer .menu a:hover {
 @media screen and (min-width: 1250px) {
   /* line 34, scss/_single.scss */
   .uitgelichte-afbeelding-buiten + .titel-over-afbeelding-indien-aanwezig .bericht-tekst.datum {
-    top: calc(50vh - .25em);
+    top: calc(50vh + .25em);
     right: calc(50% - (390px + 1em));
     -webkit-transform: translate(100%, 0);
-            transform: translate(100%, 0);
-    font-size: 2em;
+    transform: translate(100%, 0);
+    font-size: 1.75em;
   }
 }
 
 @media screen and (max-width: 1249px) and (min-width: 600px) {
-  /* line 42, scss/_single.scss */
+  /* line 43, scss/_single.scss */
   .uitgelichte-afbeelding-buiten + .titel-over-afbeelding-indien-aanwezig .bericht-tekst.datum {
     font-size: 1.5em;
     top: .66em;
@@ -5237,7 +5012,7 @@ footer .menu a:hover {
 }
 
 @media screen and (max-width: 599px) {
-  /* line 50, scss/_single.scss */
+  /* line 51, scss/_single.scss */
   .uitgelichte-afbeelding-buiten + .titel-over-afbeelding-indien-aanwezig .bericht-tekst.datum {
     opacity: .8;
     margin-bottom: -1em;
@@ -5245,13 +5020,13 @@ footer .menu a:hover {
   }
 }
 
-/* line 58, scss/_single.scss */
+/* line 59, scss/_single.scss */
 .onder-artikel-taxonomieen h2 {
   padding-top: .5em;
   border-top: 5px solid #211f1f;
 }
 
-/* line 62, scss/_single.scss */
+/* line 63, scss/_single.scss */
 .onder-artikel-taxonomieen footer {
   margin-top: 30px;
   text-align: right;
@@ -5321,91 +5096,13 @@ footer .menu a:hover {
   padding-bottom: calc(.3em - 1px);
 }
 
-/* line 1, scss/_waaier.scss */
-.weetje {
-  -webkit-columns: 5;
-     -moz-columns: 5;
-          columns: 5;
-}
-
-@media (max-width: 1200px) {
-  /* line 1, scss/_waaier.scss */
-  .weetje {
-    -webkit-columns: 4;
-       -moz-columns: 4;
-            columns: 4;
-  }
-}
-
-@media (max-width: 900px) {
-  /* line 1, scss/_waaier.scss */
-  .weetje {
-    -webkit-columns: 3;
-       -moz-columns: 3;
-            columns: 3;
-  }
-}
-
-@media (max-width: 600px) {
-  /* line 1, scss/_waaier.scss */
-  .weetje {
-    -webkit-columns: 2;
-       -moz-columns: 2;
-            columns: 2;
-  }
-}
-
-@media (max-width: 400px) {
-  /* line 1, scss/_waaier.scss */
-  .weetje {
-    -webkit-columns: 1;
-       -moz-columns: 1;
-            columns: 1;
-  }
-}
-
-/* line 15, scss/_waaier.scss */
-.weetje .weetje-letter {
-  display: block;
-}
-
-/* line 18, scss/_waaier.scss */
-.weetje .index:first-child h3 {
-  margin-top: 0;
-}
-
-/* line 21, scss/_waaier.scss */
-.weetje.gefilterd h3 {
-  margin-top: 0;
-}
-
-/* line 29, scss/_waaier.scss */
-.waaier .index-nav {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-  max-width: 750px;
-  margin-bottom: 40px;
-}
-
-/* line 33, scss/_waaier.scss */
-.waaier .index-nav a {
-  margin-right: 10px;
-  margin-bottom: 10px;
-}
-
-/* line 36, scss/_waaier.scss */
-.waaier .index-nav a span {
-  text-transform: uppercase;
-}
-
 @media screen and (min-width: 1200px) {
-  /* line 62, scss/style.scss */
+  /* line 54, scss/style.scss */
   #primary.singular,
   #primary.voorpagina {
     position: relative;
   }
-  /* line 65, scss/style.scss */
+  /* line 57, scss/style.scss */
   #primary.singular::before,
   #primary.voorpagina::before {
     position: absolute;

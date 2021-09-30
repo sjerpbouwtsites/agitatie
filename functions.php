@@ -39,12 +39,10 @@ $include_boom = array(
 		"acf", //
 	),
 	'ctrl' => array(
-		'controllers',
-		'archief',
-		'categorie',
-		'singular'
+		'controllers-bundel'
 	),
 	'hooks' => array(
+		'agenda',
 		'header',
 		'singular',
 		'voorpagina',
@@ -81,24 +79,6 @@ function remove_menu_pages() {
 
 }
 
-//////////////////////////////////////////////////////////
-
-//js toevoegingen aan dashboard
-function js_admin_aanpassing() {
-	wp_register_script( 'admin-aanpassing', get_template_directory_uri() . '/admin/admin-aanpassing.js' );
-	wp_enqueue_script( 'admin-aanpassing' );
-}
-add_action( 'admin_enqueue_scripts', 'js_admin_aanpassing' );
-
-///////////////////////////////////////////////////////////
-
-//css toevoegingen aan dashboard
-function css_admin_aanpassing() {
-	wp_register_style( 'admin-css-aanpassing', THEME_URI . '/admin/admin-aanpassing.css');
-	wp_enqueue_style( 'admin-css-aanpassing');
-}
-add_action('admin_init', 'css_admin_aanpassing' );
-
 ///////////////////////////////////////////////////////////
 
 // content width
@@ -126,3 +106,22 @@ add_action('after_setup_theme', 'stop_wp_setup_widgets_block_editor', 99);
 function has_sticky_sidebar(){
 	return is_singular() && !is_front_page() && !is_search();
 }
+
+/////////////////////////////////////////////////////////////////
+
+if (!function_exists('ag_config_agenda')) : function ag_config_agenda(){
+
+	$agenda = new Posttype_voorb('agenda', 'agenda');
+	$agenda->pas_args_aan(array(
+			'has_archive' => true,
+			'public' => true,
+			'show_in_nav_menus' => true,
+			'menu_icon' => 'dashicons-calendar-alt',
+	));
+	$agenda->registreer();
+	
+	$agenda->maak_taxonomie('plek', 'plekken');
+
+} endif;
+
+add_action('after_setup_theme', 'ag_config_agenda');
