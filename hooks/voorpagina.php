@@ -1,6 +1,6 @@
 <?php
 
-function ag_vp_print_nieuws_hook() {
+if (!function_exists('ag_vp_print_nieuws_hook')) : function ag_vp_print_nieuws_hook() {
 
 	echo "<section class='vp-nieuws verpakking verpakking-klein'>
 	<h2>Recent nieuws</h2>";
@@ -44,7 +44,7 @@ function ag_vp_print_nieuws_hook() {
 
 	echo "</section>";
 
-}
+} endif;
 
 add_action('voorpagina_na_tekst_action', 'ag_vp_print_nieuws_hook', 20);
 
