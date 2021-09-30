@@ -157,20 +157,20 @@
 		flex-direction: column;
 	}
 }
-
+ 
 .agenda-lijst__cel--pagina {
 	padding: 10px;
 	flex-grow: 0;
 }
-.agenda-lijst__links {
+.agenda-lijst__links--pagina {
 	width: 180px;
 }
 
-.agenda-lijst__midden {
+.agenda-lijst__midden--pagina {
 	width: 240px;
 }
 
-.agenda-lijst__rechts {
+.agenda-lijst__rechts--pagina {
 	width: calc(100% - 360px);
 }
 
