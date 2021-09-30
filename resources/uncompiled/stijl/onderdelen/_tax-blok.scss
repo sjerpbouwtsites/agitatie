@@ -1,0 +1,33 @@
+//parent
+#tax-blok {
+	background-color: #f1f1f1;
+	//border: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	margin-top: 50px;
+	section {
+		padding-top: 0;
+		padding-bottom: 20px;
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
+	h2 {
+		margin-top: 0;
+	}
+	h3 {
+		margin-bottom: 0;
+	}
+	ul, li {
+		@include ul-li-reset();
+	}
+	ul {
+		columns: 2;
+		column-rule: 1px solid $lichtgrijs;
+		@media (min-width: 600px) {
+			columns: 3;
+		}
+		@media (min-width: 900px) {
+			columns: 4;
+		}
+	}
+}

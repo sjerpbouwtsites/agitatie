@@ -1,0 +1,12 @@
+
+$hoofdkleur_donker: darken($hoofdkleur, 5%);
+$zijkleur_donker: 	darken($zijkleur, 5%);
+$accentkleur_donker:darken($accentkleur, 5%);
+
+$hoofdkleur_licht: lighten($hoofdkleur, 5%);
+$zijkleur_licht: 	lighten($zijkleur, 5%);
+$accentkleur_licht:lighten($accentkleur, 5%);
+
+$hoofdkleur_zeer_licht: lighten($hoofdkleur, 33%);
+$zijkleur_zeer_licht: 	lighten($zijkleur, 33%);
+$accentkleur_zeer_licht:lighten($accentkleur, 33%);

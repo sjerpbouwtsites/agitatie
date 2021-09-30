@@ -1,0 +1,72 @@
+//parent
+/*! 
+Theme Name: Agitatie
+Theme URI: https://github.com/sjerpbouwtsites/Agitatie
+Author: Sjerp van Wouden
+Author URI: http://sjerpbouwtsites.nl
+Description: Een thema door Sjerp 
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: sjerpbouwtsites
+Version: 1.0 
+GitHub Theme URI: sjerpbouwtsites/agitatie
+GitHub Theme URI: https://github.com/sjerpbouwtsites/agitatie
+!*/   
+    
+@import 'inst/bundel';
+
+@import 'basis/normalise';
+@import 'basis/typografie';
+@import 'basis/els';         
+@import 'basis/formulieren';     
+@import 'basis/inhoud';
+@import 'basis/mixins';
+
+@import 'generiek';
+@import 'generiek-teksten'; 
+
+@import 'onderdelen/art_class';
+@import 'onderdelen/back-to-top';
+@import 'onderdelen/knop';
+@import 'onderdelen/paginering';
+@import 'onderdelen/schakel';
+@import 'onderdelen/tax-blok';
+@import 'onderdelen/uitgelichte-afbeelding';
+ 
+@import 'widgets/sharedaddy';
+@import 'widgets/agenda';
+@import 'widgets/sticky-sidebar';
+@import 'widgets/pag-fam';
+@import 'widgets/nav-menu';
+
+@import 'agenda';
+@import 'archive';
+@import 'footer';
+@import 'header';
+@import 'nav'; 
+@import 'single';
+@import 'voorpagina';
+@import 'zoeken';
+
+
+
+@media screen and (min-width: 1200px) {
+#primary.singular,
+#primary.voorpagina  {
+    position: relative;
+    &::before {
+        position: absolute;
+        content: '';
+        display: block;
+        top: -100px;
+        left: 0;
+        width: calc(50vw - 390px);
+        //background: linear-gradient(90deg, rgba(0,0,36,0) 0%, lighten($hoofdkleur_zeer_licht, 21.5%) 99%, lighten($lichtgrijs, 16%) 100%); 
+        z-index: -1;
+        display: block;
+        height: calc(100% + 200px);
+    }
+}
+}
+
+ 
