@@ -1,7 +1,7 @@
 
 export function zetStijl(nodeList, eigenschap, waarde){
-	l = nodeList.length;
-	for (i = 0; i < l; i++) {
+	const l = nodeList.length;
+	for (let i = 0; i < l; i++) {
 		nodeList[i].style[eigenschap] = waarde;
 	} 
 }

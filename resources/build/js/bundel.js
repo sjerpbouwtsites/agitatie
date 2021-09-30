@@ -23,42 +23,60 @@ function verplaatsShareDaddy(){
 	shareDaddyOrigineel.classList.add('actief');
 }
 
+function zetStijl(nodeList, eigenschap, waarde){
+	const l = nodeList.length;
+	for (let i = 0; i < l; i++) {
+		nodeList[i].style[eigenschap] = waarde;
+	} 
+}
+
+function actieInit(e, testKlasse){
+
+	e.preventDefault();
+	e.stopPropagation();
+
+	return e.target.classList.contains(testKlasse) ? e.target : e.target.parentNode.classList.contains(testKlasse) ? e.target.parentNode : e.target.parentNode.parentNode;
+}
+
+const doc$1 = document;
+const body$1 = doc$1.body;
+
 function schakel(e) {
 
 	var
 	doel = actieInit(e, 'schakel'),
-	toon = doc.querySelectorAll( doel.getAttribute('data-toon') ),
+	toon = doc$1.querySelectorAll( doel.getAttribute('data-toon') ),
 	antiSchakel,
 	anti = [],
 	i; 
 
 	if (doel.hasAttribute('data-doorschakel')) {
-		doc.querySelector(doel.getAttribute('data-doorschakel')).click();
+		doc$1.querySelector(doel.getAttribute('data-doorschakel')).click();
 		return;
 	}
 
 	if (doel.hasAttribute('data-anti')) {
 
-		antiSchakel = doc.querySelectorAll(doel.getAttribute('data-anti'));
+		antiSchakel = doc$1.querySelectorAll(doel.getAttribute('data-anti'));
 		var ai;
 		for (i = antiSchakel.length - 1; i >= 0; i--) {
 			ai = antiSchakel[i];
 			ai.classList.remove('open');
-			body.classList.remove(ai.id+'-open');
-			anti.push(doc.querySelectorAll( ai.getAttribute('data-toon')) );
+			body$1.classList.remove(ai.id+'-open');
+			anti.push(doc$1.querySelectorAll( ai.getAttribute('data-toon')) );
 		}
 	}
 
 	//tonen of verstoppen afhankelijk van open
 	var stijl = '';
 	if (!doel.classList.contains('open')) {
-		if(!body.classList.contains(doel.id+'-open')) {
-			body.classList.add(doel.id+'-open');
+		if(!body$1.classList.contains(doel.id+'-open')) {
+			body$1.classList.add(doel.id+'-open');
 		}
 		stijl = "block";
 	} else {
 		stijl = "none";
-		body.classList.remove(doel.id+'-open');
+		body$1.classList.remove(doel.id+'-open');
 	}
 
 	if (toon) zetStijl(toon, 'display', stijl);
@@ -77,14 +95,45 @@ function schakel(e) {
 
 var schakelExtra = {
 	focusZoekveld: function(){
-		doc.getElementById('zoekveld').getElementsByTagName('input')[0].focus();
+		doc$1.getElementById('zoekveld').getElementsByTagName('input')[0].focus();
 	},
 };
 
-var doc$1, body$1, aside;
+function scroll(e) {
+
+	var scrollNaar;
+
+	//var werkMet = e.target.classList.contains('Ag_knop') ? e.target : e.target.parentNode;
+	var werkMet = actieInit(e, 'scroll');
+
+	if (werkMet.hasAttribute('doel')) {
+
+		scrollNaar = werkMet.getAttribute('doel');
+
+	} else if (werkMet.hasAttribute('href')) {
+
+		scrollNaar = werkMet.getAttribute('href');
+
+	} else ;
+
+	var headerH = $('#stek-kop').is(':visible') ? $('#stek-kop').height() : 0;
+
+	var marginTop = Number($(scrollNaar).css('margin-top').replace('px', ''));
+
+    $('html, body').animate({
+        scrollTop: $(scrollNaar).offset().top - headerH - marginTop
+    }, 600);
+}
+
+const schakelScroll = {
+	schakel,
+	scroll
+};
+
+var doc, body, aside;
 function klikBaas(){   
     
-	body$1.addEventListener('click', function(e){
+	body.addEventListener('click', function(e){
  
 		var
 		funcNamen = ['schakel', 'scroll'],
@@ -94,7 +143,7 @@ function klikBaas(){
 			f = funcNamen[i];
 
 			if (e.target.classList.contains(f) || e.target.parentNode.classList.contains(f)) {
-				schakel[f](e);
+				schakelScroll[f](e);
 			}  
 		}
 
@@ -103,10 +152,10 @@ function klikBaas(){
 }
 
 function init() {
-	doc$1 = document;
-	body$1 = doc$1.getElementsByTagName('body')[0] || null;
-	doc$1.getElementsByTagName('html')[0] || null;
-	aside = doc$1.getElementById('zijbalk') || null;
+	doc = document;
+	body = doc.getElementsByTagName('body')[0] || null;
+	doc.getElementsByTagName('html')[0] || null;
+	aside = doc.getElementById('zijbalk') || null;
 }
 
 function verschrikkelijkeHacks(){
@@ -209,7 +258,7 @@ window.onload = function(){
 
 	artCLinkTrigger();
 
-	if (doc$1.getElementById('sticky-sidebar')) {
+	if (doc.getElementById('sticky-sidebar')) {
 		stickySidebar();
 	}
 
@@ -219,7 +268,7 @@ window.onload = function(){
 */
 	videoPlayer(); 
 
-	if (doc$1.getElementById('agenda-filter')) agendaFilter();
+	if (doc.getElementById('agenda-filter')) agendaFilter();
  
 	kopmenuSubMobiel();
 
