@@ -1,51 +1,52 @@
 <?php
 
-function ag_vp_print_nieuws_hook()
-{
+if (!function_exists('ag_vp_print_nieuws_hook')) : function ag_vp_print_nieuws_hook()
+	{
 
-	echo "<section class='vp-nieuws verpakking verpakking-klein'>
+		echo "<section class='vp-nieuws verpakking verpakking-klein'>
 	<h2>Nieuws</h2>";
 
-	$vp_posts = new WP_Query(array(
-		'posts_per_page' => 6
-	));
+		$vp_posts = new WP_Query(array(
+			'posts_per_page' => 6
+		));
 
-	echo "<div class='art-lijst'>";
+		echo "<div class='art-lijst'>";
 
-	if (count($vp_posts->posts)) : foreach ($vp_posts->posts as $vp_post) :
+		if (count($vp_posts->posts)) : foreach ($vp_posts->posts as $vp_post) :
 
-			if (!isset($a)) {
-				$a = new Ag_article_c(array(
-					'class' 		=> 'in-lijst',
-					'htype'			=> 3,
-					'geen_tekst'	=> true,
-					'geen_afb'		=> false
-				), $vp_post);
-			} else {
-				$a->art = $vp_post;
-			}
+				if (!isset($a)) {
+					$a = new Ag_article_c(array(
+						'class' 		=> 'in-lijst',
+						'htype'			=> 3,
+						'geen_tekst'	=> true,
+						'geen_afb'		=> false
+					), $vp_post);
+				} else {
+					$a->art = $vp_post;
+				}
 
-			$a->gecontroleerd = false;
-			$a->print();
+				$a->gecontroleerd = false;
+				$a->print();
 
-		endforeach;
-	endif;
+			endforeach;
+		endif;
 
-	echo "</div>"; //art lijst
+		echo "</div>"; //art lijst
 
-	echo "<footer>";
+		echo "<footer>";
 
-	$k = new Ag_knop(array(
-		'link' 		=> get_post_type_archive_link('post'),
-		'tekst' 	=> 'alle berichten',
-		'class'		=> 'in-wit'
-	));
-	$k->print();
+		$k = new Ag_knop(array(
+			'link' 		=> get_post_type_archive_link('post'),
+			'tekst' 	=> 'alle berichten',
+			'class'		=> 'in-wit'
+		));
+		$k->print();
 
-	echo "</footer>";
+		echo "</footer>";
 
-	echo "</section>";
-}
+		echo "</section>";
+	}
+endif;
 
 add_action('voorpagina_na_tekst_action', 'ag_vp_print_nieuws_hook', 20);
 
