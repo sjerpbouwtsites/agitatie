@@ -13,9 +13,11 @@ export default function stickySidebar() {
 
 function verplaatsShareDaddy(){
 	var shareDaddyOrigineel = document.querySelector('.sharedaddy');
-	if (!shareDaddyOrigineel) return;
-	shareDaddyOrigineel.parentNode.removeChild(shareDaddyOrigineel);
 	var shareDaddyWrapperSidebar = document.getElementById('sharedaddy-in-sidebar');
+	if (!shareDaddyOrigineel) {
+		shareDaddyWrapperSidebar.parentNode.removeChild(shareDaddyWrapperSidebar);
+	}
+	shareDaddyOrigineel.parentNode.removeChild(shareDaddyOrigineel);
 	if (!shareDaddyWrapperSidebar) {
 		console.warn('geen share daddy wrapper!?');
 		return ;

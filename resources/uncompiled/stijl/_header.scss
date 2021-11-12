@@ -39,6 +39,7 @@
 
 	.stek-kop-rechts {
 		padding-left: 50px;
+		display: flex;
 		@media (max-width: 600px) {
 			padding-left: 20px;
 		}
