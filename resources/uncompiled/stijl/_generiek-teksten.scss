@@ -94,7 +94,12 @@ p, span {
 	}
 }
 
-
+.geen-margin-top {
+	margin-top: 0;
+}
+.geen-margin-top.lineheight-fix {
+	margin-top: -.25em;
+}
 
 main blockquote {
 	line-height: 1.5625em;

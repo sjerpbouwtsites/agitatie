@@ -100,9 +100,27 @@ body {
 			margin-bottom: 6em;
 		}
 	}
-	
 }
 
+/*zooitje van gemaakt... waarom kon je toen nog geen bem. */
+.marginveld.paddingveld.veel {
+	&.normale-padding {
+		padding-top: 1.5em;
+		padding-bottom: 1.5em;
+		@media (min-width: 900px) {
+			padding-top: 3em;
+			padding-bottom: 3em;
+		}		
+	}
+	&.normale-margin {
+		margin-top: 1.5em;
+		margin-bottom: 1.5em;
+		@media (min-width: 900px) {
+			margin-top: 3em;
+			margin-bottom: 3em;
+		}
+	}	
+}
 
 
 .blok {

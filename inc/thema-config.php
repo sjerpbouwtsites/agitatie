@@ -31,6 +31,7 @@ if (!function_exists('agitatie_setup')) :
 		register_nav_menus(array(
 			'openklap-menu' => esc_html__('openklap-menu', 'agitatie'),
 			'prio-menu' => esc_html__('prio-menu', 'agitatie'),
+			'voorpagina' => esc_html__('voorpagina', 'agitatie'),
 		));
 
 
