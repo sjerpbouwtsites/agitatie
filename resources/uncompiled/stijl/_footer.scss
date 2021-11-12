@@ -1,7 +1,7 @@
 //parent
 
 
-$footerkleur: $donkergrijs;
+$footerkleur: $hoofdkleur;
 
 #stek-voet {
 	color: white;
@@ -50,7 +50,7 @@ $footerkleur: $donkergrijs;
 	}
 	section {
 		padding-left: 10px;
-		border-left: 5px solid #3c3c3c;
+		border-left: 5px solid $zijkleur;
 	}
 
 	.geen-logo {
