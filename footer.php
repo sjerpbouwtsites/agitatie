@@ -1,36 +1,41 @@
 <footer id='stek-voet' class='stek-voet'>
 	<div class='verpakking logo-en-tekst'>
 		<div class='neg-marge'>
-		<?php
+			<?php
 
-		do_action('ag_footer_voor_velden_action');
+			do_action('ag_footer_voor_velden_action');
 
-		$voet_velden = get_field('footervelden', 'option'); if ($voet_velden and count($voet_velden)) :
+			$voet_velden = get_field('footervelden', 'option');
+			if ($voet_velden and count($voet_velden)) :
 
-			foreach ($voet_velden as $v) :
+				foreach ($voet_velden as $v) :
 
-				if (array_key_exists('titel', $v) and $v['titel'] !== '' ) {
-					echo "<section  class='footer-section'>
+					if (array_key_exists('titel', $v) and $v['titel'] !== '') {
+						echo "<section  class='footer-section'>
 						<h3>{$v['titel']}</h3>
-						".apply_filters('the_content', $v['veld'])."
+						" . apply_filters('the_content', $v['veld']) . "
 					</section>";
-				} else {
-					echo "<div class='footer-section'>
-						".apply_filters('the_content', $v['veld'])."
+					} else {
+						echo "<div class='footer-section'>
+						" . apply_filters('the_content', $v['veld']) . "
 					</div>";
-				}
+					}
 
-			endforeach;
+				endforeach;
 
-		endif;
+			endif;
 
-		do_action('ag_footer_na_velden_action');
+			do_action('ag_footer_na_velden_action');
 
-		?>
+			?>
 		</div>
 	</div>
 
 	<?php
+
+	ag_console(['hallo' => true]);
+	ag_console(['hallo' => false]);
+
 
 	do_action('ag_footer_widget_action');
 
@@ -39,17 +44,18 @@
 </footer>
 
 <script>
-var BASE_URL = "<?=SITE_URI?>",
-	TEMPLATE_URL = "<?=THEME_URI?>",
-	IMG_URL = "<?=IMG_URI?>",
-	AJAX_URL = BASE_URL + "/wp-admin/admin-ajax.php";
+	var BASE_URL = "<?= SITE_URI ?>",
+		TEMPLATE_URL = "<?= THEME_URI ?>",
+		IMG_URL = "<?= IMG_URI ?>",
+		AJAX_URL = BASE_URL + "/wp-admin/admin-ajax.php";
 </script>
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script type='module' src="<?=THEME_URI?>/resources/build/js/bundel.js"></script>
-<script type='module' src="<?=THEME_URI?>/../agitatie-kind/resources/build/js/kind-bundel.js"></script>
+<script type='module' src="<?= THEME_URI ?>/resources/build/js/bundel.js"></script>
+<script type='module' src="<?= THEME_URI ?>/../agitatie-kind/resources/build/js/kind-bundel.js"></script>
 
 <?php wp_footer(); ?>
 
 </body>
+
 </html>
