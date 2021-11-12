@@ -143,15 +143,12 @@
 
 .prio-menu .sub-menu {
 	position: absolute;
+	margin-left: .33em;
 }
 
-.prio-menu .menu-item.current_page_item {
-	padding-left: .33em;
-	border-left: .33em solid $wittig;  
-}
 
 .prio-menu .sub-menu .menu-item a {
-	background-color: $wittig; 
+	background-color: transparent; 
 	display: block;
 	padding-left: 1.5em;
 	padding-top: 1.5em;
@@ -187,6 +184,9 @@
 				@include heeft_zwarte_linkerstreep();
 			}
 			.sub-menu {
+				a {
+					background-color: $wittig;
+				}
 				//display: block;
 				transform: translateY(0);
 			}
