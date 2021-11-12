@@ -1418,7 +1418,7 @@ div.sharedaddy .sd-title {
       display: none; } }
 
 main.heeft-uitgelicht .sticky-sidebar {
-  top: calc(50vh + 5em);
+  top: calc(50vh + 7em);
   height: calc(100% - (50vh + 5em)); }
 
 main.heeft-uitgelicht.heeft-hero .sticky-sidebar {
