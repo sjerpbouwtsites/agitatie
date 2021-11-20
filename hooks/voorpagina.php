@@ -18,7 +18,6 @@ if (!function_exists('ag_vp_print_nieuws_hook')) : function ag_vp_print_nieuws_h
 					$a = new Ag_article_c(array(
 						'class' 		=> 'in-lijst',
 						'htype'			=> 3,
-						'geen_tekst'	=> true,
 						'geen_afb'		=> false
 					), $vp_post);
 				} else {

@@ -13,8 +13,7 @@ set_query_var('geen_margin', true);
 
 ag_tekstveld_ctrl(array(
 	'formaat'		=> 'klein',
-	'titel' 		=> $post->post_title,
-	'titel_el'		=> ag_hero_model() === false ? 'h1' : 'h2' // inefficient
+	'titel' 		=> ag_hero_model() === false ? $post->post_title : false
 ));
 
 do_action('voorpagina_na_tekst_action');
