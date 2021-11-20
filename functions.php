@@ -14,11 +14,12 @@ define('JS_URI', THEME_URI . "/js");
 ///////////////////////////////////////////////////////////
 
 if (!function_exists('agitatie_stijl_en_script')) :
-	function agitatie_stijl_en_script() {
-	    wp_enqueue_style( 'agitatie-stijl', THEME_URI.'/style.css', array(), null );
-	    //wp_enqueue_script( 'agitatie-script', JS_URI.'/all.js', array(), null, true );
+	function agitatie_stijl_en_script()
+	{
+		wp_enqueue_style('agitatie-stijl', THEME_URI . '/style.css', array(), null);
+		//wp_enqueue_script( 'agitatie-script', JS_URI.'/all.js', array(), null, true );
 	}
-	add_action( 'wp_enqueue_scripts', 'agitatie_stijl_en_script' );
+	add_action('wp_enqueue_scripts', 'agitatie_stijl_en_script');
 endif;
 
 ///////////////////////////////////////////////////////////
@@ -63,32 +64,34 @@ endforeach; //include boom
 ///////////////////////////////////////////////////////////
 
 //aanpassingen aan dashboard
-add_action( 'admin_menu', 'remove_menu_pages' );
-function remove_menu_pages() {
+add_action('admin_menu', 'remove_menu_pages');
+function remove_menu_pages()
+{
 
-	remove_menu_page( 'edit.php?post_type=feedback' );
-	remove_menu_page( 'edit-comments.php' );
+	remove_menu_page('edit.php?post_type=feedback');
+	remove_menu_page('edit-comments.php');
 	//remove_menu_page( 'edit.php' );
 
 	//verondersteld: programmeur = 1, opdrachtgever = 2, eindgebruiker > 2
 	// @OPLEVERING
-	if( get_current_user_id() > 2) {
-		remove_menu_page( 'tools.php' );
-		remove_menu_page( 'edit.php?post_type=acf-field-group' );
+	if (get_current_user_id() > 2) {
+		remove_menu_page('tools.php');
+		remove_menu_page('edit.php?post_type=acf-field-group');
 	}
-
 }
 
 ///////////////////////////////////////////////////////////
 
 // content width
-function change_content_width() {
-    $GLOBALS['content_width'] = 760;
+function change_content_width()
+{
+	$GLOBALS['content_width'] = 760;
 }
-add_action( 'template_redirect', 'change_content_width' );
+add_action('template_redirect', 'change_content_width');
 
-function body_data(){
-	echo " data-content-width='".$GLOBALS['content_width']."' ";
+function body_data()
+{
+	echo " data-content-width='" . $GLOBALS['content_width'] . "' ";
 }
 
 ////////////////////////////////////////////////////////////
@@ -97,31 +100,41 @@ function body_data(){
 /**
  * Riff on wp_setup_widgets_block_editor
  */
-function stop_wp_setup_widgets_block_editor() {
-	remove_theme_support( 'widgets-block-editor' );
+function stop_wp_setup_widgets_block_editor()
+{
+	remove_theme_support('widgets-block-editor');
 }
 
 add_action('after_setup_theme', 'stop_wp_setup_widgets_block_editor', 99);
 
-function has_sticky_sidebar(){
+function has_sticky_sidebar()
+{
 	return is_singular() && !is_front_page() && !is_search();
 }
 
 /////////////////////////////////////////////////////////////////
 
-if (!function_exists('ag_config_agenda')) : function ag_config_agenda(){
 
-	$agenda = new Posttype_voorb('agenda', 'agenda');
-	$agenda->pas_args_aan(array(
-			'has_archive' => true,
-			'public' => true,
-			'show_in_nav_menus' => true,
-			'menu_icon' => 'dashicons-calendar-alt',
-	));
-	$agenda->registreer();
-	
-	$agenda->maak_taxonomie('plek', 'plekken');
+if (!function_exists('ag_config_agenda')) : function ag_config_agenda()
+	{
 
-} endif;
+		$kind_config = $GLOBALS['kind_config'];
+
+		if (empty($kind_config) || (array_key_exists('agenda', $kind_config) && $kind_config['agenda'])) :
+
+			$agenda = new Posttype_voorb('agenda', 'agenda');
+			$agenda->pas_args_aan(array(
+				'has_archive' => true,
+				'public' => true,
+				'show_in_nav_menus' => true,
+				'menu_icon' => 'dashicons-calendar-alt',
+			));
+			$agenda->registreer();
+
+			$agenda->maak_taxonomie('plek', 'plekken');
+
+		endif;
+	}
+endif;
 
 add_action('after_setup_theme', 'ag_config_agenda');
