@@ -30,22 +30,22 @@ GitHub Theme URI: https://github.com/sjerpbouwtsites/agitatie
   color: #252525; }
 
 .tekst-hoofdkleur {
-  color: #3baf99; }
+  color: #CB4131; }
 
 .tekst-zijkleur {
-  color: #266f6b; }
+  color: #2a2322; }
 
 .tekst-accentkleur {
-  color: #B5DEE8; }
+  color: #d4e97e; }
 
 .tekst-hoofdkleur-donker {
-  color: #359c88; }
+  color: #b63a2c; }
 
 .tekst-zijkleur-donker {
-  color: #1f5c59; }
+  color: #1c1717; }
 
 .tekst-accentkleur-donker {
-  color: #a2d5e2; }
+  color: #cde568; }
 
 .achtergrond-wit {
   background-color: #fff; }
@@ -66,22 +66,22 @@ GitHub Theme URI: https://github.com/sjerpbouwtsites/agitatie
   background-color: #252525; }
 
 .achtergrond-hoofdkleur {
-  background-color: #3baf99; }
+  background-color: #CB4131; }
 
 .achtergrond-zijkleur {
-  background-color: #266f6b; }
+  background-color: #2a2322; }
 
 .achtergrond-accentkleur {
-  background-color: #B5DEE8; }
+  background-color: #d4e97e; }
 
 .achtergrond-hoofdkleur-donker {
-  background-color: #359c88; }
+  background-color: #b63a2c; }
 
 .achtergrond-zijkleur-donker {
-  background-color: #1f5c59; }
+  background-color: #1c1717; }
 
 .achtergrond-accentkleur-donker {
-  background-color: #a2d5e2; }
+  background-color: #cde568; }
 
 html {
   font-family: sans-serif;
@@ -863,17 +863,17 @@ body {
 a:hover,
 a:focus,
 a:active {
-  color: #3baf99; }
+  color: #CB4131; }
 
 a:hover {
   text-decoration: underline; }
 
 a, a:visited {
-  color: #3baf99;
+  color: #CB4131;
   text-decoration: none; }
 
 body {
-  font-family: "Merriweather", sans-serif; }
+  font-family: "Noto Serif", serif; }
 
 h1 {
   font-size: 3.6em; }
@@ -905,7 +905,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Eczar", sans-serif;
+  font-family: "Noto Sans", sans-serif;
   font-weight: 900;
   line-height: 1;
   margin: 1.33em 0 0.5em; }
@@ -1055,7 +1055,7 @@ main blockquote {
       filter: brightness(70%); }
     .art-lijst .art-c.geen-afb {
       padding-left: 20px;
-      border-left: 5px solid rgba(33, 99, 86, 0.5);
+      border-left: 5px solid rgba(121, 39, 29, 0.5);
       flex-basis: calc(33% - 60px);
       margin-bottom: 60px;
       margin-right: 30px;
@@ -1074,9 +1074,9 @@ main blockquote {
           border-left: none;
           padding-bottom: 15px; } }
     .art-lijst .art-c.geen-afb:hover {
-      border-left: 5px solid rgba(53, 156, 136, 0.8); }
+      border-left: 5px solid rgba(182, 58, 44, 0.8); }
       .art-lijst .art-c.geen-afb:hover .lees-meer {
-        color: #3baf99;
+        color: #CB4131;
         opacity: 1; }
   .art-lijst .lees-meer::before {
     content: '';
@@ -1105,7 +1105,7 @@ main blockquote {
   box-shadow: 2px 4px 0 rgba(0, 0, 0, 0.4);
   transition: all 0.2s ease-out 0.2s;
   position: relative;
-  color: #3baf99;
+  color: #CB4131;
   top: 0;
   font-size: 1em;
   text-transform: lowercase;
@@ -1119,7 +1119,7 @@ main blockquote {
   -ms-user-select: none;
   user-select: none; }
   .knop:hover, .navigation a:hover, #agenda-filter :hover[type='submit'], .search-form .search-submit:hover, .knop:visited, .navigation a:visited, #agenda-filter :visited[type='submit'], .search-form .search-submit:visited, .knop:active, .navigation a:active, #agenda-filter :active[type='submit'], .search-form .search-submit:active, input.wpcf7-submit:hover, input.wpcf7-submit:visited, input.wpcf7-submit:active {
-    color: #3baf99;
+    color: #CB4131;
     text-decoration: none; }
   .knop:hover, .navigation a:hover, #agenda-filter :hover[type='submit'], .search-form .search-submit:hover, input.wpcf7-submit:hover {
     transition: all 0.15s ease-out;
@@ -1143,7 +1143,7 @@ main blockquote {
   .knop i, .navigation a i, #agenda-filter [type='submit'] i, .search-form .search-submit i, input.wpcf7-submit i {
     color: inherit !important; }
   .knop.in-wit, .navigation a.in-wit, #agenda-filter .in-wit[type='submit'], .search-form .in-wit.search-submit, input.wpcf7-submit.in-wit {
-    background-color: #3baf99;
+    background-color: #CB4131;
     box-shadow: 2px 4px 0 rgba(0, 0, 0, 0.4);
     color: white !important; }
     .knop.in-wit:hover, .navigation a.in-wit:hover, #agenda-filter .in-wit:hover[type='submit'], .search-form .in-wit.search-submit:hover, input.wpcf7-submit.in-wit:hover {
@@ -1202,11 +1202,11 @@ input.wpcf7-submit {
   .navigation li {
     margin: 0 5px; }
   .navigation .active a {
-    background-color: #3baf99;
-    box-shadow: 2px 4px 0 #359c88;
+    background-color: #CB4131;
+    box-shadow: 2px 4px 0 #b63a2c;
     color: white !important; }
     .navigation .active a:hover {
-      box-shadow: 0.5px 1px 0 #359c88;
+      box-shadow: 0.5px 1px 0 #b63a2c;
       top: 3px; }
     .navigation .active a span, .navigation .active a i {
       color: white !important; }
@@ -1262,7 +1262,8 @@ input.wpcf7-submit {
     object-fit: cover; }
 
 .uitgelichte-afbeelding-buiten.hero {
-  height: calc(75vh - 70px); }
+  height: calc(75vh - 70px);
+  margin-bottom: 3em; }
   @media screen and (max-width: 600px) {
     .uitgelichte-afbeelding-buiten.hero {
       height: calc(100vh - 70px);
@@ -1283,7 +1284,7 @@ input.wpcf7-submit {
   .uitgelichte-afbeelding-buiten.hero h1 {
     margin: 0;
     color: #f5f5f5;
-    background-color: #3baf99;
+    background-color: #CB4131;
     font-size: 2.5rem;
     padding: .6em 1.2em;
     text-align: center; }
@@ -1293,7 +1294,7 @@ input.wpcf7-submit {
     .uitgelichte-afbeelding-buiten.hero h1 span {
       font-size: .5em;
       font-weight: 400;
-      font-family: "Merriweather", sans-serif;
+      font-family: "Noto Serif", serif;
       opacity: .8; }
     @media (max-width: 600px) {
       .uitgelichte-afbeelding-buiten.hero h1 {
@@ -1456,7 +1457,7 @@ main.heeft-uitgelicht.heeft-hero .sticky-sidebar {
   top: 40px;
   bottom: 20px;
   padding: 0 20px 0 20px;
-  border-left: 5px solid #3baf99;
+  border-left: 5px solid #CB4131;
   max-height: calc(100% - 40px);
   overflow-y: hidden; }
 
@@ -1478,7 +1479,7 @@ main.heeft-uitgelicht.heeft-hero .sticky-sidebar {
   margin-bottom: .5em; }
 
 .pag-fam article.huidige a h3, .pag-fam article a:hover h3 {
-  color: #3baf99;
+  color: #CB4131;
   font-weight: bold; }
 
 .pag-fam article h3 {
@@ -1502,12 +1503,12 @@ main.heeft-uitgelicht.heeft-hero .sticky-sidebar {
   font-family: "Eczar", sans-serif; }
 
 .sticky-widget.widget_nav_menu .current-menu-item a {
-  color: #3baf99;
+  color: #CB4131;
   font-weight: bold; }
 
 #agenda-filter {
   padding: 20px;
-  background-color: #3baf99;
+  background-color: #CB4131;
   color: white; }
   #agenda-filter h3 {
     color: white;
@@ -1554,7 +1555,7 @@ main.heeft-uitgelicht.heeft-hero .sticky-sidebar {
     border: 0;
     font-size: 12px;
     background-color: #fff;
-    font-family: "Merriweather", sans-serif;
+    font-family: "Noto Sans", serif;
     font-weight: bold;
     color: #666; }
     #agenda-filter select.geklikt, #agenda-filter select:hover {
@@ -1579,7 +1580,7 @@ main.heeft-uitgelicht.heeft-hero .sticky-sidebar {
 .agenda-lijst__wrapper {
   display: flex;
   flex-direction: column;
-  background-color: #44c0a8;
+  background-color: #d25244;
   padding: 20px; }
 
 .agenda-lijst,
@@ -1671,7 +1672,7 @@ main.heeft-uitgelicht.heeft-hero .sticky-sidebar {
 #stek-voet {
   color: white;
   font-size: .8em;
-  background-color: #3baf99;
+  background-color: #CB4131;
   padding: 50px 0 0 0;
   margin-top: 100px; }
   #stek-voet.alleen-colofon {
@@ -1710,13 +1711,13 @@ main.heeft-uitgelicht.heeft-hero .sticky-sidebar {
           margin-bottom: 50px; } }
   #stek-voet section {
     padding-left: 10px;
-    border-left: 5px solid #266f6b; }
+    border-left: 5px solid #2a2322; }
   #stek-voet .geen-logo {
     font-size: 5em;
     color: #f5f5f5;
     line-height: 1; }
     #stek-voet .geen-logo:hover {
-      color: #3baf99;
+      color: #CB4131;
       text-decoration: none; }
 
 #stek-voet .verpakking.widgets .neg-marge {
@@ -1769,7 +1770,7 @@ main.heeft-uitgelicht.heeft-hero .sticky-sidebar {
   color: inherit;
   text-decoration: none; }
   .footer-section a:hover, .footer-section a:active:hover, .footer-section a:visited:hover {
-    color: #3baf99; }
+    color: #CB4131; }
 
 .footer-section *:last-child {
   margin-bottom: 0; }
@@ -1794,7 +1795,7 @@ main.heeft-uitgelicht.heeft-hero .sticky-sidebar {
     filter: brightness(120%); }
 
 footer .search-form .search-submit {
-  color: #3baf99; }
+  color: #CB4131; }
 
 .colofon p {
   margin: 0;
@@ -1876,7 +1877,7 @@ footer .search-form .search-submit {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: #359c88;
+  background-color: #b63a2c;
   z-index: 1000;
   font-size: 2rem; }
 
@@ -1961,7 +1962,7 @@ footer .search-form .search-submit {
   transform: translateY(70px); }
 
 .prio-menu-container .menu-item:hover > a {
-  background-color: #3baf99;
+  background-color: #CB4131;
   color: white; }
 
 .prio-menu-container .menu-item-has-children:hover > a, .prio-menu-container .menu-item-has-children:hover .sub-menu a {
@@ -1982,7 +1983,7 @@ footer .search-form .search-submit {
     background-color: #f5f5f5; }
 
 .prio-menu-container .menu-item-has-children:hover .sub-menu .menu-item > a:hover {
-  background-color: #3baf99;
+  background-color: #CB4131;
   color: white; }
 
 .kopmenu-mobiel {
@@ -1999,7 +2000,7 @@ footer .search-form .search-submit {
     top: 2px;
     margin-left: 10px; }
   .kopmenu-mobiel:hover {
-    background-color: #3baf99;
+    background-color: #CB4131;
     color: white; }
 
 .mobiele-menu-schakel-open .kopmenu-mobiel {
@@ -2015,7 +2016,7 @@ footer .search-form .search-submit {
     font-size: 2rem; }
 
 footer .menu a:hover {
-  color: #3baf99; }
+  color: #CB4131; }
 
 .bericht {
   position: relative; }
@@ -2089,7 +2090,7 @@ footer .menu a:hover {
     height: 110px; }
 
 .search-form {
-  background-color: #3baf99;
+  background-color: #CB4131;
   padding: 20px;
   color: white;
   display: inline-block;
