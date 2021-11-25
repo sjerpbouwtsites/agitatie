@@ -50,7 +50,13 @@
 .agenda-lijst__tijd--widget {
 	max-width: 90px;
 }
+.agenda-lijst__tijd-spacer--pagina {
+	padding-left: .15em;
+	padding-right: .15em;
+	font-size: 1em;
+	opacity: 0.6;
+}
 .agenda-lijst__tijd-spacer--widget {
-	padding-left: .16em;
+	padding-left: .16em; 
 	padding-right: .16em;
 }

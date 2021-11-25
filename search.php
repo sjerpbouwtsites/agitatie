@@ -22,7 +22,8 @@ if ($_GET['s'] !== '') :
 					'htype' => 3,
 					'exc_lim' => 350
 				),
-			$post);
+				$post
+			);
 
 			$art->print();
 
@@ -32,10 +33,10 @@ if ($_GET['s'] !== '') :
 
 	else :
 
-		echo "<p>Niets gevonden! Sorry.</p>";
+		echo "<p>" . \agitatie\taal\streng('Niets gevonden! Sorry.') . "</p>";
 
 		$voorpagina = new Ag_knop(array(
-			'tekst'		=> 'Terug naar voorpagina',
+			'tekst'		=> \agitatie\taal\streng('Terug naar de voorpagina.'),
 			'link'		=> SITE_URI,
 			'class'		=> 'in-wit',
 		));

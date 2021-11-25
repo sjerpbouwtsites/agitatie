@@ -33,9 +33,6 @@
 
 	<?php
 
-	ag_console(['hallo' => true]);
-	ag_console(['hallo' => false]);
-
 
 	do_action('ag_footer_widget_action');
 

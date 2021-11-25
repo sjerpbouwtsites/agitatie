@@ -4,24 +4,38 @@ import gereedschap from "./modules/gereedschap.js";
 import schakelScroll from "./modules/schakel-scroll.js";
 
 var doc, body, html, aside, i, l;
-function klikBaas(){   
-    
-	body.addEventListener('click', function(e){
- 
+function klikBaas() {
+
+	body.addEventListener('click', function (e) {
+
 		var
-		funcNamen = ['schakel', 'scroll'],
-		f;
+			funcNamen = ['schakel', 'scroll'],
+			f;
 
 		for (var i = funcNamen.length - 1; i >= 0; i--) {
 			f = funcNamen[i];
 
 			if (e.target.classList.contains(f) || e.target.parentNode.classList.contains(f)) {
 				schakelScroll[f](e);
-			}  
+			}
 		}
 
 	});
 
+}
+
+function zetAlleAnkersOpLocalhostAlsDaar() {
+	if (!BASE_URL || !BASE_URL.includes('localhost')) {
+		return;
+	}
+	Array.from(document.getElementsByTagName('a')).forEach(anker => {
+		let oudeHref = anker.href;
+		if (!oudeHref.includes('.nl')) {
+			return;
+		}
+		const naSplit = oudeHref.split('.nl')[1];
+		anker.href = 'http://localhost' + naSplit;
+	})
 }
 
 function init() {
@@ -29,39 +43,40 @@ function init() {
 	body = doc.getElementsByTagName('body')[0] || null;
 	html = doc.getElementsByTagName('html')[0] || null;
 	aside = doc.getElementById('zijbalk') || null;
+	zetAlleAnkersOpLocalhostAlsDaar()
 }
 
-function naAllesGeladenZetCSS(){
-	window.addEventListener('load', function(){
+function naAllesGeladenZetCSS() {
+	window.addEventListener('load', function () {
 		document.body.classList.add('pagina-geladen');
 	});
 }
 
-function verschrikkelijkeHacks(){
+function verschrikkelijkeHacks() {
 
 	if (aside) {
 		var
-		l = aside.getElementsByTagName('section').length;
+			l = aside.getElementsByTagName('section').length;
 
 		var
-		c = (l%2 === 0 ? 'even' : 'oneven');
+			c = (l % 2 === 0 ? 'even' : 'oneven');
 
-		aside.classList.add('sectietal-'+c);
+		aside.classList.add('sectietal-' + c);
 	}
 
 }
 
 
 
-function videoPlayer () {
+function videoPlayer() {
 
-	$('video ~ .Ag_knop').hover(function(){
+	$('video ~ .Ag_knop').hover(function () {
 		if (this.classList.contains('speel-video')) {
 			this.classList.add('in-wit');
 		} else {
 			this.classList.remove('in-wit');
 		}
-	}, function(){
+	}, function () {
 		if (this.classList.contains('speel-video')) {
 			this.classList.remove('in-wit');
 		} else {
@@ -69,14 +84,14 @@ function videoPlayer () {
 		}
 	});
 
-	$('body').on('click', '.speel-video', function(e){
+	$('body').on('click', '.speel-video', function (e) {
 		e.preventDefault();
 		console.log(this, $(this).closest('vid-doos').find('video'));
 		$(this).closest('.vid-doos').find('video').click();
 		//this.parentNode.getElementsByTagName('video')[0].click();
 	});
 
-	$('body').on('click', 'video', function(){
+	$('body').on('click', 'video', function () {
 		if (this.paused) {
 			this.classList.remove('pause');
 			this.classList.add('speelt');
@@ -92,8 +107,8 @@ function videoPlayer () {
 
 
 
-function artCLinkTrigger(){
-	$('.art-c').on('click', 'div', function(e){
+function artCLinkTrigger() {
+	$('.art-c').on('click', 'div', function (e) {
 
 		if (this.classList.contains('art-rechts')) {
 			this.querySelector('a').click();
@@ -111,7 +126,7 @@ function kopmenuSubMobiel() {
 
 	// $("#stek-kop .menu").on('click', 'i', function(e){
 	// 	e.preventDefault();
-		
+
 	// 	document.querySelector('.menu-kop-container').classList.toggle('tonen');
 
 	// 	// const menuKop = document.getElementById('menu-kop');
@@ -120,14 +135,14 @@ function kopmenuSubMobiel() {
 	// 	// 	menuKop.classList.toggle('omhoog-geschoven');
 	// 	// }, 5); 
 
-		
+
 	// });
 
 }
 
 
 
-window.onload = function(){
+window.onload = function () {
 
 	init();
 
@@ -142,13 +157,13 @@ window.onload = function(){
 	}
 
 
-/*	var shareDaddy = $('.sharedaddy');
-	if (shareDaddy.length) kopieerShare(shareDaddy);
-*/
-	videoPlayer(); 
+	/*	var shareDaddy = $('.sharedaddy');
+		if (shareDaddy.length) kopieerShare(shareDaddy);
+	*/
+	videoPlayer();
 
 	if (doc.getElementById('agenda-filter')) agendaFilter();
- 
+
 	kopmenuSubMobiel();
 
 };

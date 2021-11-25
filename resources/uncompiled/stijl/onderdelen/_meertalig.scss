@@ -1,0 +1,44 @@
+.multi-lang-vlaggen__buiten {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  margin-left: 30px;
+}
+.multi-lang-vlaggen {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  padding-top: 10px;
+  z-index: 10;
+  .lang-item {
+    display: none;
+  }
+  .lang-item.current-lang {
+    display: block;
+  }
+  &:hover {
+    .lang-item {
+      display: block;
+    }
+  }
+  .lang-item a {
+    background-color: $hoofdkleur;
+    &:hover {
+      background-color: $hoofdkleur_licht;
+    }
+  }
+  .lang-item a, .lang-item img {
+    display: block;
+  }
+  .lang-item img {
+    height: 45px !important;
+    width: 60px !important;
+    padding: 10px;
+  }
+}

@@ -11,77 +11,118 @@ Version: 1.0
 GitHub Theme URI: sjerpbouwtsites/agitatie
 GitHub Theme URI: https://github.com/sjerpbouwtsites/agitatie
 !*/
-.tekst-wit {
+.tekst-wit,
+a.tekst-wit {
   color: #fff; }
 
-.tekst-wittig {
+.tekst-wittig,
+a.tekst-wittig {
   color: #f5f5f5; }
 
-.tekst-lichtgrijs {
+.tekst-lichtgrijs,
+a.tekst-lichtgrijs {
   color: #CAC8C8; }
 
-.tekst-grijs {
+.tekst-grijs,
+a.tekst-grijs {
   color: #666; }
 
-.tekst-donkergrijs {
+.tekst-donkergrijs,
+a.tekst-donkergrijs {
   color: #211f1f; }
 
-.tekst-zwart, .sticky-widget.widget_nav_menu .menu-item a {
+.tekst-zwart, .sticky-widget.widget_nav_menu .menu-item a,
+a.tekst-zwart,
+.sticky-widget.widget_nav_menu .menu-item a {
   color: #252525; }
 
-.tekst-hoofdkleur {
+.tekst-hoofdkleur,
+a.tekst-hoofdkleur {
   color: #CB4131; }
 
-.tekst-zijkleur {
+.tekst-zijkleur,
+a.tekst-zijkleur {
   color: #2a2322; }
 
-.tekst-accentkleur {
+.tekst-accentkleur,
+a.tekst-accentkleur {
   color: #d4e97e; }
 
-.tekst-hoofdkleur-donker {
+.tekst-hoofdkleur-donker,
+a.tekst-hoofdkleur-donker {
   color: #b63a2c; }
 
-.tekst-zijkleur-donker {
+.tekst-zijkleur-donker,
+a.tekst-zijkleur-donker {
   color: #1c1717; }
 
-.tekst-accentkleur-donker {
+.tekst-accentkleur-donker,
+a.tekst-accentkleur-donker {
   color: #cde568; }
 
-.achtergrond-wit {
+.achtergrond-wit,
+a.achtergrond-wit {
   background-color: #fff; }
 
-.achtergrond-wittig {
+.achtergrond-wittig,
+a.achtergrond-wittig {
   background-color: #f5f5f5; }
 
-.achtergrond-lichtgrijs {
+.achtergrond-lichtgrijs,
+a.achtergrond-lichtgrijs {
   background-color: #CAC8C8; }
 
-.achtergrond-grijs {
+.achtergrond-grijs,
+a.achtergrond-grijs {
   background-color: #666; }
 
-.achtergrond-donkergrijs {
+.achtergrond-donkergrijs,
+a.achtergrond-donkergrijs {
   background-color: #211f1f; }
 
-.achtergrond-zwart {
+.achtergrond-zwart,
+a.achtergrond-zwart {
   background-color: #252525; }
 
-.achtergrond-hoofdkleur {
+.achtergrond-hoofdkleur,
+a.achtergrond-hoofdkleur {
   background-color: #CB4131; }
 
-.achtergrond-zijkleur {
+.achtergrond-zijkleur,
+a.achtergrond-zijkleur {
   background-color: #2a2322; }
 
-.achtergrond-accentkleur {
+.achtergrond-accentkleur,
+a.achtergrond-accentkleur {
   background-color: #d4e97e; }
 
-.achtergrond-hoofdkleur-donker {
+.achtergrond-hoofdkleur-donker,
+a.achtergrond-hoofdkleur-donker {
   background-color: #b63a2c; }
 
-.achtergrond-zijkleur-donker {
+.achtergrond-zijkleur-donker,
+a.achtergrond-zijkleur-donker {
   background-color: #1c1717; }
 
-.achtergrond-accentkleur-donker {
+.achtergrond-accentkleur-donker,
+a.achtergrond-accentkleur-donker {
   background-color: #cde568; }
+
+.kop-letter,
+.kopletter {
+  font-family: "Noto Sans", sans-serif; }
+
+.brood-letter,
+.broodletter {
+  font-family: "Noto Serif", serif; }
+
+.accent-letter,
+.accentletter {
+  font-family: "Noto Sans", sans-serif; }
+
+.kleine-letter,
+.kleineletter {
+  font-family: "Noto Sans", serif; }
 
 html {
   font-family: sans-serif;
@@ -993,7 +1034,7 @@ main blockquote {
     line-height: 1.2;
     font-size: .85em; }
     .art-c .art-rechts p a {
-      text-decoration: underline; }
+      text-decoration: none; }
     .art-c .art-rechts p:last-child {
       margin-bottom: 0; }
   .art-c time, .art-c .tax, .art-c time ~ span {
@@ -1321,13 +1362,13 @@ input.wpcf7-submit {
     .uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child {
       margin-top: -2em;
       padding-top: .66em;
-      background-color: #f7f7f7;
+      background-color: #fffaf9;
       position: relative;
       min-height: 130px; }
       .uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child::before, .uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1:first-child::after {
         display: block;
         content: '';
-        background-color: #f7f7f7;
+        background-color: #fffaf9;
         width: .66em;
         height: 100%;
         position: absolute;
@@ -1345,6 +1386,41 @@ input.wpcf7-submit {
 @media screen and (max-width: 768px) {
   .uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig h1 {
     margin-top: .66em; } }
+
+.multi-lang-vlaggen__buiten {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  margin-left: 30px; }
+
+.multi-lang-vlaggen {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  padding-top: 10px;
+  z-index: 10; }
+  .multi-lang-vlaggen .lang-item {
+    display: none; }
+  .multi-lang-vlaggen .lang-item.current-lang {
+    display: block; }
+  .multi-lang-vlaggen:hover .lang-item {
+    display: block; }
+  .multi-lang-vlaggen .lang-item a {
+    background-color: #CB4131; }
+    .multi-lang-vlaggen .lang-item a:hover {
+      background-color: #d25244; }
+  .multi-lang-vlaggen .lang-item a, .multi-lang-vlaggen .lang-item img {
+    display: block; }
+  .multi-lang-vlaggen .lang-item img {
+    height: 45px !important;
+    width: 60px !important;
+    padding: 10px; }
 
 .sharedaddy {
   display: none !important;
@@ -1426,6 +1502,12 @@ div.sharedaddy .sd-title {
 
 .agenda-lijst__tijd--widget {
   max-width: 90px; }
+
+.agenda-lijst__tijd-spacer--pagina {
+  padding-left: .15em;
+  padding-right: .15em;
+  font-size: 1em;
+  opacity: 0.6; }
 
 .agenda-lijst__tijd-spacer--widget {
   padding-left: .16em;
@@ -1597,14 +1679,18 @@ main.heeft-uitgelicht.heeft-hero .sticky-sidebar {
 .agenda-lijst__taxonomie,
 .agenda-lijst__tijd,
 .agenda-lijst__rechts > span {
-  color: #666;
   line-height: 1;
   display: block;
-  font-weight: bold;
-  color: white; }
+  font-weight: bold; }
+
+.agenda-lijst__datum {
+  font-size: .8em;
+  line-height: .8em; }
+
+.agenda-lijst__taxonomie {
+  font-weight: normal; }
 
 .agenda-lijst__titel {
-  color: #252525;
   margin-bottom: .5em;
   display: inline-block;
   word-break: break-word; }
@@ -2046,7 +2132,7 @@ footer .menu a:hover {
 
 @media screen and (min-width: 1250px) {
   .uitgelichte-afbeelding-buiten + .titel-over-afbeelding-indien-aanwezig .bericht-tekst.datum {
-    top: calc(50vh + .25em);
+    top: calc(50vh - .5em);
     right: calc(50% - (390px + 1em));
     -webkit-transform: translate(100%, 0);
     transform: translate(100%, 0);
@@ -2054,16 +2140,18 @@ footer .menu a:hover {
 
 @media screen and (max-width: 1249px) and (min-width: 600px) {
   .uitgelichte-afbeelding-buiten + .titel-over-afbeelding-indien-aanwezig .bericht-tekst.datum {
-    font-size: 1.5em;
-    top: .66em;
-    right: .66em;
-    text-align: right; } }
+    position: static;
+    text-shadow: none;
+    width: auto;
+    max-width: initial;
+    transform: initial;
+    font-size: inherit;
+    color: #666;
+    margin-bottom: -.75em; } }
 
 @media screen and (max-width: 599px) {
   .uitgelichte-afbeelding-buiten + .titel-over-afbeelding-indien-aanwezig .bericht-tekst.datum {
-    opacity: .8;
-    margin-bottom: -1em;
-    display: block; } }
+    margin-bottom: -.75em; } }
 
 .onder-artikel-taxonomieen h2 {
   padding-top: .5em;

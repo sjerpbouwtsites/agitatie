@@ -206,6 +206,8 @@ if (!function_exists('ag_hero_model')) : function ag_hero_model()
 
         global $post;
 
+        if (empty($post)) return false;
+
         if (!$hero_aan = get_field('gebruik_hero', $post->ID)) return false;
         if (!has_post_thumbnail()) return false;
 

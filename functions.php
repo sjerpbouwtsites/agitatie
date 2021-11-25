@@ -6,6 +6,7 @@ define('SITE_URI', get_site_url());
 define('THEME_DIR', get_template_directory());
 define('THEME_URI', get_template_directory_uri());
 
+
 define('IMG_DIR', THEME_DIR . "/afb");
 define('IMG_URI', THEME_URI . "/afb");
 define('JS_DIR', THEME_DIR . "/js");
@@ -28,6 +29,7 @@ endif;
 
 $include_boom = array(
 	'inc' => array(
+		'taal',
 		'thema-config', //MOET ALS EERST.
 		'edit',
 		'gereedschap',
@@ -60,6 +62,8 @@ foreach ($include_boom as $tak => $map) :
 	}
 
 endforeach; //include boom
+
+agitatie\taal\def_is_meertalig();
 
 ///////////////////////////////////////////////////////////
 

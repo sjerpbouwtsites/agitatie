@@ -116,14 +116,18 @@
 .agenda-lijst__taxonomie,	
 .agenda-lijst__tijd,
 .agenda-lijst__rechts > span  { // content
-	color: $grijs;
 	line-height: 1;
 	display: block;
 	font-weight: bold;
-	color: white;
+}
+.agenda-lijst__datum {
+	font-size: .8em;
+	line-height: .8em;
+}
+.agenda-lijst__taxonomie {
+	font-weight: normal
 }
 .agenda-lijst__titel {
-	color: $zwart;
 	margin-bottom: .5em;
 	display: inline-block;
 	word-break: break-word;

@@ -130,6 +130,8 @@ endif;
  */
 function ag_print_console()
 {
+	if (empty($_SESSION) || !$_SESSION) return;
+
 	if (!array_key_exists('ag_console_opslag', $_SESSION)) {
 		return;
 	}

@@ -1,9 +1,13 @@
 <?php
 
-class Ag_basis_class {
-	function __construct($a = array()) {
+use \agitatie\taal as taal;
+
+class Ag_basis_class
+{
+	function __construct($a = array())
+	{
 		if (is_array($a)) {
-			foreach ($a as $k=>$v) {
+			foreach ($a as $k => $v) {
 				$this->$k = $v;
 			}
 		} else {
@@ -12,29 +16,34 @@ class Ag_basis_class {
 	}
 }
 
-class Ag_knop extends Ag_basis_class{
+class Ag_knop extends Ag_basis_class
+{
 
 	public $class, $link, $tekst, $extern, $schakel, $html;
 
-	public function __construct ($a = array()) {
+	public function __construct($a = array())
+	{
 		parent::__construct($a);
 		$this->klaar = false;
 	}
 
-	public function nalopen () {
+	public function nalopen()
+	{
 		if (!ag_cp_truthy('ikoon', $this)) $this->ikoon = "arrow-right-thick";
 		if (!ag_cp_truthy('link', $this)) $this->link = "#";
 		if (!ag_cp_truthy('geen_ikoon', $this)) $this->geen_ikoon = false;
-		$this->class = $this->class . ($this->geen_ikoon ? " geen-ikoon": "");
+		$this->class = $this->class . ($this->geen_ikoon ? " geen-ikoon" : "");
 		$this->klaar = true;
 	}
 
-	public function print_ikoon() {
+	public function print_ikoon()
+	{
 
 		return $this->geen_ikoon ? "" : "</span><i class='mdi mdi-{$this->ikoon}'></i>";
 	}
 
-	public function maak() {
+	public function maak()
+	{
 
 		if (!$this->klaar) $this->nalopen();
 
@@ -47,21 +56,25 @@ class Ag_knop extends Ag_basis_class{
 		return $this->html;
 	}
 
-	public function print () {
+	public function print()
+	{
 		$this->maak();
 		echo $this->html;
 	}
 }
 
-class Ag_Widget_M extends Ag_basis_class {
+class Ag_Widget_M extends Ag_basis_class
+{
 
 	public $naam, $verp_open, $verp_sluit, $gemaakt, $css_klassen, $vernietigd;
 
-	public function __construct ($a) {
+	public function __construct($a)
+	{
 		parent::__construct($a);
 	}
 
-	public function maak() {
+	public function maak()
+	{
 
 		if (!$this->css_klassen) $this->css_klassen = preg_replace('~[^\p{L}\p{N}]++~u', '', strtolower($this->naam));
 		$this->extra_voor_verp();
@@ -69,22 +82,25 @@ class Ag_Widget_M extends Ag_basis_class {
 		$this->verp_sluit = "</section>";
 		$this->zet_inhoud();
 		$this->gemaakt = true;
-
 	}
 
-	public function zet_inhoud() {
+	public function zet_inhoud()
+	{
 		$this->inhoud = "lege widget";
 	}
 
-	public function extra_voor_verp (){
+	public function extra_voor_verp()
+	{
 		//voor kinderen om na te bewerken
 	}
 
-	public function vernietig() {
+	public function vernietig()
+	{
 		$this->vernietigd = true;
 	}
 
-	public function print(){
+	public function print()
+	{
 
 		if ($this->vernietigd) return;
 
@@ -104,33 +120,40 @@ class Ag_Widget_M extends Ag_basis_class {
 	}
 }
 
-class Ag_Zijbalk_Posts extends Ag_Widget_M {
+class Ag_Zijbalk_Posts extends Ag_Widget_M
+{
 
-	public function __construct ($a = array()) {
+	public function __construct($a = array())
+	{
 		parent::__construct($a);
 	}
 
-	public function zet_inhoud () {
+	public function zet_inhoud()
+	{
 
 		//
 
 	}
 }
 
-class Ag_article_c extends Ag_basis_class{
+class Ag_article_c extends Ag_basis_class
+{
 
 	public $art, $gecontroleerd, $data_src;
 
-	public function __construct ($config, $post) {
+	public function __construct($config, $post)
+	{
 		parent::__construct($config);
 		$this->art = $post;
 	}
 
-	public function test() {
+	public function test()
+	{
 		return "test";
 	}
 
-	public function controleer () {
+	public function controleer()
+	{
 		if ($this->gecontroleerd) return;
 
 		//initialiseer negatieve waarden hier
@@ -151,14 +174,15 @@ class Ag_article_c extends Ag_basis_class{
 		$this->zet_permalink();
 		$this->maak_titel();
 
-		$this->htype = ag_cp_truthy('htype',$this) ? $this->htype : "3";
-		$this->exc_lim = ag_cp_truthy('exc_lim',$this) ? $this->exc_lim : "300";
-		$this->afb_formaat = ag_cp_truthy('afb_formaat',$this) ? $this->afb_formaat : "lijst";
+		$this->htype = ag_cp_truthy('htype', $this) ? $this->htype : "3";
+		$this->exc_lim = ag_cp_truthy('exc_lim', $this) ? $this->exc_lim : "300";
+		$this->afb_formaat = ag_cp_truthy('afb_formaat', $this) ? $this->afb_formaat : "lijst";
 
 		$this->gecontroleerd = true;
 	}
 
-	public function maak_titel () {
+	public function maak_titel()
+	{
 		if ($this->is_categorie) {
 			$this->art->post_title = $this->art->name;
 		} else {
@@ -171,18 +195,20 @@ class Ag_article_c extends Ag_basis_class{
 	}
 
 
-	public function zet_permalink() {
+	public function zet_permalink()
+	{
 		if ($this->is_categorie) {
-			$this->permalink = get_category_link( $this->art->term_id );
+			$this->permalink = get_category_link($this->art->term_id);
 		} else {
 			$this->permalink = get_permalink($this->art->ID);
 		}
 	}
 
-	public function print_afb () {
+	public function print_afb()
+	{
 		if ($this->is_categorie) {
 
-			$afb_verz = get_field('cat_afb', 'category_'.$this->art->term_id);
+			$afb_verz = get_field('cat_afb', 'category_' . $this->art->term_id);
 
 			if ($afb_verz) {
 				$img = "<img
@@ -194,8 +220,6 @@ class Ag_article_c extends Ag_basis_class{
 			} else {
 				$img = '';
 			}
-
-
 		} else {
 
 			if (has_post_thumbnail($this->art->ID)) {
@@ -204,8 +228,8 @@ class Ag_article_c extends Ag_basis_class{
 
 				$img_f = get_field('ta_afbeelding', 'option');
 				if ($img_f) {
-					$w = $this->afb_formaat.'-width';
-					$h = $this->afb_formaat.'-height';
+					$w = $this->afb_formaat . '-width';
+					$h = $this->afb_formaat . '-height';
 					$img = "
 						<img
 							src='{$img_f['sizes'][$this->afb_formaat]}'
@@ -216,51 +240,54 @@ class Ag_article_c extends Ag_basis_class{
 				} else {
 					$img =  '';
 				}
-				
 			}
-
 		}
 
 		echo $img;
-
 	}
 
-	public function maak_tekst (){
-		return "<p class='tekst-zwart'>". ag_maak_excerpt($this->art, $this->exc_lim) .
+	public function maak_tekst()
+	{
+		return "<p class='tekst-zwart'>" . ag_maak_excerpt($this->art, $this->exc_lim) .
 
-		//als geen afbeelding, dan pijltje achter tekst zodat klikbaarheid duidelijker is.
-		($this->geen_afb ? "<span class='lees-meer'>Meer ".ag_mdi('arrow-right-bold-circle', false) . "</span>" : '') .
+			//als geen afbeelding, dan pijltje achter tekst zodat klikbaarheid duidelijker is.
+			$meer = taal\streng('meer');
+		($this->geen_afb ? "<span class='lees-meer'>$meer" . ag_mdi('arrow-right-bold-circle', false) . "</span>" : '') .
 
-		"</p>";
+			"</p>";
 	}
 
-	public function datum() {
+	public function datum()
+	{
 		if ($this->geen_datum || $this->is_categorie) return;
 
-		echo "<time class='post-datum tekst-zwart'>" . get_the_date(get_option('date_format'), $this->art->ID) . "</time>";
+		echo "<time class='post-datum tekst-grijs kleine-letter'>" . get_the_date(get_option('date_format'), $this->art->ID) . "</time>";
 	}
 
-	public function maak_taxlijst() {
+	public function maak_taxlijst()
+	{
 
-			$uitsluiten = array(
-				'post_format', 'post_tag'
-			);
+		$uitsluiten = array(
+			'post_format', 'post_tag'
+		);
 
-			$lijst = get_object_taxonomies($this->art);
-			$p_lijst = array();
+		$lijst = agitatie\taal\verwijder_meertaligheids_tax(
+			get_object_taxonomies($this->art)
+		);
 
-			foreach ($lijst as $l) {
-				if (!in_array($l, $uitsluiten)) {
-					$p_lijst[] = $l;
-				}
+		$p_lijst = array();
+
+		foreach ($lijst as $l) {
+			if (!in_array($l, $uitsluiten)) {
+				$p_lijst[] = $l;
 			}
+		}
 
-			$GLOBALS[$this->art->post_type . '-taxlijst'] = $p_lijst;
-
-
+		$GLOBALS[$this->art->post_type . '-taxlijst'] = $p_lijst;
 	}
 
-	public function taxonomieen() {
+	public function taxonomieen()
+	{
 
 		// slaat in globale variabele op hoe de taxonomieen heten van deze posttype, als dat niet reeds gedaan is
 		// bepaalde waarden worden opgeslagen
@@ -278,15 +305,15 @@ class Ag_article_c extends Ag_basis_class{
 		}
 
 
-		$terms = wp_get_post_terms( $this->art->ID, $GLOBALS[$tl_str] );
+		$terms = wp_get_post_terms($this->art->ID, $GLOBALS[$tl_str]);
 
-		$overslaan = array('Geen categorie');
+		$overslaan = array('Geen categorie', 'Uncategorized');
 
 		$print_ar = array();
 
 		if (count($terms)) :
 
-			foreach ( $terms as $term ) :
+			foreach ($terms as $term) :
 
 				if (in_array($term->name, $overslaan)) continue;
 
@@ -317,7 +344,7 @@ class Ag_article_c extends Ag_basis_class{
 						$teller++;
 					}
 
-					echo "<span class='tax tekst-zwart'> $str". strtolower(implode(', ', $tax_waarden)) . "</span>";
+					echo "<span class='tax tekst-zwart'> $str" . strtolower(implode(', ', $tax_waarden)) . "</span>";
 
 
 				endforeach; //iedere print_ar
@@ -327,42 +354,43 @@ class Ag_article_c extends Ag_basis_class{
 
 	}
 
-	public function extra_class(){
+	public function extra_class()
+	{
 
 		$r = '';
 		if ($this->geen_afb) $r .= 'geen-afb ';
 		if ($this->geen_tekst) $r .= 'geen-tekst ';
 		if ($this->geen_datum) $r .= 'geen-datum ';
 		return trim($r);
-
 	}
 
-	public function maak_artikel ($maak_html = false) {
+	public function maak_artikel($maak_html = false)
+	{
 
 		if (!$this->gecontroleerd) $this->controleer();
 
 		if ($maak_html) ob_start();
 
-		?>
+?>
 
-		<article class="flex art-c <?=$this->class?> <?=$this->extra_class()?>" <?=$this->data_src?> >
+		<article class="flex art-c <?= $this->class ?> <?= $this->extra_class() ?>" <?= $this->data_src ?>>
 
 			<?php if (!$this->geen_afb) : ?>
-			<div class='art-links'>
-				<a href='<?=$this->permalink?>'>
-					<?php $this->print_afb(); ?>
-				</a>
-			</div>
-			<?php endif;?>
+				<div class='art-links'>
+					<a href='<?= $this->permalink ?>'>
+						<?php $this->print_afb(); ?>
+					</a>
+				</div>
+			<?php endif; ?>
 
 			<div class='art-rechts'>
-				<a class='tekst-zwart' href='<?=$this->permalink?>'>
+				<a class='tekst-zwart' href='<?= $this->permalink ?>'>
 					<header>
-						<h<?=$this->htype?> class='tekst-zwart'>
-							<?=$this->art->post_title?>
-						</h<?=$this->htype?>>
+						<h<?= $this->htype ?> class='tekst-hoofdkleur'>
+							<?= $this->art->post_title ?>
+						</h<?= $this->htype ?>>
 						<?php $this->datum();
-						 $this->taxonomieen(); ?>
+						$this->taxonomieen(); ?>
 					</header>
 					<?php
 
@@ -373,34 +401,36 @@ class Ag_article_c extends Ag_basis_class{
 			</div>
 
 		</article>
-		<?php
+<?php
 
 		if ($maak_html) {
 			$this->html = ob_get_clean();
 		}
-
-
-
 	}
 
-	public function print () {
+	public function print()
+	{
 		$this->maak_artikel(false);
 	}
 }
 
-class Ag_pag_fam extends Ag_Zijbalk_Posts{
+class Ag_pag_fam extends Ag_Zijbalk_Posts
+{
 
 	public $inhoud;
 
-	public function __construct ($a = array()) {
+	public function __construct($a = array())
+	{
 		parent::__construct($a);
 	}
 
-	public function extra_voor_verp () {
+	public function extra_voor_verp()
+	{
 		$this->css_klassen = $this->css_klassen . " pag-fam";
 	}
 
-	public function zet_inhoud () {
+	public function zet_inhoud()
+	{
 
 		$post = $GLOBALS['post'];
 
@@ -417,10 +447,10 @@ class Ag_pag_fam extends Ag_Zijbalk_Posts{
 
 		$pagina_query = new WP_Query();
 		$alle_paginas = $pagina_query->query(array('post_type' => 'page', 'posts_per_page' => '-1'));
-		$this->kinderen = get_page_children( $this->ouder, $alle_paginas );
+		$this->kinderen = get_page_children($this->ouder, $alle_paginas);
 
 		//als er geen kinderen zijn (0 of alleen zichzelf) dan zit deze pagina niet in een familie.
-		if (count($this->kinderen) < 2)  {
+		if (count($this->kinderen) < 2) {
 			$this->vernietig();
 			return;
 		}
@@ -436,9 +466,10 @@ class Ag_pag_fam extends Ag_Zijbalk_Posts{
 				'geen_tekst' => true,
 				'in_zijbalk' => true,
 				'geen_afb'	=> true,
-				'geen_datum'=> true,
+				'geen_datum' => true,
 			),
-		get_post($this->ouder));
+			get_post($this->ouder)
+		);
 
 		$art->print();
 
@@ -453,29 +484,32 @@ class Ag_pag_fam extends Ag_Zijbalk_Posts{
 					'htype' => 3,
 					'geen_afb'	=> true,
 					'geen_tekst' => true,
-					'geen_datum'=> true,
+					'geen_datum' => true,
 					'in_zijbalk' => true
 				),
-			get_post($k));
+				get_post($k)
+			);
 
 			$art->print();
 		}
 
 		$this->inhoud .= ob_get_clean();
-
 	}
 }
 
-class Ag_tax_blok extends Ag_basis_class {
+class Ag_tax_blok extends Ag_basis_class
+{
 
 	//aantal uitgesloten tax namen, post_tag en post_format
 	public $uitgesloten = array();
 
-	public function __construct ($a = array()) {
+	public function __construct($a = array())
+	{
 		parent::__construct($a);
 	}
 
-	public function nalopen () {
+	public function nalopen()
+	{
 		if (!ag_cp_truthy('post', $this)) die();
 		if (!ag_cp_truthy('titel', $this)) $this->titel = "";
 		if (!ag_cp_truthy('html', $this)) $this->html = "";
@@ -485,11 +519,13 @@ class Ag_tax_blok extends Ag_basis_class {
 	}
 
 
-	public function zet_basis() {
+	public function zet_basis()
+	{
 		$this->basis = get_post_type_archive_link($this->post->post_type);
 	}
 
-	public function verwerk_tax_naam($a) {
+	public function verwerk_tax_naam($a)
+	{
 
 		//LEGACY ?
 
@@ -500,32 +536,36 @@ class Ag_tax_blok extends Ag_basis_class {
 		}
 	}
 
-	public function maak_li ($tax_term){
+	public function maak_li($tax_term)
+	{
 		$href = get_term_link($tax_term->term_id);
-		return "<li><a href='$href'>".ucfirst($tax_term->name)."</a></li>";
+		return "<li><a href='$href'>" . ucfirst($tax_term->name) . "</a></li>";
 	}
 
-	public function controleer_tax_titel($str) {
+	public function controleer_tax_titel($str)
+	{
 
 		//vervangt tax titel namen
 
 		$controle = array(
-			'category'		=> 'categorie',
+			'category'		=> taal\streng('categorie'),
 		);
 
-		if(array_key_exists($str, $controle)) {
+		if (array_key_exists($str, $controle)) {
 			return $controle[$str];
 		} else {
 			return $str;
 		}
-
 	}
 
-	public function uitsluiten ($naam) {
+	public function uitsluiten($naam)
+	{
 
 		//sluit bepaalde namen uit en slaat dit op in uitgesloten.
 
-		if ($naam === 'post_format' || $naam === 'post_tag') {
+		$exclude = ['post_format', 'post_tag', 'language', 'post_translations'];
+
+		if (in_array($naam, $exclude)) {
 			if (!in_array($naam, $this->uitgesloten)) $this->uitgesloten[] = $naam;
 			return true;
 		} else {
@@ -533,7 +573,8 @@ class Ag_tax_blok extends Ag_basis_class {
 		}
 	}
 
-	public function maak() {
+	public function maak()
+	{
 
 		$this->nalopen();
 
@@ -543,7 +584,7 @@ class Ag_tax_blok extends Ag_basis_class {
 		$tax_en_terms = array();
 
 		foreach ($taxs as $t) :
-			$tax_en_terms[$t->name] = get_terms( $t->name, array('hide_empty' => true,) );
+			$tax_en_terms[$t->name] = get_terms($t->name, array('hide_empty' => true,));
 		endforeach;
 
 		$linkblokken = '';
@@ -558,13 +599,14 @@ class Ag_tax_blok extends Ag_basis_class {
 			if ($this->uitsluiten($naam)) continue;
 
 			$linkblokken .= "<section>";
-			if ( (count($tax_en_terms) - count($this->uitgesloten) ) > 1) {
-				$linkblokken .= "<h3>".ucfirst($this->controleer_tax_titel($naam))."</h3>";
+			if ((count($tax_en_terms) - count($this->uitgesloten)) > 1) {
+				$linkblokken .= "<h3>" . ucfirst($this->controleer_tax_titel($naam)) . "</h3>";
 			}
 			if (count($waarden)) :
 				$linkblokken .= "<ul class='reset'>";
 				if ($this->reset) {
-					$linkblokken .= "<li><a href='{$this->basis}'>Alles</a></li>";
+					$alles = taal\streng('telwoord_alles');
+					$linkblokken .= "<li><a href='{$this->basis}'>$alles</a></li>";
 				}
 				foreach ($waarden as $tax_term) {
 					$linkblokken .= $this->maak_li($tax_term);
@@ -586,16 +628,13 @@ class Ag_tax_blok extends Ag_basis_class {
 
 			";
 		}
-
-
 	}
 
-	public function print() {
+	public function print()
+	{
 		if (!ag_cp_truthy('html', $this)) {
 			$this->maak();
 		}
 		echo $this->html;
 	}
-
 }
-

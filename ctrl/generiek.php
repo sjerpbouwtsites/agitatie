@@ -21,6 +21,13 @@ endif;
 if (!function_exists('ag_kop_menu_ctrl')) :  function ag_kop_menu_ctrl()
 	{
 
+		// 		global $wpdb;
+		// 		$results = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}options WHERE option_id = 1", OBJECT );
+
+		// 		SELECT * 
+		//   FROM wp_posts 
+		//  WHERE post_type = 'nav_menu_item';
+
 		$menu_locations = get_nav_menu_locations();
 
 		if (!array_key_exists('openklap-menu', $menu_locations)) {
