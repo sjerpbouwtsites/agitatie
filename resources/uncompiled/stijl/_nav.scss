@@ -131,6 +131,13 @@
 	justify-content: end;
 	margin-right: 1em;
 }
+
+@media (max-width: 1200px) {
+	.prio-menu {
+		display: none;
+	}
+}
+
 .prio-menu .menu-item  a {
 	@include kopmenu_letter();
 }	
