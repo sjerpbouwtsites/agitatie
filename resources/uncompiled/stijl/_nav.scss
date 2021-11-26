@@ -222,9 +222,19 @@
 		color: white;
 	}
 }
+
+@media (max-width: 768px) {
+	.menu-menu-tekst {
+		display: none;
+	}
+	.kopmenu-mobiel {
+		padding: 0 1.6em;
+	}
+}
+
 .mobiele-menu-schakel-open .kopmenu-mobiel {
 	position: fixed;
-	z-index: 1000;
+	z-index: 1000; 
 	top: 0px;
 	right: 20px;
 	color: white;

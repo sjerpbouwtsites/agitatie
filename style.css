@@ -1230,6 +1230,9 @@ input.wpcf7-submit {
 
 .knoppendoos.groot {
   font-size: 1.5em; }
+  @media (max-width: 600px) {
+    .knoppendoos.groot {
+      font-size: 1em; } }
 
 .navigation {
   text-align: center;
@@ -1340,7 +1343,10 @@ input.wpcf7-submit {
       font-size: .5em;
       font-weight: 400;
       font-family: "Noto Serif", serif;
-      opacity: .8; }
+      opacity: .8;
+      line-height: 1;
+      display: inline-block;
+      margin-top: .75em; }
     @media (max-width: 600px) {
       .uitgelichte-afbeelding-buiten.hero h1 {
         font-size: 1.5rem; } }
@@ -2096,6 +2102,12 @@ footer .search-form .search-submit {
   .kopmenu-mobiel:hover {
     background-color: #1a0f0a;
     color: white; }
+
+@media (max-width: 768px) {
+  .menu-menu-tekst {
+    display: none; }
+  .kopmenu-mobiel {
+    padding: 0 1.6em; } }
 
 .mobiele-menu-schakel-open .kopmenu-mobiel {
   position: fixed;
