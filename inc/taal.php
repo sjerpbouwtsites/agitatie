@@ -64,6 +64,8 @@ function registreer_strengen()
     reg_streng_h('zoekterm_terug_voorpagina', 'Terug naar de voorpagina.', 'agitatie-zoektermen'),
     reg_streng_h('zoekterm_je_zocht', 'Je zocht', 'agitatie-zoektermen'),
     reg_streng_h('zoekterm_wat_zoek_je', 'Wat zoek je', 'agitatie-zoektermen'),
+    reg_streng_h('zoekterm_zoeken', 'Zoeken', 'agitatie-zoektermen'),
+    reg_streng_h('zoekterm_zoek', 'Zoek', 'agitatie-zoektermen'),
     reg_streng_h('zoekterm_404_melding', 'Oeps! Die pagina bestaat niet', 'agitatie-zoektermen'),
     reg_streng_h('zoekterm_404_zoek_hint', 'Probeer eens onderstaand zoekformulier', 'agitatie-zoektermen'),
 
