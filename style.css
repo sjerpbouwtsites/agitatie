@@ -981,6 +981,10 @@ p, span {
   font-size: 1.33em; }
   .bericht-tekst > * {
     line-height: 1.35; }
+  .bericht-tekst > h2 {
+    line-height: 1.1; }
+  .bericht-tekst > h3 {
+    line-height: 1; }
 
 .geen-margin-top {
   margin-top: 0; }
