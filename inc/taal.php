@@ -46,6 +46,8 @@ function registreer_strengen()
 
   // name, string, group, multiline
   $strengen = [
+    reg_streng_h('menu_menu', 'Menu'),
+
     reg_streng_h('widget_pag_fam_lees_verder', 'lees verder'),
 
     reg_streng_h('categorie_taxonomie_naam', 'categorie'),
