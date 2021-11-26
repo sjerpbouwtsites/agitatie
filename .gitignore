@@ -2,3 +2,4 @@ node_modules/
 .htaccess
 nginx.conf
 ctrl/agenda.php
+style.css

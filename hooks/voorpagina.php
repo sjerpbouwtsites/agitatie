@@ -79,11 +79,13 @@ if (!function_exists('ag_vp_print_menu')) : function ag_vp_print_menu()
 		if (array_key_exists('voorpagina', $locaties)) {
 
 			$menu = wp_get_nav_menu_object($locaties['voorpagina']);
+
+			if (empty($menu)) {
+				return;
+			}
 			$menu_stukken = wp_get_nav_menu_items($menu->term_id);
 
 			if ($menu_stukken and count($menu_stukken)) :
-
-
 
 				echo "<section class='vp-menu verpakking paddingveld marginveld veel normale-padding achtergrond-zijkleur'>";
 				echo "<h2 class='tekst-wittig geen-margin-top lineheight-fix' >" . \agitatie\taal\streng('Zie ook') . "</h2>";
