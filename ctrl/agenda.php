@@ -165,20 +165,8 @@ class Ag_agenda extends Ag_basis_class
                         if (!$this->is_widget) {
                             $content = ag_maak_excerpt($a, 320);
 
-                            $rechts = "<div 
-                                class='agenda-lijst__cel 
-                                    agenda-lijst__cel--$omgeving 
-                                    kleine-letter
-                                    tekst-wit
-                                    agenda-lijst__rechts 
-                                    agenda-lijst__rechts--" . $omgeving . "'>
-                                    <span>" . $content . "</span>
-                                </div>";
-
-                            $midden = "<div 
-                                class='agenda-lijst__midden agenda-lijst__cel 
-                                    agenda-lijst__cel--$omgeving 
-                                    agenda-lijst__midden--" . $omgeving . "'>";
+                            // midden is in links gezet.
+                            $midden = "";
                             foreach ($post_taxonomieen as $pt) :
 
                                 $prefix = count($post_taxonomieen) > 1
@@ -196,8 +184,15 @@ class Ag_agenda extends Ag_basis_class
                                         $prefix $pt->name
                                     </span>";
                             endforeach;
-
-                            $midden .= "</div>";
+                            $rechts = "<div 
+                                class='agenda-lijst__cel 
+                                    agenda-lijst__cel--$omgeving 
+                                    kleine-letter
+                                    tekst-wit
+                                    agenda-lijst__rechts 
+                                    agenda-lijst__rechts--" . $omgeving . "'>
+                                    <span>" . $content . "</span>
+                                </div>";
                         } else {
                             $rechts = '';
                             $midden = '';
@@ -231,8 +226,8 @@ class Ag_agenda extends Ag_basis_class
 
                                     <span class='agenda-lijst__titel tekst-zwart kop-letter agenda-lijst__titel--" . $omgeving . "' >" . $a->post_title . "</span>
                                     <time class='tekst-wittig kleine-letter agenda-lijst__tijd agenda-lijst__tijd--$omgeving'>$datum</time>
+                                    $midden
                                 </div>
-                                $midden
                                 {$rechts}
                             </a>
 						</li>";
