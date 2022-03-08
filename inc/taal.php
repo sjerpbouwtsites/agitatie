@@ -60,6 +60,10 @@ function registreer_strengen()
     reg_streng_h('post_type_post_naam_mv', 'berichten'),
     reg_streng_h('post_type_post_naam', 'post'),
     reg_streng_h('post_type_post_naam_mv', 'posts'),
+    reg_streng_h('post_type_post_naam', 'story'),
+    reg_streng_h('post_type_post_naam_mv', 'stories'),
+    reg_streng_h('post_type_post_naam', 'download'),
+    reg_streng_h('post_type_post_naam_mv', 'downloads'),
 
     reg_streng_h('telwoord_alle', 'alle', 'agitatie-telwoorden'),
     reg_streng_h('telwoord_alles', 'alles', 'agitatie-telwoorden'),
@@ -74,7 +78,7 @@ function registreer_strengen()
     reg_streng_h('zoekterm_404_melding', 'Oeps! Die pagina bestaat niet', 'agitatie-zoektermen'),
     reg_streng_h('zoekterm_404_zoek_hint', 'Probeer eens onderstaand zoekformulier', 'agitatie-zoektermen'),
 
-
+    reg_streng_h('download-posttype-description', 'Download posters, flyers, etc!', 'agitatie-downloads', true),
 
     reg_streng_h('voorpagina_zie_ook', 'Zie ook', 'agitatie-voorpagina'),
     reg_streng_h('voorpagina_nieuws', 'nieuws', 'agitatie-voorpagina'),

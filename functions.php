@@ -40,6 +40,7 @@ $include_boom = array(
 		'widgets',
 		'strip_scripts',
 		"acf", //
+		"download-posttype"
 	),
 	'ctrl' => array(
 		'controllers-bundel'

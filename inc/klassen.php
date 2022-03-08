@@ -164,7 +164,9 @@ class Ag_article_c extends Ag_basis_class
 			'class',
 			'geen_datum',
 			'taxonomieen',
-			'korte_titel'
+			'korte_titel',
+			'target_blank',
+			'download_link'
 		);
 
 		foreach ($c as $cc) {
@@ -199,6 +201,15 @@ class Ag_article_c extends Ag_basis_class
 	{
 		if ($this->is_categorie) {
 			$this->permalink = get_category_link($this->art->term_id);
+		} else if ($this->art->post_type === 'download') {
+			$this->target_blank = true;
+			$bestand_of_url = get_field('bestand_of_url', $this->art->ID);
+			if ($bestand_of_url === 'bestand') {
+				$this->permalink = get_field('bestand', $this->art->ID);
+				$this->download_link = true;
+			} else {
+				$this->permalink = get_field('url', $this->art->ID);
+			}
 		} else {
 			$this->permalink = get_permalink($this->art->ID);
 		}
@@ -371,20 +382,23 @@ class Ag_article_c extends Ag_basis_class
 
 		if ($maak_html) ob_start();
 
+		$link_target = $this->target_blank ? "_blank" : "_self";
+		$download_attr = $this->download_link ? "download" : "";
+
 ?>
 
 		<article class="flex art-c <?= $this->class ?> <?= $this->extra_class() ?>" <?= $this->data_src ?>>
 
 			<?php if (!$this->geen_afb) : ?>
 				<div class='art-links'>
-					<a href='<?= $this->permalink ?>'>
+					<a href='<?= $this->permalink ?>' target="<?= $link_target ?>" <?= $download_attr ?>>
 						<?php $this->print_afb(); ?>
 					</a>
 				</div>
 			<?php endif; ?>
 
 			<div class='art-rechts'>
-				<a class='tekst-zwart' href='<?= $this->permalink ?>'>
+				<a class='tekst-zwart' href='<?= $this->permalink ?>' target="<?= $link_target ?>" <?= $download_attr ?>>
 					<header>
 						<h<?= $this->htype ?> class='tekst-hoofdkleur'>
 							<?= $this->art->post_title ?>
