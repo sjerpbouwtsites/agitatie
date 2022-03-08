@@ -160,6 +160,7 @@ class Ag_article_c extends Ag_basis_class
 		$c = array(
 			'is_categorie',
 			'geen_afb',
+			'geen_meer_tekst',
 			'geen_tekst',
 			'class',
 			'geen_datum',
@@ -259,11 +260,21 @@ class Ag_article_c extends Ag_basis_class
 
 	public function maak_tekst()
 	{
+
+		$heeft_meer = property_exists($this, 'geen_meer_tekst')
+			? !$this->geen_meer_tekst
+			: true;
+
+		$meer = taal\streng('meer');
+		//als geen afbeelding, dan pijltje achter tekst zodat klikbaarheid duidelijker is.
+		$meer_html = (($this->geen_afb && $heeft_meer)
+			? "<span class='lees-meer'>$meer" . ag_mdi('arrow-right-bold-circle', false) . "</span>"
+			: '');
+
 		return "<p class='tekst-zwart'>" . ag_maak_excerpt($this->art, $this->exc_lim) .
 
-			//als geen afbeelding, dan pijltje achter tekst zodat klikbaarheid duidelijker is.
-			$meer = taal\streng('meer');
-		($this->geen_afb ? "<span class='lees-meer'>$meer" . ag_mdi('arrow-right-bold-circle', false) . "</span>" : '') .
+			$meer_html
+			.
 
 			"</p>";
 	}
@@ -387,7 +398,7 @@ class Ag_article_c extends Ag_basis_class
 
 ?>
 
-		<article class="flex art-c <?= $this->class ?> <?= $this->extra_class() ?>" <?= $this->data_src ?>>
+		<article id='<?= $this->art->post_name ?>' class="flex art-c <?= $this->class ?> <?= $this->extra_class() ?>" <?= $this->data_src ?>>
 
 			<?php if (!$this->geen_afb) : ?>
 				<div class='art-links'>
