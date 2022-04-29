@@ -2,7 +2,7 @@
     .menu-item a {
         font-size: 1em;
         font-weight: normal;
-        font-family: "Eczar", sans-serif;
+        font-family: $kopletter;
         @extend .tekst-zwart; 
     }
     .current-menu-item a {
