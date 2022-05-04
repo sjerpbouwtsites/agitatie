@@ -2,17 +2,17 @@
 
 if (!function_exists('ag_vp_print_nieuws_hook')) : function ag_vp_print_nieuws_hook()
 	{
-
-		echo "<section class='vp-nieuws verpakking'>
-	<h2>" . ucfirst(\agitatie\taal\streng('nieuws')) . "</h2>";
-
 		$vp_posts = new WP_Query(array(
 			'posts_per_page' => 5
 		));
 
-		echo "<div class='art-lijst'>";
-
 		if (count($vp_posts->posts)) : foreach ($vp_posts->posts as $vp_post) :
+				echo "<section class='vp-nieuws verpakking'>
+	<h2>" . ucfirst(\agitatie\taal\streng('nieuws')) . "</h2>";
+
+
+				echo "<div class='art-lijst'>";
+
 
 				if (!isset($a)) {
 					$a = new Ag_article_c(array(
@@ -28,43 +28,44 @@ if (!function_exists('ag_vp_print_nieuws_hook')) : function ag_vp_print_nieuws_h
 				$a->print();
 
 			endforeach;
+
+			echo "</div>"; //art lijst
+
+			echo "<footer>";
+
+			$k = new Ag_knop(array(
+				'link' 		=> get_post_type_archive_link('post'),
+				'tekst' 	=> ucfirst(\agitatie\taal\streng('alle')) . ' ' . \agitatie\taal\streng('posts'),
+				'class'		=> 'in-wit'
+			));
+			$k->print();
+
+			echo "</footer>";
+
+			echo "</section>";
+
 		endif;
-
-		echo "</div>"; //art lijst
-
-		echo "<footer>";
-
-		$k = new Ag_knop(array(
-			'link' 		=> get_post_type_archive_link('post'),
-			'tekst' 	=> ucfirst(\agitatie\taal\streng('alle')) . ' ' . \agitatie\taal\streng('posts'),
-			'class'		=> 'in-wit'
-		));
-		$k->print();
-
-		echo "</footer>";
-
-		echo "</section>";
-
-		echo "<section class='verpakking verpakking-klein marginveld'>";
-		echo "<div class='agenda'>
-		<h2>Agenda</h2>";
-
-
 
 		//$afm = ag_agenda_filter_ctrl();
 
-		if (have_posts()) :
 
-			$agenda = new Ag_agenda(array(
-				'aantal' => 10,
-				'omgeving' => 'pagina'
-			));
+		$agenda = new Ag_agenda(array(
+			'aantal' => 10,
+			'omgeving' => 'pagina'
+		));
+
+		if (count($agenda->agendastukken) > 0) :
+
+			echo "<section class='verpakking verpakking-klein marginveld'>";
+			echo "<div class='agenda'>
+			<h2>Agenda</h2>";
 
 			$agenda->print();
-		endif;
+			echo "</div>";
+			echo "</section>";
 
-		echo "</div>";
-		echo "</section>";
+		endif; // als agendastukken
+
 	}
 endif;
 

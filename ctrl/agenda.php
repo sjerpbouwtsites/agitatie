@@ -24,7 +24,10 @@ class Ag_agenda extends Ag_basis_class
     public function __construct($a = array())
     {
         parent::__construct($a);
-        //filter, /omgeving, etc.
+        $omgeving = $this->omgeving;
+
+        $this->zet_is_widget();
+        $this->zet_agendastukken();
     }
 
     public function zet_is_widget()
@@ -142,10 +145,7 @@ class Ag_agenda extends Ag_basis_class
     public function print()
     {
 
-        $omgeving = $this->omgeving;
 
-        $this->zet_is_widget();
-        $this->zet_agendastukken();
         $this->nalopen();
 
         $verpakking_el = $this->is_widget ? "section" : "div";
