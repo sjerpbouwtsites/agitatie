@@ -15,30 +15,28 @@ if (!function_exists('ag_vp_print_nieuws_hook')) : function ag_vp_print_nieuws_h
 			));
 
 			echo "<section class='vp-nieuws verpakking'>
-				<h2>" . ucfirst(\agitatie\taal\streng('nieuws')) . "</h2>";
+				<h2>" . ucfirst(\agitatie\taal\streng('nieuws')) . "</h2>
+					<div class='art-lijst'>";
+					
+					foreach ($vp_posts->posts as $vp_post) :
+						if (!isset($a)) {
+							$a = new Ag_article_c(array(
+								'class' 		=> 'in-lijst',
+								'htype'			=> 3,
+								'geen_afb'		=> false
+							), $vp_post);
+						} else {
+							$a->art = $vp_post;
+						}
+						$a->gecontroleerd = false;
+										
+						$a->print();
+					endforeach;
 			
-			foreach ($vp_posts->posts as $vp_post) :
-
-				if (!isset($a)) {
-					$a = new Ag_article_c(array(
-						'class' 		=> 'in-lijst',
-						'htype'			=> 3,
-						'geen_afb'		=> false
-					), $vp_post);
-				} else {
-					$a->art = $vp_post;
-				}
-				$a->gecontroleerd = false;
-		
-				echo "<div class='art-lijst'>";
-					$a->print();
 				echo "</div>"; //art lijst
-				
-			endforeach;
-
-			echo "<footer>";
-				$footerknop->print();
-			echo "</footer>";
+				echo "<footer>";
+					$footerknop->print();
+				echo "</footer>";
 
 			echo "</section>";
 
