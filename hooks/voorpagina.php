@@ -6,13 +6,18 @@ if (!function_exists('ag_vp_print_nieuws_hook')) : function ag_vp_print_nieuws_h
 			'posts_per_page' => 5
 		));
 
-		if (count($vp_posts->posts)) : foreach ($vp_posts->posts as $vp_post) :
-				echo "<section class='vp-nieuws verpakking'>
-	<h2>" . ucfirst(\agitatie\taal\streng('nieuws')) . "</h2>";
+		if (count($vp_posts->posts)) : 
 
+			$footerknop = new Ag_knop(array(
+				'link' 		=> get_post_type_archive_link('post'),
+				'tekst' 	=> ucfirst(\agitatie\taal\streng('alle')) . ' ' . \agitatie\taal\streng('posts'),
+				'class'		=> 'in-wit'
+			));
 
-				echo "<div class='art-lijst'>";
-
+			echo "<section class='vp-nieuws verpakking'>
+				<h2>" . ucfirst(\agitatie\taal\streng('nieuws')) . "</h2>";
+			
+			foreach ($vp_posts->posts as $vp_post) :
 
 				if (!isset($a)) {
 					$a = new Ag_article_c(array(
@@ -23,23 +28,16 @@ if (!function_exists('ag_vp_print_nieuws_hook')) : function ag_vp_print_nieuws_h
 				} else {
 					$a->art = $vp_post;
 				}
-
 				$a->gecontroleerd = false;
-				$a->print();
-
+		
+				echo "<div class='art-lijst'>";
+					$a->print();
+				echo "</div>"; //art lijst
+				
 			endforeach;
 
-			echo "</div>"; //art lijst
-
 			echo "<footer>";
-
-			$k = new Ag_knop(array(
-				'link' 		=> get_post_type_archive_link('post'),
-				'tekst' 	=> ucfirst(\agitatie\taal\streng('alle')) . ' ' . \agitatie\taal\streng('posts'),
-				'class'		=> 'in-wit'
-			));
-			$k->print();
-
+				$footerknop->print();
 			echo "</footer>";
 
 			echo "</section>";
@@ -47,7 +45,6 @@ if (!function_exists('ag_vp_print_nieuws_hook')) : function ag_vp_print_nieuws_h
 		endif;
 
 		//$afm = ag_agenda_filter_ctrl();
-
 
 		$agenda = new Ag_agenda(array(
 			'aantal' => 10,
