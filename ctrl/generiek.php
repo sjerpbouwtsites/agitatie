@@ -45,6 +45,12 @@ if (!function_exists('ag_kop_menu_ctrl')) :  function ag_kop_menu_ctrl()
 			wp_nav_menu($a);
 		}
 
+		echo "<a id='mobiele-menu-schakel' href='#' class='schakel kopmenu-mobiel' data-toon='.stek-kop-rechts .openklap-menu-container'>
+					<span class='menu-menu-tekst'>Menu</span>";
+				 ag_mdi('menu', true);
+				ag_mdi('close', true);
+			echo "</a>";
+
 		$a = array(
 			'theme_location' 			=> 'openklap-menu',
 			'menu_class'					=> 'openklap-menu menu',
