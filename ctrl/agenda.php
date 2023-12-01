@@ -5,7 +5,6 @@ use agitatie\taal as taal;
 if (!function_exists('ag_agenda_filter_ctrl')) :
     function ag_agenda_filter_ctrl()
     {
-
         $models_ans = ag_agenda_filter_model();
 
         ag_agenda_filter(...$models_ans);
@@ -18,7 +17,6 @@ endif;
 
 class Ag_agenda extends Ag_basis_class
 {
-
     public $omgeving;
 
     public function __construct($a = array())
@@ -37,8 +35,6 @@ class Ag_agenda extends Ag_basis_class
 
     public function in_pagina_queryarg()
     {
-
-
         $this->console = [];
 
         $archief = array_key_exists('archief', $_POST) || array_key_exists('archief', $_GET);
@@ -90,7 +86,6 @@ class Ag_agenda extends Ag_basis_class
 
     public function widget_queryarg()
     {
-
         $args = array(
             'post_type'         => 'agenda',
             'post_status'       => 'publish',
@@ -113,7 +108,6 @@ class Ag_agenda extends Ag_basis_class
 
     public function zet_agendastukken()
     {
-
         $this->is_widget ? $this->widget_queryarg() : $this->in_pagina_queryarg();
 
         $this->console[] = $this->is_widget;
@@ -144,13 +138,11 @@ class Ag_agenda extends Ag_basis_class
 
     public function print()
     {
-
-
         $this->nalopen();
 
         $verpakking_el = $this->is_widget ? "section" : "div";
 
-?>
+        ?>
         <<?= $verpakking_el ?> class='agenda-lijst__wrapper agenda-lijst__wrapper--<?= $this->omgeving ?>'>
             <?= ($this->omgeving === "widget" ? "<h3 class='widget-title'>Agenda</h3>" : "") ?>
 
@@ -158,33 +150,33 @@ class Ag_agenda extends Ag_basis_class
                 <ul class='agenda-lijst agenda-lijst--<?= $omgeving ?>'>
                     <?php
 
-                    foreach ($this->agendastukken as $a) :
+                            foreach ($this->agendastukken as $a) :
 
-                        $tax_strings = taal\verwijder_meertaligheids_tax(get_post_taxonomies($a));
-                        $post_taxonomieen = wp_get_post_terms($a->ID, $tax_strings);
-                        if (!$this->is_widget) {
-                            $content = ag_maak_excerpt($a, 320);
+                                $tax_strings = taal\verwijder_meertaligheids_tax(get_post_taxonomies($a));
+                                $post_taxonomieen = wp_get_post_terms($a->ID, $tax_strings);
+                                if (!$this->is_widget) {
+                                    $content = ag_maak_excerpt($a, 320);
 
-                            // midden is in links gezet.
-                            $midden = "";
-                            foreach ($post_taxonomieen as $pt) :
+                                    // midden is in links gezet.
+                                    $midden = "";
+                                    foreach ($post_taxonomieen as $pt) :
 
-                                $prefix = count($post_taxonomieen) > 1
-                                    ? "<span 
+                                        $prefix = count($post_taxonomieen) > 1
+                                            ? "<span 
                                         class='agenda-lijst__taxonomie-prefix 
                                         tekst-zwart
                                         kop-letter
                                         agenda-lijst__taxonomie-prefix--$omgeving 
                                         agenda-lijst__taxonomie-prefix--$pt->taxonomy
                                         '>$pt->taxonomy:</span>"
-                                    : '';
+                                            : '';
 
-                                $midden .= "<span
+                                        $midden .= "<span
                                         class='agenda-lijst__taxonomie kop-letter tekst-zwart agenda-lijst__taxonomie--$omgeving agenda-lijst__taxonomie--$pt->taxonomy'>
                                         $prefix $pt->name
                                     </span>";
-                            endforeach;
-                            $rechts = "<div 
+                                    endforeach;
+                                    $rechts = "<div 
                                 class='agenda-lijst__cel 
                                     agenda-lijst__cel--$omgeving 
                                     kleine-letter
@@ -193,25 +185,25 @@ class Ag_agenda extends Ag_basis_class
                                     agenda-lijst__rechts--" . $omgeving . "'>
                                     <span>" . $content . "</span>
                                 </div>";
-                        } else {
-                            $rechts = '';
-                            $midden = '';
-                        }
+                                } else {
+                                    $rechts = '';
+                                    $midden = '';
+                                }
 
 
-                        $afb = wp_get_attachment_image_src(get_post_thumbnail_id($a->ID), 'large');
-                        $datum = get_field('datum', $a->ID);
+                                $afb = wp_get_attachment_image_src(get_post_thumbnail_id($a->ID), 'large');
+                                $datum = get_field('datum', $a->ID);
 
-                        $datum = preg_replace("/\s/i", "<br>", $datum);
+                                $datum = preg_replace("/\s/i", "<br>", $datum);
 
-                        $datum = preg_replace("/\//i", "<span class='agenda-lijst__tijd-spacer agenda-lijst__tijd-spacer--$omgeving'>/</span>", $datum);
+                                $datum = preg_replace("/\//i", "<span class='agenda-lijst__tijd-spacer agenda-lijst__tijd-spacer--$omgeving'>/</span>", $datum);
 
-                        $datum = preg_replace("/:/i", "<span class='agenda-lijst__tijd-spacer agenda-lijst__tijd-spacer--$omgeving'>:</span>", $datum);
+                                $datum = preg_replace("/:/i", "<span class='agenda-lijst__tijd-spacer agenda-lijst__tijd-spacer--$omgeving'>:</span>", $datum);
 
 
 
-                        echo
-                        "<li class='agenda-lijst__stuk agenda-lijst__stuk--" . $omgeving . "'>
+                                echo
+                                "<li class='agenda-lijst__stuk agenda-lijst__stuk--" . $omgeving . "'>
                             <a class='agenda-lijst__link agenda-lijst__link--" . $omgeving . "' href='" . get_the_permalink($a->ID) . "'>
                                 <div 
                                     class='agenda-lijst__links 
@@ -231,9 +223,9 @@ class Ag_agenda extends Ag_basis_class
                                 {$rechts}
                             </a>
 						</li>";
-                    endforeach; //agendastukken
+                            endforeach; //agendastukken
 
-                    ?>
+        ?>
 
                 </ul>
 
@@ -253,7 +245,7 @@ class Ag_agenda extends Ag_basis_class
                 }
 
 
-                ?>
+        ?>
 
 
             </div>
@@ -266,7 +258,6 @@ class Ag_agenda extends Ag_basis_class
 if (!function_exists('ag_agenda_filter_model')) :
     function ag_agenda_filter_model()
     {
-
         $agenda_taxen = get_terms(array('soort', 'locatie'));
         $filters_inst = array();
 
@@ -330,24 +321,23 @@ endif;
 
 
 if (!function_exists('ag_agenda_filter')) : function ag_agenda_filter($filters_actief, $filters_inst)
-    {
+{
+    $filter_text = "";
 
-        $filter_text = "";
-
-        if (
-            count($_POST) and
-            (array_key_exists('soort', $_POST) and $_POST['soort'] !== '') ||
-            (array_key_exists('locatie', $_POST) and $_POST['locatie'] !== '')
-        ) {
-            $filter_t_ar = array();
-            if (array_key_exists('soort', $_POST) and $_POST['soort'] !== '') {
-                $filter_t_ar[] = $_POST['soort'];
-            }
-            if (array_key_exists('locatie', $_POST) and $_POST['locatie'] !== '') {
-                $filter_t_ar[] = $_POST['locatie'];
-            }
-            $filter_text = "Je zocht op " . implode(', ', $filter_t_ar) . ".";
+    if (
+        count($_POST) and
+        (array_key_exists('soort', $_POST) and $_POST['soort'] !== '') ||
+        (array_key_exists('locatie', $_POST) and $_POST['locatie'] !== '')
+    ) {
+        $filter_t_ar = array();
+        if (array_key_exists('soort', $_POST) and $_POST['soort'] !== '') {
+            $filter_t_ar[] = $_POST['soort'];
         }
+        if (array_key_exists('locatie', $_POST) and $_POST['locatie'] !== '') {
+            $filter_t_ar[] = $_POST['locatie'];
+        }
+        $filter_text = "Je zocht op " . implode(', ', $filter_t_ar) . ".";
+    }
 
     ?>
 
@@ -381,7 +371,9 @@ if (!function_exists('ag_agenda_filter')) : function ag_agenda_filter($filters_a
                     }
                     echo "<option value=''>geen keuze</option>";
                     foreach ($opts as $o) {
-                        if ($o['slug'] === $prio) continue;
+                        if ($o['slug'] === $prio) {
+                            continue;
+                        }
 
                         $count_print = $filters_actief ? "" : "(" . $o['count'] . ")";
 
