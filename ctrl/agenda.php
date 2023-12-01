@@ -46,6 +46,7 @@ class Ag_agenda extends Ag_basis_class
         $args = array(
             'post_type'         => 'agenda',
             'post_status'       => 'publish',
+            'posts_per_page'    => $this->aantal,
             'meta_key'          => 'datum',
             'orderby'           => 'meta_value',
             'order'             => $datum_sortering,
