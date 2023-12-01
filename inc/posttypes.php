@@ -124,7 +124,7 @@ if (!class_exists('Posttype_voorb')) : class Posttype_voorb
                     'singular_name' 	=> _x($tax_enkelvoud, 'taxonomy singular name'),
                 ),
                 'public' 	=> true,
-
+                'rewrite'   => array('slug'=>$tax_enkelvoud)
 
             )
         );
