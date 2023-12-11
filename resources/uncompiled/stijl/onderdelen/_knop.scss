@@ -117,6 +117,7 @@
 	background-color: #ffffffcc;
 	color: $hoofdkleur;
   }  
+  line-height: calc(1.5em - 6px);
   &.in-wit {
 	background-color: transparent;
 	border: 3px solid $hoofdkleur;
