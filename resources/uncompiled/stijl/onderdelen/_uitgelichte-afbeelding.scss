@@ -16,7 +16,7 @@
 	height: calc(75vh - 70px); //$header-height
 	margin-bottom: 3em;
 	@media screen and (max-width: 600px) {
-		height: calc(100vh - 70px); //$header-height + hero height
+		height: calc(100vh - 40px); //$header-height + hero height
 		padding-top: 60px;
 	}
 	.uitgelichte-afbeelding-binnen {

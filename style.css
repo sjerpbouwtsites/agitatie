@@ -1334,7 +1334,7 @@ input.wpcf7-submit {
   margin-bottom: 3em; }
   @media screen and (max-width: 600px) {
     .uitgelichte-afbeelding-buiten.hero {
-      height: calc(100vh - 70px);
+      height: calc(100vh - 40px);
       padding-top: 60px; } }
   .uitgelichte-afbeelding-buiten.hero .uitgelichte-afbeelding-binnen {
     position: absolute;
