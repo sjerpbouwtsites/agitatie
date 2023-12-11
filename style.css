@@ -1247,7 +1247,7 @@ input.wpcf7-submit {
     .knop.ghost.in-wit:hover, .navigation a.ghost.in-wit:hover, #agenda-filter .ghost.in-wit:hover[type='submit'], .search-form .ghost.in-wit.search-submit:hover {
       background-color: #78bfbe; }
       .knop.ghost.in-wit:hover span, .navigation a.ghost.in-wit:hover span, #agenda-filter .ghost.in-wit:hover[type='submit'] span, .search-form .ghost.in-wit.search-submit:hover span, .knop.ghost.in-wit:hover i, .navigation a.ghost.in-wit:hover i, #agenda-filter .ghost.in-wit:hover[type='submit'] i, .search-form .ghost.in-wit.search-submit:hover i {
-        color: #252525; }
+        color: #252525 !important; }
     .knop.ghost.in-wit span, .navigation a.ghost.in-wit span, #agenda-filter .ghost.in-wit[type='submit'] span, .search-form .ghost.in-wit.search-submit span, .knop.ghost.in-wit i, .navigation a.ghost.in-wit i, #agenda-filter .ghost.in-wit[type='submit'] i, .search-form .ghost.in-wit.search-submit i {
       color: inherit !important; }
 
