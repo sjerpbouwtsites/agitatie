@@ -1386,9 +1386,6 @@ input.wpcf7-submit {
       .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop {
         margin-bottom: -10px;
         margin-right: -10px; } }
-    @media screen and (max-width: 460px) {
-      .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop {
-        justify-content: center; } }
     .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop .knop, .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop .navigation a, .navigation .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop a, .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop #agenda-filter [type='submit'], #agenda-filter .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop [type='submit'], .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop .search-form .search-submit, .search-form .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop .search-submit {
       font-size: 1.6em;
       margin-bottom: 20px;
