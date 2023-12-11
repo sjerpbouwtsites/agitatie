@@ -109,3 +109,22 @@
 		font-size: 1em;
 	}
 }
+.knop.ghost {
+  background-color: #ffffff1f;
+  border: 3px solid $wit;
+  color: $wit;
+  &:hover {
+	background-color: #ffffffcc;
+  }  
+  &.in-wit {
+	background-color: transparent;
+	border: 3px solid $hoofdkleur;
+	color: $hoofdkleur !important;
+	&:hover {
+		background-color: $hoofdkleur_zeer_licht;
+	  }  
+	span, i {
+		color: inherit !important;
+	}
+}  
+}

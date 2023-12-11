@@ -61,9 +61,16 @@
 	.uitgelichte-afb-knop {
 		margin-top: 40px;
 		text-align: center;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-bottom: -20px;
 		.knop {
 			font-size: 1.6em;
+			margin-bottom: 20px;
 		}
+		
+
 		@media screen and (max-width: 600px) {
 			position: absolute;
 			bottom: auto;

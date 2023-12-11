@@ -1234,6 +1234,21 @@ input.wpcf7-submit {
     .knoppendoos.groot {
       font-size: 1em; } }
 
+.knop.ghost, .navigation a.ghost, #agenda-filter .ghost[type='submit'], .search-form .ghost.search-submit {
+  background-color: #ffffff1f;
+  border: 3px solid #fff;
+  color: #fff; }
+  .knop.ghost:hover, .navigation a.ghost:hover, #agenda-filter .ghost:hover[type='submit'], .search-form .ghost.search-submit:hover {
+    background-color: #ffffffcc; }
+  .knop.ghost.in-wit, .navigation a.ghost.in-wit, #agenda-filter .ghost.in-wit[type='submit'], .search-form .ghost.in-wit.search-submit {
+    background-color: transparent;
+    border: 3px solid #2e6160;
+    color: #2e6160 !important; }
+    .knop.ghost.in-wit:hover, .navigation a.ghost.in-wit:hover, #agenda-filter .ghost.in-wit:hover[type='submit'], .search-form .ghost.in-wit.search-submit:hover {
+      background-color: #78bfbe; }
+    .knop.ghost.in-wit span, .navigation a.ghost.in-wit span, #agenda-filter .ghost.in-wit[type='submit'] span, .search-form .ghost.in-wit.search-submit span, .knop.ghost.in-wit i, .navigation a.ghost.in-wit i, #agenda-filter .ghost.in-wit[type='submit'] i, .search-form .ghost.in-wit.search-submit i {
+      color: inherit !important; }
+
 .navigation {
   text-align: center;
   padding-top: 0;
@@ -1352,9 +1367,14 @@ input.wpcf7-submit {
         font-size: 1.5rem; } }
   .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop {
     margin-top: 40px;
-    text-align: center; }
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: -20px; }
     .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop .knop, .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop .navigation a, .navigation .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop a, .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop #agenda-filter [type='submit'], #agenda-filter .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop [type='submit'], .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop .search-form .search-submit, .search-form .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop .search-submit {
-      font-size: 1.6em; }
+      font-size: 1.6em;
+      margin-bottom: 20px; }
     @media screen and (max-width: 600px) {
       .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop {
         position: absolute;
