@@ -122,7 +122,10 @@
 	color: $hoofdkleur !important;
 	&:hover {
 		background-color: $hoofdkleur_zeer_licht;
-		color: $zwart;
+		
+		span, i {
+			color: $zwart;
+		}
 	  }  
 	span, i {
 		color: inherit !important;
