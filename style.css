@@ -1372,7 +1372,7 @@ input.wpcf7-submit {
       margin-top: .75em; }
     @media (max-width: 600px) {
       .uitgelichte-afbeelding-buiten.hero h1 {
-        font-size: 1.5rem; } }
+        font-size: 2rem; } }
   .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop {
     margin-top: 40px;
     text-align: center;
@@ -1392,7 +1392,7 @@ input.wpcf7-submit {
         left: 50%;
         -webkit-transform: translate(0, -50%);
         transform: translate(-50%, 0%);
-        width: 80%; } }
+        width: 100%; } }
 
 @media screen and (min-width: 1025px) {
   .uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig {
