@@ -27,8 +27,11 @@
 		display: flex;
 		flex-direction: column;
 		max-width: 40%;
-		@media screen and (max-width: 600px) {
+		@media screen and (max-width: 900px){
 			max-width: initial;
+		}
+		@media screen and (max-width: 600px) {
+			
 			top: 0;
 			left: 0;
 			transform: unset;			
