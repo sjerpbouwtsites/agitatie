@@ -1341,9 +1341,11 @@ input.wpcf7-submit {
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    max-width: 40%; }
     @media screen and (max-width: 600px) {
       .uitgelichte-afbeelding-buiten.hero .uitgelichte-afbeelding-binnen {
+        max-width: initial;
         top: 0;
         left: 0;
         transform: unset;
