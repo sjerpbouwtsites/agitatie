@@ -1343,7 +1343,7 @@ input.wpcf7-submit {
     display: flex;
     flex-direction: column;
     max-width: 40%; }
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 1024px) {
       .uitgelichte-afbeelding-buiten.hero .uitgelichte-afbeelding-binnen {
         max-width: initial; } }
     @media screen and (max-width: 600px) {

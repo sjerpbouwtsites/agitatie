@@ -27,7 +27,7 @@
 		display: flex;
 		flex-direction: column;
 		max-width: 40%;
-		@media screen and (max-width: 900px){
+		@media screen and (max-width: 1024px){
 			max-width: initial;
 		}
 		@media screen and (max-width: 600px) {
