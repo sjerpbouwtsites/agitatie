@@ -1245,7 +1245,8 @@ input.wpcf7-submit {
     border: 3px solid #2e6160;
     color: #2e6160 !important; }
     .knop.ghost.in-wit:hover, .navigation a.ghost.in-wit:hover, #agenda-filter .ghost.in-wit:hover[type='submit'], .search-form .ghost.in-wit.search-submit:hover {
-      background-color: #78bfbe; }
+      background-color: #78bfbe;
+      color: #252525; }
     .knop.ghost.in-wit span, .navigation a.ghost.in-wit span, #agenda-filter .ghost.in-wit[type='submit'] span, .search-form .ghost.in-wit.search-submit span, .knop.ghost.in-wit i, .navigation a.ghost.in-wit i, #agenda-filter .ghost.in-wit[type='submit'] i, .search-form .ghost.in-wit.search-submit i {
       color: inherit !important; }
 
