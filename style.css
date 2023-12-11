@@ -1398,6 +1398,9 @@ input.wpcf7-submit {
         -webkit-transform: translate(0, -50%);
         transform: translate(-50%, 0%);
         width: 100%; } }
+    @media screen and (max-width: 440px) {
+      .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop {
+        display: block; } }
 
 @media screen and (min-width: 1025px) {
   .uitgelichte-afbeelding-buiten + .marginveld.titel-over-afbeelding-indien-aanwezig {
