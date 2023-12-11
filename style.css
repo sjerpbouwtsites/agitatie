@@ -1239,7 +1239,8 @@ input.wpcf7-submit {
   border: 3px solid #fff;
   color: #fff; }
   .knop.ghost:hover, .navigation a.ghost:hover, #agenda-filter .ghost:hover[type='submit'], .search-form .ghost.search-submit:hover {
-    background-color: #ffffffcc; }
+    background-color: #ffffffcc;
+    color: #2e6160; }
   .knop.ghost.in-wit, .navigation a.ghost.in-wit, #agenda-filter .ghost.in-wit[type='submit'], .search-form .ghost.in-wit.search-submit {
     background-color: transparent;
     border: 3px solid #2e6160;
