@@ -1382,7 +1382,8 @@ input.wpcf7-submit {
     margin-bottom: -20px; }
     .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop .knop, .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop .navigation a, .navigation .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop a, .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop #agenda-filter [type='submit'], #agenda-filter .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop [type='submit'], .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop .search-form .search-submit, .search-form .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop .search-submit {
       font-size: 1.6em;
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      align-self: flex-start; }
     @media screen and (max-width: 600px) {
       .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop {
         position: absolute;
