@@ -147,8 +147,8 @@ class Ag_agenda extends Ag_basis_class
         <<?= $verpakking_el ?> id='agenda-lijst' class='agenda-lijst__wrapper agenda-lijst__wrapper--<?= $this->omgeving ?>'>
             <?= ($this->omgeving === "widget" ? "<h3 class='widget-title'>Agenda</h3>" : "") ?>
 
-            <div class='agenda-lijst__buiten agenda-lijst__buiten--<?= $omgeving ?>'>
-                <ul class='agenda-lijst agenda-lijst--<?= $omgeving ?>'>
+            <div class='agenda-lijst__buiten agenda-lijst__buiten--<?= $this->omgeving ?>'>
+                <ul class='agenda-lijst agenda-lijst--<?= $this->omgeving ?>'>
                     <?php
 
                             foreach ($this->agendastukken as $a) :
@@ -176,24 +176,24 @@ class Ag_agenda extends Ag_basis_class
                                         class='agenda-lijst__taxonomie-prefix 
                                         tekst-wit
                                         kop-letter
-                                        agenda-lijst__taxonomie-prefix--$omgeving 
+                                        agenda-lijst__taxonomie-prefix--$this->omgeving 
                                         agenda-lijst__taxonomie-prefix--$pt->taxonomy
                                         '>$ptt:</span>"
                                             : '';
 
                                         $midden .= "<span
-                                        class='agenda-lijst__taxonomie kop-letter tekst-wit agenda-lijst__taxonomie--$omgeving agenda-lijst__taxonomie--$pt->taxonomy'>
+                                        class='agenda-lijst__taxonomie kop-letter tekst-wit agenda-lijst__taxonomie--$this->omgeving agenda-lijst__taxonomie--$pt->taxonomy'>
                                         $prefix $pt->name
                                     </span>";
                                     endforeach;
                                     $midden .= "</div>";
                                     $rechts = "<div 
                                 class='agenda-lijst__cel 
-                                    agenda-lijst__cel--$omgeving 
+                                    agenda-lijst__cel--$this->omgeving 
                                     kleine-letter
                                     tekst-wit
                                     agenda-lijst__rechts 
-                                    agenda-lijst__rechts--" . $omgeving . "'>
+                                    agenda-lijst__rechts--" . $this->omgeving . "'>
                                     " . wpautop($content) . "
                                 </div>";
                                 } else {
@@ -207,33 +207,33 @@ class Ag_agenda extends Ag_basis_class
 
                                 //$datum = preg_replace("/\s/i", "<br>", $datum);
 
-                                $datum = preg_replace("/\//i", "<span class='agenda-lijst__tijd-spacer agenda-lijst__tijd-spacer--$omgeving'>/</span>", $datum);
+                                $datum = preg_replace("/\//i", "<span class='agenda-lijst__tijd-spacer agenda-lijst__tijd-spacer--$this->omgeving'>/</span>", $datum);
 
-                                $datum = preg_replace("/:/i", "<span class='agenda-lijst__tijd-spacer agenda-lijst__tijd-spacer--$omgeving'>:</span>", $datum);
+                                $datum = preg_replace("/:/i", "<span class='agenda-lijst__tijd-spacer agenda-lijst__tijd-spacer--$this->omgeving'>:</span>", $datum);
 
-
+                                $afb = !$this->is_widget ? get_the_post_thumbnail($a->ID, 'thumbnail') : '';af
 
                                 echo
-                                "<li class='agenda-lijst__stuk agenda-lijst__stuk--" . $omgeving . "'>
+                                "<li class='agenda-lijst__stuk agenda-lijst__stuk--" . $this->omgeving . "'>
                                 <article>
-                            <a class='agenda-lijst__link agenda-lijst__link--" . $omgeving . "' href='" . get_the_permalink($a->ID) . "'>
+                            <a class='agenda-lijst__link agenda-lijst__link--" . $this->omgeving . "' href='" . get_the_permalink($a->ID) . "'>
 
-                                ".get_the_post_thumbnail($a->ID, 'thumbnail')."
+                                ".$afb."
                                 
                                 <div 
                                     class='agenda-lijst__links 
                                         agenda-lijst__cel 
-                                        agenda-lijst__cel--$omgeving 
+                                        agenda-lijst__cel--$this->omgeving 
                                         agenda-lijst__datum 
                                         zwarte-letter
                                         accent-letter
                                         
-                                        agenda-lijst__links--" . $omgeving . " 
-                                        agenda-lijst__datum--" . $omgeving . "'>
+                                        agenda-lijst__links--" . $this->omgeving . " 
+                                        agenda-lijst__datum--" . $this->omgeving . "'>
 
                                         
 
-                                    <h3 class='agenda-lijst__titel tekst-wit kop-letter agenda-lijst__titel--" . $omgeving . "' >" . $a->post_title . " <time class='tekst-wittig kleine-letter agenda-lijst__tijd agenda-lijst__tijd--$omgeving'>$datum</time></h3>
+                                    <h3 class='agenda-lijst__titel tekst-wit kop-letter agenda-lijst__titel--" . $this->omgeving . "' >" . $a->post_title . " <time class='tekst-wittig kleine-letter agenda-lijst__tijd agenda-lijst__tijd--$this->omgeving'>$datum</time></h3>
                                     
                                     $midden
                                 </div>
