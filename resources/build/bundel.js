@@ -20,8 +20,10 @@ function verplaatsShareDaddy(){
 		console.warn('geen share daddy wrapper!?');
 		return ;
 	}
-	shareDaddyWrapperSidebar.appendChild(shareDaddyOrigineel);
-	shareDaddyOrigineel.classList.add('actief');
+	if (shareDaddyOrigineel){
+		shareDaddyWrapperSidebar.appendChild(shareDaddyOrigineel);
+		shareDaddyOrigineel.classList.add('actief');
+	}
 }
 
 var doc, body, aside;
