@@ -250,9 +250,7 @@ class Ag_agenda extends Ag_basis_class
 
                 <?php
 
-                echo "<pre>";
-        var_dump($this);
-        echo "</pre>";
+
 
         if ($this->is_widget) {
             echo "<footer class='agenda-lijst__footer'>";

@@ -49,15 +49,15 @@ get_template_part('/sja/open-main');
 // 	$archief_Ag_knop->print();
 
 // 	//als filters actief Ag_knop terug naar begin.
-// 	if ( $afm['filters_actief'] ) {
+	if ( $afm['filters_actief'] ) {
 
-// 		$agenda_begin = new Ag_knop(array(
-// 			'ikoon' => 'replay',
-// 			'class'=> 'in-wit',
-// 			'link' => $agenda_link,
-// 			'tekst'=> "Verwijder filters",
-// 		));
-// 		$agenda_begin->print();
+		$agenda_begin = new Ag_knop(array(
+			'ikoon' => 'replay',
+			'class'=> 'in-wit',
+			'link' => $agenda_link,
+			'tekst'=> "Verwijder filters",
+		));
+		$agenda_begin->print();
 
 // 	}
 
