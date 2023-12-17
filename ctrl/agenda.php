@@ -408,7 +408,20 @@ if (!function_exists('ag_agenda_filter')) : function ag_agenda_filter($filters_a
                         <h3><?php echo \agitatie\taal\streng('Zoek!'); ?></h3>
                 <input type='submit' value='<?=\agitatie\taal\streng('Gaan');?>'>
             </section>
-         
+
+ <?php
+  if (count($_POST)) {
+      $agenda_begin = new Ag_knop(array(
+          'ikoon' => 'replay',
+          'class'=> 'in-wit',
+          'link' => $agenda_link,
+          'tekst'=> "Verwijder filters",
+      ));
+      echo "<section class='flex'><h3>".\agitatie\taal\streng('Reset')."</h3>";
+      $agenda_begin->print();
+      echo "<section>";
+  }
+    ?>   
             </div>
 
             <!--WEG IN PRODUCTIE -->
