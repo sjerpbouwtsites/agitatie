@@ -9,7 +9,7 @@ if (!function_exists('ag_agenda_filter_ctrl')) :
 
         ag_agenda_filter(...$models_ans);
 
-        return $m;
+        return $models_ans;
     }
 endif;
 
