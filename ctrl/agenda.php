@@ -174,7 +174,7 @@ class Ag_agenda extends Ag_basis_class
                                         $prefix = count($post_taxonomieen) > 1
                                             ? "<span 
                                         class='agenda-lijst__taxonomie-prefix 
-                                        tekst-zwart
+                                        tekst-wit
                                         kop-letter
                                         agenda-lijst__taxonomie-prefix--$omgeving 
                                         agenda-lijst__taxonomie-prefix--$pt->taxonomy
@@ -182,7 +182,7 @@ class Ag_agenda extends Ag_basis_class
                                             : '';
 
                                         $midden .= "<span
-                                        class='agenda-lijst__taxonomie kop-letter tekst-zwart agenda-lijst__taxonomie--$omgeving agenda-lijst__taxonomie--$pt->taxonomy'>
+                                        class='agenda-lijst__taxonomie kop-letter tekst-wit agenda-lijst__taxonomie--$omgeving agenda-lijst__taxonomie--$pt->taxonomy'>
                                         $prefix $pt->name
                                     </span>";
                                     endforeach;
