@@ -50,8 +50,7 @@ $archief_Ag_knop->print();
 
 //als filters actief Ag_knop terug naar begin.
 
-var_dump($afm);
-if ($afm['filters_actief']) {
+if (count($_POST)) {
     $agenda_begin = new Ag_knop(array(
         'ikoon' => 'replay',
         'class'=> 'in-wit',
