@@ -41,7 +41,7 @@ $agenda_link = get_post_type_archive_link('agenda');
 //wat als er uberhaupt geen GET zijn => andere link
 $archief_Ag_knop = new Ag_knop(array(
     'ikoon'=> ($archief ? "arrow-right-thick" : "step-backward-2"),
-    'class'=> 'in-kleur '.($archief ? "" : "ikoon-links"),
+    'class'=> 'in-wit '.($archief ? "" : "ikoon-links"),
     'link' => $agenda_link . ($archief ? "" : "?archief=ja"),
     'tekst'=> $archief ? "normale agenda" : "agenda archief"
 ));
