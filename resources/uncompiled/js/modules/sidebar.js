@@ -1,13 +1,17 @@
 
 export default function stickySidebar() {
 
-	const stickyBar = document.getElementById('sticky-sidebar');
-	//verplaatsShareDaddy()
+	if (document.body.offsetWidth > 1200){
 
-	// als geen widgets in sidebar dan weer weg.
-	if (stickyBar.querySelectorAll('.widget').length === 0) {
-		stickyBar.parentNode.removeChild(stickyBar);
+		const stickyBar = document.getElementById('sticky-sidebar');
+		verplaatsShareDaddy()
+	
+		// als geen widgets in sidebar dan weer weg.
+		if (stickyBar.querySelectorAll('.widget').length === 0) {
+			stickyBar.parentNode.removeChild(stickyBar);
+		}
 	}
+
 		
 }
 
