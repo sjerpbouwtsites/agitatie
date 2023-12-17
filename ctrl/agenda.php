@@ -193,7 +193,7 @@ class Ag_agenda extends Ag_basis_class
                                     tekst-wit
                                     agenda-lijst__rechts 
                                     agenda-lijst__rechts--" . $omgeving . "'>
-                                    <span>" . $content . "</span>
+                                    " . wpautop($content) . "
                                 </div>";
                                 } else {
                                     $rechts = '';
