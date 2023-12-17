@@ -187,3 +187,9 @@
 .single-agenda .bericht-tekst.datum {
 	margin-bottom: 0;
 }
+.agenda-filter-inner-flex {
+	display: flex;
+  }
+  .agenda-filter-inner-flex > * {
+	margin-left: 20px;
+  }
