@@ -23,7 +23,10 @@ function verplaatsShareDaddy(){
 	if (shareDaddyOrigineel){
 		shareDaddyWrapperSidebar.appendChild(shareDaddyOrigineel);
 		shareDaddyOrigineel.classList.add('actief');
+	} else if (shareDaddyWrapperSidebar){
+		shareDaddyWrapperSidebar.parentNode.removeChild(shareDaddyWrapperSidebar)
 	}
+
 }
 
 var doc, body, aside;
