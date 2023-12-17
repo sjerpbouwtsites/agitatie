@@ -23,16 +23,17 @@ if (!function_exists('ag_agenda_plek_adres')) :
     function ag_agenda_plek_adres()
     {
         global $post;
+        echo "fsdfsdfds";
         $plekken = wp_get_post_terms($post->ID, 'locatie');
         if (count($plekken) < 1) {
             return;
         }
 
         foreach ($plekken as $p) {
-            $straat = get_field('straat', 'locatie_' . $p->term_id);
-            $huisnummer = get_field('huisnummer', 'locatie_' . $p->term_id);
-            $postcode = get_field('postcode', 'locatie_' . $p->term_id);
-            $stad = get_field('stad', 'locatie_' . $p->term_id);
+            $straat = get_field('straat', 'plek_' . $p->term_id);
+            $huisnummer = get_field('huisnummer', 'plek_' . $p->term_id);
+            $postcode = get_field('postcode', 'plek_' . $p->term_id);
+            $stad = get_field('stad', 'plek_' . $p->term_id);
             $tijd = get_field('datum');
 
             echo "<address class='agenda-address'>
