@@ -2,7 +2,7 @@
 export default function stickySidebar() {
 
 	const stickyBar = document.getElementById('sticky-sidebar');
-	verplaatsShareDaddy()
+	//verplaatsShareDaddy()
 
 	// als geen widgets in sidebar dan weer weg.
 	if (stickyBar.querySelectorAll('.widget').length === 0) {
