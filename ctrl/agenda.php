@@ -227,8 +227,8 @@ class Ag_agenda extends Ag_basis_class
                                         agenda-lijst__links--" . $omgeving . " 
                                         agenda-lijst__datum--" . $omgeving . "'>
 
-                                    <h3 class='agenda-lijst__titel tekst-wit kop-letter agenda-lijst__titel--" . $omgeving . "' >" . $a->post_title . "</h3>
-                                    <time class='tekst-wittig kleine-letter agenda-lijst__tijd agenda-lijst__tijd--$omgeving'>$datum</time>
+                                    <h3 class='agenda-lijst__titel tekst-wit kop-letter agenda-lijst__titel--" . $omgeving . "' >" . $a->post_title . " <time class='tekst-wittig kleine-letter agenda-lijst__tijd agenda-lijst__tijd--$omgeving'>$datum</time></h3>
+                                    
                                     $midden
                                 </div>
                                 {$rechts}
