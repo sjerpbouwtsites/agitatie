@@ -29,17 +29,18 @@ if (!function_exists('ag_agenda_plek_adres')) :
             return;
         }
 
-        var_dump($plekken);
+
 
         foreach ($plekken as $p) {
             $straat = get_field('straat', 'plek_' . $p->term_id);
+            $straat2 = get_field('straat', 'locatie_' . $p->term_id);
             $huisnummer = get_field('huisnummer', 'plek_' . $p->term_id);
             $postcode = get_field('postcode', 'plek_' . $p->term_id);
             $stad = get_field('stad', 'plek_' . $p->term_id);
             $tijd = get_field('datum');
 
             echo "<address class='agenda-address'>
-        <span class='agenda-address__regel'>$straat $huisnummer</span>
+        <span class='agenda-address__regel'>$straat $straat2 $huisnummer</span>
         <span class='agenda-address__regel'>$postcode $stad</span>
         <span class='agenda-address__regel'>$tijd</span>
         </address>";
