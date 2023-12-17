@@ -160,7 +160,7 @@ class Ag_agenda extends Ag_basis_class
                                     $content = ag_maak_excerpt($a, 320);
 
                                     // midden is in links gezet.
-                                    $midden = "";
+                                    $midden = "<div class='agenda-lijst__taxonomieen'>";
                                     foreach ($post_taxonomieen as $pt) :
 
                                         $ptt = $pt->taxonomy;
@@ -186,6 +186,7 @@ class Ag_agenda extends Ag_basis_class
                                         $prefix $pt->name
                                     </span>";
                                     endforeach;
+                                    $midden .= "</div>";
                                     $rechts = "<div 
                                 class='agenda-lijst__cel 
                                     agenda-lijst__cel--$omgeving 
