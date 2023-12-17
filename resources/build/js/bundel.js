@@ -11,6 +11,7 @@ function stickySidebar() {
 }
 
 function verplaatsShareDaddy(){
+
 	var shareDaddyOrigineel = document.querySelector('.sharedaddy');
 	var shareDaddyWrapperSidebar = document.getElementById('sharedaddy-in-sidebar');
 	if (!shareDaddyOrigineel) {
@@ -21,8 +22,10 @@ function verplaatsShareDaddy(){
 		console.warn('geen share daddy wrapper!?');
 		return ;
 	}
-	shareDaddyWrapperSidebar.appendChild(shareDaddyOrigineel);
-	shareDaddyOrigineel.classList.add('actief');
+	if (shareDaddyOrigineel) {
+		shareDaddyWrapperSidebar.appendChild(shareDaddyOrigineel);
+		shareDaddyOrigineel.classList.add('actief');
+	}
 }
 
 function zetStijl(nodeList, eigenschap, waarde){
