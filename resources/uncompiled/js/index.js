@@ -162,7 +162,7 @@ window.onload = function () {
 	*/
 	videoPlayer();
 
-	if (doc.getElementById('agenda-filter')) agendaFilter();
+	//if (doc.getElementById('agenda-filter')) agendaFilter();
 
 	kopmenuSubMobiel();
 
