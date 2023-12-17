@@ -144,7 +144,7 @@ class Ag_agenda extends Ag_basis_class
         $verpakking_el = $this->is_widget ? "section" : "div";
 
         ?>
-        <<?= $verpakking_el ?> class='agenda-lijst__wrapper agenda-lijst__wrapper--<?= $this->omgeving ?>'>
+        <<?= $verpakking_el ?> id='agenda-lijst' class='agenda-lijst__wrapper agenda-lijst__wrapper--<?= $this->omgeving ?>'>
             <?= ($this->omgeving === "widget" ? "<h3 class='widget-title'>Agenda</h3>" : "") ?>
 
             <div class='agenda-lijst__buiten agenda-lijst__buiten--<?= $omgeving ?>'>
@@ -347,7 +347,7 @@ if (!function_exists('ag_agenda_filter')) : function ag_agenda_filter($filters_a
 
         <p><?= $filter_text ?></p>
 
-        <form class='doos' id='agenda-filter' action='<?php echo get_post_type_archive_link('agenda'); ?>' method='POST'>
+        <form class='doos' id='agenda-filter' action='<?php echo get_post_type_archive_link('agenda'); ?>#agenda-lijst' method='POST'>
             <div class='agenda-filter-inner-flex'>
 
                 <?php
