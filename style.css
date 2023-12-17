@@ -1510,6 +1510,9 @@ div.sharedaddy .sd-title {
 .sharedaddy:hover .share-customize-link {
   display: block; }
 
+.sharedaddy-in-sidebar .sd-content ul li {
+  margin: -5px 5px 0px 0; }
+
 .agenda-widget-buiten {
   margin-left: -20px;
   width: calc(100% + 40px); }
