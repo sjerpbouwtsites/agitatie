@@ -29,6 +29,8 @@ if (!function_exists('ag_agenda_plek_adres')) :
             return;
         }
 
+        var_dump($plekken);
+
         foreach ($plekken as $p) {
             $straat = get_field('straat', 'plek_' . $p->term_id);
             $huisnummer = get_field('huisnummer', 'plek_' . $p->term_id);
