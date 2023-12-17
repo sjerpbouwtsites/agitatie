@@ -145,7 +145,7 @@ class Ag_agenda extends Ag_basis_class
 
         ?>
         <<?= $verpakking_el ?> id='agenda-lijst' class='agenda-lijst__wrapper agenda-lijst__wrapper--<?= $this->omgeving ?>'>
-            <?= ($this->omgeving === "widget" ? "<h3 class='widget-title in-kleur'>Agenda</h3>" : "") ?>
+            <?= ($this->omgeving === "widget" ? "<h3 class='widget-title tekst-wit'>Agenda</h3>" : "") ?>
 
             <div class='agenda-lijst__buiten agenda-lijst__buiten--<?= $this->omgeving ?>'>
                 <ul class='agenda-lijst agenda-lijst--<?= $this->omgeving ?>'>
