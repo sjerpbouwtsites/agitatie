@@ -238,8 +238,8 @@ class Ag_agenda extends Ag_basis_class
                                     $midden
                                 </div>
                                 {$rechts}
+                                </a>
                                 </article>
-                            </a>
 						</li>";
                             endforeach; //agendastukken
 
