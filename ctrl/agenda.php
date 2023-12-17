@@ -210,7 +210,7 @@ class Ag_agenda extends Ag_basis_class
                                 $datum = preg_replace("/\//i", "<span class='agenda-lijst__tijd-spacer agenda-lijst__tijd-spacer--$omgeving'>/</span>", $datum);
 
                                 $datum = preg_replace("/:/i", "<span class='agenda-lijst__tijd-spacer agenda-lijst__tijd-spacer--$omgeving'>:</span>", $datum);
-                                var_dump($afb);
+
 
 
                                 echo
