@@ -250,17 +250,21 @@ class Ag_agenda extends Ag_basis_class
 
                 <?php
 
-                if ($this->is_widget) {
-                    echo "<footer class='agenda-lijst__footer'>";
+                echo "<pre>";
+        var_dump($this);
+        echo "</pre>";
 
-                    $agenda_Ag_knop = new Ag_knop(array(
-                        'class' => 'in-kleur',
-                        'link' => $this->agenda_link,
-                        'tekst' => 'Agenda'
-                    ));
-                    $agenda_Ag_knop->print();
-                    echo "</footer>";
-                }
+        if ($this->is_widget) {
+            echo "<footer class='agenda-lijst__footer'>";
+
+            $agenda_Ag_knop = new Ag_knop(array(
+                'class' => 'in-kleur',
+                'link' => $this->agenda_link,
+                'tekst' => 'Agenda'
+            ));
+            $agenda_Ag_knop->print();
+            echo "</footer>";
+        }
 
 
         ?>
