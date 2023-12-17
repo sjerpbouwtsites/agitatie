@@ -23,7 +23,7 @@ if (!function_exists('ag_agenda_plek_adres')) :
     function ag_agenda_plek_adres()
     {
         global $post;
-        echo "fsdfsdfds";
+
         $plekken = wp_get_post_terms($post->ID, 'locatie');
         if (count($plekken) < 1) {
             return;
