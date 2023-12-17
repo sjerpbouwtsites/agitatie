@@ -11,6 +11,7 @@ function stickySidebar() {
 }
 
 function verplaatsShareDaddy(){
+	// alhier 3
 	var shareDaddyOrigineel = document.querySelector('.sharedaddy');
 	if (!shareDaddyOrigineel) return;
 	shareDaddyOrigineel.parentNode.removeChild(shareDaddyOrigineel);
