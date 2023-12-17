@@ -218,7 +218,7 @@ class Ag_agenda extends Ag_basis_class
                                 <article>
                             <a class='agenda-lijst__link agenda-lijst__link--" . $omgeving . "' href='" . get_the_permalink($a->ID) . "'>
 
-                                ".get_the_post_thumbnail($a->ID, 'small')."
+                                ".get_the_post_thumbnail($a->ID, 'thumbnail')."
                                 
                                 <div 
                                     class='agenda-lijst__links 
