@@ -204,7 +204,7 @@ class Ag_agenda extends Ag_basis_class
                                 $afb = wp_get_attachment_image_src(get_post_thumbnail_id($a->ID), 'large');
                                 $datum = get_field('datum', $a->ID);
 
-                                $datum = preg_replace("/\s/i", "<br>", $datum);
+                                //$datum = preg_replace("/\s/i", "<br>", $datum);
 
                                 $datum = preg_replace("/\//i", "<span class='agenda-lijst__tijd-spacer agenda-lijst__tijd-spacer--$omgeving'>/</span>", $datum);
 
