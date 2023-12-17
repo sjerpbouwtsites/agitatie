@@ -153,6 +153,7 @@ class Ag_agenda extends Ag_basis_class
 
                             foreach ($this->agendastukken as $a) :
 
+
                                 $tax_strings = taal\verwijder_meertaligheids_tax(get_post_taxonomies($a));
                                 $post_taxonomieen = wp_get_post_terms($a->ID, $tax_strings);
                                 if (!$this->is_widget) {
@@ -385,7 +386,10 @@ if (!function_exists('ag_agenda_filter')) : function ag_agenda_filter($filters_a
                     echo "</section>";
                 } ?>
 
-                <input type='submit' value='filter'>
+                <section class='flex'>
+                        <h3><?php echo \agitatie\taal\streng('Zoek!'); ?></h3>
+                <input type='submit' value='<?=\agitatie\taal\streng('Gaan');?>'>
+            </section>
             </div>
 
             <!--WEG IN PRODUCTIE -->
