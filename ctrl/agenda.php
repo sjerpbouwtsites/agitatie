@@ -327,13 +327,13 @@ if (!function_exists('ag_agenda_filter_model')) :
 
         foreach ($filters_inst as $n => $w) {
             if (array_key_exists($n, $_POST)) {
-                $filters_actief = true;
+                $filters_actief = array('filters_actief', true);
                 break;
             }
         }
 
         return array(
-            'filters_actief' => $filters_actief,
+            $filters_actief,
             $filters_inst
         );
     }
