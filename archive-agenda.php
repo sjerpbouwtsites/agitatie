@@ -33,7 +33,7 @@ get_template_part('/sja/open-main');
 
         endif;
 
-echo "<div class='Ag_knoppen-doos'>";
+echo "<div class='Ag_knoppen-doos Ag_knoppen-doos--agenda'>";
 
 $archief = array_key_exists('archief', $_GET);
 $agenda_link = get_post_type_archive_link('agenda');
