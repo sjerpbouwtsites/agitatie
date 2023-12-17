@@ -333,7 +333,7 @@ if (!function_exists('ag_agenda_filter_model')) :
         }
 
         return array(
-            $filters_actief,
+            'filters_actief' => $filters_actief,
             $filters_inst
         );
     }
