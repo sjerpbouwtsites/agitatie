@@ -214,6 +214,7 @@ class Ag_agenda extends Ag_basis_class
 
                                 echo
                                 "<li class='agenda-lijst__stuk agenda-lijst__stuk--" . $omgeving . "'>
+                                <article>
                             <a class='agenda-lijst__link agenda-lijst__link--" . $omgeving . "' href='" . get_the_permalink($a->ID) . "'>
                                 <div 
                                     class='agenda-lijst__links 
@@ -226,11 +227,12 @@ class Ag_agenda extends Ag_basis_class
                                         agenda-lijst__links--" . $omgeving . " 
                                         agenda-lijst__datum--" . $omgeving . "'>
 
-                                    <span class='agenda-lijst__titel tekst-zwart kop-letter agenda-lijst__titel--" . $omgeving . "' >" . $a->post_title . "</span>
+                                    <h3 class='agenda-lijst__titel tekst-zwart kop-letter agenda-lijst__titel--" . $omgeving . "' >" . $a->post_title . "</h3>
                                     <time class='tekst-wittig kleine-letter agenda-lijst__tijd agenda-lijst__tijd--$omgeving'>$datum</time>
                                     $midden
                                 </div>
                                 {$rechts}
+                                </article>
                             </a>
 						</li>";
                             endforeach; //agendastukken
