@@ -202,7 +202,7 @@ class Ag_agenda extends Ag_basis_class
                                 }
 
 
-                                $afb = wp_get_attachment_image_src(get_post_thumbnail_id($a->ID), 'small');
+
                                 $datum = get_field('datum', $a->ID);
 
                                 //$datum = preg_replace("/\s/i", "<br>", $datum);
@@ -217,6 +217,9 @@ class Ag_agenda extends Ag_basis_class
                                 "<li class='agenda-lijst__stuk agenda-lijst__stuk--" . $omgeving . "'>
                                 <article>
                             <a class='agenda-lijst__link agenda-lijst__link--" . $omgeving . "' href='" . get_the_permalink($a->ID) . "'>
+
+                                ".get_the_post_thumbnail_id($a->ID, 'small')."
+                                
                                 <div 
                                     class='agenda-lijst__links 
                                         agenda-lijst__cel 
