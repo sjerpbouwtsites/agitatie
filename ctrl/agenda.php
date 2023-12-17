@@ -411,9 +411,10 @@ if (!function_exists('ag_agenda_filter')) : function ag_agenda_filter($filters_a
 
  <?php
   if (count($_POST)) {
+      $agenda_link = get_post_type_archive_link('agenda');
       $agenda_begin = new Ag_knop(array(
           'ikoon' => 'replay',
-          'class'=> 'in-wit',
+          'class'=> 'in-kleur',
           'link' => $agenda_link,
           'tekst'=> "Verwijder filters",
       ));
