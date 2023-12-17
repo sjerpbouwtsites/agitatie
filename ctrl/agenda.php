@@ -392,7 +392,7 @@ if (!function_exists('ag_agenda_filter')) : function ag_agenda_filter($filters_a
             </section>
             <section class='flex'>
                         <h3><?php echo \agitatie\taal\streng('Reset'); ?></h3>
-                <input type='submit' value='<?=\agitatie\taal\streng('Filters legen');?>'>
+                <input type='reset' value='<?=\agitatie\taal\streng('Filters legen');?>'>
             </section>            
             </div>
 
