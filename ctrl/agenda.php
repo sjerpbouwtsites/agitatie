@@ -202,7 +202,7 @@ class Ag_agenda extends Ag_basis_class
                                 }
 
 
-                                $afb = wp_get_attachment_image_src(get_post_thumbnail_id($a->ID), 'large');
+                                $afb = wp_get_attachment_image_src(get_post_thumbnail_id($a->ID), 'small');
                                 $datum = get_field('datum', $a->ID);
 
                                 //$datum = preg_replace("/\s/i", "<br>", $datum);
@@ -210,7 +210,7 @@ class Ag_agenda extends Ag_basis_class
                                 $datum = preg_replace("/\//i", "<span class='agenda-lijst__tijd-spacer agenda-lijst__tijd-spacer--$omgeving'>/</span>", $datum);
 
                                 $datum = preg_replace("/:/i", "<span class='agenda-lijst__tijd-spacer agenda-lijst__tijd-spacer--$omgeving'>:</span>", $datum);
-
+                                var_dump($afb);
 
 
                                 echo
@@ -228,7 +228,7 @@ class Ag_agenda extends Ag_basis_class
                                         agenda-lijst__links--" . $omgeving . " 
                                         agenda-lijst__datum--" . $omgeving . "'>
 
-                                        $afb
+                                        
 
                                     <h3 class='agenda-lijst__titel tekst-wit kop-letter agenda-lijst__titel--" . $omgeving . "' >" . $a->post_title . " <time class='tekst-wittig kleine-letter agenda-lijst__tijd agenda-lijst__tijd--$omgeving'>$datum</time></h3>
                                     
