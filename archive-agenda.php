@@ -12,26 +12,26 @@ get_template_part('/sja/open-main');
 
 		<?php
 
-        //$afm = ag_agenda_filter_ctrl();
+        $afm = ag_agenda_filter_ctrl();
 
-        if (have_posts()) :
+if (have_posts()) :
 
-            $agenda = new Ag_agenda(array(
-                'aantal' => 10,
-                'omgeving' => 'pagina'
-            ));
+    $agenda = new Ag_agenda(array(
+        'aantal' => 10,
+        'omgeving' => 'pagina'
+    ));
 
-            $agenda->print();
+    $agenda->print();
 
-            ?>
+    ?>
 
 		<?php ag_paginering_ctrl();
 
-        else :
+else :
 
-            echo "<p>Niets gevonden met deze opdracht.</p>";
+    echo "<p>Niets gevonden met deze opdracht.</p>";
 
-        endif;
+endif;
 
 echo "<div class='Ag_knoppen-doos Ag_knoppen-doos--agenda'>";
 
