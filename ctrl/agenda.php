@@ -163,6 +163,14 @@ class Ag_agenda extends Ag_basis_class
                                     $midden = "";
                                     foreach ($post_taxonomieen as $pt) :
 
+                                        $ptt = $pt->taxonomy;
+                                        if ($pt->taxonomy === 'locatie') {
+                                            $ptt = \agitatie\taal\streng('Waar');
+                                        }
+                                        if ($pt->taxonomy === 'soort') {
+                                            $ptt = \agitatie\taal\streng('Wat');
+                                        }
+
                                         $prefix = count($post_taxonomieen) > 1
                                             ? "<span 
                                         class='agenda-lijst__taxonomie-prefix 
@@ -170,7 +178,7 @@ class Ag_agenda extends Ag_basis_class
                                         kop-letter
                                         agenda-lijst__taxonomie-prefix--$omgeving 
                                         agenda-lijst__taxonomie-prefix--$pt->taxonomy
-                                        '>$pt->taxonomy:</span>"
+                                        '>$ptt:</span>"
                                             : '';
 
                                         $midden .= "<span
@@ -347,7 +355,7 @@ if (!function_exists('ag_agenda_filter')) : function ag_agenda_filter($filters_a
 
         <p><?= $filter_text ?></p>
 
-        <form class='doos' id='agenda-filter' action='<?php echo get_post_type_archive_link('agenda'); ?>#agenda-lijst' method='POST'>
+        <form class='doos' id='agenda-filter' action='<?php echo get_post_type_archive_link('agenda'); ?>#agenda-filter' method='POST'>
             <div class='agenda-filter-inner-flex'>
 
                 <?php
