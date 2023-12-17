@@ -211,7 +211,7 @@ class Ag_agenda extends Ag_basis_class
 
                                 $datum = preg_replace("/:/i", "<span class='agenda-lijst__tijd-spacer agenda-lijst__tijd-spacer--$this->omgeving'>:</span>", $datum);
 
-                                $afb = !$this->is_widget ? get_the_post_thumbnail($a->ID, 'thumbnail') : '';af
+                                $afb = !$this->is_widget ? get_the_post_thumbnail($a->ID, 'thumbnail') : '';
 
                                 echo
                                 "<li class='agenda-lijst__stuk agenda-lijst__stuk--" . $this->omgeving . "'>
