@@ -37,14 +37,14 @@ if (!function_exists('ag_archief_na_content_hook')) : function ag_archief_na_con
 {
     ag_paginering_ctrl();
 
-    global $post;
+    // global $post;
 
-    $tax_blok = new Ag_tax_blok(array(
-        'post'		=> $post,
-        'titel'		=> 'Zoek sneller',
-        'reset'		=> false
-    ));
-    $tax_blok->print();
+    // $tax_blok = new Ag_tax_blok(array(
+    // 	'post'		=> $post,
+    // 	'titel'		=> 'Zoek sneller',
+    // 	'reset'		=> false
+    // ));
+    // $tax_blok->print();
 }
 endif;
 
