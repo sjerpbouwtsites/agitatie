@@ -158,8 +158,6 @@ if (!function_exists('ag_archief_footer_ctrl')) : function ag_archief_footer_ctr
         'agenda'=> \agitatie\taal\streng('events'),
     );
 
-    echo $wp_query->posts[0]->post_type;
-
     if ($wp_query->is_date || $wp_query->is_category) :
 
         echo "<footer class='archief-footer'>";
