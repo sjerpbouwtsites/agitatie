@@ -696,7 +696,7 @@ class Ag_tax_blok extends Ag_basis_class
             global $wp_query;
 
 
-            echo "<footer class='archief-footer'>";
+            $this->html.= "<footer class='archief-footer'>";
             $terug = new Ag_knop(array(
                 'class' 	=> 'in-wit ikoon-links',
                 'link' 		=> get_post_type_archive_link(POST_TYPE_NAAM),
@@ -706,7 +706,7 @@ class Ag_tax_blok extends Ag_basis_class
 
             $terug->print();
 
-            echo "<footer>";
+            $this->html.= "<footer>";
         }
     }
 
