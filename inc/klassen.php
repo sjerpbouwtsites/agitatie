@@ -687,6 +687,28 @@ class Ag_tax_blok extends Ag_basis_class
 				</nav>
 
 			";
+
+            $vertaal = array(
+                'post'	=> 'berichten',
+                'page'  => 'pagina\'s'
+            );
+
+            global $wp_query;
+            if ($wp_query->is_date || $wp_query->is_category) :
+
+                echo "<footer class='archief-footer'>";
+                $terug = new Ag_knop(array(
+                    'class' 	=> 'in-wit ikoon-links',
+                    'link' 		=> get_post_type_archive_link(POST_TYPE_NAAM),
+                    'tekst'		=> 'Alle ' . $vertaal[($wp_query->posts[0]->post_type)],
+                    'ikoon'		=> 'arrow-left-thick'
+                ));
+
+                $terug->print();
+
+                echo "<footer>";
+
+            endif;
         }
     }
 
