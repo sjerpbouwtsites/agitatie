@@ -153,8 +153,9 @@ if (!function_exists('ag_archief_footer_ctrl')) : function ag_archief_footer_ctr
     global $wp_query;
 
     $vertaal = array(
-        'post'	=> 'berichten',
-        'page'  => 'pagina\'s'
+        'post'	=> \agitatie\taal\streng('berichten'),
+        'page'  => \agitatie\taal\streng('pagina\'s'),
+        'agenda'=> \agitatie\taal\streng('events'),
     );
 
     if ($wp_query->is_date || $wp_query->is_category) :
