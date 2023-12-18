@@ -22,6 +22,10 @@ class Ag_agenda extends Ag_basis_class
     public function __construct($a = array())
     {
         parent::__construct($a);
+        $this->nep_post = false;
+        if (array_key_exists('nep_post', $a)) {
+            $this->nep_post = $a['nep_post'];
+        }
         $omgeving = $this->omgeving;
 
         $this->zet_is_widget();
@@ -37,7 +41,9 @@ class Ag_agenda extends Ag_basis_class
     {
         $this->console = [];
 
-        $archief = array_key_exists('archief', $_POST) || array_key_exists('archief', $_GET);
+        $post = !$this->nep_post ? $_POST : $this->nep_post;
+
+        $archief = array_key_exists('archief', $post) || array_key_exists('archief', $_GET);
 
         $datum_vergelijking = ($archief ? '<' : '>=');
 
@@ -64,11 +70,11 @@ class Ag_agenda extends Ag_basis_class
         $tax_namen = array('locatie', 'soort',);
 
         foreach ($tax_namen as $t) {
-            if (array_key_exists($t, $_POST) && $_POST[$t] !== '') {
+            if (array_key_exists($t, $post) && $post[$t] !== '') {
                 $tax_query[] = array(
                     'taxonomy' => $t,
                     'field'    => 'slug',
-                    'terms'    => $_POST[$t],
+                    'terms'    => $post[$t],
                 );
             }
         }
