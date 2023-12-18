@@ -1,6 +1,6 @@
 <?php
 
-
+use agitatie\taal as taal;
 
 if (!function_exists('ag_archief_generiek_loop')) : function ag_archief_generiek_loop($post, $afb_formaat = 'lijst', $exc_lim_o = false)
 {
