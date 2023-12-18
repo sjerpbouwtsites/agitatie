@@ -59,37 +59,55 @@ function registreer_strengen()
 
       reg_streng_h('widget_pag_fam_lees_verder', 'lees verder'),
 
-      reg_streng_h('categorie_taxonomie_naam', 'categorie'),
-      reg_streng_h('tag_taxonomie_naam', 'tag'),
+      reg_streng_h('categorie_taxonomie_naam', 'categorie', 'agitatie-tax-termen'),
+      reg_streng_h('categorie_taxonomie_naam_mv', 'categorie&euml;n', 'agitatie-tax-termen'),
+      reg_streng_h('tag_taxonomie_naam', 'tag', 'agitatie-tax-termen'),
+      reg_streng_h('tag_taxonomie_naam_mv', 'tags', 'agitatie-tax-termen'),
+      reg_streng_h('locatie_taxonomie_naam', 'locatie', 'agitatie-tax-termen'),
+      reg_streng_h('locatie_taxonomie_naam_mv', 'locaties', 'agitatie-tax-termen'),
+      reg_streng_h('soort_taxonomie_naam', 'soort', 'agitatie-tax-termen'),
+      reg_streng_h('soort_taxonomie_naam_mv', 'soort', 'agitatie-tax-termen'),
 
-      reg_streng_h('post_type_post_naam', 'bericht'),
-      reg_streng_h('post_type_post_naam_mv', 'berichten'),
-      reg_streng_h('post_type_post_naam', 'post'),
-      reg_streng_h('post_type_post_naam_mv', 'posts'),
-      reg_streng_h('post_type_post_naam', 'story'),
-      reg_streng_h('post_type_post_naam_mv', 'stories'),
-      reg_streng_h('post_type_post_naam', 'download'),
-      reg_streng_h('post_type_post_naam_mv', 'downloads'),
-      reg_streng_h('post_type_post_naam', 'agenda'),
-      reg_streng_h('post_type_post_naam_mv', 'agendas'),
+      reg_streng_h('post_type_post_naam_bericht', 'bericht', 'agitatie-posttermen'),
+      reg_streng_h('post_type_post_naam_mv_bericht', 'berichten', 'agitatie-posttermen'),
+      reg_streng_h('post_type_post_naam_post', 'post', 'agitatie-posttermen'),
+      reg_streng_h('post_type_post_naam_mv_post', 'posts', 'agitatie-posttermen'),
+      reg_streng_h('post_type_post_naam_download', 'download', 'agitatie-posttermen'),
+      reg_streng_h('post_type_post_naam_mv_download', 'downloads', 'agitatie-posttermen'),
+      reg_streng_h('post_type_post_naam_agenda', 'agenda', 'agitatie-posttermen'),
+      reg_streng_h('post_type_post_naam_mv_agenda', 'agendas', 'agitatie-posttermen'),
+      reg_streng_h('post_type_post_naam_pagina', 'pagina', 'agitatie-posttermen'),
+      reg_streng_h('post_type_post_naam_mv_pagina', 'pagina\'s', 'agitatie-posttermen'),
 
       reg_streng_h('telwoord_alle', 'alle', 'agitatie-telwoorden'),
       reg_streng_h('telwoord_alles', 'alles', 'agitatie-telwoorden'),
       reg_streng_h('telwoord_meer', 'meer', 'agitatie-telwoorden'),
 
+      reg_streng_h('telwoord_alle', 'waar', 'agitatie-koppelwoorden'),
+      reg_streng_h('telwoord_alles', 'wat', 'agitatie-koppelwoorden'),
+
+      reg_streng_h('taxblok_kijk', 'kijk verder bij', 'agitatie-taxblok'),
+
       reg_streng_h('zoekterm_niets_gevonden', 'Niets gevonden! Sorry.', 'agitatie-zoektermen'),
       reg_streng_h('zoekterm_terug_voorpagina', 'Terug naar de voorpagina.', 'agitatie-zoektermen'),
-      reg_streng_h('zoekterm_je_zocht', 'Je zocht', 'agitatie-zoektermen'),
-      reg_streng_h('zoekterm_wat_zoek_je', 'Wat zoek je', 'agitatie-zoektermen'),
+      reg_streng_h('zoekterm_je_zocht', 'je zocht', 'agitatie-zoektermen'),
+      reg_streng_h('zoekterm_wat_zoek_je', 'wat zoek je', 'agitatie-zoektermen'),
       reg_streng_h('zoekterm_zoeken', 'Zoeken', 'agitatie-zoektermen'),
-      reg_streng_h('zoekterm_zoek', 'Zoek', 'agitatie-zoektermen'),
+      reg_streng_h('zoekterm_zoek', 'zoek', 'agitatie-zoektermen'),
+      reg_streng_h('zoekterm_reset', 'reset', 'agitatie-zoektermen'),
+      reg_streng_h('zoekterm_gaan', 'gaan', 'agitatie-zoektermen'),
       reg_streng_h('zoekterm_404_melding', 'Oeps! Die pagina bestaat niet', 'agitatie-zoektermen'),
       reg_streng_h('zoekterm_404_zoek_hint', 'Probeer eens onderstaand zoekformulier', 'agitatie-zoektermen'),
 
-      reg_streng_h('download-posttype-description', 'Download posters, flyers, etc!', 'agitatie-downloads', true),
+      reg_streng_h('download-posttype-description', 'download posters, flyers, etc!', 'agitatie-downloads', true),
 
-      reg_streng_h('voorpagina_zie_ook', 'Zie ook', 'agitatie-voorpagina'),
+      reg_streng_h('voorpagina_zie_ook', 'zie ook', 'agitatie-voorpagina'),
       reg_streng_h('voorpagina_nieuws', 'nieuws', 'agitatie-voorpagina'),
+
+      reg_streng_h('agenda_onze_events', 'onze events', 'agitatie-agenda'),
+      reg_streng_h('agenda_events', 'events', 'agitatie-agenda'),
+      reg_streng_h('agenda_gepland', 'gepland', 'agitatie-agenda'),
+      reg_streng_h('agenda_bekijk_volledige_agenda', 'bekijk de volledige agenda', 'agitatie-agenda'),
 
 
 

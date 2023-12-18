@@ -171,10 +171,10 @@ class Ag_agenda extends Ag_basis_class
 
                                         $ptt = $pt->taxonomy;
                                         if ($pt->taxonomy === 'locatie') {
-                                            $ptt = \agitatie\taal\streng('Waar');
+                                            $ptt = ucfirst(\agitatie\taal\streng('waar'));
                                         }
                                         if ($pt->taxonomy === 'soort') {
-                                            $ptt = \agitatie\taal\streng('Wat');
+                                            $ptt = ucfirst(\agitatie\taal\streng('wat'));
                                         }
 
                                         $prefix = count($post_taxonomieen) > 1
@@ -411,8 +411,8 @@ if (!function_exists('ag_agenda_filter')) : function ag_agenda_filter($filters_a
                 } ?>
 
                 <section class='flex'>
-                        <h3><?php echo \agitatie\taal\streng('Zoek!'); ?></h3>
-                <input type='submit' value='<?=\agitatie\taal\streng('Gaan');?>'>
+                        <h3><?php echo ucfirst(\agitatie\taal\streng('zoek')); ?>!</h3>
+                <input type='submit' value='<?=ucfirst(\agitatie\taal\streng('gaan'));?>'>
             </section>
 
  <?php
@@ -424,7 +424,7 @@ if (!function_exists('ag_agenda_filter')) : function ag_agenda_filter($filters_a
           'link' => $agenda_link,
           'tekst'=> "Verwijder filters",
       ));
-      echo "<section class='flex'><h3>".\agitatie\taal\streng('Reset')."</h3>";
+      echo "<section class='flex'><h3>".ucfirst(\agitatie\taal\streng('reset'))."</h3>";
       $agenda_begin->print();
       echo "<section>";
   }

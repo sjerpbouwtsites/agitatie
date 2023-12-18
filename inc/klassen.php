@@ -665,7 +665,7 @@ class Ag_tax_blok extends Ag_basis_class
             if (count($waarden)) :
                 $linkblokken .= "<ul class='reset'>";
                 if ($this->reset) {
-                    $alles = taal\streng('telwoord_alles');
+                    $alles = taal\streng('alles');
                     $linkblokken .= "<li><a href='{$this->basis}'>$alles</a></li>";
                 }
                 foreach ($waarden as $tax_term) {
