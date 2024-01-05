@@ -12,9 +12,8 @@ do_action('ag_pagina_titel');
 echo "<div class='art-lijst'>";
 
 if (have_posts()) : while (have_posts()) : the_post();
-		ag_print_lijst_ctrl($post, '3', 140);
-
-	endwhile;
+    ag_print_lijst_ctrl($post, '3', 140);
+endwhile;
 endif;
 
 echo "</div>"; //art-lijst
@@ -25,8 +24,8 @@ ag_paginering_ctrl();
 
 
 $tax_blok = new Ag_tax_blok(array(
-	'post'		=> $post,
-	'titel'		=> 'Je kan ook zoeken via...',
+    'post'		=> $post,
+    'titel'		=> 'Je kan ook zoeken via...',
 ));
 $tax_blok->print();
 

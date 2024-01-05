@@ -12,6 +12,8 @@
 @import 'tekst/overschrijven';
 @import 'tekst/zet-klassen';
 
+@debug "divider offset: #{$broodletter}";
+
 $header-height: 70px;
 
 $ease-out-snel: cubic-bezier(0,0,0,1.28);

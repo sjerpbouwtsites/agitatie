@@ -12,6 +12,7 @@ if (!function_exists('ag_archief_generiek_loop')) : function ag_archief_generiek
         'taxonomieen' 	=> true
     );
 
+
     global $kind_config;
 
     if (
@@ -119,6 +120,8 @@ if (!function_exists('ag_archief_content_ctrl')) : function ag_archief_content_c
 
     if (
         isset($kind_config) and
+        isset($post) &&
+        property_exists($post, 'post_type') &&
         array_key_exists('archief', $kind_config) and
         array_key_exists($post->post_type, $kind_config['archief'])
     ) {
@@ -168,7 +171,7 @@ if (!function_exists('ag_archief_footer_ctrl')) : function ag_archief_footer_ctr
             'ikoon'		=> 'arrow-left-thick'
         ));
 
-        $this->html.= $terug->html;
+        echo $terug->html;
 
         echo "<footer>";
 

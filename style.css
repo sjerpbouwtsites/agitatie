@@ -38,7 +38,7 @@ a.tekst-zwart,
 
 .tekst-hoofdkleur,
 a.tekst-hoofdkleur {
-  color: #2e6160; }
+  color: #2E6160; }
 
 .tekst-zijkleur,
 a.tekst-zijkleur {
@@ -46,7 +46,7 @@ a.tekst-zijkleur {
 
 .tekst-accentkleur,
 a.tekst-accentkleur {
-  color: #472e61; }
+  color: #48612e; }
 
 .tekst-hoofdkleur-donker,
 a.tekst-hoofdkleur-donker {
@@ -58,7 +58,7 @@ a.tekst-zijkleur-donker {
 
 .tekst-accentkleur-donker,
 a.tekst-accentkleur-donker {
-  color: #3a2650; }
+  color: #3b5026; }
 
 .achtergrond-wit,
 a.achtergrond-wit {
@@ -86,7 +86,7 @@ a.achtergrond-zwart {
 
 .achtergrond-hoofdkleur,
 a.achtergrond-hoofdkleur {
-  background-color: #2e6160; }
+  background-color: #2E6160; }
 
 .achtergrond-zijkleur,
 a.achtergrond-zijkleur {
@@ -94,7 +94,7 @@ a.achtergrond-zijkleur {
 
 .achtergrond-accentkleur,
 a.achtergrond-accentkleur {
-  background-color: #472e61; }
+  background-color: #48612e; }
 
 .achtergrond-hoofdkleur-donker,
 a.achtergrond-hoofdkleur-donker {
@@ -106,23 +106,23 @@ a.achtergrond-zijkleur-donker {
 
 .achtergrond-accentkleur-donker,
 a.achtergrond-accentkleur-donker {
-  background-color: #3a2650; }
+  background-color: #3b5026; }
 
 .kop-letter,
 .kopletter {
-  font-family: "Eczar", sans-serif; }
+  font-family: "Alef", serif; }
 
 .brood-letter,
 .broodletter {
-  font-family: "Merriweather Sans", sans-serif; }
+  font-family: "Alef", serif; }
 
 .accent-letter,
 .accentletter {
-  font-family: "Merriweather Sans", sans-serif; }
+  font-family: "Alef", serif; }
 
 .kleine-letter,
 .kleineletter {
-  font-family: "Merriweather Sans", sans-serif; }
+  font-family: "Alef", serif; }
 
 html {
   font-family: sans-serif;
@@ -904,17 +904,17 @@ body {
 a:hover,
 a:focus,
 a:active {
-  color: #2e6160; }
+  color: #2E6160; }
 
 a:hover {
   text-decoration: underline; }
 
 a, a:visited {
-  color: #2e6160;
+  color: #2E6160;
   text-decoration: none; }
 
 body {
-  font-family: "Merriweather Sans", sans-serif; }
+  font-family: "Alef", serif; }
 
 h1 {
   font-size: 3.6em; }
@@ -946,7 +946,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Eczar", sans-serif;
+  font-family: "Alef", serif;
   font-weight: 900;
   line-height: 1;
   margin: 1.33em 0 0.5em; }
@@ -1121,7 +1121,7 @@ main blockquote {
     .art-lijst .art-c.geen-afb:hover {
       border-left: 5px solid rgba(38, 80, 79, 0.8); }
       .art-lijst .art-c.geen-afb:hover .lees-meer {
-        color: #2e6160;
+        color: #2E6160;
         opacity: 1; }
   .art-lijst .lees-meer::before {
     content: '';
@@ -1150,7 +1150,7 @@ main blockquote {
   box-shadow: 2px 4px 0 rgba(0, 0, 0, 0.4);
   transition: all 0.2s ease-out 0.2s;
   position: relative;
-  color: #2e6160;
+  color: #2E6160;
   top: 0;
   font-size: 1em;
   text-transform: lowercase;
@@ -1164,7 +1164,7 @@ main blockquote {
   -ms-user-select: none;
   user-select: none; }
   .knop:hover, .navigation a:hover, #agenda-filter :hover[type='submit'], .search-form .search-submit:hover, .knop:visited, .navigation a:visited, #agenda-filter :visited[type='submit'], .search-form .search-submit:visited, .knop:active, .navigation a:active, #agenda-filter :active[type='submit'], .search-form .search-submit:active, input.wpcf7-submit:hover, input.wpcf7-submit:visited, input.wpcf7-submit:active, .pushbutton-wide:hover, .pushbutton-wide:visited, .pushbutton-wide:active {
-    color: #2e6160;
+    color: #2E6160;
     text-decoration: none; }
   .knop:hover, .navigation a:hover, #agenda-filter :hover[type='submit'], .search-form .search-submit:hover, input.wpcf7-submit:hover, .pushbutton-wide:hover {
     transition: all 0.15s ease-out;
@@ -1188,7 +1188,7 @@ main blockquote {
   .knop i, .navigation a i, #agenda-filter [type='submit'] i, .search-form .search-submit i, input.wpcf7-submit i, .pushbutton-wide i {
     color: inherit !important; }
   .knop.in-wit, .navigation a.in-wit, #agenda-filter .in-wit[type='submit'], .search-form .in-wit.search-submit, input.wpcf7-submit.in-wit, .pushbutton-wide.in-wit {
-    background-color: #2e6160;
+    background-color: #2E6160;
     box-shadow: 2px 4px 0 rgba(0, 0, 0, 0.4);
     color: white !important; }
     .knop.in-wit:hover, .navigation a.in-wit:hover, #agenda-filter .in-wit:hover[type='submit'], .search-form .in-wit.search-submit:hover, input.wpcf7-submit.in-wit:hover, .pushbutton-wide.in-wit:hover {
@@ -1241,11 +1241,11 @@ input.wpcf7-submit {
   line-height: calc(1.5em - 6px); }
   .knop.ghost:hover, .navigation a.ghost:hover, #agenda-filter .ghost:hover[type='submit'], .search-form .ghost.search-submit:hover {
     background-color: #ffffffcc;
-    color: #2e6160; }
+    color: #2E6160; }
   .knop.ghost.in-wit, .navigation a.ghost.in-wit, #agenda-filter .ghost.in-wit[type='submit'], .search-form .ghost.in-wit.search-submit {
     background-color: transparent;
-    border: 3px solid #2e6160;
-    color: #2e6160 !important; }
+    border: 3px solid #2E6160;
+    color: #2E6160 !important; }
     .knop.ghost.in-wit:hover, .navigation a.ghost.in-wit:hover, #agenda-filter .ghost.in-wit:hover[type='submit'], .search-form .ghost.in-wit.search-submit:hover {
       background-color: #78bfbe;
       color: #252525 !important; }
@@ -1270,7 +1270,7 @@ input.wpcf7-submit {
   .navigation li {
     margin: 0 5px; }
   .navigation .active a {
-    background-color: #2e6160;
+    background-color: #2E6160;
     box-shadow: 2px 4px 0 #26504f;
     color: white !important; }
     .navigation .active a:hover {
@@ -1356,7 +1356,7 @@ input.wpcf7-submit {
   .uitgelichte-afbeelding-buiten.hero h1 {
     margin: 0;
     color: #f5f5f5;
-    background-color: #2e6160;
+    background-color: #2E6160;
     font-size: 2.5rem;
     padding: .6em 1.2em;
     text-align: center; }
@@ -1366,7 +1366,7 @@ input.wpcf7-submit {
     .uitgelichte-afbeelding-buiten.hero h1 span {
       font-size: .5em;
       font-weight: 400;
-      font-family: "Merriweather Sans", sans-serif;
+      font-family: "Alef", serif;
       opacity: .8;
       line-height: 1;
       display: inline-block;
@@ -1466,7 +1466,7 @@ input.wpcf7-submit {
   .multi-lang-vlaggen:hover .lang-item {
     display: block; }
   .multi-lang-vlaggen .lang-item a {
-    background-color: #2e6160; }
+    background-color: #2E6160; }
     .multi-lang-vlaggen .lang-item a:hover {
       background-color: #367271; }
   .multi-lang-vlaggen .lang-item a, .multi-lang-vlaggen .lang-item img {
@@ -1596,7 +1596,7 @@ main.heeft-uitgelicht.heeft-hero .sticky-sidebar {
   top: 40px;
   bottom: 20px;
   padding: 0 20px 0 20px;
-  border-left: 5px solid #2e6160;
+  border-left: 5px solid #2E6160;
   max-height: calc(100% - 40px);
   overflow-y: hidden; }
 
@@ -1618,7 +1618,7 @@ main.heeft-uitgelicht.heeft-hero .sticky-sidebar {
   margin-bottom: .5em; }
 
 .pag-fam article.huidige a h3, .pag-fam article a:hover h3 {
-  color: #2e6160;
+  color: #2E6160;
   font-weight: bold; }
 
 .pag-fam article h3 {
@@ -1639,15 +1639,15 @@ main.heeft-uitgelicht.heeft-hero .sticky-sidebar {
 .sticky-widget.widget_nav_menu .menu-item a {
   font-size: 1em;
   font-weight: normal;
-  font-family: "Eczar", sans-serif; }
+  font-family: "Alef", serif; }
 
 .sticky-widget.widget_nav_menu .current-menu-item a {
-  color: #2e6160;
+  color: #2E6160;
   font-weight: bold; }
 
 #agenda-filter {
   padding: 20px;
-  background-color: #2e6160;
+  background-color: #2E6160;
   color: white; }
   #agenda-filter h3 {
     color: white;
@@ -1694,7 +1694,7 @@ main.heeft-uitgelicht.heeft-hero .sticky-sidebar {
     border: 0;
     font-size: 12px;
     background-color: #fff;
-    font-family: "Merriweather Sans", sans-serif;
+    font-family: "Alef", serif;
     font-weight: bold;
     color: #666; }
     #agenda-filter select.geklikt, #agenda-filter select:hover {
@@ -1821,7 +1821,7 @@ main.heeft-uitgelicht.heeft-hero .sticky-sidebar {
 #stek-voet {
   color: white;
   font-size: .8em;
-  background-color: #2e6160;
+  background-color: #2E6160;
   padding: 50px 0 0 0;
   margin-top: 100px; }
   #stek-voet.alleen-colofon {
@@ -1866,7 +1866,7 @@ main.heeft-uitgelicht.heeft-hero .sticky-sidebar {
     color: #f5f5f5;
     line-height: 1; }
     #stek-voet .geen-logo:hover {
-      color: #2e6160;
+      color: #2E6160;
       text-decoration: none; }
 
 #stek-voet .verpakking.widgets .neg-marge {
@@ -1912,14 +1912,14 @@ main.heeft-uitgelicht.heeft-hero .sticky-sidebar {
   font-weight: bold;
   display: block;
   line-height: 1;
-  font-family: "Eczar", sans-serif;
+  font-family: "Alef", serif;
   letter-spacing: 0.02em; }
 
 .footer-section a, .footer-section a:active, .footer-section a:visited {
   color: inherit;
   text-decoration: none; }
   .footer-section a:hover, .footer-section a:active:hover, .footer-section a:visited:hover {
-    color: #2e6160; }
+    color: #2E6160; }
 
 .footer-section *:last-child {
   margin-bottom: 0; }
@@ -1944,7 +1944,7 @@ main.heeft-uitgelicht.heeft-hero .sticky-sidebar {
     filter: brightness(120%); }
 
 footer .search-form .search-submit {
-  color: #2e6160; }
+  color: #2E6160; }
 
 .colofon p {
   margin: 0;
@@ -2115,7 +2115,7 @@ footer .search-form .search-submit {
   transform: translateY(70px); }
 
 .prio-menu-container .menu-item:hover > a {
-  background-color: #2e6160;
+  background-color: #2E6160;
   color: white; }
 
 .prio-menu-container .menu-item-has-children:hover > a, .prio-menu-container .menu-item-has-children:hover .sub-menu a {
@@ -2136,7 +2136,7 @@ footer .search-form .search-submit {
     background-color: #f5f5f5; }
 
 .prio-menu-container .menu-item-has-children:hover .sub-menu .menu-item > a:hover {
-  background-color: #2e6160;
+  background-color: #2E6160;
   color: white; }
 
 .kopmenu-mobiel {
@@ -2153,7 +2153,7 @@ footer .search-form .search-submit {
     top: 2px;
     margin-left: 10px; }
   .kopmenu-mobiel:hover {
-    background-color: #2e6160;
+    background-color: #2E6160;
     color: white; }
 
 @media (max-width: 768px) {
@@ -2175,7 +2175,7 @@ footer .search-form .search-submit {
     font-size: 2rem; }
 
 footer .menu a:hover {
-  color: #2e6160; }
+  color: #2E6160; }
 
 .bericht {
   position: relative; }
@@ -2251,7 +2251,7 @@ footer .menu a:hover {
     height: 110px; }
 
 .search-form {
-  background-color: #2e6160;
+  background-color: #2E6160;
   padding: 20px;
   color: white;
   display: inline-block;
@@ -2290,3 +2290,5 @@ footer .menu a:hover {
       z-index: -1;
       display: block;
       height: calc(100% + 200px); } }
+
+/*# sourceMappingURL=style.css.map */

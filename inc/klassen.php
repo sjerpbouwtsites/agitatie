@@ -241,19 +241,23 @@ class Ag_article_c extends Ag_basis_class
         if ($this->is_categorie) {
             $afb_verz = get_field('cat_afb', 'category_' . $this->art->term_id);
 
+            $aw = $this->afb_formaat.'-width';
+            $ah = $this->afb_formaat.'-height';
+
             if ($afb_verz) {
                 $img = "<img
-					src='{$afb_verz['sizes']['lijst']}'
+					src='{$afb_verz['sizes'][$this->afb_formaat]}'
 					alt='{$afb_verz['alt']}'
-					height='{$afb_verz['sizes']['lijst-width']}'
-					width='{$afb_verz['sizes']['lijst-height']}'
+					height='{$afb_verz['sizes'][$aw]}'
+					width='{$afb_verz['sizes'][$ah]}'
+                    class='is-categorie-afb'
 				/>";
             } else {
                 $img = '';
             }
         } else {
             if (has_post_thumbnail($this->art->ID)) {
-                $img = get_the_post_thumbnail($this->art, $this->afb_formaat);
+                $img = get_the_post_thumbnail($this->art, $this->afb_formaat, array('class'=>'is-post-thumbnail-afb'));
             } else {
                 $img_f = get_field('ta_afbeelding', 'option');
                 if ($img_f) {
@@ -261,6 +265,7 @@ class Ag_article_c extends Ag_basis_class
                     $h = $this->afb_formaat . '-height';
                     $img = "
 						<img
+                        class='is-terugval-afbeelding'
 							src='{$img_f['sizes'][$this->afb_formaat]}'
 							alt='{$img_f['alt']}'
 							width='{$img_f['sizes'][$w]}'

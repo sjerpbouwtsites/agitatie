@@ -10,7 +10,7 @@ export default {
   input: `${uncompiled}/js/index.js`,
   output: {
     file: `${build}/js/bundel.js`,
-    format: 'es'
+    format: 'es',
   },
   plugins: [ 
     scss({
@@ -18,7 +18,7 @@ export default {
       output: function (styles, styleNodes) {
         fs.writeFileSync('style.css', styles)
       },
-      sourceMaps: true,
+      sourceMap: true,
       outFile: '../style.css'
     }) // will output compiled styles to output.css
   ]  

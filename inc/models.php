@@ -71,7 +71,15 @@ if (!function_exists('ag_archief_titel_model')) : function ag_archief_titel_mode
 {
     global $wp_query;
 
+    if (isset($wp_query) && property_exists($wp_query, 'queried_object')) {
+        if (property_exists($wp_query->queried_object, 'taxonomy')) {
+            return $wp_query->queried_object->name;
+        }
+    }
+
     $post_type = ag_post_naam_model();
+
+
 
     if ($post_type && $post_type !== '') {
         $obj = get_post_type_object($post_type);
@@ -79,6 +87,7 @@ if (!function_exists('ag_archief_titel_model')) : function ag_archief_titel_mode
     } else {
         return false;
     }
+
 
 
     if ($wp_query->is_date) { //is dit een datum archief?

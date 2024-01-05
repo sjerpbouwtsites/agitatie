@@ -109,6 +109,10 @@ function registreer_strengen()
       reg_streng_h('agenda_gepland', 'gepland', 'agitatie-agenda'),
       reg_streng_h('agenda_bekijk_volledige_agenda', 'bekijk de volledige agenda', 'agitatie-agenda'),
 
+      reg_streng_h('header_slogan', 'Radicaal inclusieve Joodse cultuur', 'agitatie-header'),
+
+
+
 
 
 
