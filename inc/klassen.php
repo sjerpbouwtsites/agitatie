@@ -292,7 +292,10 @@ class Ag_article_c extends Ag_basis_class
             ? "<span class='lees-meer'>$meer" . ag_mdi('arrow-right-bold-circle', false) . "</span>"
             : '');
 
-        return "<p class='tekst-zwart'>" . ag_maak_excerpt($this->art, $this->exc_lim) .
+        $l = ag_maak_excerpt($this->art, $this->exc_lim);
+        $ingekort = $l[0];
+        $ingekort_class = $l[1] ? 'ingekort' : 'oningekort';
+        return "<p class='tekst-zwart $ingekort_class'>" . $ingekort .
 
             $meer_html
             .
