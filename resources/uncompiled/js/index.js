@@ -24,27 +24,12 @@ function klikBaas() {
 
 }
 
-function zetAlleAnkersOpLocalhostAlsDaar() {
-	if (!BASE_URL || !BASE_URL.includes('localhost')) {
-		return;
-	}
-	Array.from(document.getElementsByTagName('a')).forEach(anker => {
-		let oudeHref = anker.href;
-		if (!oudeHref.includes('.nl')) {
-			return;
-		}
-		const naSplit = oudeHref.split('.nl')[1];
-		anker.href = 'http://localhost' + naSplit;
-	})
-}
-
 function init() {
 	doc = document;
 	body = doc.getElementsByTagName('body')[0] || null;
 	html = doc.getElementsByTagName('html')[0] || null;
 	aside = doc.getElementById('zijbalk') || null;
-	zetAlleAnkersOpLocalhostAlsDaar()
-}
+} 
 
 function naAllesGeladenZetCSS() {
 	window.addEventListener('load', function () {
