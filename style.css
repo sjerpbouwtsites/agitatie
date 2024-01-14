@@ -791,13 +791,13 @@ body {
 
 .verpakking {
   margin: 0 auto;
-  padding: 0 2.33em;
+  padding: 0 2.33rem;
   box-sizing: border-box;
   width: 1200px;
   max-width: 100%; }
   @media screen and (max-width: 768px) {
     .verpakking {
-      padding: 0 1.25em; } }
+      padding: 0 1.25rem; } }
 
 .verpakking-klein {
   width: 760px; }
@@ -1042,8 +1042,7 @@ main blockquote {
     .art-c .art-rechts p:last-child {
       margin-bottom: 0; }
   .art-c time, .art-c .tax, .art-c time ~ span {
-    font-size: .85rem;
-    opacity: 0.8; }
+    font-size: .8em; }
   .art-c.blok .art-rechts {
     padding: 20px; }
   .art-c a:hover {
@@ -1067,7 +1066,8 @@ main blockquote {
   justify-content: space-between;
   margin-bottom: -30px;
   margin-left: -15px;
-  margin-right: -15px; }
+  margin-right: -15px;
+  font-size: 1rem; }
   .art-lijst.geen-afb-buiten {
     margin-bottom: -60px;
     margin-left: -30px;
