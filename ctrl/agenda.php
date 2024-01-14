@@ -163,7 +163,8 @@ class Ag_agenda extends Ag_basis_class
                                 $tax_strings = taal\verwijder_meertaligheids_tax(get_post_taxonomies($a));
                                 $post_taxonomieen = wp_get_post_terms($a->ID, $tax_strings);
                                 if (!$this->is_widget) {
-                                    $content = ag_maak_excerpt($a, 320);
+                                    $l = ag_maak_excerpt($a, 320);
+                                    $content = $l[0];
 
                                     // midden is in links gezet.
                                     $midden = "<div class='agenda-lijst__taxonomieen agenda-lijst__taxonomieen--$this->omgeving '>";

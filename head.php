@@ -3,9 +3,9 @@
 <head>
 	<?php get_template_part('sja/header/google-analytics'); ?>
 	<style>
-		body.hidden-body {
-    opacity: 0;
-}
+		<?php if (!$_GET['debug']) : ?>body.hidden-body {
+    		opacity: 0;
+		}<?php endif;?>
 	</style>
 <meta charset="<?php bloginfo('charset'); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,9 +15,4 @@
 <?php wp_head(); ?>
 <?php get_template_part('sja/header/google-fonts'); ?>
 <meta name="format-detection" content="telephone=no"/>
-<script>
-		window.addEventListener('load', function(){
-		document.body.classList.add('pagina-geladen');
-	})
-</script>
 </head>
