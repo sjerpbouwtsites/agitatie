@@ -29,7 +29,7 @@ if(!function_exists('thumbnail_init')) : function thumbnail_init()
         'hele-breedte'              => mk_tmb_frm('hele-breedte', 2000, 1400),
         'bovenaan_art'              => mk_tmb_frm('bovenaan_art', 2000, 700),
         'portfolio'                 => mk_tmb_frm('portfolio', 600, 600),
-        'portfolio-dubbel'          => mk_tmb_frm('portfolio', 1200, 1200),
+        'fader-video'               => mk_tmb_frm('fader-video', 1200, 1000),
     );
 
     if ($kind_thumbs) {

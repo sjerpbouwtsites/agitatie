@@ -13,7 +13,9 @@ if(!function_exists('ag_tekstveld_ctrl')) :  function ag_tekstveld_ctrl($invoer 
     $basis_waarden = array(
         'formaat'	=> 'groot',
         'titel'		=> false,
-        'titel_el'	=> 'h2'
+        'titel_el'	=> 'h2',
+        'class'     => '',
+        'html_onder'=> '',
     );
 
     //er in zetten
@@ -43,7 +45,7 @@ if(!function_exists('ag_tekstveld_ctrl')) :  function ag_tekstveld_ctrl($invoer 
         $toevoeving['header'] = '';
     } else {
         $toevoeving['veld_element'] = "section";
-        $toevoeving['header'] = "<{$invoer['titel_el']}>{$invoer['titel']}</{$invoer['titel_el']}>";
+        $toevoeving['header'] = "<{$invoer['titel_el']} class='titel-uit-tekstveld-ctrl'>{$invoer['titel']}</{$invoer['titel_el']}>";
     }
 
     //
