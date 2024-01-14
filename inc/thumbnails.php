@@ -6,7 +6,8 @@
  *
  */
 
-if(!function_exists('mk_tmb_frm')) : function mk_tmb_frm($naam, $breedte, $hoogte, $crop = true){
+if(!function_exists('mk_tmb_frm')) : function mk_tmb_frm($naam, $breedte, $hoogte, $crop = true)
+{
     return array(
         'naam'             => $naam,
         'breedte'          => $breedte,
@@ -18,16 +19,17 @@ if(!function_exists('mk_tmb_frm')) : function mk_tmb_frm($naam, $breedte, $hoogt
 //thumbnailformaten normaal alleen opvraagbaar via query. Dit maakt ze beschikbaar.
 //naam //breedte //hoogte //crop
 
-if(!function_exists('thumbnail_init')) : function thumbnail_init() {
-
+if(!function_exists('thumbnail_init')) : function thumbnail_init()
+{
     global $kind_thumbs;
     global $thema_ondersteuning;
 
     $thumbnail_formaten = array(
-        'lijst'                     => mk_tmb_frm( 'lijst', 750, 416 ),
-        'hele-breedte'              => mk_tmb_frm( 'hele-breedte', 2000, 1400),
-        'bovenaan_art'              => mk_tmb_frm( 'bovenaan_art', 2000, 700),
-        'portfolio'                 => mk_tmb_frm( 'portfolio', 600, 600),
+        'lijst'                     => mk_tmb_frm('lijst', 750, 416),
+        'hele-breedte'              => mk_tmb_frm('hele-breedte', 2000, 1400),
+        'bovenaan_art'              => mk_tmb_frm('bovenaan_art', 2000, 700),
+        'portfolio'                 => mk_tmb_frm('portfolio', 600, 600),
+        'portfolio-dubbel'          => mk_tmb_frm('portfolio', 1200, 1200),
     );
 
     if ($kind_thumbs) {
@@ -40,8 +42,6 @@ if(!function_exists('thumbnail_init')) : function thumbnail_init() {
     }
 
     $thema_ondersteuning['thumbnail_formaten'] = $thumbnail_formaten;
-
 }
-add_action( 'after_setup_theme', 'thumbnail_init' );
+    add_action('after_setup_theme', 'thumbnail_init');
 endif;
-

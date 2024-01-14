@@ -111,6 +111,8 @@ function registreer_strengen()
 
       reg_streng_h('header_slogan', 'Radicaal inclusieve Joodse cultuur', 'agitatie-header'),
 
+      reg_streng_h('pak_nieuwsbrief', 'pak nieuwsbrief', 'agitatie-frontpage'),
+
 
 
 
