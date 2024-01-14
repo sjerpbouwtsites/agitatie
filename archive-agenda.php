@@ -25,7 +25,7 @@ if (have_posts()) :
 
     ?>
 
-		<?php ag_paginering_ctrl();
+		<?php // ag_paginering_ctrl();
 
 else :
 
