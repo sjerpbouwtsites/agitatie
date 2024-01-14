@@ -76,13 +76,15 @@ function schakel(e) {
 		}
 	}
 
+	const zichtbareDisplayValue = doel.hasAttribute('data-toon-soort') ? doel.getAttribute('data-toon-soort') : 'block';
+
 	//tonen of verstoppen afhankelijk van open
 	var stijl = '';
 	if (!doel.classList.contains('open')) {
 		if(!body$1.classList.contains(doel.id+'-open')) {
 			body$1.classList.add(doel.id+'-open');
 		}
-		stijl = "block";
+		stijl = zichtbareDisplayValue;
 	} else {
 		stijl = "none";
 		body$1.classList.remove(doel.id+'-open');
@@ -275,7 +277,7 @@ function kopmenuSubMobiel() {
 window.onload = function () {
 
 	init();
-
+ 
 	klikBaas();
 
 	verschrikkelijkeHacks();
@@ -295,5 +297,15 @@ window.onload = function () {
 	//if (doc.getElementById('agenda-filter')) agendaFilter();
 
 	kopmenuSubMobiel();
+
+	document.body.classList.add('has-animation');
+
+	setTimeout(()=>{
+		document.body.classList.add('animate-into-view');
+	}, 2);
+	setTimeout(()=>{
+		document.body.classList.remove('hidden-body');
+		document.body.classList.remove('animate-into-view');
+	}, 2500);
 
 };

@@ -169,6 +169,10 @@ class Ag_agenda extends Ag_basis_class
                                     $midden = "<div class='agenda-lijst__taxonomieen agenda-lijst__taxonomieen--$this->omgeving '>";
                                     foreach ($post_taxonomieen as $pt) :
 
+                                        if ($pt->taxonomy === 'locatie') {
+                                            continue;
+                                        }
+
                                         $ptt = $pt->taxonomy;
                                         if ($pt->taxonomy === 'locatie') {
                                             $ptt = ucfirst(\agitatie\taal\streng('waar'));

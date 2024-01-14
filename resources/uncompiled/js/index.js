@@ -145,7 +145,7 @@ function kopmenuSubMobiel() {
 window.onload = function () {
 
 	init();
-
+ 
 	klikBaas();
 
 	verschrikkelijkeHacks();
@@ -165,6 +165,16 @@ window.onload = function () {
 	//if (doc.getElementById('agenda-filter')) agendaFilter();
 
 	kopmenuSubMobiel();
+
+	document.body.classList.add('has-animation');
+
+	setTimeout(()=>{
+		document.body.classList.add('animate-into-view');
+	}, 2)
+	setTimeout(()=>{
+		document.body.classList.remove('hidden-body');
+		document.body.classList.remove('animate-into-view');
+	}, 2500);
 
 };
 

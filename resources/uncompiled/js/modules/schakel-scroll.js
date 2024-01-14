@@ -29,13 +29,15 @@ export function schakel(e) {
 		}
 	}
 
+	const zichtbareDisplayValue = doel.hasAttribute('data-toon-soort') ? doel.getAttribute('data-toon-soort') : 'block'
+
 	//tonen of verstoppen afhankelijk van open
 	var stijl = '';
 	if (!doel.classList.contains('open')) {
 		if(!body.classList.contains(doel.id+'-open')) {
 			body.classList.add(doel.id+'-open');
 		}
-		stijl = "block";
+		stijl = zichtbareDisplayValue;
 	} else {
 		stijl = "none";
 		body.classList.remove(doel.id+'-open');

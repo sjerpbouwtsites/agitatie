@@ -1,5 +1,5 @@
 <?php get_template_part('head');?>
 
-<body <?php body_class('geen-header-of-menu'); ?>>
+<body <?php body_class('geen-header-of-menu hidden-body'); ?>>
 
 
