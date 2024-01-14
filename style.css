@@ -1148,10 +1148,9 @@ main blockquote {
   font-weight: bold;
   background-color: #f5f5f5;
   box-shadow: 2px 4px 0 rgba(0, 0, 0, 0.4);
-  transition: all 0.2s ease-out 0.2s;
-  position: relative;
+  transition: transform 0.2s ease-out 0.2s, box-shadow 0.2s ease-out 0.2s;
+  transform: translate(0, 0);
   color: #2E6160;
-  top: 0;
   font-size: 1em;
   text-transform: lowercase;
   border-radius: 0;
@@ -1167,9 +1166,9 @@ main blockquote {
     color: #2E6160;
     text-decoration: none; }
   .knop:hover, .navigation a:hover, #agenda-filter :hover[type='submit'], .search-form .search-submit:hover, input.wpcf7-submit:hover, .pushbutton-wide:hover {
-    transition: all 0.15s ease-out;
+    transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
     box-shadow: 0.5px 1px 0 rgba(0, 0, 0, 0.4);
-    top: 3px; }
+    transform: translate(0, 3px); }
   .knop span, .navigation a span, #agenda-filter [type='submit'] span, .search-form .search-submit span, input.wpcf7-submit span, .pushbutton-wide span {
     margin-right: 8px;
     color: inherit !important;
@@ -1192,8 +1191,7 @@ main blockquote {
     box-shadow: 2px 4px 0 rgba(0, 0, 0, 0.4);
     color: white !important; }
     .knop.in-wit:hover, .navigation a.in-wit:hover, #agenda-filter .in-wit:hover[type='submit'], .search-form .in-wit.search-submit:hover, input.wpcf7-submit.in-wit:hover, .pushbutton-wide.in-wit:hover {
-      box-shadow: 0.5px 1px 0 rgba(0, 0, 0, 0.4);
-      top: 3px; }
+      box-shadow: 0.5px 1px 0 rgba(0, 0, 0, 0.4); }
     .knop.in-wit span, .navigation a.in-wit span, #agenda-filter .in-wit[type='submit'] span, .search-form .in-wit.search-submit span, .knop.in-wit i, .navigation a.in-wit i, #agenda-filter .in-wit[type='submit'] i, .search-form .in-wit.search-submit i, input.wpcf7-submit.in-wit span, input.wpcf7-submit.in-wit i, .pushbutton-wide.in-wit span, .pushbutton-wide.in-wit i {
       color: inherit !important; }
   .knop.ikoon-links, .navigation a.ikoon-links, #agenda-filter .ikoon-links[type='submit'], .search-form .ikoon-links.search-submit, input.wpcf7-submit.ikoon-links, .pushbutton-wide.ikoon-links {
