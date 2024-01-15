@@ -1063,7 +1063,7 @@ main blockquote {
 .art-lijst {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: start;
   margin-bottom: -30px;
   margin-left: -15px;
   margin-right: -15px;
@@ -1086,7 +1086,7 @@ main blockquote {
     margin-bottom: 30px;
     margin-right: 15px;
     margin-left: 15px;
-    flex-grow: 1;
+    flex-grow: 0;
     min-width: 240px; }
     @media (max-width: 400px) {
       .art-lijst .art-c {
