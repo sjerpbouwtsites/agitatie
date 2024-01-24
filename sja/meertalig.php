@@ -6,6 +6,7 @@ if (function_exists('pll_the_languages')) :
     echo "<ul class='multi-lang-vlaggen'>";
     pll_the_languages(array('show_flags' => 1, 'show_names' => 0));
     echo "<script>
+    alert('fdfd');
     document.querySelectorAll('#lang_choice_1 option').forEach(option => {
       if (option.textContent.includes('nl')) {
         option.setAttribute('aria-label', 'Nederlands');
