@@ -7,7 +7,7 @@ if (!function_exists('ag_agenda_singular_hooks')) :
             return;
         }
         global $post;
-        if ($post->post_type !== 'agenda') {
+        if ($post->post_type !== 'event') {
             return;
         }
 
@@ -61,7 +61,7 @@ if (!function_exists('ag_agenda_singular_back_to_agenda')) :
     {
         $terug_naar_agenda = new Ag_knop(array(
           'class'   => 'in-wit ikoon-links',
-          'link'     => get_post_type_archive_link('agenda'),
+          'link'     => get_post_type_archive_link('event'),
           'tekst'    => 'Terug naar de agenda',
           'ikoon'    => 'arrow-left-thick'
         ));

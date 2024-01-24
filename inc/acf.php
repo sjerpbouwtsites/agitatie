@@ -58,7 +58,7 @@ function ag_acf_agenda_en_tax_velden()
                     array(
                         'param' => 'post_type',
                         'operator' => '==',
-                        'value' => 'agenda',
+                        'value' => 'event',
                     ),
                 ),
             ),

@@ -36,7 +36,7 @@ endif;
 echo "<div class='Ag_knoppen-doos Ag_knoppen-doos--agenda'>";
 
 $archief = array_key_exists('archief', $_GET);
-$agenda_link = get_post_type_archive_link('agenda');
+$agenda_link = get_post_type_archive_link('event');
 
 //wat als er uberhaupt geen GET zijn => andere link
 $archief_Ag_knop = new Ag_knop(array(

@@ -50,7 +50,7 @@ class Ag_agenda extends Ag_basis_class
         $datum_sortering = ($archief ? 'DESC' : 'ASC');
 
         $args = array(
-            'post_type'         => 'agenda',
+            'post_type'         => 'event',
             'post_status'       => 'publish',
             'posts_per_page'    => $this->aantal,
             'meta_key'          => 'datum',
@@ -94,7 +94,7 @@ class Ag_agenda extends Ag_basis_class
     public function widget_queryarg()
     {
         $args = array(
-            'post_type'         => 'agenda',
+            'post_type'         => 'event',
             'post_status'       => 'publish',
             'posts_per_page'    => $this->aantal,
             'meta_key'          => 'datum',
@@ -131,7 +131,7 @@ class Ag_agenda extends Ag_basis_class
             $this->aantal = 5;
         }
         if (!ag_cp_truthy('agenda_link', $this)) {
-            $this->agenda_link = get_post_type_archive_link('agenda');
+            $this->agenda_link = get_post_type_archive_link('event');
         }
     }
 
@@ -305,7 +305,7 @@ if (!function_exists('ag_agenda_filter_model')) :
 
             $test_posts = get_posts(array(
                 'posts_per_page'    => -1,
-                'post_type'         => 'agenda',
+                'post_type'         => 'event',
                 $at->taxonomy       =>  $at->slug,
                 'meta_key'          => 'datum',
                 'orderby'           => 'meta_value',
@@ -376,7 +376,7 @@ if (!function_exists('ag_agenda_filter')) : function ag_agenda_filter($filters_a
 
         <p><?= $filter_text ?></p>
 
-        <form class='doos' id='agenda-filter' action='<?php echo get_post_type_archive_link('agenda'); ?>#agenda-filter' method='POST'>
+        <form class='doos' id='agenda-filter' action='<?php echo get_post_type_archive_link('event'); ?>#agenda-filter' method='POST'>
             <div class='agenda-filter-inner-flex'>
 
                 <?php
@@ -422,7 +422,7 @@ if (!function_exists('ag_agenda_filter')) : function ag_agenda_filter($filters_a
 
  <?php
   if (count($_POST)) {
-      $agenda_link = get_post_type_archive_link('agenda');
+      $agenda_link = get_post_type_archive_link('event');
       $agenda_begin = new Ag_knop(array(
           'ikoon' => 'replay',
           'class'=> 'in-kleur',
