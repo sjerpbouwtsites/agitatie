@@ -2,6 +2,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<?php get_template_part('sja/header/google-analytics'); ?>
+	<?php get_template_part('sja/header/google-fonts'); ?>
 	<style>
 		<?php if (!$_GET['debug']) : ?>body.hidden-body {
     		opacity: 0;
@@ -12,6 +13,5 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 <?php wp_head(); ?>
-<?php get_template_part('sja/header/google-fonts'); ?>
 <meta name="format-detection" content="telephone=no"/>
 </head>
