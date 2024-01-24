@@ -113,6 +113,8 @@ function registreer_strengen()
 
       reg_streng_h('pak_nieuwsbrief', 'pak nieuwsbrief', 'agitatie-frontpage'),
 
+      reg_streng_h('oyvey_team_titel', 'Oy Vey, wie zijn we?', 'oyvey-teams'),
+
 
 
 
