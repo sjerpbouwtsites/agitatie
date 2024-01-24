@@ -4,9 +4,21 @@
 	<?php get_template_part('sja/header/google-analytics'); ?>
 	<?php get_template_part('sja/header/google-fonts'); ?>
 	<style>
-		<?php if (!$_GET['debug']) : ?>body.hidden-body {
+		body.hidden-body {
     		opacity: 0;
-		}<?php endif;?>
+		}
+		body.has-animation {
+    transition-property: opacity;
+    transition-duration: 0.075s ease-in;
+}
+
+body.hidden-body {
+    opacity: 1 !important;
+}
+
+body.hidden-body.animate-into-view {
+    opacity: 1;
+}
 	</style>
 <meta charset="<?php bloginfo('charset'); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
