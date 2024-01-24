@@ -12,7 +12,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50px;
+  width: 55px;
   height: 60px;
   padding-top: 10px;
   z-index: 10;
@@ -42,6 +42,14 @@
     padding: 10px;
   }
 }
+.multi-lang-vlaggen select {
+  height:40px;
+  background:transparent;
+  padding:10px;
+  border-radius:3px;
+  padding-right: 5px;
+}
+
 .pll-switcher-select {
   font-size: 1rem;
 }
