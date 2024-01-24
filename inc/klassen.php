@@ -247,7 +247,7 @@ class Ag_article_c extends Ag_basis_class
             if ($afb_verz) {
                 $img = "<img
 					src='{$afb_verz['sizes'][$this->afb_formaat]}'
-					alt='{$afb_verz['alt']}'
+					alt='{$this->art->term_name}'
 					height='{$afb_verz['sizes'][$aw]}'
 					width='{$afb_verz['sizes'][$ah]}'
                     class='is-categorie-afb'
@@ -257,7 +257,7 @@ class Ag_article_c extends Ag_basis_class
             }
         } else {
             if (has_post_thumbnail($this->art->ID)) {
-                $img = get_the_post_thumbnail($this->art, $this->afb_formaat, array('class'=>'is-post-thumbnail-afb'));
+                $img = get_the_post_thumbnail($this->art, $this->afb_formaat, array('class'=>'is-post-thumbnail-afb', 'alt'=> $this->art->post_title));
             } else {
                 $img_f = get_field('ta_afbeelding', 'option');
                 if ($img_f) {
