@@ -31,6 +31,7 @@ main.heeft-uitgelicht.heeft-hero .sticky-sidebar {
 	border-left: 5px solid $hoofdkleur;
 	max-height: calc(100% - 40px);
 	overflow-y: hidden;
+	overflow-x:hidden;
 } 
 
 .sticky-widget .widget-title {
