@@ -1,0 +1,33 @@
+/* MaterialDesignIcons.com */
+@font-face {
+    font-family: "Material Design Icons";
+    src: url("./resources/lettertypen/materialdesignicons-webfont.eot?v=2.0.46");
+    src: url("./resources/lettertypen/materialdesignicons-webfont.eot?#iefix&v=2.0.46") format("embedded-opentype"), url("./resources/lettertypen/materialdesignicons-webfont.woff2?v=2.0.46") format("woff2"), url("./resources/lettertypen/materialdesignicons-webfont.woff?v=2.0.46") format("woff"), url("./resources/lettertypen/materialdesignicons-webfont.ttf?v=2.0.46") format("truetype"), url("./resources/lettertypen/materialdesignicons-webfont.svg?v=2.0.46#materialdesigniconsregular") format("svg");    font-weight: normal;
+    font-style: normal;
+  }
+  .mdi:before,
+  .mdi-set {
+    display: inline-block;
+    font: normal normal normal 24px/1 "Material Design Icons";
+    font-size: inherit;
+    text-rendering: auto;
+    line-height: inherit;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .mdi-arrow-right-thick:before {
+    content: "\F055";
+  }
+
+  .mdi-magnify:before {
+    content: "\F349";
+  }
+
+  .mdi-window-close:before {
+    content: "\F5AD";
+  }
+
+  .mdi-menu:before {
+    content: "\F35C";
+  }

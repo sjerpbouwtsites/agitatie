@@ -119,6 +119,14 @@ function has_sticky_sidebar()
 /////////////////////////////////////////////////////////////////
 
 
+
+function enqueu_used_material_design_icons()
+{
+    wp_enqueue_style('material-design-icons-used', THEME_URI . '/material-design-icons-used.css', array(), null);
+}
+add_action('wp_enqueue_scripts', 'enqueu_used_material_design_icons', 10);
+
+
 if (!function_exists('ag_config_agenda')) : function ag_config_agenda()
 {
     $kind_config = $GLOBALS['kind_config'];

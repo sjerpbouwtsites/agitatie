@@ -30,9 +30,7 @@ function verplaatsShareDaddy(){
 		shareDaddyWrapperSidebar.appendChild(shareDaddyOrigineel);
 		shareDaddyOrigineel.classList.add('actief');
 	}
-}
-
-function zetStijl(nodeList, eigenschap, waarde){
+}function zetStijl(nodeList, eigenschap, waarde){
 	const l = nodeList.length;
 	for (let i = 0; i < l; i++) {
 		nodeList[i].style[eigenschap] = waarde;
@@ -45,9 +43,7 @@ function actieInit(e, testKlasse){
 	e.stopPropagation();
 
 	return e.target.classList.contains(testKlasse) ? e.target : e.target.parentNode.classList.contains(testKlasse) ? e.target.parentNode : e.target.parentNode.parentNode;
-}
-
-const doc$1 = document;
+}const doc$1 = document;
 const body$1 = doc$1.body;
 
 function schakel(e) {
@@ -139,9 +135,7 @@ function scroll(e) {
 const schakelScroll = {
 	schakel,
 	scroll
-};
-
-var doc, body, aside;
+};var doc, body, aside;
 function klikBaas() {
 
 	body.addEventListener('click', function (e) {
