@@ -43,7 +43,7 @@ $archief_Ag_knop = new Ag_knop(array(
     'ikoon'=> ($archief ? "arrow-right-thick" : "step-backward-2"),
     'class'=> 'in-wit '.($archief ? "" : "ikoon-links"),
     'link' => $agenda_link . ($archief ? "" : "?archief=ja"),
-    'tekst'=> $archief ? "normale agenda" : "agenda archief"
+    'tekst'=> $archief ? "normale events" : "events archief"
 ));
 
 $archief_Ag_knop->print();

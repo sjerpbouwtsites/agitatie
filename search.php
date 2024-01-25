@@ -8,7 +8,25 @@ get_template_part('/sja/open-main');
 
 do_action('ag_pagina_titel');
 
-get_search_form();
+?>
+
+<div class='marginveld'>
+<div id="zoekveld2" style="display: flex;">
+
+<form role="search" method="get" class="search-form" action="<?=get_site_url()?>">
+    <label>
+        <span class="screen-reader-text">Zoeken naar:</span>
+        <input class="search-field" placeholder="Zoeken …" value="" name="s" type="search">
+    </label>
+    <label for="kop-zoekveld">
+        <input id="kop-zoekveld" class="search-submit knop-rond" value="Zoeken" type="submit">
+        
+    </label>
+</form>
+
+</div></div>
+
+<?php
 
 if ($_GET['s'] !== '') :
     if (have_posts()) :

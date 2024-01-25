@@ -383,7 +383,8 @@ if (!function_exists('ag_agenda_filter')) : function ag_agenda_filter($filters_a
                 foreach ($filters_inst as $tax_naam => $opts) {
                     $prio = false;
                     echo "<section class='flex'>";
-                    echo "<h3>" . $tax_naam . "</h3>";
+
+                    echo "<h3 id='select-title-$tax_naam'>" .taal\streng('Filter events op') . " " . $tax_naam . "</h3>";
 
                     if (array_key_exists($tax_naam, $_POST)) {
                         $prio = $_POST[$tax_naam];
@@ -396,7 +397,7 @@ if (!function_exists('ag_agenda_filter')) : function ag_agenda_filter($filters_a
                         }
                     }
 
-                    echo "<select class='agenda-filters " . ($prio ? "geklikt" : "") . "' name='$tax_naam'>";
+                    echo "<select aria-labelledby='select-title-$tax_naam' class='agenda-filters " . ($prio ? "geklikt" : "") . "' name='$tax_naam'>";
                     if ($prio) {
                         echo "<option value='$prio'>$prio_naam</option>";
                     }
