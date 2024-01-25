@@ -437,7 +437,7 @@ class Ag_article_c extends Ag_basis_class
 
 			<?php if (!$this->geen_afb) : ?>
 				<div class='art-links'>
-					<a href='<?= $this->permalink ?>' target="<?= $link_target ?>" <?= $download_attr ?>>
+					<a tabindex='-1' href='<?= $this->permalink ?>' target="<?= $link_target ?>" <?= $download_attr ?>>
 						<?php $this->print_afb(); ?>
 					</a>
 				</div>

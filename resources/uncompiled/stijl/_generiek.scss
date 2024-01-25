@@ -23,9 +23,35 @@ body {
 	}
 }
 
+a.skip-to-content-link {
+	left: 50%;
+	position: absolute;
+	transform: translateY(-100%);
+  }
+
+  a.skip-to-content-link {
+	background: $hoofdkleur;
+	color: white;
+	font-weight: bold;
+	font-size: 1.5rem;
+	left: 50%;
+	padding: 8px;
+	position: absolute;
+	transform: translateY(-100%);
+	&.has-transform{
+		transition: transform 0.3s;
+	}
+  }
+  
+  a.skip-to-content-link:focus {
+	transform: translateY(30%);
+	color:white;
+  }
+
+
 .geen-margin-top {
 	margin-top: 0;
-}
+} 
 
 
 .verpakking {

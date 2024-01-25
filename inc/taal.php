@@ -55,7 +55,7 @@ function registreer_strengen()
       reg_streng_h('menu_menu', 'Menu'),
       reg_streng_h('menu_taal_schakel', 'Schakel van taal'),
 
-
+       reg_streng_h('spring_naar_inhoud', 'spring naar inhoud', 'agitatie-toegankelijkheid'),
 
       reg_streng_h('widget_pag_fam_lees_verder', 'lees verder'),
 

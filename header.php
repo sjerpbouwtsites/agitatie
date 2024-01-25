@@ -1,7 +1,14 @@
-<?php get_template_part('head');?>
+<?php
+
+use agitatie\taal as taal;
+
+get_template_part('head');?>
 
 <body <?php body_class('hidden-body');
 body_data(); ?>>
+<a id='skip-to-content-link' class="skip-to-content-link" href="#main">
+  <?=taal\streng('spring naar inhoud')?>
+</a>
 <header id='stek-kop'>
 	<div class='rel'>
 		<div class='verpakking'>

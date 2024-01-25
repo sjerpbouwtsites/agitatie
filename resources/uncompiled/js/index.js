@@ -155,6 +155,7 @@ window.onload = function () {
 
 	setTimeout(()=>{
 		document.body.classList.add('animate-into-view');
+		document.getElementById('skip-to-content-link').classList.add('has-transform')
 	}, 2)
 	setTimeout(()=>{
 		document.body.classList.remove('hidden-body');
