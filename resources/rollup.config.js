@@ -18,7 +18,7 @@ export default {
       output: function (styles, styleNodes) {
         fs.writeFileSync('style.css', styles)
       },
-      sourceMap: true,
+      sourceMap: false,
       outFile: '../style.css',
       outputStyle: "compressed"
     }) // will output compiled styles to output.css
