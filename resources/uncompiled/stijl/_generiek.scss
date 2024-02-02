@@ -54,6 +54,10 @@ a.skip-to-content-link {
 } 
 
 
+blockquote p { // zou eigenlijk niet mogen bestaan
+	margin: 0;
+}
+
 .verpakking {
 	margin: 0 auto;
 	padding: 0 2.33rem;
