@@ -31,3 +31,6 @@
   .mdi-menu:before {
     content: "\F35C";
   }
+  .mdi-arrow-left-thick:before {
+    content: "\F04E";
+  }
