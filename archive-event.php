@@ -22,7 +22,7 @@ if (!$arch) {
 
 		<?php
 
-$afm = ag_agenda_filter_ctrl();
+//$afm = ag_agenda_filter_ctrl();
 
 if (have_posts()) :
 
