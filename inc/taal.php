@@ -93,6 +93,7 @@ function registreer_strengen()
       reg_streng_h('zoekterm_je_zocht', 'je zocht', 'agitatie-zoektermen'),
       reg_streng_h('zoekterm_wat_zoek_je', 'wat zoek je', 'agitatie-zoektermen'),
       reg_streng_h('zoekterm_zoeken', 'Zoeken', 'agitatie-zoektermen'),
+      reg_streng_h('zoekterm_zoeken_naar', 'Zoeken naar', 'agitatie-zoektermen'),
       reg_streng_h('zoekterm_zoek', 'zoek', 'agitatie-zoektermen'),
       reg_streng_h('zoekterm_reset', 'reset', 'agitatie-zoektermen'),
       reg_streng_h('zoekterm_gaan', 'gaan', 'agitatie-zoektermen'),
