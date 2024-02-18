@@ -2,35 +2,35 @@
 
 use agitatie\taal as taal;
 
-function wpd_foo_rewrite_rule()
-{
-    add_rewrite_rule(
-        '^event/archief/?',
-        'index.php?post_type=event&archief=true',
-        'top'
-    );
-}
-add_action('init', 'wpd_foo_rewrite_rule');
+// function wpd_foo_rewrite_rule()
+// {
+//     add_rewrite_rule(
+//         '^event/archief/?',
+//         'index.php?post_type=event&archief=true',
+//         'top'
+//     );
+// }
+// add_action('init', 'wpd_foo_rewrite_rule');
 
-function wpd_foo_get_param()
-{
-    if(false !== get_query_var('archief')) {
-        $_GET['archief'] = get_query_var('archief');
-    }
-}
-add_action('parse_query', 'wpd_foo_get_param');
+// function wpd_foo_get_param()
+// {
+//     if(false !== get_query_var('archief')) {
+//         $_GET['archief'] = get_query_var('archief');
+//     }
+// }
+// add_action('parse_query', 'wpd_foo_get_param');
 
 
-if (!function_exists('ag_agenda_filter_ctrl')) :
-    function ag_agenda_filter_ctrl()
-    {
-        $models_ans = ag_agenda_filter_model();
+// if (!function_exists('ag_agenda_filter_ctrl')) :
+//     function ag_agenda_filter_ctrl()
+//     {
+//         $models_ans = ag_agenda_filter_model();
 
-        ag_agenda_filter(...$models_ans);
+//         ag_agenda_filter(...$models_ans);
 
-        return $models_ans;
-    }
-endif;
+//         return $models_ans;
+//     }
+// endif;
 
 
 
