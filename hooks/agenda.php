@@ -7,15 +7,16 @@ if (!function_exists('ag_agenda_singular_hooks')) :
             return;
         }
         global $post;
+
         if ($post->post_type !== 'event') {
             return;
         }
 
-        add_action('af_pagina_voor_tekst', 'ag_agenda_singular_print_date');
-        add_action('ag_singular_na_artikel', 'ag_agenda_singular_back_to_agenda', 20);
-        remove_action('ag_singular_na_artikel', 'ag_singular_taxonomieen', 20);
+        remove_action('ag_pagina_voor_tekst', 'ag_agenda_singular_print_date');
+  //      add_action('ag_singular_na_artikel', 'ag_agenda_singular_back_to_agenda', 20);
+    //    remove_action('ag_singular_na_artikel', 'ag_singular_taxonomieen', 20);
 
-        add_action('ag_pagina_voor_tekst', 'ag_agenda_plek_adres');
+        //  add_action('ag_pagina_voor_tekst', 'ag_agenda_plek_adres');
     }
 endif;
 
