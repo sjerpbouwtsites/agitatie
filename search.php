@@ -2,7 +2,7 @@
 
 get_header();
 
-set_query_var('klassen_bij_primary', "zoeken verpakking verpakking-klein marginveld");
+set_query_var('klassen_bij_primary', "zoeken verpakking marginveld");
 //set_query_var('titel_hoog', "<h1>".()."</h1>");
 get_template_part('/sja/open-main');
 
@@ -11,7 +11,7 @@ do_action('ag_pagina_titel');
 ?>
 
 <div class='marginveld'>
-<div id="zoekveld2" style="display: flex;">
+<div id="zoekveld2" style="display: flex; justify-content: center;">
 
 <form role="search" method="get" class="search-form" action="<?php echo esc_url(home_url('/')); ?>">
     <label>

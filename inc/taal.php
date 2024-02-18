@@ -107,6 +107,7 @@ function registreer_strengen()
 
       reg_streng_h('agenda_onze_events', 'onze events', 'agitatie-agenda'),
       reg_streng_h('agenda_events', 'events', 'agitatie-agenda'),
+      reg_streng_h('agenda_events', 'events archief', 'agitatie-agenda'),
       reg_streng_h('agenda_gepland', 'gepland', 'agitatie-agenda'),
       reg_streng_h('agenda_bekijk_volledige_agenda', 'volledige agenda', 'agitatie-agenda'),
       reg_streng_h('agenda_filter_events_met', 'Filter events op', 'agitatie-agenda'),
