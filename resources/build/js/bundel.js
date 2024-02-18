@@ -17,6 +17,7 @@ function stickySidebar() {
 function verplaatsShareDaddy(){
 
 	var shareDaddyOrigineel = document.querySelector('.sharedaddy');
+	if (!shareDaddyOrigineel) return;
 	var shareDaddyWrapperSidebar = document.getElementById('sharedaddy-in-sidebar');
 	if (!shareDaddyOrigineel) {
 		shareDaddyWrapperSidebar.parentNode.removeChild(shareDaddyWrapperSidebar);
