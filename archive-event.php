@@ -49,7 +49,7 @@ $archief = array_key_exists('archief', $_GET);
 $agenda_link = get_post_type_archive_link('event');
 
 //wat als er uberhaupt geen GET zijn => andere link
-$archief_link = str_contains($_SERVER['REQUEST_URI'], '/en/') ? "event-archive" : "event-archief";
+$archief_link = site_url(str_contains($_SERVER['REQUEST_URI'], '/en/') ? "event-archive" : "event-archief");
 $archief_Ag_knop = new Ag_knop(array(
     'ikoon'=> ($archief ? "arrow-right-thick" : "step-backward-2"),
     'class'=> 'in-wit '.($archief ? "" : "ikoon-links"),
