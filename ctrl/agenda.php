@@ -213,9 +213,7 @@ class Ag_agenda extends Ag_basis_class
                                         $prefix = '';
 
                                         $midden .= "<span
-                                        class='agenda-lijst__taxonomie kop-letter tekst-wit agenda-lijst__taxonomie--$this->omgeving agenda-lijst__taxonomie--$pt->taxonomy'>
-                                        $prefix$pt->name
-                                    </span>";
+                                        class='agenda-lijst__taxonomie kop-letter tekst-wit agenda-lijst__taxonomie--$this->omgeving agenda-lijst__taxonomie--$pt->taxonomy'>$prefix$pt->name</span>";
                                     endforeach;
                                     $midden .= "</div>";
                                     $rechts = "<div 
