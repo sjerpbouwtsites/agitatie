@@ -88,7 +88,7 @@ if (!class_exists('Posttype_voorb')) : class Posttype_voorb
                 'title',
                 'editor',
                 'excerpt',
-                'thumbnail'
+                'thumbnail',
             ),
         );
     }

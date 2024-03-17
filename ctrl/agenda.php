@@ -193,27 +193,28 @@ class Ag_agenda extends Ag_basis_class
                                             continue;
                                         }
 
-                                        $ptt = $pt->taxonomy;
-                                        if ($pt->taxonomy === 'locatie') {
-                                            $ptt = ucfirst(\agitatie\taal\streng('waar'));
-                                        }
-                                        if ($pt->taxonomy === 'soort') {
-                                            $ptt = ucfirst(\agitatie\taal\streng('wat'));
-                                        }
-
-                                        $prefix = count($post_taxonomieen) > 1
-                                            ? "<span 
-                                        class='agenda-lijst__taxonomie-prefix 
-                                        tekst-wit
-                                        kop-letter
-                                        agenda-lijst__taxonomie-prefix--$this->omgeving 
-                                        agenda-lijst__taxonomie-prefix--$pt->taxonomy
-                                        '>$ptt:</span>"
-                                            : '';
+                                        // $ptt = $pt->taxonomy;
+                                        // if ($pt->taxonomy === 'locatie') {
+                                        //     $ptt = ucfirst(\agitatie\taal\streng('waar'));
+                                        // }
+                                        // if ($pt->taxonomy === 'soort') {
+                                        //     $ptt = ucfirst(\agitatie\taal\streng('wat'));
+                                        // }
+                                        $ptt = '';
+                                        // $prefix = count($post_taxonomieen) > 1
+                                        //     ? "<span
+                                        // class='agenda-lijst__taxonomie-prefix
+                                        // tekst-wit
+                                        // kop-letter
+                                        // agenda-lijst__taxonomie-prefix--$this->omgeving
+                                        // agenda-lijst__taxonomie-prefix--$pt->taxonomy
+                                        // '>$ptt</span>"
+                                        //     : '';
+                                        $prefix = '';
 
                                         $midden .= "<span
                                         class='agenda-lijst__taxonomie kop-letter tekst-wit agenda-lijst__taxonomie--$this->omgeving agenda-lijst__taxonomie--$pt->taxonomy'>
-                                        $prefix $pt->name
+                                        $prefix$pt->name
                                     </span>";
                                     endforeach;
                                     $midden .= "</div>";
