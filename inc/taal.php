@@ -82,6 +82,7 @@ function registreer_strengen()
       reg_streng_h('telwoord_alle', 'alle', 'agitatie-telwoorden'),
       reg_streng_h('telwoord_alles', 'alles', 'agitatie-telwoorden'),
       reg_streng_h('telwoord_meer', 'meer', 'agitatie-telwoorden'),
+      reg_streng_h('telwoord_andere', 'andere', 'agitatie-telwoorden'),
 
       reg_streng_h('telwoord_alle', 'waar', 'agitatie-koppelwoorden'),
       reg_streng_h('telwoord_alles', 'wat', 'agitatie-koppelwoorden'),

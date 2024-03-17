@@ -43,36 +43,6 @@ else :
 
 endif;
 
-echo "<div class='Ag_knoppen-doos Ag_knoppen-doos--agenda'>";
-
-$archief = array_key_exists('archief', $_GET);
-$agenda_link = get_post_type_archive_link('event');
-
-//wat als er uberhaupt geen GET zijn => andere link
-$archief_link = site_url(str_contains($_SERVER['REQUEST_URI'], '/en/') ? "event-archive" : "event-archief");
-$archief_Ag_knop = new Ag_knop(array(
-    'ikoon'=> ($archief ? "arrow-right-thick" : "step-backward-2"),
-    'class'=> 'in-wit '.($archief ? "" : "ikoon-links"),
-    'link' => $archief ? $agenda_link : $archief_link,
-    'tekst'=> $archief ? taal\streng('events') : taal\streng('events archief')
-));
-
-$archief_Ag_knop->print();
-
-//als filters actief Ag_knop terug naar begin.
-
-if (count($_POST)) {
-    $agenda_begin = new Ag_knop(array(
-        'ikoon' => 'replay',
-        'class'=> 'in-wit',
-        'link' => $agenda_link,
-        'tekst'=> "Verwijder filters",
-    ));
-    $agenda_begin->print();
-}
-
-echo "</div>";
-
 ?>
 	</div>
 </div>
