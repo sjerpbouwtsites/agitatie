@@ -233,12 +233,18 @@ class Ag_agenda extends Ag_basis_class
 
 
                                 $datum = get_field('datum', $a->ID);
+                                $dit_jaar = date("Y");
+                                if (str_contains($datum, $dit_jaar)) {
+                                    $datum = str_replace("/$dit_jaar", '', $datum);
+                                }
 
                                 //$datum = preg_replace("/\s/i", "<br>", $datum);
 
                                 $datum = preg_replace("/\//i", "<span class='agenda-lijst__tijd-spacer agenda-lijst__tijd-spacer--$this->omgeving'>/</span>", $datum);
 
                                 $datum = preg_replace("/:/i", "<span class='agenda-lijst__tijd-spacer agenda-lijst__tijd-spacer--$this->omgeving'>:</span>", $datum);
+                                $replacement = '<span class="agenda-lijst__tijd-tussen-spacer agenda-lijst__tijd-tussen-spacer--'.$this->omgeving.'"></span>${1}';
+                                $datum = preg_replace("/(\d\d)/i", $replacement, $datum);
 
                                 $afb = !$this->is_widget ? get_the_post_thumbnail($a->ID, 'thumbnail') : '';
 
