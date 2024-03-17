@@ -52,7 +52,7 @@ $agenda_link = get_post_type_archive_link('event');
 $archief_Ag_knop = new Ag_knop(array(
     'ikoon'=> ($archief ? "arrow-right-thick" : "step-backward-2"),
     'class'=> 'in-wit '.($archief ? "" : "ikoon-links"),
-    'link' => $agenda_link . ($archief ? "" : "?archief=ja"),
+    'link' => $agenda_link . ($archief ? "" : "archief"),
     'tekst'=> $archief ? "normale events" : "events archief"
 ));
 
