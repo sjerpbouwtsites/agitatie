@@ -53,7 +53,7 @@ $archief_link = str_contains($_SERVER['REQUEST_URI'], '/en/') ? "event-archive" 
 $archief_Ag_knop = new Ag_knop(array(
     'ikoon'=> ($archief ? "arrow-right-thick" : "step-backward-2"),
     'class'=> 'in-wit '.($archief ? "" : "ikoon-links"),
-    'link' => $agenda_link . ($archief ? "" : $archief_link),
+    'link' => !$archief ? $agenda_link : $archief_link,
     'tekst'=> $archief ? "normale events" : "events archief"
 ));
 
