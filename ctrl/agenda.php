@@ -231,9 +231,6 @@ class Ag_agenda extends Ag_basis_class
                                 }
 
 
-
-                                $datum = get_field('datum', $a->ID);
-                                $dit_jaar = date("Y");
                                 if (str_contains($datum, $dit_jaar)) {
                                     $datum = str_replace("/$dit_jaar", '', $datum);
                                 }
