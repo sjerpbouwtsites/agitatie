@@ -1,5 +1,7 @@
 <?php
 
+use agitatie\taal as taal;
+
 if (!function_exists('ag_agenda_singular_hooks')) :
     function ag_agenda_singular_hooks()
     {
