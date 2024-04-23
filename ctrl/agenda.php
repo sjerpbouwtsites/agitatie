@@ -230,18 +230,19 @@ class Ag_agenda extends Ag_basis_class
                                     $midden = '';
                                 }
 
+                                $datum = get_field('datum', $a->ID);
 
-                                if (str_contains($datum, $dit_jaar)) {
-                                    $datum = str_replace("/$dit_jaar", '', $datum);
-                                }
+                                // if (str_contains($datum, $dit_jaar)) {
+                                //     $datum = str_replace("/$dit_jaar", '', $datum);
+                                // }
 
-                                //$datum = preg_replace("/\s/i", "<br>", $datum);
+                                // $datum = preg_replace("/\s/i", "<br>", $datum);
 
-                                $datum = preg_replace("/\//i", "<span class='agenda-lijst__tijd-spacer agenda-lijst__tijd-spacer--$this->omgeving'>/</span>", $datum);
+                                // $datum = preg_replace("/\//i", "<span class='agenda-lijst__tijd-spacer agenda-lijst__tijd-spacer--$this->omgeving'>/</span>", $datum);
 
-                                $datum = preg_replace("/:/i", "<span class='agenda-lijst__tijd-spacer agenda-lijst__tijd-spacer--$this->omgeving'>:</span>", $datum);
-                                $replacement = '<span class="agenda-lijst__tijd-tussen-spacer agenda-lijst__tijd-tussen-spacer--'.$this->omgeving.'"></span>${1}';
-                                $datum = preg_replace("/(\d\d)/i", $replacement, $datum);
+                                // $datum = preg_replace("/:/i", "<span class='agenda-lijst__tijd-spacer agenda-lijst__tijd-spacer--$this->omgeving'>:</span>", $datum);
+                                // $replacement = '<span class="agenda-lijst__tijd-tussen-spacer agenda-lijst__tijd-tussen-spacer--'.$this->omgeving.'"></span>${1}';
+                                // $datum = preg_replace("/(\d\d)/i", $replacement, $datum);
 
                                 $afb = !$this->is_widget ? get_the_post_thumbnail($a->ID, 'thumbnail') : '';
 
@@ -265,7 +266,9 @@ class Ag_agenda extends Ag_basis_class
 
                                         
 
-                                    <h3 class='agenda-lijst__titel tekst-wit kop-letter agenda-lijst__titel--" . $this->omgeving . "' >" . $a->post_title . " <time class='tekst-wittig kleine-letter agenda-lijst__tijd agenda-lijst__tijd--$this->omgeving'>$datum</time></h3>
+                                    <h3 class='agenda-lijst__titel tekst-wit kop-letter agenda-lijst__titel--" . $this->omgeving . "' >" . $a->post_title . " 
+                                    <time class='tekst-wittig kleine-letter agenda-lijst__tijd agenda-lijst__tijd--$this->omgeving'>$datum</time>
+                                    </h3>
                                     
                                     $midden
                                 </div>
