@@ -15,10 +15,8 @@ function my_mce_before_init_insert_formats($init_array)
         // Each array child is a format with it's own settings
         array(
             'title' => 'knop',
-            'inline' => 'a',
             'selector'=> 'a',
             'classes' => 'knop in-wit uit-mce',
-            'wrapper' => true,
         ),
         array(
             'title' => 'klein',
