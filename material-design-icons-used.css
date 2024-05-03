@@ -34,3 +34,6 @@
   .mdi-arrow-left-thick:before {
     content: "\F04E";
   }
+  .mdi-play-circle:before {
+    content: "\F40C";
+  }
