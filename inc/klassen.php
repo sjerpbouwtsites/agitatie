@@ -257,7 +257,7 @@ class Ag_article_c extends Ag_basis_class
             }
         } else {
             if (has_post_thumbnail($this->art->ID)) {
-                $img = get_the_post_thumbnail($this->art, $this->afb_formaat, array('class'=>'is-post-thumbnail-afb', 'alt'=> $this->art->post_title));
+                $img = get_the_post_thumbnail($this->art, $this->afb_formaat, array('class'=>'is-post-thumbnail-afb'));
             } else {
                 $img_f = get_field('ta_afbeelding', 'option');
                 if ($img_f) {
